@@ -1,0 +1,92 @@
+<div class="flex justify-center">
+    <div class="flex container flex-col">
+        <div>
+            <div style="background-image:url( {{ theme:images src='auth-hero.jpg' }} ); height: 600px; background-position: 50% 0px;" class="hidden sm:block w-full bg-cover mb-8 relative">
+                <div class="bg-black opacity-25 absolute w-full h-full"></div>
+                <div style="padding-top:300px;">
+                    <h1 class="text-3xl lg:text-5xl font-bold text-white relative text-center">{{ trans:signup.account }}</h1>
+                </div>
+            </div>
+            <div class="sm:hidden">
+                <div class="mb-8 mt-8" style="padding-top: 100px;">
+                    <h1 class="text-3xl lg:text-5xl font-bold text-grey-darkest relative text-center">{{ trans:signup.account }}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+            {{ user:register_form allow_request_redirect="true" }}
+                <div class="flex container flex-col md:flex-row">
+                    <div class="border-b md:w-2/5 md:border-b-0 md:border-r border-black border-1">
+                        <div class="mx-2 lg:mx-0 md:flex md:items-center mb-6">
+                            <div class="md:w-1/3">
+                                <label class="block text-grey-darker font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                                {{ trans:signup.email }}
+                                </label>
+                            </div>
+                            <div class="md:max-w-lg">
+                                <input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-grey-darker" name="email" type="text" value="{{ old:email }}" />
+                            </div>
+                        </div>
+                        
+                        <div class="md:mx-0 md:flex md:items-center mb-6">
+                            <div class="md:w-1/3">
+                                <label class="block text-grey-darker font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                                {{ trans:signup.name }}
+                                </label>
+                            </div>
+                            <div class="md:w-1/3">
+                                <input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-grey-darker" name="name" type="text" value="{{ old:name }}" />
+                            </div>
+                        </div>
+
+                        <div class="md:mx-0 md:flex md:items-center mb-6">
+                            <div class="md:w-1/3">
+                                <label class="block text-grey-darker font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-username">
+                                        {{ trans:signup.password }}
+                                </label>
+                            </div>
+                            <div class="md:w-1/3">
+                                <input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-grey-darker" name="password" type="password" />
+                            </div>
+                        </div>
+
+                        <div class="md:mx-0 md:flex md:items-center mb-6">
+                                <div class="md:w-1/3">
+                                    <label class="block text-grey-darker font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-username">
+                                            {{ trans:signup.password }}
+                                    </label>
+                                </div>
+                                <div class="md:w-1/3">
+                                    <input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-grey-darker" name="password_confirmation" type="password" />
+                                </div>
+                            </div>
+
+                        <div class="md:mx-0 md:flex md:items-center mb-6">
+                            <div class="md:w-1/3"></div>
+                            <label class="md:w-1/3 block text-grey-darker font-bold">
+                                <input class="mr-2 leading-tight" type="checkbox" name="newsletter" />
+                                <span class="text-sm">
+                                        {{ trans:signup.newsletter }}
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="md:mx-0 md:flex md:items-center">
+                            <div class="md:w-1/3"></div>
+                            <div class="md:w-1/3">
+                                <button class="h-8 bg-red-darker hover:bg-green-dark text-white uppercase text-sm py-1 px-2 -mt-1 rounded">
+                                {{ trans:signup.signup }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+            {{ /user:register_form }}
+        </div>
+    </div>
+</div>

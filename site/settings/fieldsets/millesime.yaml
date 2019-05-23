@@ -1,0 +1,34 @@
+sections:
+  main:
+    display: Main
+    fields:
+      millesime:
+        type: text
+        display: Millesime
+      active:
+        type: toggle
+        display: Active
+      description:
+        type: textarea
+        localizable: true
+        display: Description
+      scores:
+        mode: table
+        fields:
+          guide:
+            options:
+              BD: 'Bettane & Dessauve'
+              RVF: 'Revue du Vin de France'
+              WA: 'Wine Advocate'
+            type: select
+            display: Guide
+          score:
+            type: text
+            display: score
+          maxscore:
+            type: text
+            display: maxscore
+        type: grid
+        display: Scores
+taxonomies: true
+title: Millesime

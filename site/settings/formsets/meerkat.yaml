@@ -1,0 +1,27 @@
+title: 'Comment Submission'
+fields:
+  name:
+    display: Name
+    validate: required
+  comment:
+    display: Comment
+    validate: 'required|min:5'
+  email:
+    display: Email
+    validate: required|email
+  rating:
+    display: Rating
+columns:
+  - name
+  - comment
+  - email
+  - rating
+metrics:
+  -
+    type: total
+    label: Total
+  -
+    type: average
+    label: 'Average rating'
+    field: rating
+    precision: '2'

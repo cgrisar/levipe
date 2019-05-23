@@ -1,0 +1,35 @@
+{
+  "name": "levipe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "algoliasearch": "^3.32.1",
+    "flickity": "^2.1.2",
+    "gulp": "^3.9.1",
+    "modal": "^1.2.0",
+    "vue-autosuggest": "^1.8.3",
+    "vue-axios": "^2.1.4",
+    "vue-cli": "^2.9.6",
+    "vue-flickity": "^1.1.2",
+    "vue-instantsearch": "^2.1.0",
+    "vue-star-rating": "^1.6.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

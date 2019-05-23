@@ -1,0 +1,87 @@
+sections:
+  main:
+    display: Main
+    fields:
+      level:
+        options:
+          region: Region
+          subregion: Subregion
+          village: Villages
+        type: select
+        display: Level
+      name:
+        type: text
+        display: Name
+      cover_image:
+        container: main
+        folder: img/Regions
+        restrict: false
+        type: assets
+        display: 'Cover Image'
+      description:
+        buttons:
+          - h2
+          - h3
+          - h5
+          - h6
+          - bold
+          - italic
+          - unorderedlist
+          - orderedlist
+          - removeformat
+          - quote
+          - anchor
+        style: sans
+        spellcheck: true
+        allow_source: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: false
+        semantic_elements: false
+        restrict_assets: true
+        type: bard
+        display: Description
+        sets:
+          image:
+            display: Image
+            fields:
+              image:
+                container: main
+                folder: img/Regions
+                restrict: false
+                type: assets
+                display: image
+              caption:
+                type: text
+                display: caption
+              float:
+                options:
+                  left: left
+                  right: right
+                type: select
+                display: float
+        localizable: true
+        allow_internal_links: true
+      area:
+        type: text
+        display: Area
+      estates:
+        type: text
+        display: Estates
+      production:
+        type: text
+        display: Production
+      yield:
+        type: text
+        localizable: true
+        display: Yield
+      climate:
+        type: text
+        localizable: true
+        display: Climate
+      terroir:
+        type: text
+        localizable: true
+        display: Terroir
+taxonomies: true
+title: Region

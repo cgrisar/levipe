@@ -1,0 +1,7 @@
+driver: algolia
+algolia_api_key: 9f0b0ab920a4fd77a091d044929d5026
+algolia_app_id: FX7PZZ3MWT
+auto_index: true
+default_index: default
+searchable:
+  - title

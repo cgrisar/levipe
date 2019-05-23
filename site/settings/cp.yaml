@@ -1,0 +1,19 @@
+start_page: dashboard
+date_format: Y/n/d
+pagination_size: 50
+widgets:
+  -
+    type: collection
+    collection: grape
+    limit: 5
+  -
+    type: meerkat
+  -
+    type: form
+    form: contact
+    limit: 5
+    title: 'Recent Submissions'
+    width: full
+    fields:
+      - name
+      - email

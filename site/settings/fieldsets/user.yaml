@@ -1,0 +1,45 @@
+title: User
+hide: true
+sections:
+  main:
+    display: Main
+    fields:
+      roles:
+        type: user_roles
+        width: 50
+      email:
+        type: text
+        display: 'Email address'
+      name:
+        type: text
+        display: Name
+        validate: required
+      first_name:
+        type: text
+        display: 'First Name'
+        width: 50
+      last_name:
+        type: text
+        display: 'Last Name'
+        width: 50
+      newsletter:
+        options: {  }
+        type: checkboxes
+        display: Newsletter
+        default: '1'
+      address:
+        type: text
+        display: Address
+      zip:
+        type: text
+        display: ZIP
+      county:
+        type: text
+        display: County
+      country:
+        type: text
+        display: Country
+      phone:
+        type: text
+        display: Phone
+taxonomies: true

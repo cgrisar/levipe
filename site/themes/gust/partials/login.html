@@ -1,0 +1,46 @@
+{{ user }}
+
+    {{ if no_results }}
+
+        <div class="container w-full lg:flex mx-auto my-8 bg-grey-lighter lg:rounded-lg">
+            <div class="h-auto lg:w-1/4 bg-cover rounded-l-lg pr-2 flex-none" style="background-image:url({{ theme:images src="bottles-lineup.jpg" }})"></div>
+            <div class="p-4 flex flex-col justify-between leading-normal">
+                <div class="text-black font-bold text-xl mb-2 text-center">{{ trans:login.title title={ title } }}</div>
+                <div class="container flex sm:flex-row w-full mb-4">
+                    <div class="w-full sm:w-1/3 text-center border-b sm:border-b-0 sm:border-r border-grey-darker px-2">
+                        <h5 class="text-red-darker mt-4">{{ trans:login.promotion_header }}</h5>
+                        <p class="hidden md:block">{{ trans:login.promotion_message }}</p>
+                    </div>
+                    <div class="w-full sm:w-1/3 text-center border-b sm:border-b-0 sm:border-r border-grey-darker px-2">
+                        <h5 class="text-red-darker mt-4">{{ trans:login.transport_header }}</h5>
+                        <p class="hidden md:block">{{ trans:login.transport_message }}</p>
+                    </div>
+                    <div class="w-full sm:w-1/3 text-center px-2">
+                        <h5 class="text-red-darker mt-4">{{ trans:login.assurance_header }}</h5>
+                        <p class="hidden md:block">{{ trans:login.assurance_message }}</p>
+                    </div>
+                </div>
+                <div class="container text-center">
+                    {{ user:login_form redirect='{ current_url }' }}
+                        <input class="h-8 border border-grey-dark appearance-none py-2 px-3 mr-2 text-grey-darker text-grey-darkest focus:outline-none focus:border-2" name="username" type="email" placeholder="Adresse e-mail">
+                        <input class="h-8 border border-grey-dark appearance-none py-2 px-3 mr-2 text-grey-darker text-grey-darkest focus:outline-none focus:border-2" name="password" type="password" placeholder="Mot de passe">
+                        <button type="submit">
+                            <span class="fa-fw fa-layers fa-2x -mb-1" title="{{ trans:login.connexion }}">
+                                <i class="fas fa-circle text-green-darker"></i>
+                                <i class="fas fa-sign-in-alt fa-inverse" data-fa-transform="shrink-6"></i>
+                            </span>
+                        </button>
+                        <span class="fa-fw fa-layers fa-2x -mb-1" title="{{ trans:login.creer_compte }}">
+                            <a href="{{ link to='/register/?redirect={ current_url }' }}">
+                                <i class="fas fa-circle text-blue-darker"></i>
+                                <i class="fas fa-user-plus fa-inverse" data-fa-transform="shrink-8"></i>
+                            </a>
+                        </span>
+                    {{ /user:login_form }}
+                </div>
+            </div>
+        </div>
+
+   {{ /if }}
+
+{{ /user }}

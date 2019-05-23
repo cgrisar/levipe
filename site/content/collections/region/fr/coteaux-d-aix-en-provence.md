@@ -1,0 +1,7 @@
+description:
+  -
+    type: text
+    text: '<p>L’aire d’Appellation des Coteaux d’Aix-en-Provence est située dans la zone occidentale de la Provence. Elle s’étend de la Durance à la mer Méditerranée, et de la vallée du Rhône à l’Ouest à la montagne Sainte-Victoire à l’Est. C’est entre des reliefs constitués d’une succession de chaînons parallèles au littoral – chaîne de la Nerthe, chaîne de la Fare, chaîne d’Eguilles et de la Trévaresse, chaînon des Costes prolongé par les Alpilles – que se situent les bassins sédimentaires où s’est concentrée l’activité viticole.</p><p>Le climat, de type méditerranéen, est marqué par le Mistral, vent du Nord dominant froid et sec. Il permet à l’appellation de bénéficier d’un ensoleillement annuel moyen de 2 900 heures. De faibles pluies – entre 550 et 680 mm par an – sont essentiellement concentrées sur le printemps et l’automne.</p><p>Les sols rencontrés sont majoritairement argilo-calcaire caillouteux; Sableux, souvent graveleux sur molasses et grès; Caillouteux à matrice argileuse ou limono-sableux sur les terrasses de l’Arc et de la Durance. En général les sols sont très pauvres et ne permettent qu’une culture d’arbres ou arbustes qui supportent d’être mis en souffrance comme les vignes mais aussi les oliviers, les garrigues, …</p>'
+climate: Méditérannéen
+terroir: 'argilo-calcaire, sableux, caillouteux et argiles'
+id: 59813cca-b975-43b0-9aa5-9035c9981bf2

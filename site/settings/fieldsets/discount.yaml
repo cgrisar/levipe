@@ -1,0 +1,69 @@
+sections:
+  main:
+    display: Main
+    fields:
+      start_date:
+        allow_blank: false
+        allow_time: false
+        require_time: false
+        earliest_date: 'January 1, 1900'
+        input_format: DD/MM/YYYY
+        type: date
+        width: 50
+        display: 'Start Date'
+      end_date:
+        allow_blank: false
+        allow_time: false
+        require_time: false
+        earliest_date: 'January 1, 1900'
+        input_format: DD/MM/YYYY
+        type: date
+        width: 50
+        display: 'End Date'
+        validate: 'after:start_date'
+      wine:
+        sort: 'title:asc'
+        collection:
+          - wines
+        mode: tags
+        type: collection
+        width: 50
+        display: wine
+      volume:
+        type: text
+        width: 25
+        display: Volume
+      vintage:
+        type: text
+        width: 25
+        display: Vintage
+      discount_type:
+        default: bogof
+        options:
+          bogof: 'Buy one Get one Free'
+          percentage: Percentage
+        type: select
+        display: 'Discount type'
+        validate: required
+      how_many_to_get_some_free:
+        type: text
+        width: 33
+        display: 'How Many to Get Some Free'
+        validate: 'numeric|required_if:discount_type,bogof'
+      how_many_free:
+        type: text
+        width: 33
+        display: 'How Many Free'
+        validate: 'numeric|required_if:discount_type,bogof'
+      discount_free_products:
+        type: text
+        width: 33
+        display: 'Discount Free Products'
+        validate: 'numeric|between:1,100|required_if:discount_type,bogof'
+      discount:
+        type: text
+        width: 33
+        display: Discount
+        validate: 'numeric|between:1,100|required_unless:discount_type,bogof'
+taxonomies: true
+title: Discount

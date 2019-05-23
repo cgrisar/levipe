@@ -1,0 +1,40 @@
+routes:
+  /blog/tags: blog/taxonomies
+  /search: search
+  /users: user/index
+  '/users/{username}': user/profile
+  /account: user/account
+  /login: auth/login
+  /forgot-password: auth/password-forgot
+  /reset-password: auth/password-reset
+  /blog/feed:
+    layout: feed
+    template: feeds/blog
+    content_type: atom
+  /grapeimages:
+    template: grapes
+collections:
+  blog: '/blog/{year}/{month}/{day}/{slug}'
+  things: '/things/{slug}'
+  grape:
+    en: '/grape/{slug}'
+    fr: '/grape/{slug}'
+    nl: '/grape/{slug}'
+  wines:
+    en: '/shop/{slug}'
+    fr: '/shop/{slug}'
+    nl: '/shop/{slug}'
+  estate:
+    en: '/estate/{slug}'
+    fr: '/estate/{slug}'
+    nl: '/estate/{slug}'
+  region:
+    en: '/region/{slug}'
+    fr: '/region/{slug}'
+    nl: '/region/{slug}'
+taxonomies:
+  grap:
+    en: '/grap/{slug}'
+    fr: '/grap/{slug}'
+    nl: '/grap/{slug}'
+  g: 'grapz/{slug}'

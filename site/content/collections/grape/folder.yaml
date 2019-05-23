@@ -1,0 +1,6 @@
+order: date
+title: Grape
+fieldset: grape
+template: grape
+searchable:
+  - title

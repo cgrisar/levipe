@@ -1,0 +1,101 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+        localizable: true
+        validate: required
+      cover_image:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: cover_image
+      label_image:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: label_image
+      color:
+        options:
+          red: Red
+          white: White
+          pink: Pink
+          orange: Orange
+        type: select
+        display: Color
+      description:
+        spellcheck: true
+        allow_source: true
+        autoLink: false
+        target_blank: false
+        link_validation: false
+        force_plain_text: true
+        clean_pasted_html: false
+        restrict_assets: false
+        type: bard
+        localizable: true
+        display: Description
+      cepages:
+        collection:
+          - grape
+        type: collection
+        display: Cépages
+        mode: tags
+        localizable: true
+      estate:
+        collection:
+          - estate
+        type: collection
+        display: Estate
+        mode: tags
+      appellations:
+        collection:
+          - region
+        type: collection
+        display: appellations
+        mode: tags
+      odoo:
+        type: text
+        display: Odoo
+      culture:
+        options:
+          classic: Classic
+          organic: Organic
+          biodynamic: Biodynamic
+        type: select
+        display: Culture
+      natural_wine:
+        type: toggle
+        display: 'Natural Wine'
+      variants:
+        mode: table
+        fields:
+          millesime:
+            fieldset: millesime
+            type: partial
+            display: Millesime
+        type: grid
+        display: Millesimes
+        localizable: true
+  taxonomies:
+    display: Taxonomies
+    fields:
+      g:
+        type: taxonomy
+        display: Grapes
+        taxonomy: g
+        mode: tags
+        sort: 'name:asc'
+      r:
+        type: taxonomy
+        display: Regions
+        sort: 'name:asc'
+        taxonomy: r
+        mode: tags
+taxonomies: true
+title: Wine
+create_title: 'Create Wine'

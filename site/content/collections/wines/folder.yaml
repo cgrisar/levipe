@@ -1,0 +1,9 @@
+title: Wines
+fieldset: wine
+template: wine
+searchable:
+  - title
+  - culture
+  - cepages
+  - g
+  - r

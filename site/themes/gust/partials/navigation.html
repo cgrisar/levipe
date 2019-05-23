@@ -1,0 +1,39 @@
+
+<div class="flex fixed px-4 md:px-0 justify-center min-w-full z-50 bg-white">
+    <nav class="container flex py-6 z-50 h-24 text-black bg-white border-b border-solid border-grey">
+        <div class="justify-start">
+            <span class="textlogo text-xl visible md:hidden mr-3">l . v . p</span>
+            <span class="textlogo text-xl hidden md:inline mr-3">les vins personnalisés</span>
+            {{ locales }}
+                {{ if !first && locale:key != "en" }}
+                    <a href="{{ url }}" class="mt-2">
+                        <img src='{{ theme:images src="{ locale:key }.png" }}' width="18" class="-mb-1" />
+                    </a>
+                {{ /if }}
+            {{ /locales }}
+        </div>
+        <div class="h-48"></div>
+        
+        <div class="relative justify-end ml-auto">
+            <div class="group inline">
+                <a href="{{ locale_url }}cart" class="text-black no-underline inline float-left ml-4">
+                    <div class="w-12 h-12 float-left">
+                        <i class="spk-icon-cart-shopkeeper absolute text-2xl font-hairline mt-1 h-3 w-3"></i>
+                        <lvp-cart-counter></lvp-cart-counter>
+                    </div>
+                    <div class="absolute hidden group-hover:block mr-8 pin-r">
+                        <lvp-minicart></lvp-minicart>
+                    </div>
+                </a>
+            </div>
+            <div class="w-12 h-12 float-left mt-1 -mr-4">
+                {{ user }}
+                    <a href="{{ locale_url }}{{ if no_results }}register{{ else }}hello{{ /if }}" class="text-black no-underline inline float-left ml-4">
+                        <i class="spk-icon-user-account text-2xl"></i>
+                    </a>
+                {{ /user }}
+            </div>
+        </div>
+
+    </nav>
+</div>

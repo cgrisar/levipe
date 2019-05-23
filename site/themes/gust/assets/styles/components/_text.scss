@@ -1,0 +1,28 @@
+body {
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 0.9em;
+    color: #545454
+}
+
+.textlogo {
+    font-family: 'Source Sans Pro'
+}
+
+.gradualgrey {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0,0,0,0));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto';
+    color: black;
+}
+
+h5 {
+    @apply text-base mb-1 mt-6;
+}
+
+p, ul {
+    @apply mb-4;
+}

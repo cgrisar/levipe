@@ -1,0 +1,52 @@
+locales:
+  en:
+    full: en_US
+    name: English
+    url: 'http://levipe.dev/'
+  fr:
+    full: fr_FR
+    name: Français
+    url: 'http://levipe.dev/fr'
+  nl:
+    full: nl_NL
+    name: Nederlands
+    url: 'http://levipe.dev/nl'
+timezone: UTC
+date_format: 'F jS, Y'
+default_extension: md
+filesystems:
+  content:
+    driver: local
+    root: site/content
+  storage:
+    driver: local
+    root: site/storage
+  users:
+    driver: local
+    root: site/users
+  themes:
+    driver: local
+    root: site/themes
+    url: /site/themes
+app_key: RI4Rca9CrdwEgd0g5g5jmsc8v7n2HZwJ
+redactor:
+  -
+    name: Standard
+    settings:
+      buttons:
+        - formatting
+        - bold
+        - italic
+        - link
+        - unorderedlist
+        - orderedlist
+        - html
+  -
+    name: Basic
+    settings:
+      buttons:
+        - bold
+        - italic
+yaml_parser: symfony
+send_powered_by_header: true
+ensure_unique_ids: true

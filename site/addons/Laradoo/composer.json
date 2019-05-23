@@ -1,0 +1,6 @@
+{
+    "name": "charles/laradoo",
+    "require": {
+        "edujugon/laradoo" :"^1.1"
+    }
+}

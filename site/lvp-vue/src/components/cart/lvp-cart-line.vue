@@ -1,0 +1,71 @@
+<template>
+    <div :id="variant.variantId" class="container flex flex-row">
+        <div class="inline w-12">
+            <button @click="removeVariant( variant )">
+                <i class="far fa-2x fa-times-circle" data-fa-transform="shrink-4"></i>
+            </button>
+        </div>
+        <div class="inline w-1/4 md:w-64 mr-2">
+            <div class="font-medium -mb-1">{{ variant.wine }}</div>
+            <div class="text-xs italic">
+                <span class="mr-2">{{ variant.vintage }}</span>
+                <span>{{ variant.volume }}</span>
+            </div>
+        </div>
+        
+        <div class="w-1/8 font-bold text-right ml-2">{{ variant.price }} &euro;</div>
+        
+        <div class="w-1/6 text-right align-top ml-2">
+            <button @click="decVariant( variant )">
+                <i class="fas fa-2x text-red-darker fa-minus-circle fa-inverse pb-2" data-f-transform="shrink-8"></i>
+            </button>
+            <input type="number" min="1" class="w-8 text-right pr-1 text-grey-darker bg-grey-lighter rounded-sm align-top" v-model="variant.ordered" />
+            <button @click="incVariant( variant )">
+                <i class="fas fa-2x text-green-darker fa-plus-circle fa-inverse pb-2 ml-1" data-f-transform="shrink-8"></i>
+            </button>
+        </div>
+
+        <div class="w-1/6 text-right font-medium">{{ orderedAmountVariant( variant ) }} &euro;</div>
+
+    </div>
+</template>
+
+<script>
+export default {
+    props: { variant },
+
+    methods:
+    {
+        removeVariant()
+        {
+            this.$emit.removed(variant);
+            i = cart.findIndex( element => element.variantId === variant.variantId );
+            cart.splice( i, 1 );
+            sessionStorage.cart = JSON.stringify( cart )
+        },
+
+        devVariant()
+        {
+            if ( variant.ordered > 1 ) {
+                variant.ordered--;
+                variant.total_gof = this.calculateTotalGof( variant );
+                sessionStorage.cart = JSON.stringify( this.cart )
+            }
+        },
+
+        incVariant()
+        {
+            if ( (variant.ordered + variant.total_gof ) < variant.quantity ) {
+                variant.ordered++;
+                variant.total_gof = this.calculateTotalGof( variant );
+                sessionStorage.cart = JSON.stringify( this.cart )
+            }
+        }
+    }
+
+}
+</script>
+
+<style>
+
+</style>

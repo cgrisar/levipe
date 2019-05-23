@@ -1,0 +1,9 @@
+<ul id="millesimes" class="list-reset flex flex-wrap my-6 -ml-6">
+    {{ variants sort="millesime" }}
+        <li id="{{ millesime }}" class="vintage text-center px-4" onclick="show_vintages( this )">
+            <a href="#" class="no-underline hover:no-underline">
+                <div class="text-sm font-bold px-2 bg-grey-lightest rounded-full text-red-darker">{{ millesime }}</div>
+            </a>
+        </li>
+    {{ /variants }}
+</ul>

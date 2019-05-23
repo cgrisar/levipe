@@ -1,0 +1,41 @@
+sections:
+  main:
+    display: Main
+    fields:
+      name:
+        display: Name
+        type: text
+        localizable: true
+      cover_image:
+        container: main
+        folder: img/Grapes/Covers
+        restrict: false
+        type: assets
+        display: 'Cover Image'
+      leave_image:
+        container: main
+        folder: img/Grapes/Leaves
+        restrict: false
+        type: assets
+        display: 'Leave Image'
+      grape_image:
+        container: main
+        folder: img/Grapes/Grapes
+        restrict: false
+        type: assets
+        display: 'Grape Image'
+      description:
+        spellcheck: true
+        allow_source: true
+        autoLink: false
+        target_blank: false
+        link_validation: false
+        force_plain_text: true
+        clean_pasted_html: false
+        restrict_assets: false
+        type: bard
+        localizable: true
+        display: Description
+taxonomies: true
+title: Grapes
+create_title: 'Create Grape'

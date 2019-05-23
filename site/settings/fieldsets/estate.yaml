@@ -1,0 +1,55 @@
+sections:
+  main:
+    display: Main
+    fields:
+      hero:
+        container: main
+        folder: img/Estates/Covers
+        restrict: true
+        type: assets
+        display: Hero
+      description:
+        spellcheck: true
+        allow_source: true
+        autoLink: true
+        target_blank: false
+        link_validation: true
+        force_plain_text: false
+        clean_pasted_html: true
+        restrict_assets: false
+        type: bard
+        localizable: true
+        display: Description
+      owner:
+        type: text
+        display: Owner
+      address:
+        type: text
+        display: Address
+      zip:
+        type: text
+        display: Zip
+      commune:
+        type: text
+        display: Commune
+      country:
+        type: text
+        display: Country
+      phone:
+        type: text
+        display: Phone
+      www:
+        type: text
+        display: WWW
+      e_mail:
+        type: text
+        display: E-mail
+      acrage:
+        type: text
+        display: Acrage
+      production:
+        type: text
+        display: Production
+taxonomies: true
+title: Estate
+create_title: ''

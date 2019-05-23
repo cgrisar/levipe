@@ -1,0 +1,13 @@
+d32e14fb-08c9-44c2-aaf8-21200852bafd:
+  title: Admin
+  permissions:
+    - super
+7f2c29c6-1f4b-46bf-b234-8d9d8800179b:
+  title: Individu
+  slug: individu
+  permissions:
+    - 'pages:view'
+    - 'collections:blog:view'
+    - 'collections:grape:view'
+    - 'collections:wines:view'
+    - 'taxonomies:tags:view'

@@ -1,0 +1,8 @@
+title: Estates
+fieldset: estate
+template: estate
+searchable:
+  - title
+  - owner
+  - commune
+  - description
