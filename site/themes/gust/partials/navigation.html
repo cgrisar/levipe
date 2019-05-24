@@ -16,15 +16,7 @@
         
         <div class="relative justify-end ml-auto">
             <div class="group inline">
-                <a href="{{ locale_url }}cart" class="text-black no-underline inline float-left ml-4">
-                    <div class="w-12 h-12 float-left">
-                        <i class="spk-icon-cart-shopkeeper absolute text-2xl font-hairline mt-1 h-3 w-3"></i>
-                        <lvp-cart-counter></lvp-cart-counter>
-                    </div>
-                    <div class="absolute hidden group-hover:block mr-8 pin-r">
-                        <lvp-minicart></lvp-minicart>
-                    </div>
-                </a>
+                <lvp-minicart locale_url="{{locale_url}}"></lvp-minicart>
             </div>
             <div class="w-12 h-12 float-left mt-1 -mr-4">
                 {{ user }}

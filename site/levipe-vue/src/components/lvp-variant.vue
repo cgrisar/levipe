@@ -132,6 +132,7 @@
 
             decVariant(e) 
             {
+                
                 if (this.ordered > 1) 
                 {
                     this.ordered--;

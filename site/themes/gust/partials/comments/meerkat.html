@@ -12,25 +12,21 @@
 
                     <h5 class="block w-full text-left text-grey-darkest my-6">{{ trans:comments.mycomment }}</h5>
 
-                    <div class="flex flex-col mb-2">
-                        <input class="hidden border border-grey-darkest py-2 px-3 text-grey-darkest appearance-none" type="text" name="name" id="name" value="{{ username }}" placeholder="Name">
+                    <div class="mb-4">
+                        <input class="hidden" type="text" name="name" id="name" value="{{ username }}" placeholder="Name">
+                        <input class="hidden" type="email" name="email" id="email" value="{{ email }}" placeholder="E-mail">
+                        <textarea class="bg-grey-lighter rounded focus:border-grey-darker w-full h-24 py-2 px-3 text-grey-darkest appearance-none" id="comment" name="comment" rows="3" placeholder="{{ trans:comments.comment }}">{{ old:comment }}</textarea>
                     </div>
 
-                    <div class="flex flex-col mb-2">
-                        <input class="hidden border border-grey-darkest py-2 px-3 text-grey-darkest appearance-none" type="email" name="email" id="email" value="{{ email }}" placeholder="E-mail">
-                    </div>
+                    <div class="flex flex-col w-full md:flex-row mb-4">
+                        <div class="md:w-1/2 float-left">
+                            <star-rating :show-rating="false" :star-size="20" v-model="rating"></star-rating>
+                            <input class="hidden" id="rating" name="rating" type="number" v-model="rating" />
+                        </div>
 
-                    <div class="flex flex-col mb-4">
-                        <textarea class="bg-grey-lighter rounded focus:border-grey-darker py-2 px-3 text-grey-darkest appearance-none" id="comment" name="comment" rows="3" placeholder="{{ trans:comments.comment }}">{{ old:comment }}</textarea>
-                    </div>
-
-                    <div class="flex flex-col md:w-1/2 float-left">
-                        <star-rating :show-rating="false" :star-size="20" v-model="rating"></star-rating>
-                        <input class="hidden" id="rating" name="rating" type="number" v-model="rating" />
-                    </div>
-
-                    <div class="flex flex-col md:w-1/2 mb-4 float-right">
-                        <input class="block bg-red-darker hover:bg-green-dark text-white uppercase text-sm py-1 px-2 float-right" type="submit" value="Submit">
+                        <div class="md:w-1/2 float-right">
+                            <input class="block bg-red-darker hover:bg-green-dark text-white uppercase text-sm py-1 px-2 float-right" type="submit" value="Submit">
+                        </div>
                     </div>
 
                 {{ /meerkat:create }}
@@ -51,7 +47,7 @@
 
             <div>
                 <div class="w-1/2 float-left overflow-hidden whitespace-no-wrap -mb-2" style="text-overflow: ellipsis">
-                    <span class="font-bold text-base">{{ name }}</span>
+                    <span class="font-semibold text-sm">{{ name }}</span>
                 </div>
                 <div class="w-1/2 float-right">
                     <star-rating :show-rating="false" :star-size="15" :rating="{{ rating }}" class="float-right"></star-rating>

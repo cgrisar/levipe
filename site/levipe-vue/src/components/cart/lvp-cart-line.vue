@@ -1,7 +1,7 @@
 <template>
     <div :id="variant.variantId" class="container flex flex-row">
         <div class="inline w-12">
-            <button @click="removeVariant( variant )">
+            <button @click="removeVariant(variant)">
                 <i class="far fa-2x fa-times-circle" data-fa-transform="shrink-4"></i>
             </button>
         </div>
@@ -16,11 +16,11 @@
         <div class="w-1/8 font-bold text-right ml-2">{{ variant.price }} &euro;</div>
         
         <div class="w-1/6 text-right align-top ml-2">
-            <button @click="decVariant( variant )">
+            <button @click="decVariant(variant)">
                 <i class="fas fa-2x text-red-darker fa-minus-circle fa-inverse pb-2" data-f-transform="shrink-8"></i>
             </button>
             <input type="number" min="1" class="w-8 text-right pr-1 text-grey-darker bg-grey-lighter rounded-sm align-top" v-model="variant.ordered" />
-            <button @click="incVariant( variant )">
+            <button @click="incVariant(variant)">
                 <i class="fas fa-2x text-green-darker fa-plus-circle fa-inverse pb-2 ml-1" data-f-transform="shrink-8"></i>
             </button>
         </div>
@@ -36,34 +36,37 @@ export default {
 
     methods:
     {
-        removeVariant()
+        removeVariant(variant)
         {
             this.$emit('removed', variant);
         },
 
-        devVariant()
+        decVariant(variant)
         {
-            if ( variant.ordered > 1 ) {
+            if (variant.ordered > 1) {
                 variant.ordered--;
-                variant.total_gof = this.calculateTotalGof( variant );
-                sessionStorage.cart = JSON.stringify( this.cart )
+                variant.total_gof = this.calculateTotalGof(variant);
             }
-            this.$emit('changedQuantity', variant);
+            this.$emit('quantity', variant);
         },
 
-        incVariant()
+        incVariant(variant)
         {
-            if ( (variant.ordered + variant.total_gof ) < variant.quantity ) {
+            if ((variant.ordered + variant.total_gof) < variant.quantity) {
                 variant.ordered++;
-                variant.total_gof = this.calculateTotalGof( variant );
-                sessionStorage.cart = JSON.stringify( this.cart )
+                variant.total_gof = this.calculateTotalGof(variant);
             }
+            this.$emit('quantity', variant);
+        },
+
+        calculateTotalGof(variant) {
+            return (variant.bo > 0) ? Math.floor(variant.ordered / variant.bo) * variant.gof : 0;
+        },
+
+        orderedAmountVariant(variant) {
+            return (variant.ordered * Number(variant.price.replace(',','.'))).toFixed(2).replace('.',',')
         }
     }
 
 }
 </script>
-
-<style>
-
-</style>

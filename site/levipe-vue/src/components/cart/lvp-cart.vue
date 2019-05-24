@@ -8,7 +8,7 @@
                                     v-bind:key="variant.id" 
                                     v-bind:variant="variant"
                                     @removed="removeCartLine"
-                                    @quantityChanged="changeQuantity"
+                                    @quantity="changeQuantity"
                                     class="text-grey-darker mb-1">
                     </lvp-cart-line>
                 </div>
@@ -33,7 +33,6 @@
             <div class="flex container justify-center">
                 <div class="text-white bg-red-darker px-2 py-1 rounded font-normal">
                 The Cart is Empty
-                {{ cart }}
                 </div>
             </div>
         </template>
@@ -49,39 +48,29 @@ export default {
     
     data() {
         return {
-            total: {
-                amount: 0,
-                bottles: 0
-            },
-            cart: ( sessionStorage.cart ) ? JSON.parse( sessionStorage. cart ) : new Array
+            cart: store.cart
         }
     },
 
     methods:{
-        removeCartLine()
-        {
-            alert(this);
-            i = cart.findIndex(element => element.variantId === this.variantId);
-            cart.splice(i, 1);
-            sessionStorage.cart = JSON.stringify(cart)
+        removeCartLine(variant) {
+            var i = this.cart.findIndex(element => element.variantId === variant.variantId);
+            this.cart.splice(i, 1);
         },
 
-        changeQuantity(variant)
-        {
-
-        }
+        changeQuantity(variant) {
+            var i = this.cart.findIndex(element => element.variantId === variant.variantId);
+            this.cart[i] = variant;
+        },
     },
 
-
     watch: {
-        cart: function() 
-        {
-            sessionStorage.cart = JSON.stringify( this.cart )
+        cart: {
+            handler: function() {
+                sessionStorage.cart = JSON.stringify(this.cart)
+            },
+            deep: true
         }
     }
 }
 </script>
-
-<style>
-
-</style>
