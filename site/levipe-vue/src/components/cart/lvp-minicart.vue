@@ -1,8 +1,8 @@
 <template>
     <template v-if="cart.length > 0">
-        <a v-bind:href="locale_url+'cart'" class="text-black no-underline inline float-left ml-4">
+        <a v-bind:href="locale_url+'cart'" class="text-black no-underline inline float-left ml-4 -mt-1">
             <div class="w-12 h-12 float-left">
-                <i class="spk-icon-cart-shopkeeper absolute text-2xl font-hairline mt-1 h-3 w-3"></i>
+                <i class="spk-icon-cart-shopkeeper absolute text-2xl font-hairline h-4 w-3 mt-1"></i>
                 <lvp-cart-counter :cart="cart"></lvp-cart-counter>
             </div>
             <div class="absolute hidden group-hover:block mr-8 pin-r">

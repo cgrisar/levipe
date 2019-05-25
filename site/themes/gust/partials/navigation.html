@@ -15,10 +15,11 @@
         <div class="h-48"></div>
         
         <div class="relative justify-end ml-auto">
+            <autocomplete-search locale="{{locale}}" attribute="title" placeholder="Zoek" class="float-left"></autocomplete-search>
             <div class="group inline">
                 <lvp-minicart locale_url="{{locale_url}}"></lvp-minicart>
             </div>
-            <div class="w-12 h-12 float-left mt-1 -mr-4">
+            <div class="w-12 h-12 float-left">
                 {{ user }}
                     <a href="{{ locale_url }}{{ if no_results }}register{{ else }}hello{{ /if }}" class="text-black no-underline inline float-left ml-4">
                         <i class="spk-icon-user-account text-2xl"></i>

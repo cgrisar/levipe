@@ -4,3 +4,4 @@ fieldset: grape
 template: grape
 searchable:
   - title
+  - description

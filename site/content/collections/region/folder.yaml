@@ -1,3 +1,6 @@
 title: Region
 fieldset: region
 template: region
+searchable:
+  - title
+  - description

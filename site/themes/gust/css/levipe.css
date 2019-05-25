@@ -2,6 +2,10 @@ h5 {
     margin-bottom: 1rem;
 }
 
+*:focus {
+    outline: none;
+}
+
 input[type="number"]::-webkit-outer-spin-button, 
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
