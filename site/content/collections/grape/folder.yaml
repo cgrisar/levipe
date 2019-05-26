@@ -5,3 +5,4 @@ template: grape
 searchable:
   - title
   - description
+  - slug

@@ -4,3 +4,4 @@ template: region
 searchable:
   - title
   - description
+  - slug

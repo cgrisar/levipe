@@ -21,12 +21,16 @@
     </div>
 </div>
 
-<script>
-    function showCaption( el ) {
-        el.nextElementSibling.childNodes[1].className = el.nextElementSibling.childNodes[1].className.slice(0, -7);
-    }
+{{ section:page_scripts }}
 
-    function hideCaption( el ) {
-        el.nextElementSibling.childNodes[1].className += " hidden"
-    }
-</script>
+    <script>
+        function showCaption( el ) {
+            el.nextElementSibling.childNodes[1].className = el.nextElementSibling.childNodes[1].className.slice(0, -7);
+        }
+
+        function hideCaption( el ) {
+            el.nextElementSibling.childNodes[1].className += " hidden"
+        }
+    </script>
+
+{{ /section:page_scripts }}

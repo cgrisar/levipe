@@ -3,6 +3,7 @@ fieldset: estate
 template: estate
 searchable:
   - title
+  - slug
   - owner
   - commune
   - description

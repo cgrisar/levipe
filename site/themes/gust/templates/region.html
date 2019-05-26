@@ -1,89 +1,82 @@
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
 <section>
-  {{ assets:cover_image }}
-  <div class="flex justify-center">
-    <div class="flex container">
-      <div style="background-image:url({{ url }}); height: 600px; background-position: 50% 0px;" class="w-full bg-cover mb-8 relative">
-        <div class="bg-black opacity-25 absolute w-full h-full"></div>
-          <div style="padding-top:370px;">
-              <h1 class="text-3xl lg:text-5xl font-bold text-white relative text-center">{{ name }}</h1>
-          </div>
+
+    <div class="flex container mx-auto flex-col">
+      {{ assets:cover_image }}
+        <div style="background-image:url({{ url }}); height: 600px; background-position: 50% 0px;" class="w-full bg-cover mb-8 relative mb-4">
+      {{ /assets:cover_image }}
+            <div class="bg-black opacity-25 absolute w-full h-full"></div>
+            <div style="padding-top:370px;">
+                <h1 class="text-3xl lg:text-5xl font-bold text-white relative text-center z-20">{{ title }}</h1>
+            </div>
         </div>
-      </div>
+
+    
+        <div class="flex container mx-auto flex-col md:flex-row">
+
+            <div class="ml-0 sm:w-1/2 md:w-1/3 lg:w-1/4">
+
+                <div class="md:text-right md:border-r md:border-red-darker md:px-6 mb-8">
+
+                  {{ trans:region.intro area='{ area }' estates='{ estates }' production='{ production}' yield='{ yield }' climate='{ climate }' }}
+
+                </div>
+
+                <div class="main-carousel mb-4" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
+                    {{ collection:wines taxonomy:r="{{ page:title | slugify }}" }}
+                        {{ assets:label_image }}
+                          <div class="carousel-cell">
+                              <a href="{{ site_url }}/shop/{{ slug }}">
+                                <img src="{{ url }}">
+                              </a>
+                          </div>
+                        {{ /assets:label_image }}
+                    {{ /collection:wines }}
+                </div>
+
+            </div>
+
+            <hr class="border-b border-red-darker md:hidden">
+
+            <div class="sm:w-1/2 md:w-2/3 lg:w-3/4 h-8 ml-6">
+
+              {{ description }}
+                
+                {{ if type == "text" }}
+                    {{ text }}
+                {{ /if }}
+
+                {{ if type == "image" }}
+                    {{ partial:bard/image }}
+                {{ /if }}
+
+              {{ /description }}
+
+            </div>
+        </div>
     </div>
-  </div>
-  {{ /assets:cover_image }}
-
-  <div class="flex justify-center mb-6">
-    
-    <div class="flex container flex-col">
-    
-      <div class="w-full flex flex-col md:flex-row mb-4">
-
-        <div class="flex flex-col ml-0 sm:w-1/2 md:w-1/3 lg:w-1/4">
-
-          <div class="md:text-right md:border-r md:border-red-darker md:px-6 mb-8">
-
-            {{ trans:region.intro area='{ area }' estates='{ estates }' production='{ production}' yield='{ yield }' climate='{ climate }' }}
-
-          </div>
-
-          {{ lefipe filter="r" filterValue="{{ page:title | slugify }}" }}
-
-          <div class="main-carousel mb-4" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
-              {{ collection:wines taxonomy:r="{{ page:title | slugify }}" }}
-                  {{ assets:label_image }}
-                    <div class="carousel-cell">
-                        <a href="{{ site_url }}/shop/{{ slug }}">
-                          <img src="{{ url }}">
-                        </a>
-                    </div>
-                  {{ /assets:label_image }}
-              {{ /collection:wines }}
-          </div>
-
-        </div>
-
-        <hr class="border-b border-red-darker md:hidden">
-
-        <div class="sm:w-1/2 md:w-2/3 lg:w-/4 h-8 ml-6">
-
-          {{ description }}
-            
-            {{ if type == "text" }}
-                {{ text }}
-            {{ /if }}
-
-            {{ if type == "image" }}
-                {{ partial:bard/image }}
-            {{ /if }}
-
-          {{ /description }}
-
-        </div>
-
-      </div>
-  </div>
 
 </section>
 
-<!-- load scripts and css specific to regions -->
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
 <style>
-  .carousel-cell {
-    width: 50%; /* full width */
-    height: auto; /* height of carousel */
-    margin-right: 10px;
+    .carousel-cell {
+      width: 50%; /* full width */
+      height: auto; /* height of carousel */
+      margin-right: 10px;
+    }
+  
+    .flickity-page-dots .dot {
+      height: 4px;
+      width: 40px;
+      margin: 0;
+      border-radius: 0;
   }
+  </style>
 
-  .flickity-page-dots .dot {
-    height: 4px;
-    width: 40px;
-    margin: 0;
-    border-radius: 0;
-}
-</style>
+{{ section:page_scripts }}
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+{{ /section:page_scripts }}
 
