@@ -1,4 +1,5 @@
 level: village
+name: Chinon
 cover_image:
   - /assets/img/Regions/chinon.jpeg
 area: '2300'

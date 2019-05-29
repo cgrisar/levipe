@@ -3,7 +3,7 @@
  * 
  * In order to ensure that BrowserSync works with your site, add your local URL here.
  */
-var localUrl = 'http://levipe.dev';
+var localUrl = 'http://levipe.test';
 
 /**
  * Required Packages
@@ -21,7 +21,6 @@ var gulp = require('gulp'),
     tailwindcss = require('tailwindcss'),
     purgecss = require('@fullhuman/postcss-purgecss');
     browserSync = require('browser-sync').create();
-    elixir = require('laravel-elixir');
 
 
 
@@ -258,11 +257,3 @@ gulp.task('css:preflight', ['css:minify:preflight']);
  * @since 1.1.0
  */
 gulp.task('preflight', ['css:preflight', 'js'])
-
-require('laravel-elixir-vue');
-
-elixir(function(mix) {
-    mix.webpack([
-        './resources/assets/js/main.js'
-    ], './resources/assets/js/scripts.js');
-});

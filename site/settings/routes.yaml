@@ -1,4 +1,5 @@
 routes:
+  /: home
   /blog/tags: blog/taxonomies
   /search: search
   /users: user/index

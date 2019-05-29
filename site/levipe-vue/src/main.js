@@ -9,7 +9,8 @@ import StarRating from 'vue-star-rating'
 import lvpVariant from './components/lvp-variant.vue'
 import lvpCart from './components/cart/lvp-cart.vue'
 import lvpMinicart from './components/cart/lvp-minicart.vue'
-import autocompleteSearch from './components/search/autocomplete-search.vue';
+import autocompleteSearch from './components/search/autocomplete-search.vue'
+import pushbuttonList from './components/search/pushbutton-list.vue'
 
 Vue.use(VModal);
 Vue.use(InstantSearch);
@@ -24,5 +25,5 @@ new Vue({
         }
     },
     
-    components: { swal, lvpVariant, lvpCart, lvpMinicart, StarRating, autocompleteSearch }
+    components: { swal, lvpVariant, lvpCart, lvpMinicart, StarRating, autocompleteSearch, pushbuttonList }
 });
