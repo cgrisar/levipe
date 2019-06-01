@@ -8,4 +8,9 @@ return [
     'confirmpassword' => 'Confirmez le mot de passe',
     'newsletter' => 'Envoyez-moi la newsletter',
     'signup' => 'Souscrire',
+    'zip' => 'CP',
+    'city' => 'Commune',
+    'address' => 'Adresse',
+    'phone' => 'Téléphone',
+    'VAT' => 'No de TVA'
 ];

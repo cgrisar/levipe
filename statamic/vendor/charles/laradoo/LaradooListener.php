@@ -11,5 +11,4 @@ class LaradooListener extends Listener
      *
      * @var array
      */
-    public $events = [];
 }

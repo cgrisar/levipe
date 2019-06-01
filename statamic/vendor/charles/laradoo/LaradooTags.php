@@ -194,7 +194,7 @@ class LaradooTags extends Tags
     }
 
     /**
-     * The {{ laradoo:variants }} tag
+     * The {{ laradoo:variants_of_a_wine }} tag
      *
      * @return string|array
      */
@@ -247,4 +247,18 @@ class LaradooTags extends Tags
         
         }
     }
+
+    /** ------------------------------------------------- */
+
+    /**
+     * The {{ laradoo:create_user }} tag
+     *
+     * @return string|array
+     */
+
+     public function createUser()
+     {
+        $odoo = $this->connectToOdoo();
+        $id = $odoo->create('res.partner',['name' => 'Jonh Odoo']);
+     }
 }

@@ -1,16 +1,16 @@
 <template>
-    <div :id="variantId" class="container flex flex-row">
-        <div class="w-1/5 pt-2 text-right">{{ volume }}</div>
-        <div class="w-1/5 pt-2 font-bold text-right ml-2">{{ price }} &euro;</div>
+    <div :id="variantId" class="container flex flex-row items-center px-2">
+        <div class="w-1/5 text-right">{{ volume }}</div>
+        <div class="w-1/5 font-bold text-right ml-2">{{ price }} &euro;</div>
         
         <template v-if="quantity > 0">
             <div class="w-2/5 justify-center ml-2 flex flex-row" style="min-width:6rem;">
                 <button class="mr-4 lg:mr-0" @click="decVariant( $event )">
-                    <i class="fas fa-2x text-red-darker fa-minus-circle fa-inverse pt-1" data-fa-transform="shrink-6"></i>
+                    <i class="fas fa-2x text-red-darker fa-minus-circle fa-inverse" data-fa-transform="shrink-6"></i>
                 </button>
                 <input type="number" min="1" :max="quantity" class="w-8 text-right pr-1 rounded-sm" v-model="ordered" @focus="getVariantFromCart" />
                 <button class="ml-4 lg:ml-0" @click="incVariant( $event )">
-                    <i class="fas fa-2x text-red-darker fa-plus-circle fa-inverse pt-1" data-fa-transform="shrink-6"></i>
+                    <i class="fas fa-2x text-red-darker fa-plus-circle fa-inverse" data-fa-transform="shrink-6"></i>
                 </button>
             </div>
 
@@ -34,7 +34,7 @@
                 
                 <div class="w-1/2">
                     <button @click="addVariantToCart">
-                        <i class="fas fa-2x text-red-darker fa-cart-plus fa-inverse pt-2 text-right" data-fa-transform="shrink-6"></i>
+                        <i class="fas fa-2x text-red-darker fa-cart-plus fa-inverse text-right" data-fa-transform="shrink-6"></i>
                     </button>
                 </div>
             </div>

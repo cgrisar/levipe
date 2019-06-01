@@ -1,3 +1,8 @@
-driver: mail
+driver: smtp
 from_email: charles@levipe.be
-from_name: 'Charles @ les vins personnalisés'
+from_name: 'charles @ les vins personnalisés'
+host: smtp-auth.register.be
+port: '587'
+encryption: tls
+username: charles@levipe.be
+password: Ver0N!que

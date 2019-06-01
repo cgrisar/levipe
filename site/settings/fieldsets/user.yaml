@@ -9,21 +9,13 @@ sections:
         width: 50
       email:
         type: text
-        display: 'Email address'
+        display: Email
+        validate: required
       name:
         type: text
         display: Name
         validate: required
-      first_name:
-        type: text
-        display: 'First Name'
-        width: 50
-      last_name:
-        type: text
-        display: 'Last Name'
-        width: 50
       newsletter:
-        options: {  }
         type: checkboxes
         display: Newsletter
         default: '1'
@@ -33,7 +25,7 @@ sections:
       zip:
         type: text
         display: ZIP
-      county:
+      city:
         type: text
         display: County
       country:
@@ -42,4 +34,7 @@ sections:
       phone:
         type: text
         display: Phone
+      vat:
+        type: text
+        display: VAT
 taxonomies: true
