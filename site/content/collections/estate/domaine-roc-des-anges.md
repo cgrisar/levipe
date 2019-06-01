@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/roc-des-anges-1.jpg
 owner: 'Stéphane et Marjorie Gallet'
 address: '1 route de Montner'

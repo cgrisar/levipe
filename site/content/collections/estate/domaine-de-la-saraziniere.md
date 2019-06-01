@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/sarazini-c3-a8re.png
 owner: 'Philippe Trébignaud'
 address: 'Le Bourg'

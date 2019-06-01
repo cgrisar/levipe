@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/rijckaert.jpg
 owner: 'Florent Rouve'
 address: 'La Cuette'

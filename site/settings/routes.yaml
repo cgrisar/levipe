@@ -15,16 +15,15 @@ routes:
   /grapeimages:
     template: grapes
 collections:
-  blog: '/blog/{year}/{month}/{day}/{slug}'
   things: '/things/{slug}'
   grape:
     en: '/grape/{slug}'
     fr: '/grape/{slug}'
     nl: '/grape/{slug}'
   wines:
-    en: '/shop/{slug}'
-    fr: '/shop/{slug}'
-    nl: '/shop/{slug}'
+    en: '/wines/{slug}'
+    fr: '/wines/{slug}'
+    nl: '/wines/{slug}'
   estate:
     en: '/estate/{slug}'
     fr: '/estate/{slug}'

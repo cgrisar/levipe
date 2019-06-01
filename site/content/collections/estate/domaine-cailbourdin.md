@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/cailbourdin.jpg
 owner: 'Alain Cailbourdin'
 address: Maltaverne

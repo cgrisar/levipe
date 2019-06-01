@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/colombette.jpeg
 owner: 'Vincent Pugibet'
 address: 'Ancienne route de Bedarieux'

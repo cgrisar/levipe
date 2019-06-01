@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/luc-percher.jpg
 owner: 'Luc Percher'
 address: '12, La Marignonnerie'

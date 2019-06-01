@@ -16,3 +16,10 @@ assets:
     focus: 77-70
   img/Regions/chablis.jpg:
     title: Chablis
+  img/Wines/Cover/chateau-de-come.jpeg:
+    title: 'Château de Côme'
+    alt: 'Château de Côme'
+    focus: 67-67
+  img/Wines/Label/chateau-de-come.jpg:
+    title: 'Château de Côme'
+    alt: 'Château de Côme'

@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/la-mothe-du-barry.jpg
 owner: 'Joël et Sandrine Duffau'
 address: '2, les Arromans'

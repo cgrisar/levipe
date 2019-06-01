@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/adelerouze-1.jpeg
 owner: 'Adèle Rouzé'
 address: '2 ter Chemin des Vignes'

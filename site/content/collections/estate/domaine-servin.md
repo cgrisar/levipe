@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/servin.jpeg
 owner: 'François Servin'
 address: '20, av d''Oberwesel'

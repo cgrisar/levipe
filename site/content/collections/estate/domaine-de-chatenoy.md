@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/domaine-de-chatenoy.jpg
 owner: 'Isabelle et Pierre Clément'
 zip: '18510'

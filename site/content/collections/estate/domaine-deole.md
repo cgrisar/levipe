@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/eole.jpg
 address: 'Chemin des Pilons'
 zip: '13810'

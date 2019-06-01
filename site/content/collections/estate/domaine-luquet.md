@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/luquet.jpg
 owner: 'Patrick et Christine Luquet'
 address: '101 Rue du Bourg'

@@ -2,6 +2,7 @@
 @font-face {
   font-family: 'Shopkeeper-Icon-Font';
   src: url("../fonts/shopkeeper.svg") format("svg") ;
+  src: url("../fonts/shopkeeper.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 

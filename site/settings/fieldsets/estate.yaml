@@ -2,7 +2,7 @@ sections:
   main:
     display: Main
     fields:
-      hero:
+      cover_image:
         container: main
         folder: img/Estates/Covers
         restrict: true
@@ -52,4 +52,3 @@ sections:
         display: Production
 taxonomies: true
 title: Estate
-create_title: ''

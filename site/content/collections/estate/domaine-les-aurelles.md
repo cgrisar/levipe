@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/domaine-les-aurelles-1.jpg
 owner: 'Basile Saint-Germain'
 address: '8 chemin des champs blancs'

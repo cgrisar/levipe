@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/dirler-cade.jpg
 owner: 'Jean et Ludvine Dirler'
 address: '13, rue d''Issenheim'

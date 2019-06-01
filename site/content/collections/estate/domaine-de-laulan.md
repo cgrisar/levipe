@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/laulan-1.jpeg
 owner: 'Régis Geoffroy'
 zip: '47120'

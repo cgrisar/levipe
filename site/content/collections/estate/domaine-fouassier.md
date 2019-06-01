@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/fouassier.jpeg
 owner: 'Benoît et Paul Fouassier'
 address: '180 Avenue de Verdun'

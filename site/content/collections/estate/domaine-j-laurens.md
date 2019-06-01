@@ -1,4 +1,4 @@
-hero:
+cover_image:
   - /assets/img/Estates/Covers/laurens.jpg
 owner: 'Jacques Calvel'
 address: 'La Digne d''Amont'
