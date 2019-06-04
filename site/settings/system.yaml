@@ -2,15 +2,15 @@ locales:
   en:
     full: en_US
     name: English
-    url: 'http://levipe.test/'
+    url: '/'
   fr:
     full: fr_FR
     name: Français
-    url: 'http://levipe.test/fr'
+    url: '/fr'
   nl:
     full: nl_NL
     name: Nederlands
-    url: 'http://levipe.test/nl'
+    url: '/nl'
 timezone: UTC
 date_format: 'F jS, Y'
 default_extension: md
