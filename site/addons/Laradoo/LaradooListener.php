@@ -45,7 +45,7 @@ class LaradooListener extends Listener
              */
             $odooUser = $odoo->where('id', '=', $ids->first())
                             ->limit(1)
-                            ->fields('street', 'zip', 'city', 'vat')
+                            ->fields('street', 'zip', 'city', 'vat', 'lang', 'category_id')
                             ->get('res.partner')
                             ->first();
 
@@ -67,7 +67,9 @@ class LaradooListener extends Listener
                                                 'vat' => $user->get('vat'),
                                                 'property_account_position_id' => 1,
                                                 'email' => $user->get('email'),
-                                                'propery_product_pricelist' => 1
+                                                'propery_product_pricelist' => 1,
+                                                'category_id' => array('42'),
+                                                'lang' => app()->getLocale() . '_' . strtoupper(app()->getLocale())
                                                 ] 
                                             )
                     );

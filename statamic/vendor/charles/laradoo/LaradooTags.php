@@ -7,9 +7,6 @@ use Statamic\API\Entry;
 use Statamic\Data\Entries\EntryCollection;
 use Edujugon\Laradoo\Odoo;
 
-class variants {
-
-}
 
 class LaradooTags extends Tags
 {
@@ -247,18 +244,4 @@ class LaradooTags extends Tags
         
         }
     }
-
-    /** ------------------------------------------------- */
-
-    /**
-     * The {{ laradoo:create_user }} tag
-     *
-     * @return string|array
-     */
-
-     public function createUser()
-     {
-        $odoo = $this->connectToOdoo();
-        $id = $odoo->create('res.partner',['name' => 'Jonh Odoo']);
-     }
 }

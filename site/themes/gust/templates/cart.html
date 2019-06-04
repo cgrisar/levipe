@@ -13,10 +13,12 @@
         </div>
     </div>
     
-    <lvp-cart></lvp-cart>
+    <div class="flex container mx-auto">
+        <div class="px-1 w-full md:w-1/2 md:pl-0 md:pr-2 md:border-r md:border-red-darker">
+            <lvp-cart></lvp-cart>
+        </div>
+        <div class="px-1 w-full md:w-1/2 md:pl-2">
+        </div>
+    </div>
 
 </div>
-
-{{ section:page_scripts }}
-    {{ theme:js src="mainvue" tag="true" }}
-{{ /section:page_scripts }}

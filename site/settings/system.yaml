@@ -47,10 +47,8 @@ redactor:
       buttons:
         - bold
         - italic
+csrf_exclude:
+  - '/!/Fetch/*'
 yaml_parser: symfony
 send_powered_by_header: true
 ensure_unique_ids: true
-license_key: ''
-csrf_exclude:
-  - '/!/Fetch/*'
-php_max_memory_limit: null
