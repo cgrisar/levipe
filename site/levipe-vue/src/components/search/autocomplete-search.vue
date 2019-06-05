@@ -143,11 +143,6 @@
                 var matchAvailable = function(snippet) {
                   return snippet.matchLevel === 'full'
                 };
-
-                if (index === 'primary' && !snippets.some(matchAvailable)) {
-                  console.log('no match');
-                  return
-                };
                 
                 if (index === 'primary') {
                     var snippetString = snippets.map(function(snippet){
@@ -166,7 +161,7 @@
             },
 
             url(slug, index) {
-              return 'https://levipe.test/' + this.locale + "/" + ((index === 'primary') ? 'shop' : index) + "/" + slug;
+              return '/' + this.locale + "/" + ((index === 'primary') ? 'wines' : index) + "/" + slug;
             }
         }
     }
