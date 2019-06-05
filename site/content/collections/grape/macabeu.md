@@ -1,0 +1,5 @@
+name: Macabeu
+cover_image:
+  - /assets/img/Grapes/Covers/macabeu.jpg
+title: Macabeu
+id: 105a9234-f0c7-43b0-8b05-27c37af074a6

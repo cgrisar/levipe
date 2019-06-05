@@ -1,0 +1,9 @@
+forms:
+  - registration
+error_message: 'reCAPTCHA failed.'
+hide_badge: true
+disclaimer: 'This site is protected by reCAPTCHA and the Google [Privacy Policy](https://policies.google.com/privacy) and [Terms of Service](https://policies.google.com/terms) apply.'
+site_key: 6LePrKYUAAAAAD7socWALbrqG24J-liRgdfmWvbT
+secret: 6LePrKYUAAAAAHjAMODGWIm8EedUPwC4dv_brin_
+invisible: true
+multi_keys: false

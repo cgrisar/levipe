@@ -1,0 +1,54 @@
+#mondrian::after {
+    font-family: 'source sans pro';
+    content:'les vins personnalisés';
+    flex-grow:999999999;
+    padding-top: 100px;
+    @apply text-red-darker text-xl bg-white text-right align-bottom;
+}
+
+.mondrian { 
+-webkit-transition: transform .5s ease-in-out;
+   -moz-transition: transform .5s ease-in-out;
+    -ms-transition: transform .5s ease-in-out;
+     -o-transition: transform .5s ease-in-out;
+        transition: transform .5s ease-in-out; 
+}
+.mondrian:hover { transform: scale(1.5); z-index: 20;}
+
+.mondrian.opacity-0, .mondrian.opacity-100 > img {
+-webkit-transition: opacity 0.7s linear;
+   -moz-transition: opacity 0.7s linear;
+    -ms-transition: opacity 0.7s linear;
+     -o-transition: opacity 0.7s linear;
+        transition: opacity 0.7s linear;
+}
+
+.opacity-0 {
+    animation-duration: .5s;
+    animation-name: fadeOut;
+}
+
+@keyframes fadeOut{
+  from {
+	opacity: 1;
+  }
+
+  to {
+	opacity: 0;
+  }
+}
+
+.opacity-100 {
+    animation-duration: 2s;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn{
+  from {
+	opacity: 0;
+  }
+
+  to {
+	opacity: 1;
+  }
+}

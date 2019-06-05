@@ -1,0 +1,8 @@
+
+input[type=checkbox] + label div {
+    @apply .shadow-md
+  }
+
+input[type=checkbox]:checked + label div {
+    @apply .shadow-lg
+}
