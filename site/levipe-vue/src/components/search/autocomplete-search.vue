@@ -143,6 +143,11 @@
                 var matchAvailable = function(snippet) {
                   return snippet.matchLevel === 'full'
                 };
+
+                if (index === 'primary' && !snippets.some(matchAvailable)) {
+                  console.log('no match');
+                  return
+                };
                 
                 if (index === 'primary') {
                     var snippetString = snippets.map(function(snippet){
