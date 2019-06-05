@@ -2,15 +2,15 @@ locales:
   en:
     full: en_US
     name: English
-    url: 'http://178.62.220.251/'
+    url: '/'
   fr:
     full: fr_FR
     name: Français
-    url: 'http://178.62.220.251/fr'
+    url: '/fr'
   nl:
     full: nl_NL
     name: Nederlands
-    url: 'http://178.62.220.251/nl'
+    url: '/nl'
 timezone: UTC
 date_format: 'F jS, Y'
 default_extension: md
