@@ -127,11 +127,11 @@ class Ripcord_Client
 	{
 		if ( !isset($rootClient) ) {
 			$rootClient = $this;
-			if ( !function_exists( 'xmlrpc_encode_request' ) )
-			{
-				throw new Ripcord_ConfigurationException('PHP XMLRPC library is not installed', 
-					ripcord::xmlrpcNotInstalled);
-			}
+			// if ( !function_exists( 'xmlrpc_encode_request' ) )
+			// {
+			// 	throw new Ripcord_ConfigurationException('PHP XMLRPC library is not installed', 
+			// 		ripcord::xmlrpcNotInstalled);
+			// }
 			$version = explode('.', phpversion() );
 			if ( (0 + $version[0]) == 5) {
 				if ( ( 0 + $version[1]) < 2 ) { 
