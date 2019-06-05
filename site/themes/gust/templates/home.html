@@ -4,16 +4,16 @@
 
     <div class="flex justify-start flex-row"></div>
         {{ collection from="wines" sort="random" limit="1" }}
-            <pushbutton collection="wine" file="{{asset:cover_image}}{{ glide:url height='120' quality='100' fit='crop_focal' }}{{/asset:cover_image}}"></pushbutton>
+            <pushbutton collection="wines" file="{{asset:cover_image}}{{ glide:url height='120' quality='100' fit='crop_focal' }}{{/asset:cover_image}}" locale="{{locale}}"></pushbutton>
         {{ /collection }}
         {{ collection from="estate" sort="random" limit="1" }}
-            <pushbutton collection="estate" file="{{asset:cover_image}}{{ glide:url height='120' quality='100' fit='crop_focal' }}{{/asset:cover_image}}"></pushbutton>
+            <pushbutton collection="estate" file="{{asset:cover_image}}{{ glide:url height='120' quality='100' fit='crop_focal' }}{{/asset:cover_image}}" locale="{{locale}}"></pushbutton>
         {{ /collection }}
         {{ collection from="grape" sort="random" limit="1" }}
-            <pushbutton collection="grape" file="{{asset:cover_image}}{{ glide:url height='120' quality='100' fit='crop_focal' }}{{/asset:cover_image}}"></pushbutton>
+            <pushbutton collection="grape" file="{{asset:cover_image}}{{ glide:url height='120' quality='100' fit='crop_focal' }}{{/asset:cover_image}}" locale="{{locale}}"></pushbutton>
         {{ /collection }}
         {{ collection from="region" sort="random" limit="1" }}
-            <pushbutton collection="region" file="{{asset:cover_image}}{{ glide:url height='120' quality='100' fit='crop_focal' }}{{/asset:cover_image}}"></pushbutton>
+            <pushbutton collection="region" file="{{asset:cover_image}}{{ glide:url height='120' quality='100' fit='crop_focal' }}{{/asset:cover_image}}" locale="{{locale}}"></pushbutton>
         {{ /collection }}
     </div>
 

@@ -21,7 +21,7 @@
             </div>
             <div class="w-12 h-12 float-left">
                 {{ user }}
-                    <a href="{{ locale_url }}{{ if no_results }}register{{ else }}hello{{ /if }}" class="text-black no-underline inline float-left ml-4">
+                    <a href="{{ if no_results }}register{{ else }}hello{{ /if }}" class="text-black no-underline inline float-left ml-4">
                         <i class="spk-icon-user-account text-2xl"></i>
                     </a>
                 {{ /user }}
