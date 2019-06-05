@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'signup' => 'Gebruikersinformatie',
+    'account' => 'Gebruikersinformatie',
     'name' => 'Naam',
     'email' => 'E-mail',
     'password' => 'Wachtwoord',
@@ -12,5 +12,7 @@ return [
     'city' => 'Gemeente',
     'address' => 'Adres',
     'phone' => 'Telefoon',
-    'VAT' => 'BTW-nummer'
+    'VAT' => 'BTW-nummer',
+    'obligatoires' => 'Verplichte gegevens',
+    'non_obligatoires' => 'Gegevens die niet verplicht zijn'
 ];

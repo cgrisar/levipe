@@ -12,5 +12,7 @@ return [
     'city' => 'Commune',
     'address' => 'Adresse',
     'phone' => 'Téléphone',
-    'VAT' => 'No de TVA'
+    'VAT' => 'No de TVA',
+    'obligatoires' => 'Données obligatoires',
+    'non_obligatoires' => 'Données non obligatoires'
 ];
