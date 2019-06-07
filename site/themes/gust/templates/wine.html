@@ -13,41 +13,38 @@
       </div>
       
       <div class="w-3/5">
-        <div class="w-1/2 mx-6">
-              <div>
-                  <div class="flex justify-between mb-1">
-                      <div class="">
-                          <h1 class="text-xl font-bold text-black roboto">{{ title }}</h1>
-                      </div>
-                      <div class="flex">
-                          <span class="rounded-full h-4 w-4 flex items-center justify-center bg-{{ color }}-darker ml-2"></span>
-                          <span class="rounded-full h-4 w-4 flex items-center justify-center bg-{{ color }}-darker ml-2"></span>
-                      </div>
-                  </div>
-                  <div class="font-light">
-                      {{ relate:appellations sort="level" }}
-                        <a href="{{ url }}" class="text-red-darker no-underline hover:underline"> {{ title }}</a>
-                        {{ unless last }}
-                          &nbsp;-&nbsp;
-                        {{ /unless }}
-                      {{ /relate:appellations }}
-                  </div>
-                  <div class="font-light -mt-1">
-                      {{ relate:cepages }}
-                      <a href="{{ url }}" class="text-red-darker no-underline hover:underline"> {{ title }}</a>
-                      {{ unless last }}
-                        &nbsp;-&nbsp;
-                      {{ /unless}}
-                    {{ /relate:cepages }}
-                  </div>
-              </div>
+        <div class="w-1/2 mx-4">
+            <div class="flex justify-between mb-1">
+                <div class="">
+                    <h1 class="text-xl font-bold text-black roboto">{{ title }}</h1>
+                </div>
+                <div class="flex">
+                    <span class="rounded-full h-4 w-4 flex items-center justify-center ml-2 {{ if color == 'red' }} bg-red-darker{{ /if }}
+                                                                                            {{ if color == 'white' }} bg-yellow-dark{{ /if }}
+                                                                                            {{ if color == 'pink' }} bg-pink-lighter{{ /if }}"></span>
+                </div>
+            </div>
+            <div class="font-light">
+                {{ relate:appellations sort="level" }}
+                  <a href="{{ url }}" class="text-red-darker no-underline hover:underline"> {{ title }}</a>
+                  {{ unless last }}
+                    &nbsp;-&nbsp;
+                  {{ /unless }}
+                {{ /relate:appellations }}
+            </div>
+            <div class="font-light -mt-1">
+                {{ relate:cepages }}
+                <a href="{{ url }}" class="text-red-darker no-underline hover:underline"> {{ title }}</a>
+                {{ unless last }}
+                  &nbsp;-&nbsp;
+                {{ /unless}}
+              {{ /relate:cepages }}
+            </div>
         </div>
-      
-    
 
-        <div class="container mx-auto flex flex-col lg:flex-row">
+        <div class="mx-4 flex flex-col lg:flex-row">
     
-          <div class="w-full lg:w-1/2 lg:mx-6" id="vintage_descriptions">
+          <div class="w-full lg:w-1/2" id="vintage_descriptions">
 
             {{ partial:wine/vintages_list }}
 

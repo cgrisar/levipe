@@ -53,6 +53,7 @@ return array(
     'League\\Csv\\' => array($vendorDir . '/league/csv/src'),
     'Laravel\\Socialite\\' => array($vendorDir . '/laravel/socialite/src'),
     'JmesPath\\' => array($vendorDir . '/mtdowling/jmespath.php/src'),
+    'JRC9DS\\Analytics\\' => array($vendorDir . '/jrc9designstudio/statamic-laravel-analytics/src'),
     'Intervention\\Image\\' => array($vendorDir . '/intervention/image/src/Intervention/Image'),
     'Illuminate\\' => array($vendorDir . '/laravel/framework/src/Illuminate'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),

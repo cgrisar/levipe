@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51de0562e35312c3e2973a433608cb9a",
+    "content-hash": "1844a14459756cec08813c56570f4b02",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -198,6 +198,20 @@
                 "webprofiler"
             ],
             "time": "2017-06-01T17:46:08+00:00"
+        },
+        {
+            "name": "charles-grisar/lefipe",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../site/addons/Lefipe",
+                "reference": "e486a6ec5e0ec5a94d1cf4f6a7cb10073b375a5e",
+                "shasum": null
+            },
+            "type": "library",
+            "transport-options": {
+                "symlink": false
+            }
         },
         {
             "name": "charles/laradoo",
@@ -528,6 +542,49 @@
                 "composer"
             ],
             "time": "2016-12-23T18:15:30+00:00"
+        },
+        {
+            "name": "google/apiclient",
+            "version": "v1.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/googleapis/google-api-php-client.git",
+                "reference": "85309a3520bb5f53368d43e35fd24f43c9556323"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/85309a3520bb5f53368d43e35fd24f43c9556323",
+                "reference": "85309a3520bb5f53368d43e35fd24f43c9556323",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-v1-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Google/autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Client library for Google APIs",
+            "homepage": "http://developers.google.com/api-client-library/php",
+            "keywords": [
+                "google"
+            ],
+            "time": "2016-06-06T21:22:48+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -916,6 +973,87 @@
                 "tokenizer"
             ],
             "time": "2016-12-07T09:37:55+00:00"
+        },
+        {
+            "name": "jrc9designstudio/statamic-google-analytics-v2",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../site/addons/GoogleAnalytics",
+                "reference": "3e3ef25facf5c88ad740058cd2dac99baf6b080c",
+                "shasum": null
+            },
+            "require": {
+                "jrc9designstudio/statamic-laravel-analytics": "^1.0.0"
+            },
+            "type": "library",
+            "transport-options": {
+                "symlink": false
+            }
+        },
+        {
+            "name": "jrc9designstudio/statamic-laravel-analytics",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jrc9designstudio/statamic-laravel-analytics.git",
+                "reference": "8243d5ea243571eac914d3da62bffafab32eff82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jrc9designstudio/statamic-laravel-analytics/zipball/8243d5ea243571eac914d3da62bffafab32eff82",
+                "reference": "8243d5ea243571eac914d3da62bffafab32eff82",
+                "shasum": ""
+            },
+            "require": {
+                "google/apiclient": "^1.1",
+                "illuminate/contracts": "~5.1.0|~5.2.0|~5.3.0",
+                "illuminate/support": "~5.1.0|~5.2.0|~5.3.0",
+                "nesbot/carbon": "^1.21",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "orchestra/database": "3.3.x@dev",
+                "orchestra/testbench": "3.3.x@dev",
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JRC9DS\\Analytics\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://murze.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Jonathan Cohlmeyer",
+                    "email": "jcohlmeyer@jrc9.ca",
+                    "homepage": "https://jrc9.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel 5 package to retrieve Google Analytics data.",
+            "homepage": "https://github.com/jrc9designstudio/statamic-laravel-analytics",
+            "keywords": [
+                "analytics",
+                "google",
+                "laravel",
+                "reports",
+                "retrieve",
+                "spatie",
+                "statamic"
+            ],
+            "time": "2018-03-17T21:34:21+00:00"
         },
         {
             "name": "laravel/framework",
@@ -5519,7 +5657,9 @@
         "mustangostang/spyc": 20,
         "michelf/php-smartypants": 20,
         "netcarver/textile": 20,
+        "jrc9designstudio/statamic-google-analytics-v2": 20,
         "charles/laradoo": 20,
+        "charles-grisar/lefipe": 20,
         "stillat/meerkat": 20
     },
     "prefer-stable": true,

@@ -13,6 +13,8 @@ import lvpMinicart from './components/cart/lvp-minicart.vue'
 import autocompleteSearch from './components/search/autocomplete-search.vue'
 import pushbutton from './components/search/pushbutton.vue'
 
+import lightbox from './components/miscellaneous/lightbox.vue'
+
 Vue.use(VModal);
 Vue.use(axios)
 Vue.use(InstantSearch);
@@ -27,5 +29,5 @@ new Vue({
         }
     },
     
-    components: { swal, lvpVariant, lvpCart, lvpMinicart, StarRating, autocompleteSearch, pushbutton }
+    components: { swal, lvpVariant, lvpCart, lvpMinicart, StarRating, autocompleteSearch, pushbutton, lightbox }
 });
