@@ -1,0 +1,15 @@
+social_links:
+  -
+    social_icon: facebook
+    url: 'https://www.facebook.com/levipers/'
+  -
+    social_icon: instagram
+    url: 'https://www.instagram.com/le_vi_pe/'
+twitter_username: '@levipers'
+twitter_card_type: summary_large_image
+title_separator: '|'
+site_name: 'les vins personnalisés'
+company_or_person: company
+company_name: 'les vins personnalisés'
+enable_breadcrumbs: true
+no_index: false

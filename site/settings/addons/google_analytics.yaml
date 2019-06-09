@@ -1,0 +1,11 @@
+tracking_id: UA-43848540-3
+async: true
+beacon: true
+anonymize_ip: true
+display_features: true
+link_id: true
+track_uid: true
+ignore_admins: false
+debug: false
+trace_debugging: false
+disable_sending: false

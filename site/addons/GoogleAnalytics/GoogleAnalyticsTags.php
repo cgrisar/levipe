@@ -21,8 +21,9 @@ class GoogleAnalyticsTags extends Tags {
    * @return string|array
    */
   public function index() {
-    $tracking_id = str_replace(' ', '', $this->getConfig('tracking_id', ''), $value);
-
+    $tracking_id = str_replace(' ', '', $this->getConfig('tracking_id',''), $value);
+    $tracking_id = 'UA-43848540-3';
+    
     if (!empty($tracking_id)) {
       $anonymize_ip = $this->getConfig('anonymize_ip', false);
       $display_features = $this->getConfig('display_features', false);
