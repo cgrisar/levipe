@@ -677,6 +677,10 @@ body {
   color: #545454;
 }
 
+a {
+  color: #621b18;
+}
+
 .textlogo {
   font-family: 'Source Sans Pro';
 }

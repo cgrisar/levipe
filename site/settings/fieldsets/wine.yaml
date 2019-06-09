@@ -27,6 +27,24 @@ sections:
           orange: Orange
         type: select
         display: Color
+        width: 25
+      culture:
+        options:
+          classic: Classic
+          organic: Organic
+          biodynamic: Biodynamic
+        type: select
+        display: Culture
+        width: 25
+      sparkling:
+        type: toggle
+        width: 25
+        display: Sparkling
+        default: 'off'
+      natural_wine:
+        type: toggle
+        display: 'Natural Wine'
+        width: 25
       description:
         spellcheck: true
         allow_source: true
@@ -39,6 +57,12 @@ sections:
         type: bard
         localizable: true
         display: Description
+      estate:
+        collection:
+          - estate
+        type: collection
+        display: Estate
+        mode: tags
       cepages:
         collection:
           - grape
@@ -46,12 +70,6 @@ sections:
         display: Cépages
         mode: tags
         localizable: true
-      estate:
-        collection:
-          - estate
-        type: collection
-        display: Estate
-        mode: tags
       appellations:
         collection:
           - region
@@ -61,16 +79,6 @@ sections:
       odoo:
         type: text
         display: Odoo
-      culture:
-        options:
-          classic: Classic
-          organic: Organic
-          biodynamic: Biodynamic
-        type: select
-        display: Culture
-      natural_wine:
-        type: toggle
-        display: 'Natural Wine'
       variants:
         mode: table
         fields:

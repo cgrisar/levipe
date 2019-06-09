@@ -18,3 +18,7 @@ assets:
   img/Wines/Label/Nobles_Pierres.jpg:
     title: 'Nobles Pierres'
     alt: 'Nobles Pierres'
+  img/Wines/Cover/cdmo-arab.jpg:
+    title: Arabesque
+    alt: Arabasque
+    focus: 23-46

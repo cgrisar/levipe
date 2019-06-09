@@ -6,6 +6,10 @@ body {
     color: #545454
 }
 
+a {
+    @apply text-red-darker;
+}
+
 .textlogo {
     font-family: 'Source Sans Pro'
 }
