@@ -12,3 +12,6 @@ cepages:
   - 0964d0be-6df0-4c54-b8d7-5fe503f2da00
 odoo: ERLG-LEGB
 id: b19fbebc-fb94-4bd8-ad4a-04504a785e51
+g:
+  - pinot-noir
+  - chardonnay

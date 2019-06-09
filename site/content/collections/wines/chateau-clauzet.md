@@ -4,10 +4,11 @@ cover_image:
 label_image:
   - /assets/img/Wines/Label/CLAU-CLAU.png
 color: red
+sparkling: true
+natural_wine: false
 appellations:
   - ff367741-f507-4f20-85f3-60defdc3d611
 odoo: CLAU-CLAU
-natural_wine: false
 variants:
   -
     millesime: '2012'
@@ -22,3 +23,7 @@ variants:
         score: '14'
         maxscore: '20'
 id: 06b59df2-5fe8-4ff0-97c1-2e55214c3ea4
+g:
+  - cabernet-sauvignon
+r:
+  - bordeaux

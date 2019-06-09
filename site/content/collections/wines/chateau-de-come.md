@@ -4,9 +4,12 @@ cover_image:
 label_image:
   - /assets/img/Wines/Label/BVEL-COME.jpg
 color: red
-odoo: BVEL-COME
 culture: organic
+sparkling: true
 natural_wine: false
+odoo: BVEL-COME
 id: 31315d42-4d0a-41cc-81a9-b56e0097ded2
+g:
+  - cabernet-sauvignon
 r:
-  - limoux
+  - bordeaux
