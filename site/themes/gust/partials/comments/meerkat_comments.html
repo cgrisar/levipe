@@ -1,0 +1,30 @@
+{{ meerkat:responses as="comments" }}
+
+    {{ unless no_results }}
+
+        <h5 class="text-left text-black mb-4">{{ trans:comments.comments }}</h5>
+
+        {{ comments }}
+
+            <div class="w-full bg-grey-light rounded-lg mb-1 px-2 py-2">
+
+                <div>
+                    <div class="w-1/2 float-left overflow-hidden whitespace-no-wrap -mb-2" style="text-overflow: ellipsis">
+                        <span class="font-semibold text-sm">{{ name }}</span>
+                    </div>
+                    <div class="w-1/2 float-right">
+                        <star-rating :show-rating="false" :star-size="15" :rating="{{ rating }}" class="float-right"></star-rating>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="inline-block text-xs font-semibold h-0 pt-1">{{ date | relative }}</span>
+                    <span class="font-light text-sm">{{ comment }}</span>
+                </div>
+
+            </div>
+        {{ /comments }}
+
+    {{ /unless }}
+
+{{ /meerkat:responses }}

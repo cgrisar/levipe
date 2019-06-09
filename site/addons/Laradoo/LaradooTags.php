@@ -134,15 +134,18 @@ class LaradooTags extends Tags
         $attributes[20] = 2014;
         $attributes[21] = 2015; 
         $attributes[22] = '75cl';
+        $attributes[24] = 'BiB 10L';
         $attributes[25] ='37,5cl';
         $attributes[27] = 2016;
         $attributes[28] = 2012;
         $attributes[29] = 2010;
         $attributes[30] = "NV";
+        $attributes[32] = 2009;
         $attributes[33] = 2008;
         $attributes[34] = '150cl';
         $attributes[41] = '300cl';
         $attributes[47] = 2017;
+        $attributes[49] = 2018;
 
         $rvariants = [];
 
@@ -158,7 +161,7 @@ class LaradooTags extends Tags
             
             $first_attribute = $attributes[$variant["attribute_value_ids"][0]];
 
-            $vintage["millesime"] = $attributes[$variant["attribute_value_ids"][ is_numeric( $first_attribute ) ? 0 : 1 ]];
+            $vintage["millesime"] = $attributes[$variant["attribute_value_ids"][ is_numeric( $first_attribute ) or ($first_attribute === "NV") ? 0 : 1 ]];
             $vintage_variant["variantId"] = $variant["id"];
             $vintage_variant["quantity"] = $variant["qty_available"];
             $vintage_variant["volume"] = $attributes[$variant["attribute_value_ids"][ is_numeric( $first_attribute ) ? 1 : 0 ]];
@@ -233,8 +236,8 @@ class LaradooTags extends Tags
                     );
 
         // if we have a template
-        if ( count( $template ) ) {
-
+        if ( count( $template ) ) 
+        {
             // then get the variant_ids
             $variant_ids = ( $template[0]["product_variant_ids"] );
 
@@ -245,7 +248,6 @@ class LaradooTags extends Tags
                         ) ;
 
             return $this->transform_variants_array( $products, $prices, $odoowine ) ;
-        
         }
     }
 }

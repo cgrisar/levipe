@@ -1,12 +1,14 @@
 title: 'Le Clos des Messieurs'
 cover_image:
-  - /assets/clos-des-messieurs.jpg
+  - /assets/img/Wines/Cover/CLLA-CMES.jpg
+label_image:
+  - /assets/img/Wines/Label/clla-cmes.jpeg
 color: white
 cepages:
   - c0f6495a-3e99-4b34-980f-fa914df0a2ce
 appellations:
   - f74a2c7c-fad0-4b4c-8688-5c9d4cd3b2dd
-odoo: CLCDM
+odoo: CLLA-CMES
 culture: classic
 natural_wine: false
 variants:

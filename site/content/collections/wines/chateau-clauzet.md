@@ -1,12 +1,12 @@
 title: 'Château Clauzet'
 cover_image:
-  - /assets/clauzet_banner.jpg
+  - /assets/img/Wines/Cover/CLAU-CLAU.jpg
 label_image:
-  - /assets/clauzet.png
+  - /assets/img/Wines/Label/CLAU-CLAU.png
 color: red
 appellations:
   - ff367741-f507-4f20-85f3-60defdc3d611
-odoo: CLAU
+odoo: CLAU-CLAU
 natural_wine: false
 variants:
   -

@@ -2,5 +2,7 @@
 
 return [
     'mycomment' => 'Mon commentaire',
-    'comment' => 'Commentaire'
+    'comment' => 'Commentaire',
+    'comments' => 'Commentaires',
+    'submit' => 'Partager'
 ];

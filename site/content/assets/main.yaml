@@ -11,3 +11,10 @@ assets:
   img/Wines/Label/chateau-de-come.jpg:
     title: 'Château de Côme'
     alt: 'Château de Côme'
+  img/Wines/Cover/nobles-pierres.jpg:
+    title: 'Nobles Pierres'
+    alt: 'Nobles Pierres'
+    focus: 73-49
+  img/Wines/Label/Nobles_Pierres.jpg:
+    title: 'Nobles Pierres'
+    alt: 'Nobles Pierres'

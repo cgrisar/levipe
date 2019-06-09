@@ -1,6 +1,8 @@
 <?php
 
 return [
-    'mycomment' => 'Mijn commentaar',
-    'comment' => 'Commentaar'
+    'mycomment' => 'Mijn Ervaring',
+    'comment' => 'Ervaring',
+    'comments' => 'Ervaringen',
+    'submit' => 'Delen'
 ];

@@ -1,0 +1,32 @@
+<div id="comments">
+
+    {{ form:set is="meerkat" }}
+
+        {{ meerkat:create }}
+
+            <h5 class="text-left text-black mb-6">{{ trans:comments.mycomment }}</h5>
+
+            <div class="mb-4">
+                <input class="hidden" type="text" name="name" id="name" value="{{ username }}" placeholder="Name">
+                <input class="hidden" type="email" name="email" id="email" value="{{ email }}" placeholder="E-mail">
+                <textarea class="bg-grey-light rounded-lg w-full h-24 py-2 px-3 text-black appearance-none" id="comment" name="comment" rows="3" placeholder="{{ trans:comments.comment }}">{{ old:comment }}</textarea>
+            </div>
+
+            <div class="flex flex-col w-full md:flex-row mb-4">
+                <div class="md:w-1/2 float-left">
+                    <star-rating :show-rating="false" :star-size="20" v-model="rating"></star-rating>
+                    <input class="hidden" id="rating" name="rating" type="number" v-model="rating" />
+                </div>
+
+                <div class="md:w-1/2 float-right">
+                    <button class="bg-red-darker rounded-lg hover:bg-green-dark text-white uppercase text-sm py-1 px-2 float-right" type="submit">
+                        {{ trans:comments.submit }}    
+                    </button>
+                </div>
+            </div>
+
+        {{ /meerkat:create }}
+
+    {{ /form:set }}
+
+</div>

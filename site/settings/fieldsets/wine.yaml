@@ -9,13 +9,13 @@ sections:
         validate: required
       cover_image:
         container: main
-        folder: /
+        folder: img/Wines/Cover
         restrict: false
         type: assets
         display: cover_image
       label_image:
         container: main
-        folder: /
+        folder: img/Wines/Label
         restrict: false
         type: assets
         display: label_image

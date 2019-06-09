@@ -1,1 +1,2 @@
+description: '<p>Le Clos des Messieurs n''a pas volé son nom. Les Reuilly blancs qui en proviennent étaient fort convoités par les notables de Bourges. Cette parcelle d''un peu plus d''un hectare présente une géologie qui permet une meilleure maturation des raisins. Le vigneron choisit systématiquement un élevage sur lies de plus ou moins 6 mois, qui amène gras et fraîcheur au vin. Un grand classique de notre gamme!</p>'
 id: 6c1b18a2-11b0-40ce-b878-65d402720d2e

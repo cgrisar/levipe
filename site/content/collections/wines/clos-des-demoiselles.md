@@ -1,8 +1,8 @@
 title: 'Clos des Demoiselles'
 cover_image:
-  - /assets/demoiselles.jpg
+  - /assets/img/Wines/Cover/JLAU-CDEM.jpg
 label_image:
-  - /assets/screenshot-2019-03-06-at-23.50.52.png
+  - /assets/img/Wines/Label/JLAU-CDEM.png
 color: white
 cepages:
   - 0964d0be-6df0-4c54-b8d7-5fe503f2da00
@@ -10,6 +10,7 @@ cepages:
   - 17e91089-b78c-4649-9cfe-3ddc4efa4983
 appellations:
   - 454ab9ad-acb0-4979-8acc-234517832d5c
+odoo: JLAU-CDEM
 culture: classic
 natural_wine: false
 variants:
