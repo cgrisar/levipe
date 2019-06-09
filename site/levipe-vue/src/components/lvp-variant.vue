@@ -41,7 +41,7 @@
         </template>
 
         <template v-else>
-            <div class="w-3/5 text-center ml-2" style="min-width:6rem;">
+            <div class="w-3/5 text-center ml-2 text-right" style="min-width:6rem;">
                 <span class="bg-red-darker rounded-full text-white font-semibold uppercase text-xs px-2" style="padding-top:.125rem; padding-bottom:.125rem;">Out of stock</span>
             </div>
         </template>

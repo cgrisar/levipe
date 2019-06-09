@@ -56,10 +56,10 @@
 
                     {{ laradoo:variants_of_a_wine odoowine="{ odoo }" customer="{ email }" }}
 
-                      <div id="vintageprices">
+                      <div id="vintageprices-{{ millesime }}" class="rounded-lg bg-grey-light">
 
                         {{ vintages }}
-                          <div id="volumes-{{ millesime }}" class="px-1 py-2 lg:p-2 rounded-lg bg-grey-light hidden justify-between">
+                          <div class="px-1 py-2 lg:p-2">
                             {{ variants }}
                               <lvp-variant wine='{{ title }}'
                                           variant-id="{{ variantId }}" 
@@ -110,8 +110,8 @@
           document.getElementById( vintages[i].id ).getElementsByTagName( "div" )[0].className = document.getElementById( vintages[i].id ).getElementsByTagName( "div" )[0].className.replace(/text-white/g,'text-red-darker');
           
           document.getElementById( "description-" + vintages[i].id ).classList.add('hidden');
-          if ( document.getElementById( "volumes-" + vintages[i].id ) ) {
-            document.getElementById( "volumes-" + vintages[i].id ).classList.add('hidden');
+          if ( document.getElementById( "vintageprices-" + vintages[i].id ) ) {
+            document.getElementById( "vintageprices-" + vintages[i].id ).classList.add('hidden');
           };
         };
     
@@ -120,8 +120,8 @@
         element.getElementsByTagName( "div" )[0].className = element.getElementsByTagName( "div" )[0].className.replace(/text-red-darker/, 'text-white');
         
         document.getElementById( "description-" + vintage ).classList.remove('hidden');
-        if ( document.getElementById( "volumes-" + vintage ) ) {
-          document.getElementById( "volumes-"+vintage ).classList.remove('hidden');
+        if ( document.getElementById( "vintageprices-" + vintage ) ) {
+          document.getElementById( "vintageprices-"+vintage ).classList.remove('hidden');
         }
       };
     
