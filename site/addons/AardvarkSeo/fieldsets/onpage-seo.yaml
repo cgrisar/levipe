@@ -7,6 +7,7 @@ fields:
     type: aardvark_seo.valid_meta_title
   meta_description:
     type: aardvark_seo.valid_meta_description
+    localizable: true
   meta_preview:
     display: Google search preview
     type: aardvark_seo.meta_preview

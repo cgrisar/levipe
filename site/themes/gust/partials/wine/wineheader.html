@@ -3,20 +3,21 @@
         <h1 class="text-xl font-bold text-black roboto mb-2">{{ title }}</h1>
     </div>
     <div class="flex">
-        <span class="rounded-full h-6 w-6 flex items-center justify-center {{ if color == 'red' }} bg-red-darker{{ /if }}
-                                                                            {{ if color == 'white' }} bg-yellow-dark{{ /if }}
-                                                                            {{ if color == 'pink' }} bg-pink-lighter{{ /if }}"></span>
+        <span class="rounded-full h-6 w-6 flex items-center justify-center {{ if color == 'red' }} bg-red-darker {{ /if }}
+                                                                            {{ if color == 'white' }} bg-yellow-dark {{ /if }}
+                                                                            {{ if color == 'pink' }} bg-pink-lighter opacity-50 {{ /if }}"
+                title="{{ trans:wine.{{color}} }}"></span>
         {{ if sparkling }}
-            <img src="{{ theme:images src='sparkling.png'}}" alt="{{ trans:wine/sparkling }}" class="w-6 h-6 ml-2">
+            <img src="{{ theme:images src='sparkling.png'}}" title="{{ trans:wine.sparkling }}" class="w-6 h-6 ml-2">
         {{ /if }}
         {{ if culture == "organic" }}
-            <img src="{{ theme:images src='organic.png'}}" alt="{{ trans:wine/organic }}" class="w-6 h-6 ml-2">
+            <img src="{{ theme:images src='organic.png'}}" title="{{ trans:wine.organic }}" class="w-6 h-6 ml-2">
         {{ /if }}
         {{ if culture == "biodynamic" }}
-            <img src="{{ theme:images src='biodynamic.png'}}" alt="{{ trans:wine/biodynamic }}" class="w-6 h-6 ml-2">
+            <img src="{{ theme:images src='biodynamic.png'}}" title="{{ trans:wine.biodynamic }}" class="w-6 h-6 ml-2">
         {{ /if }}
         {{ if natural_wine }}
-            <img src="{{ theme:images src='so2.png'}}" alt="{{ trans:wine/nature }}" class="w-6 h-6 ml-2">
+            <img src="{{ theme:images src='so2.png'}}" title="{{ trans:wine.nature }}" class="w-6 h-6 ml-2">
         {{ /if }}
     </div>
 </div>
