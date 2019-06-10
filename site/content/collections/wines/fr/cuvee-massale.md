@@ -9,4 +9,12 @@ variants:
     description: 'La robe est jaune pâle avec des reflets or/verts. Le nez est complexe et minéral avec des arômes de fruits jaunes frais. L''attaque en bouche est fraîche et équilibrée. La bouche est ronde et riche. Une belle longueur et une rondeur en finale donnent à ce vin une superbe typicité.'
     active: true
     millesime: '2017'
+  -
+    millesime: '2008'
+    active: false
+page_no_index: false
+no_follow_links: false
+sitemap_priority: '0.5'
+sitemap_changefreq: daily
+twitter_share_setting: inherit
 id: 7580eec6-8863-4c2f-980e-f5b514e5af5f

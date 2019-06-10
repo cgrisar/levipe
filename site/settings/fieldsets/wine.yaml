@@ -40,7 +40,6 @@ sections:
         type: toggle
         width: 25
         display: Sparkling
-        default: 'off'
       natural_wine:
         type: toggle
         display: 'Natural Wine'

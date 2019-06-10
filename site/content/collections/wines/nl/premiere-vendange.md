@@ -1,0 +1,3 @@
+description: '<p>Première Vendange is een wijn die het plezier en de joie de vivre uitstraalt. Deze natuurwijn ziet en proeft rijker dan een klassieke <a href="/nl/grape/gamay-a-jus-blanc">gamay</a>, zowel in kleur, smaak en complexiteit. Zonder sulfieten krijgen alle gisten de kans om zich uit te drukken en hun stempel te drukken op deze charmeur.</p>'
+meta_description: 'Première Vendange, bedacht door Henry Marionnet voor zijn Domaine de la Charmoise (Loire, Touraine, Sologne) is een natuurwijn gemaakt van gamay. De joie de vivre die deze wijn uitstraalt is kenmerkend voor oorsprong van deze wijn.'
+id: 37d72347-5e0d-485a-9b3c-f268058ff071
