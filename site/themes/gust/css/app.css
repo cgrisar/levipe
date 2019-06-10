@@ -3414,6 +3414,18 @@ input[type=checkbox]:checked + label div {
   height: 6rem;
 }
 
+.h-26 {
+  height: 6.5rem;
+}
+
+.h-28 {
+  height: 7rem;
+}
+
+.h-30 {
+  height: 7.5rem;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -5592,6 +5604,18 @@ input[type=checkbox]:checked + label div {
 
 .w-24 {
   width: 6rem;
+}
+
+.w-26 {
+  width: 6.5rem;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-30 {
+  width: 7.5rem;
 }
 
 .w-32 {
@@ -8302,6 +8326,18 @@ input[type=checkbox]:checked + label div {
     height: 6rem;
   }
 
+  .sm\:h-26 {
+    height: 6.5rem;
+  }
+
+  .sm\:h-28 {
+    height: 7rem;
+  }
+
+  .sm\:h-30 {
+    height: 7.5rem;
+  }
+
   .sm\:h-32 {
     height: 8rem;
   }
@@ -10472,6 +10508,18 @@ input[type=checkbox]:checked + label div {
 
   .sm\:w-24 {
     width: 6rem;
+  }
+
+  .sm\:w-26 {
+    width: 6.5rem;
+  }
+
+  .sm\:w-28 {
+    width: 7rem;
+  }
+
+  .sm\:w-30 {
+    width: 7.5rem;
   }
 
   .sm\:w-32 {
@@ -13183,6 +13231,18 @@ input[type=checkbox]:checked + label div {
     height: 6rem;
   }
 
+  .md\:h-26 {
+    height: 6.5rem;
+  }
+
+  .md\:h-28 {
+    height: 7rem;
+  }
+
+  .md\:h-30 {
+    height: 7.5rem;
+  }
+
   .md\:h-32 {
     height: 8rem;
   }
@@ -15353,6 +15413,18 @@ input[type=checkbox]:checked + label div {
 
   .md\:w-24 {
     width: 6rem;
+  }
+
+  .md\:w-26 {
+    width: 6.5rem;
+  }
+
+  .md\:w-28 {
+    width: 7rem;
+  }
+
+  .md\:w-30 {
+    width: 7.5rem;
   }
 
   .md\:w-32 {
@@ -18064,6 +18136,18 @@ input[type=checkbox]:checked + label div {
     height: 6rem;
   }
 
+  .lg\:h-26 {
+    height: 6.5rem;
+  }
+
+  .lg\:h-28 {
+    height: 7rem;
+  }
+
+  .lg\:h-30 {
+    height: 7.5rem;
+  }
+
   .lg\:h-32 {
     height: 8rem;
   }
@@ -20234,6 +20318,18 @@ input[type=checkbox]:checked + label div {
 
   .lg\:w-24 {
     width: 6rem;
+  }
+
+  .lg\:w-26 {
+    width: 6.5rem;
+  }
+
+  .lg\:w-28 {
+    width: 7rem;
+  }
+
+  .lg\:w-30 {
+    width: 7.5rem;
   }
 
   .lg\:w-32 {
@@ -22945,6 +23041,18 @@ input[type=checkbox]:checked + label div {
     height: 6rem;
   }
 
+  .xl\:h-26 {
+    height: 6.5rem;
+  }
+
+  .xl\:h-28 {
+    height: 7rem;
+  }
+
+  .xl\:h-30 {
+    height: 7.5rem;
+  }
+
   .xl\:h-32 {
     height: 8rem;
   }
@@ -25115,6 +25223,18 @@ input[type=checkbox]:checked + label div {
 
   .xl\:w-24 {
     width: 6rem;
+  }
+
+  .xl\:w-26 {
+    width: 6.5rem;
+  }
+
+  .xl\:w-28 {
+    width: 7rem;
+  }
+
+  .xl\:w-30 {
+    width: 7.5rem;
   }
 
   .xl\:w-32 {
