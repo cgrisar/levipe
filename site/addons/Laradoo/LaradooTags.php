@@ -2,10 +2,11 @@
 
 namespace Statamic\Addons\Laradoo;
 
-use Statamic\Extend\Tags;
 use Statamic\API\Entry;
-use Statamic\Data\Entries\EntryCollection;
+use Statamic\Extend\Tags;
 use Edujugon\Laradoo\Odoo;
+use Statamic\Addons\Helpers\Attributes;
+use Statamic\Data\Entries\EntryCollection;
 
 class variants {
 
@@ -127,44 +128,26 @@ class LaradooTags extends Tags
      * @return array
      */
 
-    private function transform_variants_array ( $variants, $prices, $wine ) {
-
-        $attributes = [];
-        $attributes[19] = 2011;
-        $attributes[20] = 2014;
-        $attributes[21] = 2015; 
-        $attributes[22] = '75cl';
-        $attributes[24] = 'BiB 10L';
-        $attributes[25] ='37,5cl';
-        $attributes[27] = 2016;
-        $attributes[28] = 2012;
-        $attributes[29] = 2010;
-        $attributes[30] = "NV";
-        $attributes[32] = 2009;
-        $attributes[33] = 2008;
-        $attributes[34] = '150cl';
-        $attributes[41] = '300cl';
-        $attributes[47] = 2017;
-        $attributes[49] = 2018;
-
+    private function transform_variants_array ($variants, $prices, $wine) 
+    {
         $rvariants = [];
 
         // we only need the variants that may be sold
-        $variants = array_filter( $variants->toArray(), function( $variant ) {
+        $variants = array_filter($variants->toArray(), function($variant) 
+        {
             return $variant["sale_ok"];
         });
 
-        foreach ( $variants as $variant ) {
-
-            $vintage = [];     // create a helper associative array
+        foreach ($variants as $variant) 
+        {
             $vintage_variant = [];
             
-            $first_attribute = $attributes[$variant["attribute_value_ids"][0]];
+            $first_attribute = Attributes::attribute($variant["attribute_value_ids"][0]);
 
-            $vintage["millesime"] = $attributes[$variant["attribute_value_ids"][ is_numeric( $first_attribute ) or ($first_attribute === "NV") ? 0 : 1 ]];
+            $millesime = Attributes::attribute($variant["attribute_value_ids"][ Attributes::isMillesime($first_attribute) ? 0 : 1 ]);
             $vintage_variant["variantId"] = $variant["id"];
             $vintage_variant["quantity"] = $variant["qty_available"];
-            $vintage_variant["volume"] = $attributes[$variant["attribute_value_ids"][ is_numeric( $first_attribute ) ? 1 : 0 ]];
+            $vintage_variant["volume"] = Attributes::attribute($variant["attribute_value_ids"][ Attributes::isMillesime($first_attribute) ? 1 : 0 ]);
             
             // now we'll find the correct price of the variant
             $variant_price = array_filter( $prices->toArray(), function ( $price ) use ( $variant ) {
@@ -175,10 +158,11 @@ class LaradooTags extends Tags
             $vintage_variant["price"] = number_format( current( $variant_price )["fixed_price"], 2, ',', '.');
 
             // merge existing discount with the vintage_variant
-            $vintage_variant += $this->get_discount( $wine, $vintage["millesime"], $vintage_variant["volume"] );
+            $vintage_variant += $this->get_discount( $wine, $millesime, $vintage_variant["volume"] );
 
-            if( !$el = $this->is_millesime_in_array( $vintage["millesime"], $rvariants ) ) {
-                $rvariants[] = array_merge( $vintage, array( "variants" => $vintage_variant ) );
+            $el = $this->is_millesime_in_array($millesime, $rvariants);
+            if($el === NULL) {
+                $rvariants[] = array_merge(array("millesime" => $millesime), array( "variants" => [$vintage_variant] ) );
             } else {
                 $rvariants[$el]["variants"][] = $vintage_variant;
             }

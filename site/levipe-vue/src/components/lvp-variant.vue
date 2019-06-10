@@ -1,5 +1,5 @@
 <template>
-    <div :id="variantId" class="container flex flex-row items-center px-2">
+    <div :id="variantId" class="container flex flex-row items-center px-2 py-1">
         <div class="w-1/5 text-right">{{ volume }}</div>
         <div class="w-1/5 font-bold text-right ml-2">{{ price }} &euro;</div>
         
