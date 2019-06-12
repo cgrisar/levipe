@@ -15,7 +15,14 @@ appellations:
   - 455bfce1-3e57-496a-accb-6810c97e7540
   - 0efec7ad-16a6-4937-ac2d-94f2a001fedd
 odoo: CDMO-ARAB
+page_no_index: false
+no_follow_links: false
+sitemap_priority: '0.5'
+sitemap_changefreq: daily
+twitter_share_setting: inherit
 id: 396dbdf7-a32b-4c5d-8fef-56b7c19a368c
+e:
+  - domaine-de-montvac
 g:
   - grenache-noir
   - syrah

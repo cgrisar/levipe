@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
-<section>
-
     <div class="flex container mx-auto flex-col">
       {{ assets:cover_image }}
         <div style="background-image:url({{ url }}); height: 600px; background-position: 50% 0px;" class="w-full bg-cover mb-8 relative mb-4">
@@ -20,7 +16,7 @@
                 <div class="mr-0 lg:mr-4 md:mr-6 lg:mr-8">
                     {{ assets:label_image }}
                         <a href="{{site_url}}wines/{{ slug }}">
-                            <img src="{{ url }}" class="h-16 w-16 lg:w-32 lg:h-32 rounded-full bg-cover">
+                            <img src="{{ url }}" class="h-12 w-12 lg:w-24 lg:h-24 rounded-full bg-cover">
                         </a>
                     {{ /assets:label_image }}
                 </div>
@@ -59,8 +55,6 @@
             </div>
         </div>
     </div>
-
-</section>
 
 <style>
     .carousel-cell {

@@ -19,6 +19,8 @@ sitemap_priority: '0.5'
 sitemap_changefreq: daily
 twitter_share_setting: inherit
 id: 7e734ec9-2e78-4f20-bf5e-80bcf931f6cd
+e:
+  - domaine-rijckaert
 g:
   - chardonnay
 r:

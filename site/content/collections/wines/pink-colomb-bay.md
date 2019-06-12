@@ -18,3 +18,9 @@ facebook_image:
   - /assets/img/Wines/Cover/vpco-pico.jpg
 twitter_share_setting: inherit
 id: 04613a92-bd07-4408-bc2e-1d424676f21a
+e:
+  - domaine-la-colombette
+g:
+  - pinot-noir
+r:
+  - languedoc

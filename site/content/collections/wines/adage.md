@@ -14,7 +14,14 @@ cepages:
 appellations:
   - cb952961-7ea8-42fc-a16f-87380159c7ae
 odoo: CDMO-ADAG
+page_no_index: false
+no_follow_links: false
+sitemap_priority: '0.5'
+sitemap_changefreq: daily
+twitter_share_setting: inherit
 id: b7b746af-4b99-4115-ba58-4c2c89b57cfb
+e:
+  - domaine-de-montvac
 g:
   - grenache-noir
   - syrah

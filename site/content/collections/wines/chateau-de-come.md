@@ -5,11 +5,28 @@ label_image:
   - /assets/img/Wines/Label/BVEL-COME.jpg
 color: red
 culture: organic
-sparkling: true
+sparkling: false
 natural_wine: false
+cepages:
+  - 0b20a017-0221-4608-8950-75b1226cb635
+  - 089af729-d837-4619-b84d-d06ff73ab12f
+appellations:
+  - ff367741-f507-4f20-85f3-60defdc3d611
 odoo: BVEL-COME
+variants:
+  -
+    millesime: '2015'
+    active: true
+page_no_index: false
+no_follow_links: false
+sitemap_priority: '0.5'
+sitemap_changefreq: daily
+twitter_share_setting: inherit
 id: 31315d42-4d0a-41cc-81a9-b56e0097ded2
+e:
+  - chateau-de-come
 g:
+  - merlot
   - cabernet-sauvignon
 r:
   - bordeaux

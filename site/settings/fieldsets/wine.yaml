@@ -103,6 +103,10 @@ sections:
         sort: 'name:asc'
         taxonomy: r
         mode: tags
+      e:
+        type: taxonomy
+        display: Estate
+        taxonomy: e
 taxonomies: true
 title: Wine
 create_title: 'Create Wine'

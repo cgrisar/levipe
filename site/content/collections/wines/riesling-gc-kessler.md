@@ -4,11 +4,12 @@ cover_image:
 label_image:
   - /assets/img/Wines/Label/DICA-RKES.jpg
 color: white
+culture: biodynamic
+sparkling: false
+natural_wine: false
 estate:
   - 9389718a-b4ab-405b-9e2f-d9402d5a493c
 odoo: DICA-RKES
-culture: biodynamic
-natural_wine: false
 variants:
   -
     millesime: '2008'
@@ -16,4 +17,15 @@ variants:
   -
     millesime: '2014'
     active: true
+page_no_index: false
+no_follow_links: false
+sitemap_priority: '0.5'
+sitemap_changefreq: daily
+twitter_share_setting: inherit
 id: a8a3faeb-0a5a-4f37-b5d9-029efad2bf76
+e:
+  - domaine-dirler-cade
+g:
+  - riesling
+r:
+  - alsace

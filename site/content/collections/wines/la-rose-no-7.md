@@ -22,3 +22,11 @@ sitemap_priority: '0.5'
 sitemap_changefreq: daily
 twitter_share_setting: inherit
 id: f4b5d5a1-8b65-482f-aa05-f0243e2fdda6
+e:
+  - domaine-j-laurens
+g:
+  - chardonnay
+  - chenin-blanc
+  - pinot-noir
+r:
+  - limoux
