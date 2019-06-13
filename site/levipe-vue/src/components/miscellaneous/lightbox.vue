@@ -1,7 +1,7 @@
 <template>
     <div>
       <a href="#" @click.prevent="show" class="w-full">
-          <figure :style="'background-image:url('+thumbnail+')'" alt="{{ alt }}" class="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-cover rounded-full shadow-md" />
+          <figure :style="'background-image:url('+thumbnail+');background-position: 50% 0px;'" alt="{{ alt }}" class="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-cover rounded-full shadow-md" />
       </a>
       <div class="lightbox fixed pin z-50 flex justify-center items-center bg-black" style="background: rgba(0, 0, 0, 0.75);" v-if="visible" @click="hide">
           <div class="fixed pin-r pin-t text-white cursor-pointer text-4xl p-1 mr-2" @click.stop="hide">&times;</div>
