@@ -19,6 +19,9 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_title: 'Baron de Chanteclerc'
+facebook_image:
+  - /assets/img/Wines/Cover/vpco-bach.jpg
 twitter_share_setting: inherit
 id: 232543e5-a407-4225-ad68-0248d0315d73
 e:
