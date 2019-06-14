@@ -20,3 +20,6 @@ sitemap_priority: '0.5'
 sitemap_changefreq: daily
 twitter_share_setting: inherit
 id: 7b6ecc9c-cd9b-488e-8ad8-56c871ca5c3a
+g:
+  - syrah
+  - grenache-noir
