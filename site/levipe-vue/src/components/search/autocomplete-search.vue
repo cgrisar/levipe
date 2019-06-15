@@ -35,14 +35,13 @@
                             <a 
                               class="font-regular uppercase no-underline mt-3"
                               @click="$modal.hide('search-modal')">
-                                <i class="spk-icon-close text-2xl"></i>
+                                <i class="spk-icon-close text-2xl text-white"></i>
                             </a>
                         </div>
 
                         <div v-if="currentRefinement">
                           <div class="flex">
-                            <div v-for="index in indices" :key="index.label" :class="indexClass(indices.length)">
-                                <div v-show="index.hits.length > 0">
+                            <div v-for="index in indices" :key="index.label" class="pr-4 w-1/4" v-show="index.hits.length > 0">
                                     <h2 class="text-xl font-semibold text-white mb-2">{{ localeLabel(index.label) }}</h2>
                                     
                                     <div v-for="hit in index.hits" :key="hit.objectID" class="mb-2">
@@ -60,7 +59,6 @@
 
                                         <ais-snippet attribute="description" :hit="hit" class="text-xs"/>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -104,10 +102,6 @@
 
             localeIndex(index) {
               return index + this.locale;
-            },
-
-            indexClass(length) {
-              return "pr-4 w-1/" + length.toString();
             },
 
             localeLabel(label) {

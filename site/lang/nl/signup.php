@@ -14,5 +14,5 @@ return [
     'phone' => 'Telefoon',
     'VAT' => 'BTW-nummer',
     'obligatoires' => 'Verplichte gegevens',
-    'non_obligatoires' => 'Gegevens die niet verplicht zijn'
+    'non_obligatoires' => 'Gegevens die niet vereist zijn'
 ];
