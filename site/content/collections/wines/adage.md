@@ -14,10 +14,17 @@ cepages:
 appellations:
   - cb952961-7ea8-42fc-a16f-87380159c7ae
 odoo: CDMO-ADAG
+localized_urls:
+  -
+    locale: fr-fr
+    url: /fr/adage
+  -
+    locale: nl-NL
+    url: /nl/adage
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
-sitemap_changefreq: daily
+sitemap_changefreq: weekly
 twitter_share_setting: inherit
 id: b7b746af-4b99-4115-ba58-4c2c89b57cfb
 e:

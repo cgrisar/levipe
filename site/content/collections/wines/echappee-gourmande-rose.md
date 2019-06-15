@@ -18,6 +18,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Wines/Cover/arjo-egro.jpg
 twitter_share_setting: inherit
 id: 7b6ecc9c-cd9b-488e-8ad8-56c871ca5c3a
 g:
