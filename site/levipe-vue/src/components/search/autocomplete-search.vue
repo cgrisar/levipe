@@ -42,23 +42,23 @@
                         <div v-if="currentRefinement">
                           <div class="flex">
                             <div v-for="index in indices" :key="index.label" class="pr-4 w-1/4" v-show="index.hits.length > 0">
-                                    <h2 class="text-xl font-semibold text-white mb-2">{{ localeLabel(index.label) }}</h2>
-                                    
-                                    <div v-for="hit in index.hits" :key="hit.objectID" class="mb-2">
-                                        <a :href="url(hit.slug, index.label)" class="link">
-                                            <ais-highlight attribute="title" :hit="hit" style="font-weight:500;" /><br/>
-                                        </a>
-                                        <div v-if="index.label == 'primary'" :id="hit.objectID">
-                                            {{ snippetArray(hit._snippetResult.g, hit.objectID, index.label) }}
-                                            {{ snippetArray(hit._snippetResult.r, hit.objectID, index.label) }}
-                                        </div>
-                                      
-                                        <div v-if="index.label == 'region'" :id="hit.objectID">
-                                            {{ snippetArray(hit._snippetResult.description, hit.objectID, index.label) }}
-                                        </div>
-
-                                        <ais-snippet attribute="description" :hit="hit" class="text-xs"/>
+                                <h2 class="text-xl font-semibold text-white mb-2">{{ localeLabel(index.label) }}</h2>
+                                
+                                <div v-for="hit in index.hits" :key="hit.objectID" class="mb-2">
+                                    <a :href="url(hit.slug, index.label)" class="link">
+                                        <ais-highlight attribute="title" :hit="hit" style="font-weight:500;" /><br/>
+                                    </a>
+                                    <div v-if="index.label == 'primary'" :id="hit.objectID">
+                                        {{ snippetArray(hit._snippetResult.g, hit.objectID, index.label) }}
+                                        {{ snippetArray(hit._snippetResult.r, hit.objectID, index.label) }}
                                     </div>
+                                  
+                                    <div v-if="index.label == 'region'" :id="hit.objectID">
+                                        {{ snippetArray(hit._snippetResult.description, hit.objectID, index.label) }}
+                                    </div>
+
+                                    <ais-snippet attribute="description" :hit="hit" class="text-xs"/>
+                                </div>
                             </div>
                         </div>
                     </div>

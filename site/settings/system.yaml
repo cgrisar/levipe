@@ -1,16 +1,17 @@
+license_key: 80ae313f-196b-47ed-acee-3e55a03e07fd
 locales:
   en:
     full: en_US
     name: English
-    url: '/'
+    url: /
   fr:
     full: fr_FR
     name: Français
-    url: '/fr'
+    url: /fr
   nl:
     full: nl_NL
     name: Nederlands
-    url: '/nl'
+    url: /nl
 timezone: UTC
 date_format: 'F jS, Y'
 default_extension: md
