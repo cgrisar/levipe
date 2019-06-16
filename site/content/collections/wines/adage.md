@@ -25,6 +25,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: weekly
+facebook_image:
+  - /assets/img/Wines/Cover/cdmo-adag.jpg
 twitter_share_setting: inherit
 id: b7b746af-4b99-4115-ba58-4c2c89b57cfb
 e:

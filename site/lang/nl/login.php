@@ -1,8 +1,13 @@
 <?php
 
 return [
-    
+    'login' => 'Inloggen',
     'title' => 'Schrijf je in om :title online aan de beste prijs te kopen!',
+    'email' => 'E-mail',
+    'password' => 'Wachtwoord',
+    'connexion' => 'Verbinden',
+    'creer_compte' => 'Inschrijven',
+    'init_password' => 'Paswoord opnieuw instellen',
     'promotion_header' => 'Promoties',
     'promotion_message' => 'Geniet van onze promoties die we het jaar door organiseren!',
     'transport_header' => 'Gratis levering',

@@ -21,9 +21,15 @@
             </div>
             <div class="w-12 h-12 float-left">
                 {{ user }}
-                    <a href="{{ if no_results }}register{{ else }}hello{{ /if }}" class="text-black no-underline inline float-left ml-4">
-                        <i class="spk-icon-user-account text-2xl"></i>
-                    </a>
+                    {{ if !no_results }}
+                        <a href="{{ user:logout_url }}" class="text-black no-underline inline float-left ml-4">
+                            <i class="spk-icon-menu text-2xl"></i>
+                        </a>
+                    {{ else }}
+                        <div class="text-black no-underline inline float-left ml-4">
+                            {{ partial:login/login_modal }}
+                        </div>
+                    {{ /if }}
                 {{ /user }}
             </div>
         </div>
