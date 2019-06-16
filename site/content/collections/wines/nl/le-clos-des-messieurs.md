@@ -7,5 +7,5 @@ variants:
     millesime: '2017'
     active: true
     description: 'Kristallijnen, licht gouden kleur. Heel mooie neus boordevol parfum van rijpe sauvignon blanc: exotisch fruit, florale en uitnodigende vegetale toetsen. Mooie ronding in de aanzet. De smaken zijn loepzuiver. De wijn is elegant, open en bijzonder smaakvol.'
-meta_description: 'De "heren van stand" van Bourges kenden de sauvignon-wijnen van dit perceel in Reuilly (Loire) maar al te gaat. Zo zie je maar hoe de naam van een perceel ontstaat! De sauvignons rijpen hier perfect. Een rijping op fijne gisten geeft boordevol complexiteit en fraîcheur aan deze elegante wijn.'
+meta_description: 'De "heren van stand" van Bourges kenden de sauvignon-wijnen van dit perceel in Reuilly (Loire) maar al te gaat. Zo zie je maar hoe de naam van een perceel ontstaat! De sauvignons rijpen hier perfect. Een lagering op fijne gisten geeft boordevol complexiteit en fraîcheur aan deze elegante wijn.'
 id: 6c1b18a2-11b0-40ce-b878-65d402720d2e

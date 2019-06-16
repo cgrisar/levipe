@@ -4,7 +4,7 @@ cover_image:
 label_image:
   - /assets/img/Wines/Label/clla-cmes-1560708023.jpeg
 color: white
-culture: classic
+culture: organic
 sparkling: false
 natural_wine: false
 cepages:
