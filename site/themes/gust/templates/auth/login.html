@@ -1,0 +1,103 @@
+<div class="flex justify-center">
+    <div class="flex container flex-col">
+        <div class="mb-8">
+            <div style="background-image:url( {{ theme:images src='login-hero.jpg' }} ); height: 600px; background-position: 50% 0px;" class="hidden sm:block w-full bg-cover mb-8 relative">
+                <div class="bg-black opacity-25 absolute mb-8 w-full h-full"></div>
+                <div style="padding-top:300px;">
+                    <h1 class="text-3xl lg:text-5xl font-bold text-white relative text-center">{{ trans:login.login }}</h1>
+                </div>
+            </div>
+            <div class="sm:hidden">
+                <div class="mb-8 mt-8" style="padding-top: 100px;">
+                    <h1 class="text-3xl lg:text-5xl font-bold text-grey-darkest relative text-center">{{ trans:login.login }}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="connexion">
+
+            <div class="flex flex-col mx-auto">
+
+                {{ user:login_form allow_request_redirect='true' }}
+                    <div class="flex items-center lg:w-4/5 lg:mx-auto">
+                        <div class="lg:w-1/2 flex flex-col mx-auto">
+                            <div class="border-red-darker lg:border-r lg:pr-6">
+                                {{ if errors }} {{ errors }}
+                                    {{ if value ~ '/credentials/' }}
+                                        <div id="credentialsError" class="bg-red-lighter rounded-lg text-red-dark fond-medium pl-4 py-2 mx-auto mb-4">{{trans:login.credentials}}</div>
+                                    {{ /if }}
+                                {{ /errors }} {{ /if }}
+                                <div class="flex flex-1 flex-col mb-4">
+                                    <input class="bg-grey-light appearance-none rounded-lg py-2 px-4 text-black focus:outline-none" 
+                                            name="username"
+                                            id="username" 
+                                            type="email"
+                                            placeholder="{{trans:login.email}}"
+                                            onkeydown="hideUsernameError()">
+                                    {{ if errors }} {{ errors }} {{ if value ~ '/username/' }}
+                                        <span id="usernameError" class="text-red-dark text-xs mt-1 pl-4">{{trans:login.username_required}}</span>
+                                    {{ /if }} {{ /errors }} {{ /if }}
+                                </div>
+                                <div class="px-4"></div>
+                                <div class="flex flex-1 flex-col mb-6">
+                                    <input class="bg-grey-light appearance-none rounded-lg py-2 px-4 text-black focus:outline-none" 
+                                            name="password"
+                                            id="password"
+                                            type="password"
+                                            placeholder="{{trans:login.password}}"
+                                            onkeydown="hidePasswordError()">
+                                    {{ if errors }} {{ errors }} {{ if value ~ '/password/' }}
+                                        <span id="passwordError" class="text-red-dark text-xs mt-1 pl-4">{{trans:login.password_required}}</span>
+                                    {{ /if }} {{ /errors }} {{ /if }}
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-medium underline" onclick="toggle_connexions()">{{ trans:login.init_password }}</span>
+                                    <button type="submit">
+                                            <span class="fa-fw fa-layers fa-2x" title="{{trans:login.login}}">
+                                                <i class="fas fa-circle text-green-darker"></i>
+                                                <i class="fas fa-sign-in-alt fa-inverse" data-fa-transform="shrink-6"></i>
+                                            </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-1/2 pl-6 flex justify-center">
+                            <a href="{{ link to='/register' }}" class="no-underline">
+                                <h4 class="text-white bg-green-darker rounded-lg py-2 px-4 uppercase">{{ trans:login.creer_compte }}</h4>
+                            </a>
+                        </div>
+                    </div>
+                {{ /user:login_form }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ section:page_scripts }}
+<script>
+
+    function hideCredentialsError() {
+        if(document.getElementById('credentialsError')) {
+            document.getElementById('credentialsError').classList.add('hidden')
+        }
+    }
+
+    function hideUsernameError() {
+        if(document.getElementById('usernameError')) {
+            document.getElementById('usernameError').classList.add('hidden')
+        }
+        hideCredentialsError();
+    }
+
+    function hidePasswordError() {
+        if(document.getElementById('passwordError')) {
+            document.getElementById('passwordError').classList.add('hidden')
+        }
+        hideCredentialsError();
+    }
+
+    function toggle_connexions() {
+
+    }
+</script>
+{{ /section:page_scripts }}

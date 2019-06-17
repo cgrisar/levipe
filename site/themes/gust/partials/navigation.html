@@ -19,19 +19,17 @@
             <div class="group inline">
                 <lvp-minicart locale_url="{{locale_url}}"></lvp-minicart>
             </div>
-            <div class="w-12 h-12 float-left">
-                {{ user }}
-                    {{ if !no_results }}
-                        <a href="{{ user:logout_url }}" class="text-black no-underline inline float-left ml-4">
-                            <i class="spk-icon-menu text-2xl"></i>
-                        </a>
-                    {{ else }}
-                        <div class="text-black no-underline inline float-left ml-4">
-                            {{ partial:login/login_modal }}
-                        </div>
-                    {{ /if }}
-                {{ /user }}
-            </div>
+            {{ user }}
+                {{ if !no_results }}
+                    <a href="{{ user:logout_url redirect={current_url} }}" class="text-black no-underline inline float-left ml-4">
+                        <i class="spk-icon-menu text-2xl"></i>
+                    </a>
+                {{ else }}
+                    <a href="{{ link to='/login?redirect={ current_url }' }}" class="text-black font-regular uppercase no-underline">
+                        <i class="spk-icon-user-account text-2xl"></i>
+                    </a>
+                {{ /if }}
+            {{ /user }}
         </div>
 
     </nav>

@@ -184,9 +184,9 @@ class UserListener extends Listener
 
         Auth::login($user);
 
-        $redirect = Request::input('redirect', '/');
+        // $redirect = Request::input('redirect', '/');
 
-        return redirect($redirect);
+        // return redirect($redirect);
     }
 
     /**
