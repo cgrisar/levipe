@@ -22,24 +22,30 @@
                     <div class="flex items-center lg:w-4/5 lg:mx-auto">
                         <div class="lg:w-1/2 flex flex-col mx-auto">
                             <div class="border-red-darker lg:border-r lg:pr-6">
-                                {{ if errors }} {{ errors }}
-                                    {{ if value ~ '/credentials/' }}
-                                        <div id="credentialsError" class="bg-red-lighter rounded-lg text-red-dark fond-medium pl-4 py-2 mx-auto mb-4">{{trans:login.credentials}}</div>
-                                    {{ /if }}
-                                {{ /errors }} {{ /if }}
+
+                                {{ if errors }} 
+                                    {{ errors }}
+                                        {{ if value ~ '/credentials/' }}
+                                            <div id="credentialsError" class="bg-red-lighter rounded-lg text-red-dark fond-medium pl-4 py-2 mx-auto mb-4">{{trans:login.credentials}}</div>
+                                        {{ /if }}
+                                    {{ /errors }} 
+                                {{ /if }}
+                                
                                 <div class="flex flex-1 flex-col mb-4">
+                                    <label for="username" class="hidden">{{trans:login.email}}</label>
                                     <input class="bg-grey-light appearance-none rounded-lg py-2 px-4 text-black focus:outline-none" 
                                             name="username"
                                             id="username" 
                                             type="email"
                                             placeholder="{{trans:login.email}}"
                                             onkeydown="hideUsernameError()">
-                                    {{ if errors }} {{ errors }} {{ if value ~ '/username/' }}
+                                    {{ if errors }} {{ errors }} {{ if value ~ '/username field field/' }}
                                         <span id="usernameError" class="text-red-dark text-xs mt-1 pl-4">{{trans:login.username_required}}</span>
                                     {{ /if }} {{ /errors }} {{ /if }}
                                 </div>
                                 <div class="px-4"></div>
                                 <div class="flex flex-1 flex-col mb-6">
+                                    <label for="password" class="hidden">{{trans:login.password}}</label>
                                     <input class="bg-grey-light appearance-none rounded-lg py-2 px-4 text-black focus:outline-none" 
                                             name="password"
                                             id="password"
@@ -51,7 +57,7 @@
                                     {{ /if }} {{ /errors }} {{ /if }}
                                 </div>
                                 <div class="flex justify-between items-center">
-                                    <span class="text-xs font-medium underline" onclick="toggle_connexions()">{{ trans:login.init_password }}</span>
+                                    <span class="text-xs font-medium underline" onclick="toggleConnexions()">{{ trans:login.init_password }}</span>
                                     <button type="submit">
                                             <span class="fa-fw fa-layers fa-2x" title="{{trans:login.login}}">
                                                 <i class="fas fa-circle text-green-darker"></i>
@@ -69,6 +75,36 @@
                     </div>
                 {{ /user:login_form }}
             </div>
+        </div>
+
+        <div id="passwordlost" class="hidden">
+                <div class="flex flex-col lg:w-2/5 mx-auto">
+                    {{ user:forgot_password_form reset_url="/reset-password" }}
+
+                        {{ if email_sent }}
+                    
+                            <div id="emailSent" class="bg-green-lighter text-green-darker w-full px-4 py-2">{{ trans:login.email_sent }}</div>
+                    
+                        {{ else }}
+                    
+                            <div class="flex flex-1 flex-col mb-4">
+                                <input class="bg-grey-light appearance-none rounded-lg py-2 px-4 text-black focus:outline-none" 
+                                        name="username"
+                                        id="username" 
+                                        type="email"
+                                        placeholder="{{trans:login.email}}"
+                                        onkeydown="hideUsernameError()">
+                                {{ if errors }} {{ errors }} {{ unless value ~ '/field field/' }}
+                                    <span id="usernameForgetError" class="text-red-dark text-xs mt-1 pl-4">{{trans:login.username_required}}</span>
+                                {{ /unless }} {{ /errors }} {{ /if }}
+                            </div>
+                    
+                            <button>Send email</button>
+                    
+                        {{ /if }}
+                
+                    {{ /user:forgot_password_form }}
+                </div>
         </div>
     </div>
 </div>
@@ -89,6 +125,13 @@
         hideCredentialsError();
     }
 
+    function hideUsernameForgetError() {
+        if(document.getElementById('usernameForgetError')) {
+            document.getElementById('usernameForgetError').classList.add('hidden')
+        }
+        hideCredentialsError();
+    }
+
     function hidePasswordError() {
         if(document.getElementById('passwordError')) {
             document.getElementById('passwordError').classList.add('hidden')
@@ -96,8 +139,15 @@
         hideCredentialsError();
     }
 
-    function toggle_connexions() {
-
+    function toggleConnexions() {
+        document.getElementById('connexion').classList.toggle('hidden');
+        document.getElementById('passwordlost').classList.toggle('hidden');
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        if(document.getElementById('usernameForgetError') || document.getElementById('emailSent')) {
+            toggleConnexions();
+        }
+});
 </script>
 {{ /section:page_scripts }}
