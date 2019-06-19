@@ -6,6 +6,8 @@ label_image:
 color: pink
 sparkling: false
 natural_wine: false
+estate:
+  - fcd535eb-7f35-4eb8-893f-dc5f27e71f65
 cepages:
   - 8d1d2dd3-62ec-4c10-88e9-4210c58229d7
   - c136b12b-b234-4fd6-85b0-8478909b6ab2
@@ -22,6 +24,8 @@ facebook_image:
   - /assets/img/Wines/Cover/arjo-egro.jpg
 twitter_share_setting: inherit
 id: 7b6ecc9c-cd9b-488e-8ad8-56c871ca5c3a
+e:
+  - domaine-de-larjolle
 g:
   - syrah
   - grenache-noir

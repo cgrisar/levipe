@@ -1,6 +1,6 @@
 <template>
 <div class="inline py-0 px-4">
-    <a class="font-regular uppercase no-underline"
+    <a class="font-regular text-black no-underline"
         @click="$modal.show('search-modal')"
     >
         <i class="spk-icon-search text-2xl"></i>
