@@ -33,3 +33,10 @@ facebook_image:
   - /assets/img/Wines/Cover/pcdc-cldb.jpg
 twitter_share_setting: inherit
 id: 26d64eda-679f-4f42-b132-629dfae55841
+e:
+  - domaine-de-chatenoy
+g:
+  - sauvignon-blanc
+r:
+  - loire
+  - menetou-salon
