@@ -12,7 +12,7 @@
         
         <div class="w-full md:w-3/5">
 
-            <div class="w-full lg:w-1/2 mx-4 mb-4">
+            <div class="w-full px-4 md:pr-0 mb-4">
                 {{ partial:wine/wineheader }}
             </div>
 
@@ -24,80 +24,72 @@
               {{ partial:wine/hero }}
             </div>
 
-            <div class="mx-4">
+            <div class="mx-4 md:mr-0">
 
-              {{ partial:wine/vintages_list }}
+                {{ partial:wine/vintages_list }}
 
-              {{ variants }}
-                  <div id="scores-{{ millesime }}" class="flex flex-wrap mb-4 hidden lg:w-1/2">
-                    {{ scores }}
-                        <div class="w-1/3 pr-2">
-                            <img src="{{ theme:images src='{{ guide | lower }}.jpg' }}" class="h-6 w-6 mr-2 -mb-1" />
-                            <span class="text-xl font-bold mt-0">{{ score }} / {{ maxscore }}</span>
-                        </div>
-                    {{ /scores }}
-                  </div>
-              {{ /variants }}
+                {{ variants }}
+                    <div id="scores-{{ millesime }}" class="flex flex-wrap mb-4 hidden lg:w-1/2">
+                        {{ scores }}
+                            <div class="w-1/3 pr-2">
+                                <img src="{{ theme:images src='{{ guide | lower }}.jpg' }}" class="h-6 w-6 mr-2 -mb-1" />
+                                <span class="text-xl font-bold mt-0">{{ score }} / {{ maxscore }}</span>
+                            </div>
+                        {{ /scores }}
+                    </div>
+                {{ /variants }}
 
-              <div class="flex flex-col lg:flex-row lg:mr-0">
+                <div class="flex flex-col xl:flex-row xl:mr-0">
 
-                  <div id="vintage_descriptions" class="lg:w-1/2">
+                    <div id="vintage_descriptions" class="xl:w-1/2">
 
-                    {{ variants }}
-                        <div id="description-{{ millesime }}" class="mb-6 hidden">
-                            {{ description }}
-                        </div>
-                    {{ /variants }}
+                        {{ variants }}
+                            <div id="description-{{ millesime }}" class="mb-6 hidden">
+                                {{ description }}
+                            </div>
+                        {{ /variants }}
 
-                  <div class="flex items-center mb-6">
-                      <a href="https://www.facebook.com/sharer/sharer.php?u=178.62.220.251{{url}}">
-                          <i class="fab fa-facebook-f text-blue-darker mr-6"></i>
-                      </a>
-                      <a href="https://twitter.com/intent/tweet?text=http%3A//178.62.220.251{{url}}">
-                          <i class="fab fa-twitter text-blue"></i>
-                      </a>
-                  </div>
 
-                    {{ partial:comments/meerkat_comments }}
+                        {{ partial:comments/meerkat_comments }}
 
-                  </div>
+                    </div>
               
             
-                  <div class="pl-0 lg:w-1/2 lg:pl-6"  style="min-width:45%">
+                    <div class="pl-0 xl:w-1/2 xl:pl-6"  style="min-width:45%">
 
-                      {{ user }}
+                        {{ user }}
 
-                        {{ unless no_results }}
+                            {{ unless no_results }}
 
-                            {{ laradoo:variants_of_a_wine odoowine="{ odoo }" customer="{ email }" as="vintages" }}
-                                {{ vintages }}
-                                    <div id="vintageprices-{{ millesime }}" class="px-1 py-2 lg:p-2 rounded-lg bg-grey-light">
-                                        {{ variants }}
-                                            <lvp-variant wine='{{ title }}'
-                                                        variant-id="{{ variantId }}" 
-                                                        vintage="{{ millesime }}" 
-                                                        volume="{{ volume }}" 
-                                                        price="{{ price }}" 
-                                                        quantity="{{ quantity }}" 
-                                                        bo="{{ bo }}" 
-                                                        gof="{{ gof }}" 
-                                                        bogof_discount="{{ bogof_discount }}"
-                                                        bogof_title="{{ trans:cart.bogof bo='{ bo }' gof='{ gof }' bogof_discount='{ bogof_discount }' }}">
-                                            </lvp-variant>
-                                        {{ /variants }}
-                                    </div>
-                                {{ /vintages}}
-                            {{ /laradoo:variants_of_a_wine }}
+                                {{ laradoo:variants_of_a_wine odoowine="{ odoo }" customer="{ email }" as="vintages" }}
+                                    {{ vintages }}
+                                        <div id="vintageprices-{{ millesime }}" class="px-1 py-2 lg:p-2 rounded-lg bg-grey-light">
+                                            {{ variants }}
+                                                <lvp-variant wine='{{ title }}'
+                                                            variant-id="{{ variantId }}" 
+                                                            vintage="{{ millesime }}" 
+                                                            volume="{{ volume }}" 
+                                                            price="{{ price }}" 
+                                                            quantity="{{ quantity }}" 
+                                                            bo="{{ bo }}" 
+                                                            gof="{{ gof }}" 
+                                                            bogof_discount="{{ bogof_discount }}"
+                                                            bogof_title="{{ trans:cart.bogof bo='{ bo }' gof='{ gof }' bogof_discount='{ bogof_discount }' }}">
+                                                </lvp-variant>
+                                            {{ /variants }}
+                                        </div>
+                                    {{ /vintages}}
+                                {{ /laradoo:variants_of_a_wine }}
 
-                            <!-- only logged in users can comment on a wine -->
-                            {{ partial:comments/meerkat_form }}
-                          
-                        {{ /unless }}
+                                <!-- only logged in users can comment on a wine -->
+                                {{ partial:comments/meerkat_form }}
+                            
+                            {{ /unless }}
 
-                      {{ /user }}
-                      </div>
-                  </div>
-              </div>
+                        {{ /user }}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

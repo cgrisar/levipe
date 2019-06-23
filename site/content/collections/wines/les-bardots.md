@@ -5,7 +5,7 @@ label_image:
   - /assets/img/Wines/Label/laul-bard.jpg
 color: white
 culture: classic
-sparkling: true
+sparkling: false
 natural_wine: false
 estate:
   - cce795a1-f547-429b-9b17-65c27fe598f7

@@ -1,20 +1,20 @@
 <template>
     <div :id="variantId" class="container flex flex-row items-center px-2 py-1">
-        <div class="w-1/5 text-right">{{ volume }}</div>
-        <div class="w-1/5 font-bold text-right ml-2">{{ price }} &euro;</div>
+        <div class="text-right pr-1" style="flex-grow:1;">{{ volume }}</div>
+        <div class="font-bold text-right px-1" style="flex-grow:2;">{{ price }} &euro;</div>
         
         <template v-if="quantity > 0">
-            <div class="w-2/5 justify-center ml-2 flex flex-row" style="min-width:6rem;">
+            <div class="justify-center px-1 flex flex-row" style="flex-grow:3">
                 <button class="mr-4 lg:mr-0" @click="decVariant( $event )">
-                    <i class="fas fa-2x text-red-darker fa-minus-circle fa-inverse" data-fa-transform="shrink-6"></i>
+                    <i class="fas fa-2x text-red-darker fa-minus-circle fa-inverse" data-fa-transform="shrink-4"></i>
                 </button>
-                <input type="number" min="1" :max="quantity" class="w-8 text-right pr-1 rounded-sm" v-model="ordered" @focus="getVariantFromCart" />
+                <input type="number" min="1" :max="quantity" class="w-8 text-right mx-1 pr-1 rounded-sm" v-model="ordered" @focus="getVariantFromCart" />
                 <button class="ml-4 lg:ml-0" @click="incVariant( $event )">
-                    <i class="fas fa-2x text-red-darker fa-plus-circle fa-inverse" data-fa-transform="shrink-6"></i>
+                    <i class="fas fa-2x text-red-darker fa-plus-circle fa-inverse" data-fa-transform="shrink-4"></i>
                 </button>
             </div>
 
-            <div class="w-1/5 flex flex-row">
+            <div class="flex flex-row pl-1" style="flex-grow:4;">
                 <div class="w-1/2">
                     
                     <template v-if="total_gof > 0">
@@ -34,7 +34,10 @@
                 
                 <div class="w-1/2">
                     <button @click="addVariantToCart">
-                        <i class="fas fa-2x text-red-darker fa-cart-plus fa-inverse text-right" data-fa-transform="shrink-6"></i>
+                        <span class="fa-fw fa-layers fa-2x text-right" title="Share on Facebook">
+                            <i class="fas fa-circle text-red-darker"></i>
+                            <i class="fas text-white fa-cart-plus" data-fa-transform="shrink-7 left-0.75"></i>
+                        </span>
                     </button>
                 </div>
             </div>
