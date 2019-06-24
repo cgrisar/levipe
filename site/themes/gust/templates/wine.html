@@ -3,7 +3,7 @@
 
 <div class="flex container mx-auto flex-col">
   
-    {{ partial:login }}
+    {{ partial:wine/login_md }}
     
     <div class="flex">
         <div class="w-2/5 hidden md:block">
@@ -12,11 +12,11 @@
         
         <div class="w-full md:w-3/5">
 
-            <div class="w-full px-4 md:pr-0 mb-4">
+            <div class="px-4 sm:px-0 md:px-4 lg:pr-0 mb-4">
                 {{ partial:wine/wineheader }}
             </div>
 
-            <div class="mx-4 lg:mr-0">
+            <div class="px-4 sm:px-0 md:px-4 lg:pr-0 mb-4">
               {{ description }}
             </div>
 
@@ -24,7 +24,9 @@
               {{ partial:wine/hero }}
             </div>
 
-            <div class="mx-4 md:mr-0">
+            {{ partial:wine/login_sm }}
+
+            <div class="px-4 sm:px-0 md:px-4 lg:pr-0 mb-4">
 
                 {{ partial:wine/vintages_list }}
 
@@ -98,44 +100,80 @@
 <!-- script filess -->
 {{ section:page_scripts }}
 
-  <script>
-      function show_vintages(element) {
-          vintage = element.id;
-          vintages = document.getElementById("millesimes").getElementsByTagName("li");
-      
-          // hide all the descriptions and volumes
-          [].forEach.call(vintages, function(li) {
-              li.getElementsByTagName("div")[0].className = li.getElementsByTagName( "div" )[0].className.replace(/bg-red-darker/g,'bg-grey-lightest');
-              li.getElementsByTagName("div")[0].className = li.getElementsByTagName( "div" )[0].className.replace(/text-white/g,'text-red-darker');
+<script>
+    function hideCredentialsError() {
+        if(document.getElementById('credentialsError')) {
+            document.getElementById('credentialsError').classList.add('hidden')
+        }
+    }
 
-              document.getElementById("description-"+li.id).classList.add('hidden');
-              if(document.getElementById("vintageprices-"+li.id)){
-                  document.getElementById("vintageprices-"+li.id).classList.add('hidden');
-              };
-              if(document.getElementById("scores-"+li.id)){
-                  document.getElementById("scores-"+li.id).classList.add('hidden');
-              };
-          });
-      
-          // show the descriptions upon which the vintage was selected
-          element.getElementsByTagName("div")[0].className = element.getElementsByTagName("div")[0].className.replace(/bg-grey-lightest/, 'bg-red-darker');
-          element.getElementsByTagName("div")[0].className = element.getElementsByTagName("div")[0].className.replace(/text-red-darker/, 'text-white');
-          
-          document.getElementById("description-" + vintage).classList.remove('hidden');
-          if (document.getElementById("vintageprices-" + vintage)) {
-              document.getElementById("vintageprices-"+vintage).classList.remove('hidden');
-          };
-          if (document.getElementById("scores-" + vintage)) {
-              document.getElementById("scores-"+vintage).classList.remove('hidden');
-          };
-      };
+    function hideUsernameError() {
+        if(document.getElementById('usernameError')) {
+            document.getElementById('usernameError').classList.add('hidden')
+        }
+        hideCredentialsError();
+    }
+
+    function hideUsernameForgetError() {
+        if(document.getElementById('usernameForgetError')) {
+            document.getElementById('usernameForgetError').classList.add('hidden')
+        }
+        hideCredentialsError();
+    }
+
+    function hidePasswordError() {
+        if(document.getElementById('passwordError')) {
+            document.getElementById('passwordError').classList.add('hidden')
+        }
+        hideCredentialsError();
+    }
+
+    function toggleConnexions() {
+        document.getElementById('connexion').classList.toggle('hidden');
+        document.getElementById('passwordlost').classList.toggle('hidden');
+    }
+
+    function show_vintages(element) {
+        vintage = element.id;
+        vintages = document.getElementById("millesimes").getElementsByTagName("li");
     
-      ( function() {
-          millesimes = document.getElementById("millesimes").getElementsByTagName("li");
-          millesimesLastChild = millesimes[ millesimes.length - 1 ];
-          // click on it
-          millesimesLastChild.click();
-      }) ();
-  </script>
+        // hide all the descriptions and volumes
+        [].forEach.call(vintages, function(li) {
+            li.getElementsByTagName("div")[0].className = li.getElementsByTagName( "div" )[0].className.replace(/bg-red-darker/g,'bg-grey-lightest');
+            li.getElementsByTagName("div")[0].className = li.getElementsByTagName( "div" )[0].className.replace(/text-white/g,'text-red-darker');
+
+            document.getElementById("description-"+li.id).classList.add('hidden');
+            if(document.getElementById("vintageprices-"+li.id)){
+                document.getElementById("vintageprices-"+li.id).classList.add('hidden');
+            };
+            if(document.getElementById("scores-"+li.id)){
+                document.getElementById("scores-"+li.id).classList.add('hidden');
+            };
+        });
+    
+        // show the descriptions upon which the vintage was selected
+        element.getElementsByTagName("div")[0].className = element.getElementsByTagName("div")[0].className.replace(/bg-grey-lightest/, 'bg-red-darker');
+        element.getElementsByTagName("div")[0].className = element.getElementsByTagName("div")[0].className.replace(/text-red-darker/, 'text-white');
+        
+        document.getElementById("description-" + vintage).classList.remove('hidden');
+        if (document.getElementById("vintageprices-" + vintage)) {
+            document.getElementById("vintageprices-"+vintage).classList.remove('hidden');
+        };
+        if (document.getElementById("scores-" + vintage)) {
+            document.getElementById("scores-"+vintage).classList.remove('hidden');
+        };
+    };
+
+    ( function() {
+        millesimes = document.getElementById("millesimes").getElementsByTagName("li");
+        millesimesLastChild = millesimes[ millesimes.length - 1 ];
+        // click on it
+        millesimesLastChild.click();
+
+        if(document.getElementById('usernameForgetError') || document.getElementById('emailSent')) {
+            toggleConnexions();
+        }
+    }) ();
+</script>
 
 {{ /section:page_scripts }}

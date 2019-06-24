@@ -94,7 +94,7 @@
                                         type="email"
                                         placeholder="{{trans:login.email}}"
                                         onkeydown="hideUsernameError()">
-                                {{ if errors }} {{ errors }} {{ unless value ~ '/field field/' }}
+                                {{ if errors }} {{ errors }} {{ unless value ~ '/field field | credentials/' }}
                                     <span id="usernameForgetError" class="text-red-dark text-xs mt-1 pl-4">{{trans:login.username_required}}</span>
                                 {{ /unless }} {{ /errors }} {{ /if }}
                             </div>
@@ -148,6 +148,6 @@
         if(document.getElementById('usernameForgetError') || document.getElementById('emailSent')) {
             toggleConnexions();
         }
-});
+    });
 </script>
 {{ /section:page_scripts }}

@@ -34,9 +34,9 @@
                 
                 <div class="w-1/2">
                     <button @click="addVariantToCart">
-                        <span class="fa-fw fa-layers fa-2x text-right" title="Share on Facebook">
+                        <span class="fa-fw fa-layers fa-2x text-right">
                             <i class="fas fa-circle text-red-darker"></i>
-                            <i class="fas text-white fa-cart-plus" data-fa-transform="shrink-7 left-0.75"></i>
+                            <i class="fas text-white fa-cart-plus" data-fa-transform="shrink-7 left-0.50"></i>
                         </span>
                     </button>
                 </div>

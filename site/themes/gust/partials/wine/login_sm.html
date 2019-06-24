@@ -1,0 +1,96 @@
+{{ user }}
+
+    {{ if no_results }}
+
+        <div class="bg-grey-lighter mb-8 sm:rounded-lg md:hidden">
+            <div class="p-4 flex flex-col justify-between leading-normal">
+                <div class="text-black font-bold text-xl mb-2 text-center">{{ trans:login.title title={ title } }}</div>
+                <h5 class="text-red-darker mt-4 mb-0">{{ trans:login.promotion_header }}</h5>
+                <span>{{ trans:login.promotion_message }}</span>
+                <h5 class="text-red-darker mt-4 mb-0">{{ trans:login.transport_header }}</h5>
+                <span>{{ trans:login.transport_message }}</span>
+                <h5 class="text-red-darker mt-4 mb-0">{{ trans:login.assurance_header }}</h5>
+                <span>{{ trans:login.assurance_message }}</span>
+
+                <hr class="mt-4 w-1/2 border-b border-red-darker">
+
+                <div id="connexion" class="mt-4">
+                    {{ user:login_form redirect='{ current_url }' }}
+                        {{ if errors }} 
+                            {{ errors }}
+                                {{ if value ~ '/credentials/' }}
+                                    <div id="credentialsError" class="bg-red-lighter rounded-lg text-red-dark fond-medium pl-4 py-2 mx-auto mb-4">{{trans:login.credentials}}</div>
+                                {{ /if }}
+                            {{ /errors }} 
+                        {{ /if }}
+                        <div class="flex flex-col">
+                            <div class="mb-4">
+                                <input  class="w-full h-8 rounded-lg bg-grey-light appearance-none py-2 px-3 text-black focus:outline-none" 
+                                        name="username" 
+                                        type="email"
+                                        placeholder="Adresse e-mail">
+                                {{ if errors }} {{ errors }} {{ if value ~ '/username field field/' }}
+                                    <span id="usernameError" class="text-red-dark text-xs mt-1 pl-2">{{trans:login.username_required}}</span>
+                                {{ /if }} {{ /errors }} {{ /if }}
+                            </div>
+
+                            <div class="mb-4">
+                                <input  class="w-full h-8 rounded-lg bg-grey-light appearance-none py-2 px-3 text-black focus:outline-none" 
+                                        name="password" 
+                                        type="password" 
+                                        placeholder="Mot de passe">
+                                {{ if errors }} {{ errors }} {{ if value ~ '/password/' }}
+                                    <span id="passwordError" class="text-red-dark text-xs mt-1 pl-2">{{trans:login.password_required}}</span>
+                                {{ /if }} {{ /errors }} {{ /if }}
+                            </div>
+
+                            <div class="flex flex-row justify-between items-center">
+                                <span class="text-xs font-medium underline" onclick="toggleConnexions()">{{ trans:login.init_password }}</span>
+                                <button type="submit">
+                                    <p class="fa-fw fa-layers fa-2x -mb-1" title="{{ trans:login.connexion }}">
+                                        <i class="fas fa-circle text-green-darker"></i>
+                                        <i class="fas fa-sign-in-alt fa-inverse" data-fa-transform="shrink-6"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    {{ /user:login_form }}
+                </div>
+                <div id="passwordlost" class="hidden mt-4">
+                        {{ user:forgot_password_form reset_url="/reset-password" }}
+    
+                            {{ if email_sent }}
+                        
+                                <div id="emailSent" class="bg-green-lighter text-green-darker w-full px-4 py-2">{{ trans:login.email_sent }}</div>
+                        
+                            {{ else }}
+
+                                <input class="bg-grey-light appearance-none rounded-lg py-2 px-4 text-black focus:outline-none" 
+                                        name="username"
+                                        id="username" 
+                                        type="email"
+                                        placeholder="{{trans:login.email}}"
+                                        onkeydown="hideUsernameError()">
+                                {{ if errors }} {{ errors }} {{ unless value ~ '/field field | credentials/' }}
+                                    <span id="usernameForgetError" class="text-red-dark text-xs mt-1 pl-4">{{trans:login.username_required}}</span>
+                                {{ /unless }} {{ /errors }} {{ /if }}
+
+                                <button>Send email</button>
+                        
+                            {{ /if }}
+                    
+                        {{ /user:forgot_password_form }}
+                </div>
+
+                <hr class="mt-4 w-1/2 border-b border-red-darker">
+
+                <a  href="{{ link to='/register/?redirect={ current_url }' }}" 
+                    class="mt-4 bg-blue-darker py-1 text-center rounded-lg no-underline text-white uppercase font-semibold">
+                    {{ trans:login.creer_compte }}
+                </a>
+            </div>
+        </div>
+
+   {{ /if }}
+
+{{ /user }}

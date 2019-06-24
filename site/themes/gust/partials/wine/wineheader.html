@@ -5,9 +5,9 @@
     <div class="flex flex-row justify-between">
     
         <div class="flex">
-            <span class="rounded-full h-7 w-7 flex items-center justify-center {{ if color == 'red' }} bg-red-darker {{ /if }}
-                                                                                {{ if color == 'white' }} bg-yellow-dark {{ /if }}
-                                                                                {{ if color == 'pink' }} bg-pink-lighter opacity-50 {{ /if }}"
+            <span   class="rounded-full h-7 w-7 {{ if color == 'red' }} bg-red-darker {{ /if }}
+                                                {{ if color == 'white' }} bg-yellow-dark {{ /if }}
+                                                {{ if color == 'pink' }} bg-pink-lighter opacity-50 {{ /if }}"
                     title="{{ trans:wine.{{color}} }}"></span>
             {{ if sparkling }}
                 <img src="{{ theme:images src='sparkling.png'}}" title="{{ trans:wine.sparkling }}" class="w-7 h-7 ml-2">
@@ -31,7 +31,7 @@
                 </span>
             </a>
             <a href="https://twitter.com/intent/tweet?text=http%3A//178.62.220.251{{url}}">
-                <span class="fa-fw fa-layers fa-2x ml-1 mr-3" title="Share on Facebook">
+                <span class="fa-fw fa-layers fa-2x ml-1" title="Share on Facebook">
                     <i class="fas fa-circle text-blue"></i>
                     <i class="fab fa-twitter text-white" data-fa-transform="shrink-6"></i>
                 </span>
