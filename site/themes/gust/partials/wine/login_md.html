@@ -20,23 +20,25 @@
                         <p>{{ trans:login.assurance_message }}</p>
                     </div>
                 </div>
-                <div class="container text-center">
-                    {{ user:login_form redirect='{ current_url }' }}
-                        <input class="h-8 rounded-lg bg-grey-light appearance-none py-2 px-3 mr-2 text-black focus:outline-none" name="username" type="email" placeholder="Adresse e-mail">
-                        <input class="h-8 rounded-lg bg-grey-light appearance-none py-2 px-3 mr-2 text-black focus:outline-none" name="password" type="password" placeholder="Mot de passe">
-                        <button type="submit">
-                            <span class="fa-fw fa-layers fa-2x -mb-1" title="{{ trans:login.connexion }}">
-                                <i class="fas fa-circle text-green-darker"></i>
-                                <i class="fas fa-sign-in-alt fa-inverse" data-fa-transform="shrink-6"></i>
-                            </span>
-                        </button>
-                        <span class="fa-fw fa-layers fa-2x -mb-1" title="{{ trans:login.creer_compte }}">
-                            <a href="{{ link to='/register/?redirect={ current_url }' }}">
-                                <i class="fas fa-circle text-blue-darker"></i>
-                                <i class="fas fa-user-plus fa-inverse" data-fa-transform="shrink-8"></i>
-                            </a>
-                        </span>
-                    {{ /user:login_form }}
+                <div class="flex flex-row justify-between">
+                    <div class="w-2/3 text-center">
+                        {{ user:login_form redirect='{ current_url }' }}
+                            <input class="h-8 rounded-lg bg-grey-light appearance-none py-2 px-3 mr-2 text-black focus:outline-none" name="username" type="email" placeholder="Adresse e-mail">
+                            <input class="h-8 rounded-lg bg-grey-light appearance-none py-2 px-3 mr-2 text-black focus:outline-none" name="password" type="password" placeholder="Mot de passe">
+                            <button type="submit">
+                                <span class="fa-fw fa-layers fa-2x -mb-1" title="{{ trans:login.connexion }}">
+                                    <i class="fas fa-circle text-green-darker"></i>
+                                    <i class="fas fa-sign-in-alt fa-inverse" data-fa-transform="shrink-6"></i>
+                                </span>
+                            </button>
+                        {{ /user:login_form }}
+                    </div>
+                    <div class="w-1/3 text-center">
+                        <a  href="{{ link to='/register/?redirect={ current_url }' }}" 
+                            class="mt-4 bg-blue-darker py-1 px-2 text-center rounded-lg no-underline text-white uppercase font-semibold">
+                            {{ trans:login.creer_compte }}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
