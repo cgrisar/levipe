@@ -58,43 +58,43 @@
                     {{ /user:login_form }}
                 </div>
                 <div id="passwordlost" class="hidden mt-4">
-                        {{ user:forgot_password_form reset_url="/reset-password" }}
-    
-                            {{ if email_sent }}
-                        
-                                <div id="emailSent" class="bg-green-lighter text-green-darker w-full px-4 py-2">{{ trans:login.email_sent }}</div>
-                        
-                            {{ else }}
+                    {{ user:forgot_password_form reset_url="/reset-password" }}
 
-                                <div class="flex flex-col">
-                                    
-                                    <div class="mb-4">
-                                        <input class="w-full h-8 rounded-lg bg-grey-light appearance-none py-2 px-3 text-black focus:outline-none" 
-                                                name="username"
-                                                id="username" 
-                                                type="email"
-                                                placeholder="{{trans:login.email}}"
-                                                onkeydown="hideUsernameForgetError()">
-                                        {{ if errors }} {{ errors }} {{ unless value ~ '/field field | credentials/' }}
-                                            <span id="usernameForgetError" class="text-red-dark text-xs mt-1 pl-2">{{trans:login.username_required}}</span>
-                                        {{ /unless }} {{ /errors }} {{ /if }}
-                                    </div>
-
-                                    <div class="flex flex-row justify-between items-center">
-                                        <span class="text-xs font-medium underline" onclick="toggleConnexions()">{{ trans:login.login }}</span>
-                                        <button>
-                                            <span class="fa-fw fa-layers fa-2x -mb-1" title="Sign In">
-                                                <i class="fas fa-circle text-green-darker"></i>
-                                                <i class="fas fa-paper-plane text-white" data-fa-transform="shrink-6 left-0.75"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-
-                                </div>
-                        
-                            {{ /if }}
+                        {{ if email_sent }}
                     
-                        {{ /user:forgot_password_form }}
+                            <div id="emailSent" class="bg-green-lighter text-green-darker w-full px-4 py-2">{{ trans:login.email_sent }}</div>
+                    
+                        {{ else }}
+
+                            <div class="flex flex-col">
+                                
+                                <div class="mb-4">
+                                    <input class="w-full h-8 rounded-lg bg-grey-light appearance-none py-2 px-3 text-black focus:outline-none" 
+                                            name="username"
+                                            id="username" 
+                                            type="email"
+                                            placeholder="{{trans:login.email}}"
+                                            onkeydown="hideUsernameForgetError()">
+                                    {{ if errors }} {{ errors }} {{ unless value ~ '/field field | credentials/' }}
+                                        <span id="usernameForgetError" class="text-red-dark text-xs mt-1 pl-2">{{trans:login.username_required}}</span>
+                                    {{ /unless }} {{ /errors }} {{ /if }}
+                                </div>
+
+                                <div class="flex flex-row justify-between items-center">
+                                    <span class="text-xs font-medium underline" onclick="toggleConnexions()">{{ trans:login.login }}</span>
+                                    <button>
+                                        <span class="fa-fw fa-layers fa-2x -mb-1" title="Sign In">
+                                            <i class="fas fa-circle text-green-darker"></i>
+                                            <i class="fas fa-paper-plane text-white" data-fa-transform="shrink-6 left-0.75"></i>
+                                        </span>
+                                    </button>
+                                </div>
+
+                            </div>
+                    
+                        {{ /if }}
+                
+                    {{ /user:forgot_password_form }}
                 </div>
 
                 <hr class="mt-4 w-1/2 border-b border-red-darker">

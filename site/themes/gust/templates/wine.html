@@ -103,34 +103,40 @@
 <script>
     function hideCredentialsError() {
         if(document.getElementById('credentialsError')) {
-            document.getElementById('credentialsError').classList.add('hidden')
+            document.getElementById('credentialsError').classList.add('hidden');
+            document.getElementById('md_credentialsError').classList.add('hidden');
         }
     }
 
     function hideUsernameError() {
         if(document.getElementById('usernameError')) {
-            document.getElementById('usernameError').classList.add('hidden')
+            document.getElementById('usernameError').classList.add('hidden');
+            document.getElementById('md_usernameError').classList.add('hidden');
         }
         hideCredentialsError();
     }
 
     function hideUsernameForgetError() {
         if(document.getElementById('usernameForgetError')) {
-            document.getElementById('usernameForgetError').classList.add('hidden')
+            document.getElementById('usernameForgetError').classList.add('hidden');
+            document.getElementById('md_usernameForgetError').classList.add('hidden')
         }
         hideCredentialsError();
     }
 
     function hidePasswordError() {
         if(document.getElementById('passwordError')) {
-            document.getElementById('passwordError').classList.add('hidden')
+            document.getElementById('passwordError').classList.add('hidden');
+            document.getElementById('md_passwordError').classList.add('hidden')
         }
         hideCredentialsError();
     }
 
     function toggleConnexions() {
         document.getElementById('connexion').classList.toggle('hidden');
+        document.getElementById('md_connexion').classList.toggle('hidden');
         document.getElementById('passwordlost').classList.toggle('hidden');
+        document.getElementById('md_passwordlost').classList.toggle('hidden');
     }
 
     function show_vintages(element) {
