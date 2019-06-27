@@ -40,8 +40,8 @@
                         </div>
 
                         <div v-if="currentRefinement">
-                          <div class="flex">
-                            <div v-for="index in indices" :key="index.label" class="pr-4 w-1/4" v-show="index.hits.length > 0">
+                          <div class="flex flex-col md:flex-row">
+                            <div v-for="index in indices" :key="index.label" class="pr-4 w-full md:w-1/4 mb-8" v-show="index.hits.length > 0">
                                 <h2 class="text-xl font-semibold text-white mb-2">{{ localeLabel(index.label) }}</h2>
                                 
                                 <div v-for="hit in index.hits" :key="hit.objectID" class="mb-2">

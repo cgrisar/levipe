@@ -1,23 +1,24 @@
 
- <div class="flex container mx-auto">
-    <div style="background-image:url( {{ theme:images src='cart-hero.jpg' }} ); height: 600px; background-position: 50% 0px;" class="hidden sm:block w-full bg-cover mb-8 relative">
+ <div class="flex mx-auto container">
+    <div style="background-image:url( {{ theme:images src='cart-hero.jpg' }} ); height: 600px; background-position: 50% 0px;" class="hidden md:block w-full bg-cover mb-8 relative">
         <div class="bg-black opacity-25 absolute w-full h-full"></div>
             <div style="padding-top:300px;">
-                <h1 class="text-3xl lg:text-5xl font-bold text-white relative text-center">{{ trans:cart.cart }}</h1>
+                <h1 class="text-2xl mt-8 md:mt-0 lg:text-5xl font-bold text-white relative text-center">{{ trans:cart.cart }}</h1>
             </div>
         </div>
     </div>
     <div class="sm:hidden">
         <div class="mb-8" style="padding-top: 100px;">
-            <h1 class="text-3xl lg:text-5xl font-bold text-grey-darkest relative text-center">{{ trans:cart.cart }}</h1>
+            <h1 class="text-2xl mt-8 font-bold text-grey-darkest relative text-center lg:text-5xl">{{ trans:cart.cart }}</h1>
         </div>
     </div>
     
-    <div class="flex container mx-auto">
-        <div class="px-1 w-full md:w-1/2 md:pl-0 md:pr-2 md:border-r md:border-red-darker">
+    <div class="flex flex-col container mx-auto lg:flex-row">
+        <div class="px-4 w-full lg:w-1/2 md:px-0 lg:pr-4 lg:border-r lg:border-red-darker">
             <lvp-cart></lvp-cart>
         </div>
-        <div class="px-1 w-full md:w-1/2 md:pl-2">
+        <div class="px-4 w-full lg:w-1/2 lg:pl-4">
+            User data
         </div>
     </div>
 
