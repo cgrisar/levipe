@@ -16,6 +16,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Wines/Cover/hmch-prve.jpeg
 twitter_share_setting: inherit
 id: 37d72347-5e0d-485a-9b3c-f268058ff071
 e:

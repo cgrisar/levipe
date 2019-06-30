@@ -18,7 +18,22 @@
             <lvp-cart></lvp-cart>
         </div>
         <div class="px-4 w-full lg:w-1/2 lg:pl-4">
-            User data
+            <div class="flex flex-col">
+
+                <div class="flex flex-row justify-between bg-grey-light rounded-lg px-2 py-4 items-center mb-4">
+                    <h4 class="text-black">{{ trans:cart.coupon }}</h4>
+                    <div class="flex flex-row">
+                        <div>
+                            <input size="10" class="h-7 rounded-lg mr-2">
+                        </div>
+                        <i class="spk-icon-coupon text-3xl"></i>
+                    </div>
+                </div>
+
+                <div class="flex flex-row justify-between bg-grey-light rounded-lg px-2 py-4 items-center mb-4"> 
+                    <h4 class="text-black mb-2">{{ trans:cart.deliveryaddress }}</h4>
+                </div>
+            </div>
         </div>
     </div>
 
