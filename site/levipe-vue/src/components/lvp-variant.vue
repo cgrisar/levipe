@@ -8,26 +8,30 @@
                 <button class="mr-4 lg:mr-0" @click="decVariant( $event )">
                     <i class="fas fa-2x text-red-darker fa-minus-circle fa-inverse" data-fa-transform="shrink-4"></i>
                 </button>
-                <input type="number" min="1" :max="quantity" class="w-8 text-right mx-1 pr-1 rounded-sm" v-model="ordered" @focus="getVariantFromCart" />
+                <input type="number" min="1" 
+                                    :max="maxquantity" 
+                                    class="w-8 text-right mx-1 pr-1 rounded-sm" 
+                                    v-model="ordered" 
+                                    @focus="getVariantFromCart" 
+                                    @blur="setVariant" />
                 <button class="ml-4 lg:ml-0" @click="incVariant( $event )">
                     <i class="fas fa-2x text-red-darker fa-plus-circle fa-inverse" data-fa-transform="shrink-4"></i>
                 </button>
             </div>
 
             <div class="flex flex-row pl-1" style="flex-grow:4;">
-                <div class="w-1/2">
-                    
+                <div class="flex w-1/2">
                     <template v-if="total_gof > 0">
-                        <span class="fa-stack -mb-4">
-                            <i class="fas fa-certificate fa-stack-2x text-green-darker" data-fa-transform="shrink-4"></i>
-                            <strong class="fa-stack-1x text-white text-sm font-semibold" style="padding-left: .90rem; padding-top: .25rem;">{{ total_gof }}</strong>
+                        <span class="fa-fw fa-layers fa-2x" :key="total_gof">
+                            <i class="fas fa-certificate fa-stack-2x text-green-darker" data-fa-transform="shrink-8 left-6"></i>
+                            <span class="fa-layers-text text-white font-semibold" data-fa-transform="shrink-7 left-2.25">{{ total_gof }}</span>
                         </span>
                     </template>
                     
-                    <template v-if="( total_gof == 0 ) && ( gof > 0 )">
-                        <span class="fa-stack -mb-4" :title="bogof_title">
-                            <i class="fas fa-certificate fa-stack-2x text-green-darker" data-fa-transform="shrink-4"></i>
-                            <strong class="fa-stack-1x text-white text-sm font-semibold" style="padding-left: .98rem; padding-top: .25rem;">!</strong>
+                    <template v-if="( total_gof === 0 ) && ( gof > 0 )">
+                        <span class="fa-fw fa-layers fa-2x" :title="bogof_title" key="euro">
+                            <i class="fas fa-certificate fa-stack-2x text-green-darker" data-fa-transform="shrink-8 left-6"></i>
+                            <i class="fas fa-euro-sign text-white" data-fa-transform="shrink-7 left-2.25"></i>
                         </span>
                     </template>
                 </div>
@@ -36,7 +40,7 @@
                     <button @click="addVariantToCart">
                         <span class="fa-fw fa-layers fa-2x text-right">
                             <i class="fas fa-circle text-red-darker"></i>
-                            <i class="fas text-white fa-cart-plus" data-fa-transform="shrink-8 left-0.25"></i>
+                            <i class="fas fa-cart-plus text-white" data-fa-transform="shrink-8 left-0.25"></i>
                         </span>
                     </button>
                 </div>
@@ -45,14 +49,18 @@
 
         <template v-else>
             <div class="w-3/5 text-center ml-2 text-right" style="min-width:6rem;">
-                <span class="bg-red-darker rounded-full text-white font-semibold uppercase text-xs px-2" style="padding-top:.125rem; padding-bottom:.125rem;">Out of stock</span>
+                <span   class="bg-red-darker rounded-full text-white font-semibold uppercase text-xs px-2" 
+                        style="padding-top:.125rem; padding-bottom:.125rem;">Out of stock</span>
             </div>
         </template>
     </div>
 </template>
 
 <script>
+    import cartMixin from '../mixins/cart-mixins.js'
+
     export default {
+        mixins: [cartMixin],
         props: ['wine',
                 'vintage', 
                 'volume', 
@@ -68,18 +76,13 @@
             return {
                 ordered: 1,
                 total_gof: 0,
-                cart: store.cart, 
+                cart: store.cart,
+                maxquantity: (this.bo  > 0) ? this.bo * Math.floor(this.quantity / (parseInt(this.bo) + parseInt(this.gof))) : this.quantity
             }   
         },
 
         methods: 
         {
-
-            calculateTotalGof() 
-            {
-                return ( this.bo > 0 ) ? Math.floor( this.ordered / this.bo ) * this.gof : 0;
-            },
-
             getVariantFromCart() 
             {
                 // if this product is in the shopping cart, then put its quantity in the quantity field
@@ -97,10 +100,9 @@
                 // sanitation
                 this.ordered = Math.max( 1, this.ordered );
                 this.total_gof = this.calculateTotalGof();
-                var maxquantity = ( this.bo  > 0 ) ? Math.floor( this.quantity / this.bo ) * this.gof : this.quantity;
                 this.ordered = Math.min( this.ordered, maxquantity );
 
-                var found = false ;
+                let found = false ;
 
                 if ( this.cart.length ) 
                 {
@@ -124,34 +126,16 @@
                                     'vintage': this.vintage, 
                                     'volume': this.volume, 
                                     'price': this.price,
+                                    'bo': this.bo,
+                                    'gof': this.gof,
                                     'quantity': this.quantity,
-                                    'ordered': Number( this.ordered ),
-                                    "total_gof": Number(this.total_gof)
+                                    'ordered': Number(this.ordered),
+                                    'total_gof': Number(this.total_gof)
                                     });
                  }
 
                 sessionStorage.cart = JSON.stringify( this.cart );
             },
-
-            decVariant(e) 
-            {
-                if (this.ordered > 1) 
-                {
-                    this.ordered--;
-                    this.total_gof = this.calculateTotalGof();
-                    sessionStorage.cart = JSON.stringify( this.cart );
-                }
-            },
-
-            incVariant(e) 
-            {
-                if ((this.ordered + this.total_gof) < this.quantity) 
-                {
-                    this.ordered++;
-                    this.total_gof = this.calculateTotalGof();
-                    sessionStorage.cart = JSON.stringify( this.cart );
-                }
-            }
         },
     }
 </script>

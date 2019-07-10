@@ -2,6 +2,14 @@ sections:
   main:
     display: Main
     fields:
+      active:
+        type: toggle
+        width: 50
+        display: active
+      last:
+        type: toggle
+        width: 50
+        display: last
       start_date:
         allow_blank: false
         allow_time: false
@@ -9,7 +17,7 @@ sections:
         earliest_date: 'January 1, 1900'
         input_format: DD/MM/YYYY
         type: date
-        width: 50
+        width: 33
         display: 'Start Date'
       end_date:
         allow_blank: false
@@ -18,7 +26,7 @@ sections:
         earliest_date: 'January 1, 1900'
         input_format: DD/MM/YYYY
         type: date
-        width: 50
+        width: 33
         display: 'End Date'
         validate: 'after:start_date'
       wine:

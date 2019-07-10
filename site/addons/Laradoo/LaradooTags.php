@@ -181,11 +181,45 @@ class LaradooTags extends Tags
 
     }
 
-    /**
-     * The {{ laradoo:variants }} tag
-     *
-     * @return string|array
-     */
+
+    private function getPricelist($odoo, $customer_mail)
+    {
+
+        // Find out what pricelist the customer is subject to
+        $pricelist = $odoo  ->where( 'customer', true )
+                            ->where( 'email', $customer_mail )
+                            ->fields( 'property_product_pricelist' )
+                            ->limit( 1 )
+                            ->get( 'res.partner' );
+
+        // Set pricelist to 1 - default price list - if the customer is not in the ERP-system
+        return isset( $pricelist[0] ) ? $pricelist[0]["property_product_pricelist"][0] : 1;
+    
+    }
+
+
+    private function getProductTemplate($odoo, $odoowine)
+    {
+
+        return $odoo->where( 'default_code', 'like', $odoowine ) 
+                    ->where( 'sale_ok', '=', true )
+                    ->fields( 'product_variant_ids' )
+                    ->limit( 1 )
+                    ->get( 'product.template' );
+
+    }
+
+    private function getProductPrices($odoo, $pricelist, $template)
+    {
+
+        return $odoo->call(  'product.pricelist.item', 'search_read', 
+                        array( array( array( 'pricelist_id', '=', $pricelist ), 
+                        array( 'product_id', 'in', $template[0]["product_variant_ids"] ) ) ),
+                        array( 'fields' => array( 'product_id', 'fixed_price' ) )
+                    );
+
+    }
+
 
     public function variantsOfAWine()
     {
@@ -195,29 +229,11 @@ class LaradooTags extends Tags
         $odoowine = $this->getParam('odoowine');
         $customer_mail = $this->getParam('customer');
 
-        // Find out what pricelist the customer is subject to
-        // Set pricelist to 1 - default price list - if the customer is not in the ERP-system
-        $pricelist = $odoo  ->where( 'customer', true )
-                            ->where( 'email', $customer_mail )
-                            ->fields( 'property_product_pricelist' )
-                            ->limit( 1 )
-                            ->get( 'res.partner' );
-        $pricelist = isset( $pricelist[0] ) ? $pricelist[0]["property_product_pricelist"][0] : 1;
+        $pricelist = $this->getPricelist($odoo, $customer_mail);
         
-        // get the product templates
-        $template = $odoo   ->where( 'default_code', 'like', $odoowine ) 
-                            ->where( 'sale_ok', '=', true )
-                            ->fields( 'product_variant_ids' )
-                            ->limit( 1 )
-                            ->get( 'product.template' );
+        $template = $this->getProductTemplate($odoo, $odoowine);
 
-        // get the product prices from the pricelist
-        $prices = $odoo->call(  'product.pricelist.item', 
-                                'search_read', 
-                                array( array( array( 'pricelist_id', '=', $pricelist ), 
-                                                array( 'product_id', 'in', $template[0]["product_variant_ids"] ) ) ),
-                                array( 'fields' => array( 'product_id', 'fixed_price' ) )
-                    );
+        $prices = $this->getProductPrices($odoo, $pricelist, $template);
 
         // if we have a template
         if ( count( $template ) ) 

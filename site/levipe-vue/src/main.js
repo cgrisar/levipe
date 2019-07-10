@@ -12,6 +12,7 @@ import lvpLogin from './components/login/lvp-login.vue'
 import lvpVariant from './components/lvp-variant.vue'
 import lvpCart from './components/cart/lvp-cart.vue'
 import lvpMinicart from './components/cart/lvp-minicart.vue'
+import lvpCartDiscount from './components/cart/lvp-cart-discount.vue'
 import autocompleteSearch from './components/search/autocomplete-search.vue'
 import pushbutton from './components/search/pushbutton.vue'
 
@@ -31,5 +32,5 @@ new Vue({
         }
     },
     
-    components: { swal, lvpVariant, lvpCart, lvpMinicart, StarRating, autocompleteSearch, pushbutton, lightbox, lvpLogin }
+    components: { swal, lvpVariant, lvpCart, lvpMinicart, lvpCartDiscount, StarRating, autocompleteSearch, pushbutton, lightbox, lvpLogin }
 });
