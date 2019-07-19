@@ -3,7 +3,10 @@
         <h4 class="text-black">{{ couponlabel }}</h4>
         <div class="flex flex-row">
             <div>
-                <input size="10" class="h-7 rounded-lg mr-2" @blur.prevent="lookupDiscount">
+                <input  size="10" 
+                        class="h-7 rounded-lg mr-2 px-2" 
+                        v-model="couponCode" 
+                        @blur.prevent="lookupDiscount">
             </div>
             <i class="spk-icon-coupon text-3xl"></i>
         </div>
@@ -12,59 +15,58 @@
 </template>
 
 <script>
-
-import {Engine} from 'json-rules-engine'
-let engine = new Engine()
-
-let rule = {};
-rule.conditions = {};
-rule.conditions.all = [];
-rule.conditions.all.push({
-    fact:"product-code",
-    operator:"equal",
-    value:"HPPW"});
-rule.conditions.all.push({
-    fact:"product-vintage",
-    operator:"equal",
-    value:"75cl" });
-rule.event = {};
-rule.event.type="product-discount";
-rule.event.params= {};
-rule.event.params.message="discount = 15%";
-engine.addRule(rule);
-
-
 function nowIsBetween(startDate, endDate) {
     var now = new Date();
-    return (now >= new Date(startDate) && now <= new Date(endDate));
-}
-
-function dataFromResponse(response) {
-    let rule = {};
-
-    response.data.data.forEach( discount => {
-        // we want only the active and current rules
-        if (! (nowIsBetween(discount.start_data, discount.end_date) && discount.active )) {
-            return
-        }
-
-        if (discount.discount_type === "bogof") {
-
-        }
-
-    })
+    if ((now >= new Date(startDate)) && (now <= new Date(endDate))) {
+        return true;
+    }
+    return false;
 }
 
 export default {
     props: ['couponlabel'],
 
+    data() {
+        return {
+            cart: store.cart,
+            couponCode: ''
+        }
+    },
+
     methods: {
         lookupDiscount() {
-            this.axios.get("/!/Fetch/collection/discounts")
-                .then( (response) => console.log(dataFromResponse(response) ))
-        }
-    }
+            if (this.couponCode == '') {
+                return
+            };
+        
+            this.axios.get("/!/Fetch/entry/discounts/" + this.couponCode)
+                .then( (response) => {
+                    var coupon = response.data.data;
 
+                    // we only want to work with active coupons and valid dates
+                    if (! (nowIsBetween(coupon.start_date, coupon.end_date) && coupon.active && coupon.coupon)) {
+                        return;
+                    }
+                    coupon.ratio = (parseInt(coupon.gof) * parseInt(coupon.bogof_discount)) / (100 * parseInt(coupon.bo));
+                    this.cart.forEach( (variant) => {
+                        var variantRatio = 0;
+                        
+                        if(parseInt(variant.bo) > 0) {
+                            variantRatio = (parseInt(variant.gof) * parseInt(variant.bogof_discount)) / (100 * parseInt(variant.bo));
+                        }
+                        
+                        if (variantRatio < coupon.ratio) {
+                            variant.bo = coupon.bo;
+                            variant.gof = coupon.gof;
+                            variant.discount = coupon.bogof_discount;
+                            variant.ordered = Math.ceil(parseInt(variant.total_ordered) * parseInt(variant.bo) / (parseInt(variant.bo) + parseInt(variant.gof)));
+                            variant.total_gof = variant.total_ordered - variant.ordered;
+                        }
+                    })
+            })
+        }
+
+    }
 }
 </script>
 

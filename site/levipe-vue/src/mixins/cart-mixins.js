@@ -24,8 +24,8 @@ export default {
         },
 
         setVariant() {
-            if (this.ordered < 0) {
-                this.ordered = 0;
+            if (this.ordered < 1) {
+                this.ordered = 1;
             }
             
             if (this.ordered > this.maxquantity) {

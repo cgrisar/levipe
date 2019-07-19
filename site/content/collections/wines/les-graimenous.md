@@ -17,7 +17,7 @@ appellations:
 odoo: JLAU-GRAI
 variants:
   -
-    millesime: '2016'
+    millesime: '2017'
     active: true
 page_no_index: false
 no_follow_links: false

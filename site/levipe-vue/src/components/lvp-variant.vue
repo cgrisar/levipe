@@ -57,10 +57,8 @@
 </template>
 
 <script>
-    import cartMixin from '../mixins/cart-mixins.js'
 
     export default {
-        mixins: [cartMixin],
         props: ['wine',
                 'vintage', 
                 'volume', 
@@ -100,7 +98,7 @@
                 // sanitation
                 this.ordered = Math.max( 1, this.ordered );
                 this.total_gof = this.calculateTotalGof();
-                this.ordered = Math.min( this.ordered, maxquantity );
+                this.ordered = Math.min( this.ordered, this.maxquantity );
 
                 let found = false ;
 
@@ -128,14 +126,49 @@
                                     'price': this.price,
                                     'bo': this.bo,
                                     'gof': this.gof,
+                                    'discount': this.bogof_discount,
                                     'quantity': this.quantity,
                                     'ordered': Number(this.ordered),
-                                    'total_gof': Number(this.total_gof)
+                                    'total_gof': Number(this.total_gof),
+                                    'total_ordered': Number(this.ordered) + Number(this.total_gof)
                                     });
                  }
 
                 sessionStorage.cart = JSON.stringify( this.cart );
             },
+
+            calculateTotalGof() {
+                return ( this.bo > 0 ) ? Math.floor( this.ordered / this.bo ) * this.gof : 0;
+            },
+
+            decVariant() {
+                if (this.ordered > 1) {
+                    this.ordered--;
+                    this.total_gof = this.calculateTotalGof();
+                    sessionStorage.cart = JSON.stringify( this.cart );
+                }
+            },
+
+            incVariant() {
+                if (this.ordered < this.maxquantity) {
+                    this.ordered++;
+                    this.total_gof = this.calculateTotalGof();
+                    sessionStorage.cart = JSON.stringify( this.cart );
+                }
+            },
+
+            setVariant() {
+                if (this.ordered < 1) {
+                    this.ordered = 1;
+                }
+                
+                if (this.ordered > this.maxquantity) {
+                    this.ordered = this.maxquantity
+                }
+
+                this.total_gof = this.calculateTotalGof();
+            },
+
         },
     }
 </script>

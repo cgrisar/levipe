@@ -50,6 +50,7 @@ redactor:
         - italic
 csrf_exclude:
   - '/!/Fetch/*'
+  - '/!/Laradoo/*'
 yaml_parser: symfony
 send_powered_by_header: true
 ensure_unique_ids: true

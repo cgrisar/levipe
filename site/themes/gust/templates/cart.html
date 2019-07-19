@@ -7,25 +7,57 @@
             </div>
         </div>
     </div>
-    <div class="sm:hidden">
+    <div class="md:hidden">
         <div class="mb-8" style="padding-top: 100px;">
             <h1 class="text-2xl mt-8 font-bold text-grey-darkest relative text-center lg:text-5xl">{{ trans:cart.cart }}</h1>
         </div>
     </div>
     
     <div class="flex flex-col container mx-auto lg:flex-row">
-        <div class="px-4 w-full lg:w-1/2 md:px-0 lg:pr-4 lg:border-r lg:border-red-darker">
+        <div class="px-4 w-full mb-4 sm:px-0 lg:w-1/2 lg:pr-4 lg:border-r lg:border-red-darker">
             <lvp-cart></lvp-cart>
         </div>
-        <div class="px-4 w-full lg:w-1/2 lg:pl-4">
+        <div class="px-4 w-full sm:px-0 lg:w-1/2 lg:pl-4">
             <div class="flex flex-col">
                 <lvp-cart-discount couponlabel="{{ trans:cart.coupon }}"></lvp-cart-discount>
-
-                <div class="flex flex-row justify-between bg-grey-light rounded-lg px-2 py-4 items-center mb-4"> 
-                    <h4 class="text-black mb-2">{{ trans:cart.deliveryaddress }}</h4>
-                </div>
+                {{ user }}
+                <lvp-cart-order locale="{{ locale }}" 
+                                    name ="{{ name }}"
+                                    email = "{{ username }}"
+                                    address="{{ address }}"
+                                    zip="{{ zip }}"
+                                    city="{{ city }}"
+                                    phone="{{ phone }}"
+                                    VAT="{{ VAT }}"></lvp-cart-order>
+                {{ /user }}
             </div>
         </div>
     </div>
 
 </div>
+
+{{ section:page_scripts }}
+<script>
+function showTab(element) {
+    tabs = document.getElementById("tabs").getElementsByTagName("div");
+    
+    [].forEach.call(tabs, function(div){
+        if(div.id != element.id){
+            div.classList.remove('border-b');
+            div.classList.remove('border-red-darker');
+            document.getElementById(div.id+"Block").classList.remove('block');
+            document.getElementById(div.id+"Block").classList.add('hidden');
+        }
+    });
+
+    element.classList.add('border-b');
+    element.classList.add('border-red-darker');
+    document.getElementById(element.id+"Block").classList.add('block');
+    document.getElementById(element.id+"Block").classList.remove('hidden');
+}
+
+function copyField(source, destination) {
+    document.getElementById(destination).value = document.getElementById(source).value
+}
+</script>
+{{ /section:page_scripts }}

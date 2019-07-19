@@ -8,14 +8,13 @@ import VueAxios from 'vue-axios'
 import InstantSearch from 'vue-instantsearch'
 import StarRating from 'vue-star-rating'
 
-import lvpLogin from './components/login/lvp-login.vue'
 import lvpVariant from './components/lvp-variant.vue'
 import lvpCart from './components/cart/lvp-cart.vue'
 import lvpMinicart from './components/cart/lvp-minicart.vue'
 import lvpCartDiscount from './components/cart/lvp-cart-discount.vue'
+import lvpCartOrder from './components/cart/lvp-cart-order.vue'
 import autocompleteSearch from './components/search/autocomplete-search.vue'
 import pushbutton from './components/search/pushbutton.vue'
-
 import lightbox from './components/miscellaneous/lightbox.vue'
 
 Vue.use(VModal);
@@ -32,5 +31,14 @@ new Vue({
         }
     },
     
-    components: { swal, lvpVariant, lvpCart, lvpMinicart, lvpCartDiscount, StarRating, autocompleteSearch, pushbutton, lightbox, lvpLogin }
+    components: {   swal, 
+                    lvpVariant, 
+                    lvpCart, 
+                    lvpMinicart, 
+                    lvpCartDiscount, 
+                    lvpCartOrder,
+                    StarRating, 
+                    autocompleteSearch, 
+                    pushbutton, 
+                    lightbox }
 });

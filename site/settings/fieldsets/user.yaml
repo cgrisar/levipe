@@ -10,7 +10,6 @@ sections:
       email:
         type: text
         display: Email
-        validate: required
       name:
         type: text
         display: Name

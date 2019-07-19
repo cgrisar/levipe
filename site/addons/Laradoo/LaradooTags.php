@@ -53,12 +53,12 @@ class LaradooTags extends Tags
 
             if ( $discount_entry->get( 'discount_type' ) == 'bogof' ) {
 
-                $bo = $discount_entry->get( 'how_many_to_get_some_free' );
-                $gof = $discount_entry->get( 'how_many_free' );
-                $bogof_discount = $discount_entry->get( 'discount_free_products' );
-                $discount_ratio = ( $gof * ( $bogof_discount / 100 ) ) / $bo;
+                $bo = $discount_entry->get('bo');
+                $gof = $discount_entry->get('gof');
+                $bogof_discount = $discount_entry->get('bogof_discount');
+                $discount_ratio = ($gof * ($bogof_discount / 100)) / $bo;
 
-                $old_discount_ratio = empty( $discount ) ? 0 : $discount["discount_ratio"];
+                $old_discount_ratio = empty($discount) ? 0 : $discount["discount_ratio"];
 
                 if ( $discount_ratio > $old_discount_ratio ) {
                     $discount = array( "gof" => $gof, 
@@ -91,8 +91,9 @@ class LaradooTags extends Tags
             // get the date boundaries
             $after_start_date = $value->get('start_date') <= date( "Y-m-d" );
             $before_end_date = date( "Y-m-d" ) <= $value->get('end_date');
+            $not_coupon = $value->get('coupon') == false;
 
-            return ( $after_start_date && $before_end_date ); 
+            return ( $after_start_date && $before_end_date && $not_coupon ); 
 
         });
 

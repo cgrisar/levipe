@@ -4,11 +4,15 @@ sections:
     fields:
       active:
         type: toggle
-        width: 50
+        width: 33
         display: active
+      coupon:
+        type: toggle
+        width: 33
+        display: Coupon
       last:
         type: toggle
-        width: 50
+        width: 33
         display: last
       start_date:
         allow_blank: false
@@ -53,17 +57,17 @@ sections:
         type: select
         display: 'Discount type'
         validate: required
-      how_many_to_get_some_free:
+      bo:
         type: text
         width: 33
         display: 'How Many to Get Some Free'
         validate: 'numeric|required_if:discount_type,bogof'
-      how_many_free:
+      gof:
         type: text
         width: 33
         display: 'How Many Free'
         validate: 'numeric|required_if:discount_type,bogof'
-      discount_free_products:
+      bogof_discount:
         type: text
         width: 33
         display: 'Discount Free Products'

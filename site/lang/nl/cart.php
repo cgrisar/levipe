@@ -5,5 +5,8 @@ return [
     'subtotal' => 'Subtotaal',
     'bogof' => 'Koop :bo en krijg :gof aan :bogof_discount % korting!',
     'coupon' => 'Kortingscoupon',
-    'deliveryaddress' => 'Leveringsadres'
+    'order' => 'Bestelling',
+    'deliveryaddress' => 'Levering',
+    'invoiceaddress' => 'Facturatie',
+    'confirmation' => 'Bevestiging'
 ];

@@ -19,7 +19,7 @@
             bottlesInCart() {
                 var bottles = 0;
                 this.cart.forEach( element => {
-                    bottles += element.ordered
+                    bottles += element.ordered + element.total_gof
                 });
                 return bottles;
             },

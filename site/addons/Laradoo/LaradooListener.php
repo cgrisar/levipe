@@ -5,6 +5,7 @@ namespace Statamic\Addons\Laradoo;
 use Edujugon\Laradoo\Odoo;
 use Statamic\Data\Users\User;
 use Statamic\Extend\Listener;
+use Statamic\Events\Data\UserSaved;
 
 class LaradooListener extends Listener
 {
@@ -14,7 +15,8 @@ class LaradooListener extends Listener
      * @var array
      */
     public $events = [
-        'user.registered' => 'createUserInOdoo'
+        'user.registered' => 'createUserInOdoo',
+        UserSaved::class => 'createOrderInOdoo'
     ];
 
     private function connectToOdoo() {
@@ -29,6 +31,7 @@ class LaradooListener extends Listener
         return $odoo;
 
     }
+
 
     public function createUserInOdoo(User $user)
     {
@@ -74,5 +77,11 @@ class LaradooListener extends Listener
                                             )
                     );
         $user->save();
+    }
+
+
+    public function createOrderInOdoo($event)
+    {
+        dd($event);
     }
 }

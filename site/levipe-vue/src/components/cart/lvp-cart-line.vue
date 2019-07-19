@@ -1,49 +1,45 @@
 <template>
     <div :id="variant.variantId" class="flex flex-row px-2 py-1 items-center">
         
-        <div class="pr-2" style="flex-grow:1;">
+        <div class="pr-2 w-8">
             <button @click="removeVariant(variant)">
                 <i class="far fa-2x fa-times-circle" data-fa-transform="shrink-4"></i>
             </button>
         </div>
 
-        <div class="px-1 w-1/3" style="flex-grow:4">
-            <div class="font-medium -mb-1">{{ variant.wine }}</div>
+        <div class="px-1 w-1/3">
+            <div class="font-medium -mb-1 whitespace-no-wrap overflow-hidden" style="text-overflow:ellipsis; -o-text-overflow:ellipsis;">{{ variant.wine }}</div>
             <div class="text-xs italic">
                 <span class="mr-2">{{ variant.vintage }}</span>
                 <span>{{ variant.volume }}</span>
             </div>
         </div>
         
-        <div class="font-semibold text-right px-1" style="flex-grow:2;">{{ variant.price }} &euro;</div>
+        <div class="font-semibold text-right px-2" style="width: 4.5rem;">{{ variant.price }} &euro;</div>
         
-        <div class="justify-center px-1 flex flex-row" style="flex-grow:3">
-            <button class="mr-4 lg:mr-0" @click="decVariant(variant)">
+        <div class="w-1/4 justify-center px-1 flex flex-row">
+            <button @click="decVariant(variant)">
                 <i class="fas fa-2x text-red-darker fa-minus-circle fa-inverse" data-fa-transform="shrink-4"></i>
             </button>
-            <input type="number" min="1" :max="variant.quantity" class="w-8 text-right mx-1 pr-1 rounded-sm" v-model="variant.ordered" />
-            <button class="ml-4 lg:ml-0" @click="incVariant(variant)">
+            <input type="number" min="1" :max="variant.quantity" class="w-8 text-right mx-1 pr-1 rounded-lg" v-model="variant.ordered" />
+            <button @click="incVariant(variant)">
                 <i class="fas fa-2x text-red-darker fa-plus-circle fa-inverse" data-fa-transform="shrink-4"></i>
             </button>
         </div>
 
-        <div style="flex-grow:1">       
-            <template v-if="total_gof > 0">
-                <span class="fa-stack -mb-4">
-                    <i class="fas fa-certificate fa-stack-2x text-green-darker" data-fa-transform="shrink-4"></i>
-                    <strong class="fa-stack-1x text-white text-sm font-semibold" style="padding-left: .90rem; padding-top: .25rem;">{{ total_gof }}</strong>
-                </span>
-            </template>
-            
-            <template v-if="( total_gof == 0 ) && ( gof > 0 )">
-                <span class="fa-fw fa-layers fa-layers fa-2x" :title="bogof_title">
-                    <i class="fas fa-certificate fa-stack-2x text-green-darker" data-fa-transform="shrink-8 left-6"></i>
-                    <i class="fas fa-euro-sign text-white" data-fa-transform="shrink-7 left-2.25"></i>
-                </span>
-            </template>
+        <div class="w-1/4 flex flex-row items-center w-1/5">
+            <div class="w-1/3 md:w-1/2 lg:w-1/2">       
+                <template v-if="variant.total_gof > 0">
+                    <span class="fa-fw fa-layers fa-2x" style="margin-bottom:-.125rem;">
+                        <i class="fas fa-certificate fa-stack-2x text-green-darker" data-fa-transform="shrink-8 left-6"></i>
+                        <span class="fa-layers-text text-white font-semibold" data-fa-transform="shrink-8 left-2">{{ variant.total_gof }}</span>
+                    </span>
+                </template>
+            </div>
+            <div class="w-2/3 md:w-1/2 lg:w-2/3">
+                <div class="text-right font-semibold pl-1">{{ orderedAmountVariant( variant ) }} &euro;</div>
+            </div>
         </div>
-
-        <div class="text-right font-semibold pl-1" style="flex-grow:2;">{{ orderedAmountVariant( variant ) }} &euro;</div>
 
     </div>
 </template>

@@ -1,0 +1,142 @@
+<div class="bg-grey-light rounded-lg px-4 py-4 items-center mb-4"> 
+    <h4 class="text-black mb-4">{{ trans:cart.order }}</h4>
+    <div id="tabs" class="flex flex-row">
+        <div class="w-1/5 font-thin uppercase mb-4 pb-1 border-b border-red-darker mr-6" 
+                id="delivery"
+                onclick="showTab(this)">{{ trans:cart.deliveryaddress }}</div>
+        <div class="w-1/5 font-thin uppercase mb-4 pb-1 mr-6" 
+                id="invoice"
+                onclick="showTab(this)">{{ trans:cart.invoiceaddress }}</div>
+        <div class="w-1/5 font-thin uppercase mb-4 pb-1" 
+                id="order"
+                onclick="showTab(this)">{{ trans:cart.confirmation }}</div>
+    </div>
+
+    {{ profiler:edit_form }}
+    {{ user:profile }}
+    
+    <div class="block" id="deliveryBlock">
+        <input type="hidden" name="username" value="{{ email }}">
+        <input type="hidden" name="name" value="{{ name }}">
+        
+        <div class="items-center mb-6 flex flex-row">
+            <div class="w-1/5">
+                <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                    {{ trans:signup.address }}
+                </label>
+            </div>
+            <div class="w-4/5">
+                <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
+                        name="delivery_address" 
+                        id="delivery_address" 
+                        type="text" 
+                        value="{{ old:address or address }}" 
+                        onblur="copyField('delivery_address', 'address')" />
+            </div>
+        </div>
+
+        <div class="items-center mb-6 flex flex-row">
+            <div class="w-1/5">
+                <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                    {{ trans:signup.city }}
+                </label>
+            </div>
+            <div class="flex flex-row w-4/5">
+                <div class="w-1/3 mr-4">
+                    <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
+                            name="delivery_zip" 
+                            id="delivery_zip" 
+                            type="text" 
+                            value="{{ old:zip or zip }}"
+                            onblur="copyField('delivery_zip', 'zip')" />
+                </div>
+                <div class="w-2/3">
+                    <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
+                            name="delivery_city" 
+                            id="delivery_city" 
+                            type="text" 
+                            value="{{ old:city or city }}" 
+                            onblur="copyField('delivery_city', 'city')" />
+                </div>
+            </div>
+        </div>
+
+        <div class="items-center mb-6 flex flex-row">
+            <div class="w-1/5">
+                <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                    {{ trans:signup.phone }}
+                </label>
+            </div>
+            <div class="w-2/5">
+                <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
+                        name="delivery_phone" 
+                        type="text" 
+                        value="{{ old:phone or phone }}" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="hidden" id="invoiceBlock">
+        <div class="items-center mb-6 flex flex-row">
+            <div class="w-1/5">
+                <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                    {{ trans:signup.address }}
+                </label>
+            </div>
+            <div class="w-4/5">
+                <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
+                        name="address" 
+                        id="address" 
+                        type="text" 
+                        value="{{ old:address or address }}" />
+            </div>
+        </div>
+
+        <div class="items-center mb-6 flex flex-row">
+            <div class="w-1/5">
+                <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                    {{ trans:signup.city }}
+                </label>
+            </div>
+            <div class="flex flex-row w-4/5">
+                <div class="w-1/3 mr-4">
+                    <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
+                            name="zip" 
+                            id="zip" 
+                            type="text" 
+                            value="{{ old:zip or zip }}" />
+                </div>
+                <div class="w-2/3">
+                    <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
+                            name="city" 
+                            id="city" 
+                            type="text" 
+                            value="{{ old:city or city }}" />
+                </div>
+            </div>
+        </div>
+
+        <div class="items-center mb-6 flex flex-row">
+            <div class="w-1/5">
+                <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                    {{ trans:signup.VAT }}
+                </label>
+            </div>
+            <div class="w-2/5">
+                <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
+                        name="vat" 
+                        type="text" 
+                        value="{{ old:vat or vat }}" />
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="hidden" id="orderBlock"></div>
+    
+    <button>Submit</button>
+
+    {{ /user:profile }}
+    {{ /profiler:edit_form }}
+</div>
