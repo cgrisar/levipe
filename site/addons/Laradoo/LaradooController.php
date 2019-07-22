@@ -75,6 +75,24 @@ class LaradooController extends Controller
 
         $order_id = $odoo->create('sale.order', $values);
         $this->createOrderLines($odoo, $cart, $order_id);
+        $odoo->call('sale.order', 'action_confirm', array($order_id));
+
+        /*
+        * Validate the picking. Since we invoice only products that are delivered, we first have to create a transfer
+        * and then process that transfer. It is the same as clicking on "validate" on the stock picking view
+        */
+        $picking_id = $odoo->where('id', '=', $order_id)
+            ->fields('picking_ids')
+            ->get('sale.order')
+            ->first();
+        $immediate_picking_id=$odoo->create('stock.immediate.transfer', array('pick_id' => $picking_id['picking_ids'][0]));
+        $odoo->call('stock.immediate.transfer', 'process', array($immediate_picking_id));
+
+        // Now that we have a confirmed sale.order, we can charge stripe.
+
+        $sale_order_to_invoice_data = array($order_id, array("context"=>array("active_ids"=>$order_id)));
+        $invoice_id = $odoo->call('sale.order', 'action_invoice_create', $sale_order_to_invoice_data);
+        $id = $odoo->call_wf('account.invoice', 'invoice_open', $invoice_id->first());
     }
 
 
