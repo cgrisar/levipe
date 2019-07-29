@@ -1,5 +1,6 @@
 {
     "require": {
-        "edujugon/laradoo": "^1.1"
+        "edujugon/laradoo": "^1.1",
+        "laravel/cashier": "^9.3"
     }
 }

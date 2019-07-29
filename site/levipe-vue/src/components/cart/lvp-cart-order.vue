@@ -46,7 +46,8 @@
                             id="delivery_zip" 
                             type="text" 
                             :value="zip"
-                            onblur="copyField('delivery_zip', 'zip')" />
+                            onblur="copyField('delivery_zip', 'zip');"
+                            @blur="shippingCost($event)" />
                 </div>
                 <div class="w-2/3">
                     <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
@@ -131,13 +132,17 @@
 
     </div>
     
-    <div class="hidden" id="orderBlock"></div>
+    <div class="hidden" id="orderBlock">
+        <lvp-cart-stripe></lvp-cart-stripe>
+    </div>
     
     <button @click="submitOrder">Submit</button>
 </div>
 </template>
 
 <script>
+import lvpCartStripe from './lvp-cart-stripe.vue'
+
 function getValue(id){
     if(!document.getElementById(id)){
         return ""
@@ -146,13 +151,15 @@ function getValue(id){
 }
 
 export default {
-    props: ['locale', 'name', 'username', 'address', 'zip', 'city', 'phone', 'VAT'],
+    props: ['locale', 'name', 'username', 'address', 'zip', 'city', 'phone', 'VAT', 'user'],
 
     data() {
         return {
             cart: store.cart
         }
     },
+
+    components: { lvpCartStripe },
 
     methods: {
 
@@ -180,6 +187,11 @@ export default {
             return labelMap.get(key)
         },
 
+        shippingCost(e) {
+            this.axios.get('/!/Fetch/entry/shipping/be')
+                .then(data => console.log(data))
+        },
+
         submitOrder() {
             var orderData = new FormData();
             orderData.set('odoo_id', getValue('odoo_id'));
@@ -200,7 +212,17 @@ export default {
                 config: { headers: {'Content-Type': 'multipart/form-data' }}
                 })
                 .then( (response) => console.log(response));
+        },
+
+        computed: {
+            totalAmountCart() {
+            var amount = 0;
+            this.cart.forEach( element => {
+                amount += element.ordered * Number( element.price.replace(',','.') )
+            });
+            return amount;
         }
+    }
     }
 }
 </script>

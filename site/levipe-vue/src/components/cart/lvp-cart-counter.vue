@@ -6,7 +6,7 @@
                     padding-right:0.3rem;
                     margin-left:1.1rem; 
                     font-weight:500; 
-                    font-size:0.6rem;">
+                    font-size:0.8rem;">
         {{ bottlesInCart }}
     </span>
 </template>

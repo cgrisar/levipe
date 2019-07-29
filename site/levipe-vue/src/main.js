@@ -11,8 +11,6 @@ import StarRating from 'vue-star-rating'
 import lvpVariant from './components/lvp-variant.vue'
 import lvpCart from './components/cart/lvp-cart.vue'
 import lvpMinicart from './components/cart/lvp-minicart.vue'
-import lvpCartDiscount from './components/cart/lvp-cart-discount.vue'
-import lvpCartOrder from './components/cart/lvp-cart-order.vue'
 import autocompleteSearch from './components/search/autocomplete-search.vue'
 import pushbutton from './components/search/pushbutton.vue'
 import lightbox from './components/miscellaneous/lightbox.vue'
@@ -27,7 +25,7 @@ new Vue({
 
     data() {
         return {
-            rating: 2
+            rating: 3
         }
     },
     
@@ -35,8 +33,6 @@ new Vue({
                     lvpVariant, 
                     lvpCart, 
                     lvpMinicart, 
-                    lvpCartDiscount, 
-                    lvpCartOrder,
                     StarRating, 
                     autocompleteSearch, 
                     pushbutton, 

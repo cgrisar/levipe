@@ -14,7 +14,8 @@
   "dependencies": {
     "json-rules-engine": "^3.0.2",
     "vue": "^2.5.11",
-    "vue-star-rating": "^1.6.1"
+    "vue-star-rating": "^1.6.1",
+    "vue-stripe-elements-plus": "^0.2.10"
   },
   "browserslist": [
     "> 1%",

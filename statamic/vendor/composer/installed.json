@@ -513,6 +513,26 @@
         ]
     },
     {
+        "name": "erin-dalzell/charge",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "dist": {
+            "type": "path",
+            "url": "../site/addons/Charge",
+            "reference": "2be61059655d91ce8b5c3c40a9ef6e70dae95839",
+            "shasum": null
+        },
+        "require": {
+            "stripe/stripe-php": "*",
+            "symfony/intl": "*"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "transport-options": {
+            "symlink": false
+        }
+    },
+    {
         "name": "funkjedi/composer-include-files",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
@@ -556,51 +576,6 @@
         "keywords": [
             "autoload",
             "composer"
-        ]
-    },
-    {
-        "name": "google/apiclient",
-        "version": "v1.1.8",
-        "version_normalized": "1.1.8.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/googleapis/google-api-php-client.git",
-            "reference": "85309a3520bb5f53368d43e35fd24f43c9556323"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/85309a3520bb5f53368d43e35fd24f43c9556323",
-            "reference": "85309a3520bb5f53368d43e35fd24f43c9556323",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.2.1"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "3.7.*",
-            "squizlabs/php_codesniffer": "~2.3"
-        },
-        "time": "2016-06-06T21:22:48+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-v1-master": "1.1.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "files": [
-                "src/Google/autoload.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "description": "Client library for Google APIs",
-        "homepage": "http://developers.google.com/api-client-library/php",
-        "keywords": [
-            "google"
         ]
     },
     {
@@ -1003,91 +978,6 @@
             "serializable",
             "serialize",
             "tokenizer"
-        ]
-    },
-    {
-        "name": "jrc9designstudio/statamic-google-analytics-v2",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "dist": {
-            "type": "path",
-            "url": "../site/addons/GoogleAnalytics",
-            "reference": "3e3ef25facf5c88ad740058cd2dac99baf6b080c",
-            "shasum": null
-        },
-        "require": {
-            "jrc9designstudio/statamic-laravel-analytics": "^1.0.0"
-        },
-        "type": "library",
-        "installation-source": "dist",
-        "transport-options": {
-            "symlink": false
-        }
-    },
-    {
-        "name": "jrc9designstudio/statamic-laravel-analytics",
-        "version": "v1.0.1",
-        "version_normalized": "1.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/jrc9designstudio/statamic-laravel-analytics.git",
-            "reference": "8243d5ea243571eac914d3da62bffafab32eff82"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/jrc9designstudio/statamic-laravel-analytics/zipball/8243d5ea243571eac914d3da62bffafab32eff82",
-            "reference": "8243d5ea243571eac914d3da62bffafab32eff82",
-            "shasum": ""
-        },
-        "require": {
-            "google/apiclient": "^1.1",
-            "illuminate/contracts": "~5.1.0|~5.2.0|~5.3.0",
-            "illuminate/support": "~5.1.0|~5.2.0|~5.3.0",
-            "nesbot/carbon": "^1.21",
-            "php": "^7.0"
-        },
-        "require-dev": {
-            "mockery/mockery": "^0.9.5",
-            "orchestra/database": "3.3.x@dev",
-            "orchestra/testbench": "3.3.x@dev",
-            "phpunit/phpunit": "^4.0"
-        },
-        "time": "2018-03-17T21:34:21+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "JRC9DS\\Analytics\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Freek Van der Herten",
-                "email": "freek@spatie.be",
-                "homepage": "https://murze.be",
-                "role": "Developer"
-            },
-            {
-                "name": "Jonathan Cohlmeyer",
-                "email": "jcohlmeyer@jrc9.ca",
-                "homepage": "https://jrc9.ca",
-                "role": "Developer"
-            }
-        ],
-        "description": "A Laravel 5 package to retrieve Google Analytics data.",
-        "homepage": "https://github.com/jrc9designstudio/statamic-laravel-analytics",
-        "keywords": [
-            "analytics",
-            "google",
-            "laravel",
-            "reports",
-            "retrieve",
-            "spatie",
-            "statamic"
         ]
     },
     {
@@ -2917,6 +2807,64 @@
         }
     },
     {
+        "name": "stripe/stripe-php",
+        "version": "v6.40.0",
+        "version_normalized": "6.40.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/stripe/stripe-php.git",
+            "reference": "9c22ffab790ef4dae0f371929de50e8b53c9ec8d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/stripe/stripe-php/zipball/9c22ffab790ef4dae0f371929de50e8b53c9ec8d",
+            "reference": "9c22ffab790ef4dae0f371929de50e8b53c9ec8d",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "php-coveralls/php-coveralls": "1.*",
+            "phpunit/phpunit": "~4.0",
+            "squizlabs/php_codesniffer": "~2.0",
+            "symfony/process": "~2.8"
+        },
+        "time": "2019-06-27T23:24:51+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Stripe\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Stripe and contributors",
+                "homepage": "https://github.com/stripe/stripe-php/contributors"
+            }
+        ],
+        "description": "Stripe PHP Library",
+        "homepage": "https://stripe.com/",
+        "keywords": [
+            "api",
+            "payment processing",
+            "stripe"
+        ]
+    },
+    {
         "name": "swiftmailer/swiftmailer",
         "version": "v5.4.12",
         "version_normalized": "5.4.12.0",
@@ -3462,6 +3410,83 @@
         "homepage": "https://symfony.com"
     },
     {
+        "name": "symfony/intl",
+        "version": "v4.3.2",
+        "version_normalized": "4.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/intl.git",
+            "reference": "ae61816fdc00809928bb45ebc5df593d7e0878ad"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/intl/zipball/ae61816fdc00809928bb45ebc5df593d7e0878ad",
+            "reference": "ae61816fdc00809928bb45ebc5df593d7e0878ad",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3",
+            "symfony/polyfill-intl-icu": "~1.0"
+        },
+        "require-dev": {
+            "symfony/filesystem": "~3.4|~4.0"
+        },
+        "suggest": {
+            "ext-intl": "to use the component with locales other than \"en\""
+        },
+        "time": "2019-06-17T17:37:00+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Intl\\": ""
+            },
+            "classmap": [
+                "Resources/stubs"
+            ],
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bernhard Schussek",
+                "email": "bschussek@gmail.com"
+            },
+            {
+                "name": "Eriksen Costa",
+                "email": "eriksen.costa@infranology.com.br"
+            },
+            {
+                "name": "Igor Wiedler",
+                "email": "igor@wiedler.ch"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "A PHP replacement layer for the C intl extension that includes additional data from the ICU library.",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "i18n",
+            "icu",
+            "internationalization",
+            "intl",
+            "l10n",
+            "localization"
+        ]
+    },
+    {
         "name": "symfony/lock",
         "version": "v3.4.12",
         "version_normalized": "3.4.12.0",
@@ -3523,6 +3548,66 @@
             "mutex",
             "redlock",
             "semaphore"
+        ]
+    },
+    {
+        "name": "symfony/polyfill-intl-icu",
+        "version": "v1.11.0",
+        "version_normalized": "1.11.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-intl-icu.git",
+            "reference": "999878a3a09d73cae157b0cf89bb6fb2cc073057"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/999878a3a09d73cae157b0cf89bb6fb2cc073057",
+            "reference": "999878a3a09d73cae157b0cf89bb6fb2cc073057",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "symfony/intl": "~2.3|~3.0|~4.0"
+        },
+        "suggest": {
+            "ext-intl": "For best performance"
+        },
+        "time": "2019-01-07T19:39:47+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.9-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill for intl's ICU-related data and classes",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "icu",
+            "intl",
+            "polyfill",
+            "portable",
+            "shim"
         ]
     },
     {

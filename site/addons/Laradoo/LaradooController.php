@@ -25,7 +25,7 @@ class LaradooController extends Controller
 
     }
 
-    private function createOrderLines($odoo, $cart, $order_id)
+    private function createOrderLines($cart)
     {
         /*
         * The cart array needs to be transformed into another array
@@ -36,26 +36,27 @@ class LaradooController extends Controller
         * - price_unit
         */
 
-        $orderLine = [];
-        $orderLine['order_id'] = $order_id + 0;
-        $orderLine['product_uom'] = 1;
+        $orderLines = [];
         
         foreach($cart as $cartLine) {
+            $orderLine=[];
+            $orderLine['product_uom'] = 1;
             $orderLine['product_id'] = $cartLine->variantId + 0;
             $orderLine['name'] = $cartLine->wine . ' ' . $cartLine->vintage . ' ' . $cartLine->volume;
             $orderLine['product_uom_qty'] = $cartLine->ordered;
             $orderLine['price_unit'] = str_replace(',', '.', $cartLine->price) + 0;
-            $id = $odoo->create('sale.order.line', $orderLine);
+            $orderLines[] = array(0, 0, $orderLine);
 
             // any free articles?
             if($cartLine->total_gof > 0) {
                 $orderLine['product_uom_qty'] = $cartLine->total_gof;
                 $orderLine['price_unit'] = 0;
-                $id = $odoo->create('sale.order.line', $orderLine);
+                $orderLines[] = array(0, 0, $orderLine);
             }
         }
-    }
 
+        return $orderLines;
+    }
 
     private function checkDeliveryAddress($odoo_id, $cart)
     {
@@ -70,11 +71,10 @@ class LaradooController extends Controller
             'date_order' => date("m/d/Y"),
             'payment_term' => 1,
             'partner_id' => $odoo_id + 0,
-         //   'order_line' => $orderLines
+            'order_line' => $this->createOrderLines($cart)
         ];
 
         $order_id = $odoo->create('sale.order', $values);
-        $this->createOrderLines($odoo, $cart, $order_id);
         $odoo->call('sale.order', 'action_confirm', array($order_id));
 
         /*
@@ -86,10 +86,14 @@ class LaradooController extends Controller
             ->get('sale.order')
             ->first();
         $immediate_picking_id=$odoo->create('stock.immediate.transfer', array('pick_id' => $picking_id['picking_ids'][0]));
-        $odoo->call('stock.immediate.transfer', 'process', array($immediate_picking_id));
+        $id = $odoo->call('stock.immediate.transfer', 'process', array($immediate_picking_id));
 
         // Now that we have a confirmed sale.order, we can charge stripe.
 
+        /*
+        * Stripe is charged. We can now create an invoice and acknowledge it's payment.
+        * Payment needs to be created and then added to the invoice.
+        */
         $sale_order_to_invoice_data = array($order_id, array("context"=>array("active_ids"=>$order_id)));
         $invoice_id = $odoo->call('sale.order', 'action_invoice_create', $sale_order_to_invoice_data);
         $id = $odoo->call_wf('account.invoice', 'invoice_open', $invoice_id->first());
