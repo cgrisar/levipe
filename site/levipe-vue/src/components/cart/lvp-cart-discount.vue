@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-row justify-between bg-grey-light rounded-lg px-2 py-4 items-center mb-4">
-        <h4 class="text-black">{{ couponlabel }}</h4>
+        <h4 class="text-black">{{ localeLabel('coupon') }}</h4>
         <div class="flex flex-row">
             <div>
                 <input  size="10" 
@@ -34,6 +34,17 @@ export default {
     },
 
     methods: {
+
+        localeLabel(label) {
+            var labelMap = new Map([
+                ['nl_coupon', 'Couponcode'],
+                ['fr_coupon', 'Code du coupon'],
+            ]);
+
+            var key = this.locale + "_" + label;
+            return labelMap.get(key)
+        },
+
         lookupDiscount() {
             if (this.couponCode == '') {
                 return
