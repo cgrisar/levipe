@@ -84,7 +84,7 @@
             getVariantFromCart() 
             {
                 // if this product is in the shopping cart, then put its quantity in the quantity field
-                this.cart.some(element => 
+                this.cart.cartLines.some(element => 
                 {
                     if (element.variantId === this.variantId) 
                     {
@@ -102,10 +102,10 @@
 
                 let found = false ;
 
-                if ( this.cart.length ) 
+                if ( this.cart.cartLines.length ) 
                 {
                     // parse through the array and add to variantId if it is already present
-                    this.cart.some(element => 
+                    this.cart.cartLines.some(element => 
                     {
                         if (found = (element.variantId === this.variantId)) 
                         {
@@ -119,22 +119,22 @@
                 // add an element to the array if it is not found
                 if (!found) 
                 {
-                    this.cart.push({'wine': this.wine,
-                                    'variantId': this.variantId,
-                                    'vintage': this.vintage, 
-                                    'volume': this.volume, 
-                                    'price': this.price,
-                                    'bo': this.bo,
-                                    'gof': this.gof,
-                                    'discount': this.bogof_discount,
-                                    'quantity': this.quantity,
-                                    'ordered': Number(this.ordered),
-                                    'total_gof': Number(this.total_gof),
-                                    'total_ordered': Number(this.ordered) + Number(this.total_gof)
-                                    });
+                    this.cart.cartLines.push({'wine': this.wine,
+                                                'variantId': this.variantId,
+                                                'vintage': this.vintage, 
+                                                'volume': this.volume, 
+                                                'price': this.price,
+                                                'bo': this.bo,
+                                                'gof': this.gof,
+                                                'discount': this.bogof_discount,
+                                                'quantity': this.quantity,
+                                                'ordered': Number(this.ordered),
+                                                'total_gof': Number(this.total_gof),
+                                                'total_ordered': Number(this.ordered) + Number(this.total_gof)
+                                            });
                  }
 
-                sessionStorage.cart = JSON.stringify( this.cart );
+                sessionStorage.cart = JSON.stringify(this.cart.cartLines);
             },
 
             calculateTotalGof() {
@@ -145,7 +145,7 @@
                 if (this.ordered > 1) {
                     this.ordered--;
                     this.total_gof = this.calculateTotalGof();
-                    sessionStorage.cart = JSON.stringify( this.cart );
+                    sessionStorage.cart = JSON.stringify(this.cart.cartLines);
                 }
             },
 
@@ -153,7 +153,7 @@
                 if (this.ordered < this.maxquantity) {
                     this.ordered++;
                     this.total_gof = this.calculateTotalGof();
-                    sessionStorage.cart = JSON.stringify( this.cart );
+                    sessionStorage.cart = JSON.stringify(this.cart.cartLines);
                 }
             },
 

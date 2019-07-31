@@ -20,8 +20,12 @@
         
         <script>
             let store = {
-                cart: ( sessionStorage.cart ) ? JSON.parse( sessionStorage. cart ) : new Array,
+                cart: new Array
             };
+            store.cart.cartLines = new Array
+            if (sessionStorage.cart) {
+                store.cart.cartLines = JSON.parse(sessionStorage.cart)
+            }
         </script>
 
         {{ if environment == 'production' }}

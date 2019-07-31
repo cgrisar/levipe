@@ -13,12 +13,12 @@
 
 <script>
     export default {
-        props: ['cart'],
+        props: ['cartlines'],
 
         computed: {
             bottlesInCart() {
                 var bottles = 0;
-                this.cart.forEach( element => {
+                this.cartlines.forEach( element => {
                     bottles += element.ordered + element.total_gof
                 });
                 return bottles;

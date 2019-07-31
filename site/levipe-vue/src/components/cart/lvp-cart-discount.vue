@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row justify-between bg-grey-light rounded-lg px-2 py-4 items-center mb-4">
+    <div class="flex flex-row justify-between bg-grey-light rounded-lg px-4 py-4 items-center mb-4">
         <h4 class="text-black">{{ localeLabel('coupon') }}</h4>
         <div class="flex flex-row">
             <div>
@@ -24,7 +24,7 @@ function nowIsBetween(startDate, endDate) {
 }
 
 export default {
-    props: ['couponlabel'],
+    props: ['locale'],
 
     data() {
         return {

@@ -133,10 +133,10 @@
     </div>
     
     <div class="hidden" id="orderBlock">
-        <lvp-cart-stripe></lvp-cart-stripe>
+        <lvp-cart-stripe :locale="locale"
+            @submitted="submitOrder"></lvp-cart-stripe>
     </div>
     
-    <button @click="submitOrder">Submit</button>
 </div>
 </template>
 
@@ -188,11 +188,10 @@ export default {
         },
 
         shippingCost(e) {
-            this.axios.get('/!/Fetch/entry/shipping/be')
-                .then(data => console.log(data))
+            this.$emit('chargesChanged', e);
         },
 
-        submitOrder() {
+        submitOrder(token) {
             var orderData = new FormData();
             orderData.set('odoo_id', getValue('odoo_id'));
             orderData.set('delAddress', getValue('delivery_address'));
@@ -203,7 +202,8 @@ export default {
             orderData.set('zip', getValue('zip'));
             orderData.set('city', getValue('city'));
             orderData.set('phone', getValue('vat'));
-            orderData.set('cart', JSON.stringify(this.cart));
+            orderData.set('cartlines', JSON.stringify(this.cart.cartLines));
+            orderData.set('token', token);
 
             this.axios({
                 method: 'post',
