@@ -622,9 +622,9 @@ button,
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .container {
-    max-width: 768px;
+    max-width: 760px;
   }
 }
 
@@ -10819,7 +10819,7 @@ input[type=checkbox]:checked + label div {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .md\:list-reset {
     list-style: none;
     padding: 0;

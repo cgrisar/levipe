@@ -120,7 +120,22 @@ class LaradooController extends Controller
 
     public function postOrder()
     {
+        // get the request parameters
+        $odooId = request('odooId');
+
+        $delAdress = request('delAddress');
+        $delZip = request('delZip');
+        $delCity = request('delCity');
+        $delPhone = request('delPhone');
+
+        $address = request('address');
+        $zip = request('zip');
+        $city = request('city');
+        $phone = request('phone');
+
+        $token = json_decode(request('token'));
         $cart = json_decode(request('cart'));
+
         return $this->createOrder($cart);
     }
 }

@@ -193,7 +193,7 @@ export default {
 
         submitOrder(token) {
             var orderData = new FormData();
-            orderData.set('odoo_id', getValue('odoo_id'));
+            orderData.set('odooId', getValue('odoo_id'));
             orderData.set('delAddress', getValue('delivery_address'));
             orderData.set('delZip', getValue('delivery_zip'));
             orderData.set('delCity', getValue('delivery_city'));
