@@ -197,36 +197,14 @@ module.exports = {
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
-      'Segoe UI',
       'Roboto',
       'Source Sans Pro',
-      'Oxygen',
-      'Ubuntu',
-      'Cantarell',
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
       'sans-serif',
     ],
     'serif': [
-      'Constantia',
-      'Lucida Bright',
-      'Lucidabright',
-      'Lucida Serif',
-      'Lucida',
-      'DejaVu Serif',
-      'Bitstream Vera Serif',
-      'Liberation Serif',
-      'Georgia',
-      'serif',
     ],
     'mono': [
-      'Menlo',
-      'Monaco',
-      'Consolas',
-      'Liberation Mono',
       'Courier New',
-      'monospace',
     ]
   },
 
@@ -684,8 +662,11 @@ module.exports = {
     '2': '0.5rem',
     '3': '0.75rem',
     '4': '1rem',
+    '5': '1.25rem',
     '6': '1.5rem',
+    '7': '1.75rem',
     '8': '2rem',
+    '12': '3rem'
   },
 
 
