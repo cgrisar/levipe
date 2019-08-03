@@ -25,20 +25,24 @@ class LaradooController extends Controller
 
     }
 
-    private function createOrderLines($cart)
+    private function createOrderLines($cartLines)
     {
         /*
         * The cart array needs to be transformed into another array
         * A valid order line needs
         * - productid
         * - name
+        * - product unit of measure
         * - quantity
         * - price_unit
+        *
+        * The order line is then transformed to a (0,0, orderline) and added to an array
+        * This techniques allows to create an order with just 1 call to ODOO.
         */
 
         $orderLines = [];
         
-        foreach($cart as $cartLine) {
+        foreach($cartLines as $cartLine) {
             $orderLine=[];
             $orderLine['product_uom'] = 1;
             $orderLine['product_id'] = $cartLine->variantId + 0;
@@ -58,10 +62,10 @@ class LaradooController extends Controller
         return $orderLines;
     }
 
-    private function checkDeliveryAddress($odoo_id, $cart)
+    private function checkDeliveryAddress($odooId, $cart)
     {
         $odoo = $this->connectToOdoo();
-        $odooUsers = $odoo->where('id', '=', $odoo_id)
+        $odooUsers = $odoo->where('id', '=', $odooId)
                             ->fields('name', 'street', 'zip', 'city', 'vat', 'type')
                             ->get('res.partner');
         
@@ -70,7 +74,7 @@ class LaradooController extends Controller
             'currency_id' => 1,
             'date_order' => date("m/d/Y"),
             'payment_term' => 1,
-            'partner_id' => $odoo_id + 0,
+            'partner_id' => $odooId + 0,
             'order_line' => $this->createOrderLines($cart)
         ];
 
@@ -100,10 +104,10 @@ class LaradooController extends Controller
     }
 
 
-    private function createOrder($cart)
+    private function createOrder($odooId, $cart)
     {
 
-        $this->checkDeliveryAddress('3', $cart);
+        $this->checkDeliveryAddress($odooId, $cart);
 
         return $orderLines;
     }
@@ -136,6 +140,6 @@ class LaradooController extends Controller
         $token = json_decode(request('token'));
         $cart = json_decode(request('cart'));
 
-        return $this->createOrder($cart);
+        return $this->createOrder($odooId, $cart);
     }
 }
