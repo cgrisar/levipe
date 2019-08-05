@@ -6,15 +6,17 @@ use Edujugon\Laradoo\Odoo;
 use Statamic\Extend\Controller;
 use Statamic\Data\Users\User;
 use Statamic\API\User as UserAPI;
-use Statamic\API\Fieldset;
+use Illuminate\Support\Collection;
 
 class LaradooController extends Controller
 {
-    /**
-     * Maps to your route definition in routes.yaml
-     *
-     * @return mixed
-     */
+    private $odoo;
+    
+    public function __construct()
+    {
+        $this->odoo = $this->connectToOdoo();
+    }
+
     private function connectToOdoo() {
 
         $odoo = new Odoo;
@@ -66,10 +68,11 @@ class LaradooController extends Controller
     }
 
 
-    private function checkInvoiceAddress($customer, $odoo)
+    private function updateInvoiceAddress($customer)
     {
+
         // update the contact information with the customer info
-        $test = $odoo->where('id', $customer['odooId'])
+        $this->odoo->where('id', $customer['odooId'])
                 ->update('res.partner',
                     [
                         'street' => $customer['invoiceStreet'], 
@@ -89,13 +92,20 @@ class LaradooController extends Controller
                         'vat' => $customer['invoiceVAT'],
                     ]
                 )
-            )
-            ->save();
+            );
+        $user->save();
+
     }
 
-    private function checkDeliveryAddress($customer, $odooUser, $odoo)
+
+    private function getDeliveryAddress($customer)
     {   
-        
+
+        $odooUser = $this->odoo->where('id', $customer['odooId'])
+                            ->fields('name', 'street', 'zip', 'city', 'vat', 'child_ids')
+                            ->get('res.partner')
+                            ->first();
+
         // return the id if we have a match between form input and contact address
         // we can't use array_intersect_assoc since $customer keys also contain the type of address
         if( ($customer['deliveryStreet'] == $odooUser['street']) &&
@@ -106,47 +116,36 @@ class LaradooController extends Controller
         }
 
         // we didn't match, so we're looping through the delivery addresses of odooUser to find a match
-        $addresses = $odoo->call('res.partner', 'read', 
+        $addresses = $this->odoo->call('res.partner', 'read', 
                             array($odooUser['child_ids']), 
                             array('fields' => array('street', 'zip', 'city', 'type')))
                         ->where('type', 'delivery')
                         ->where('street', $customer['deliveryStreet'])
                         ->where('zip', $customer['deliveryZip'])
                         ->where('city', $customer['deliveryCity']);
-        if($addresses->isNotEmpty())
+        if(!$addresses->isEmpty())
         {
             return $addresses->first()['id'];
         }
 
         // we didn't find a match in the delivery addresses, 
         // so we create a new delivery address and attach it to odooUser
-        $deliveryId = $odoo->create('res.partner',
-                                [
-                                    'name' => $customer['deliveryStreet'],
-                                    'zip' => $customer['deliveryZip'],
-                                    'city' => $customer['deliveryCity'],
-                                    'phone' => $customer['deliveryPhone']
-                                ]
-                            );
-        $odoo->where('id', '=', $customer['odooId'])
-                ->update('res.partner',
+        return $this->odoo->create('res.partner',
                         [
-                            'child_ids' => $odooUser['child_ids'][] = $deliveryId
-                        ]);
-        return $deliveryId;
+                            'street' => $customer['deliveryStreet'],
+                            'zip' => $customer['deliveryZip'],
+                            'city' => $customer['deliveryCity'],
+                            'phone' => $customer['deliveryPhone'],
+                            'parent_id' => $customer['odooId'],
+                            'type' => 'delivery'
+                        ]
+                    );
     }
 
     private function createOrder($customer, $cart, $token)
     {
-        $odoo = $this->connectToOdoo();
-
-        $odooUser = $odoo->where('id', '=', $customer['odooId'])
-                            ->fields('name', 'street', 'zip', 'city', 'vat', 'child_ids')
-                            ->get('res.partner')
-                            ->first();
-
         // update the customer / odoo partner data
-        $this->checkInvoiceAddress($customer, $odoo);
+        $this->updateInvoiceAddress($customer);
         
         // create order
         $values = [
@@ -154,23 +153,23 @@ class LaradooController extends Controller
             'date_order' => date("m/d/Y"),
             'payment_term' => 1,
             'partner_id' => $customer['odooId'] + 0,
-            'partner_shipping_id' => $this->checkDeliveryAddress($customer, $odooUser, $odoo),
+            'partner_shipping_id' => $this->getDeliveryAddress($customer),
             'order_line' => $this->createOrderLines($cart)
         ];
 
-        $order_id = $odoo->create('sale.order', $values);
-        $odoo->call('sale.order', 'action_confirm', array($order_id));
+        $order_id = $this->odoo->create('sale.order', $values);
+        $this->odoo->call('sale.order', 'action_confirm', array($order_id));
 
         /*
         * Validate the picking. Since we invoice only products that are delivered, we first have to create a transfer
         * and then process that transfer. It is the same as clicking on "validate" on the stock picking view
         */
-        $picking_id = $odoo->where('id', '=', $order_id)
+        $picking_id = $this->odoo->where('id', '=', $order_id)
             ->fields('picking_ids')
             ->get('sale.order')
             ->first();
-        $immediate_picking_id=$odoo->create('stock.immediate.transfer', array('pick_id' => $picking_id['picking_ids'][0]));
-        $id = $odoo->call('stock.immediate.transfer', 'process', array($immediate_picking_id));
+        $immediate_picking_id=$this->odoo->create('stock.immediate.transfer', array('pick_id' => $picking_id['picking_ids'][0]));
+        $id = $this->odoo->call('stock.immediate.transfer', 'process', array($immediate_picking_id));
 
         // Now that we have a confirmed sale.order, we can charge stripe.
 
@@ -179,8 +178,8 @@ class LaradooController extends Controller
         * Payment needs to be created and then added to the invoice.
         */
         $sale_order_to_invoice_data = array($order_id, array("context"=>array("active_ids"=>$order_id)));
-        $invoice_id = $odoo->call('sale.order', 'action_invoice_create', $sale_order_to_invoice_data);
-        $id = $odoo->call_wf('account.invoice', 'invoice_open', $invoice_id->first());
+        $invoice_id = $this->odoo->call('sale.order', 'action_invoice_create', $sale_order_to_invoice_data);
+        $id = $this->odoo->call_wf('account.invoice', 'invoice_open', $invoice_id->first());
     }
 
 
@@ -198,7 +197,7 @@ class LaradooController extends Controller
     {
         // get the request parameters
         $customer = [
-            'odooId' => request('odooId'),
+            'odooId' => request('odooId') + 0,
 
             'deliveryStreet' => request('delAddress'),
             'deliveryZip' => request('delZip'),

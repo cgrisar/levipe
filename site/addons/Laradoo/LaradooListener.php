@@ -15,8 +15,7 @@ class LaradooListener extends Listener
      * @var array
      */
     public $events = [
-        'user.registered' => 'createUserInOdoo',
-        UserSaved::class => 'createOrderInOdoo'
+        'user.registered' => 'createUserInOdoo'
     ];
 
     private function connectToOdoo() {
@@ -77,11 +76,5 @@ class LaradooListener extends Listener
                                             )
                     );
         $user->save();
-    }
-
-
-    public function createOrderInOdoo($event)
-    {
-        dd($event);
     }
 }
