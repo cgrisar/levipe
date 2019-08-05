@@ -55,7 +55,7 @@ class LaradooListener extends Listener
             $user->set('zip', $odooUser['zip']);
             $user->set('city', $odooUser['city']);
             $user->set('vat', $odooUser['vat']);
-            $user->set('odoo_id', $ids->first());
+            $user->set('odoo_id', $odooUser['id']);
             $user->save();
 
             return;
@@ -70,7 +70,7 @@ class LaradooListener extends Listener
                                                 'property_account_position_id' => 1,
                                                 'email' => $user->get('email'),
                                                 'propery_product_pricelist' => 1,
-                                                'category_id' => array('42'),
+                                                'category_id' => array(array(6, 0, array(42))),
                                                 'lang' => app()->getLocale() . '_' . strtoupper(app()->getLocale())
                                                 ] 
                                             )

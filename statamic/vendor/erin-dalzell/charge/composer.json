@@ -1,0 +1,7 @@
+{
+    "name": "erin-dalzell/charge",
+    "require": {
+        "stripe/stripe-php" : "*",
+        "symfony/intl" : "*"
+    }
+}

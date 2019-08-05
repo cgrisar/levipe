@@ -1,0 +1,23 @@
+sections:
+  main:
+    display: Main
+    fields:
+      vat:
+        type: text
+        width: 25
+        display: VAT
+      rates:
+        mode: table
+        fields:
+          minimum_amount:
+            type: text
+            width: 33
+            display: 'Minimum Amount'
+          charge:
+            type: text
+            width: 33
+            display: Charge
+        type: grid
+        display: rates
+taxonomies: true
+title: Shipping

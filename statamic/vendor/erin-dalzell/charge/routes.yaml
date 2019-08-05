@@ -1,0 +1,29 @@
+routes:
+  # Dashboard
+  /:
+    uses: index
+    as: charge
+
+  # list the customers
+  /customers:
+    uses: customers
+    as: lists.customers
+
+  # list the charges
+  /charges:
+    uses: charges
+    as: lists.charges
+
+  # list the subscriptions
+  /subscriptions:
+    uses: subscriptions
+    as: lists.subscriptions
+
+  # refund charge
+  /refund/{id}: getRefund
+
+  # cancel the given subscription id
+  /cancel/{id}: getCancel
+
+  # resubscribe the given subscription id
+  /resubscribe/{id}: getResubscribe

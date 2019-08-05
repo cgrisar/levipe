@@ -203,7 +203,7 @@ export default {
             orderData.set('city', getValue('city'));
             orderData.set('phone', getValue('vat'));
             orderData.set('cartlines', JSON.stringify(this.cart.cartLines));
-            orderData.set('token', JSON.stringify(token));
+            orderData.set('token', token);
             this.$emit('submitted', orderData);
         },
 

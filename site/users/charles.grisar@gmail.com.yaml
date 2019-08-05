@@ -1,11 +1,11 @@
 name: 'Charles Grisar'
-newsletter: 'on'
-roles:
-  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
-password_hash: $2y$10$E94Bh2Vh1Vz4fvRGq5uRMuWWyFigC8lNlhl0KC2Tj0ToDhbdRLg9W
-id: 7048ebe3-e571-4377-87b8-ea6233d2b6e4
-odoo_id: 1302
 address: 'Falconrui Inv'
 zip: '2000'
 city: Antwerpen
+phone: '0473980596'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$b.B0wZqy9OPnGvDMhzuWAev6KR.ihXhxW5xw5bHewBAVTkBcRk..C
+id: a04959f5-78a4-4a8b-9897-c5f9d2c6ea2e
 vat: null
+odoo_id: 1302

@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <div class="w-1/2 pl-6 flex justify-center">
-                            <a href="{{ link to='/register' }}" class="no-underline">
+                            <a href="{{ link to='/register' }}?redirect=<?php echo request('redirect') ?>" class="no-underline">
                                 <h4 class="text-white bg-green-darker rounded-lg py-2 px-4 uppercase">{{ trans:login.creer_compte }}</h4>
                             </a>
                         </div>

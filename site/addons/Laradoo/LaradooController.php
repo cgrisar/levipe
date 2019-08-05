@@ -2,9 +2,11 @@
 
 namespace Statamic\Addons\Laradoo;
 
+use Stripe\Charge;
+use Stripe\Stripe;
 use Edujugon\Laradoo\Odoo;
-use Statamic\Extend\Controller;
 use Statamic\Data\Users\User;
+use Statamic\Extend\Controller;
 use Statamic\API\User as UserAPI;
 use Illuminate\Support\Collection;
 
@@ -142,6 +144,23 @@ class LaradooController extends Controller
                     );
     }
 
+
+    private function chargeCreditCard($order, $token)
+    {
+        Stripe::setApiKey('sk_test_9uSTLFoU0L0bmhDaLH2epcDR');
+
+        $charge = Charge::create([
+            'amount' => intval($order['amount_total'] * 100),
+            'currency' => 'eur',
+            'description' => 'Les Vins Personnalisés order ' . $order['name'],
+            'statement_descriptor' => 'le.vi.pe order ' . $order['name'],
+            'source' => $token,
+        ]);
+
+        return $charge;
+    }
+
+
     private function createOrder($customer, $cart, $token)
     {
         // update the customer / odoo partner data
@@ -159,6 +178,10 @@ class LaradooController extends Controller
 
         $order_id = $this->odoo->create('sale.order', $values);
         $this->odoo->call('sale.order', 'action_confirm', array($order_id));
+        $order = $this->odoo->where('id', $order_id)
+                        ->fields('name', 'amount_total')
+                        ->get('sale.order')
+                        ->first();
 
         /*
         * Validate the picking. Since we invoice only products that are delivered, we first have to create a transfer
@@ -169,24 +192,20 @@ class LaradooController extends Controller
             ->get('sale.order')
             ->first();
         $immediate_picking_id=$this->odoo->create('stock.immediate.transfer', array('pick_id' => $picking_id['picking_ids'][0]));
-        $id = $this->odoo->call('stock.immediate.transfer', 'process', array($immediate_picking_id));
+        $this->odoo->call('stock.immediate.transfer', 'process', array($immediate_picking_id));
 
         // Now that we have a confirmed sale.order, we can charge stripe.
+        $this->chargeCreditCard($order, $token);
 
         /*
         * Stripe is charged. We can now create an invoice and acknowledge it's payment.
         * Payment needs to be created and then added to the invoice.
         */
-        $sale_order_to_invoice_data = array($order_id, array("context"=>array("active_ids"=>$order_id)));
+        $sale_order_to_invoice_data = array($order_id, array('context' => array('active_ids' => $order_id)));
         $invoice_id = $this->odoo->call('sale.order', 'action_invoice_create', $sale_order_to_invoice_data);
-        $id = $this->odoo->call_wf('account.invoice', 'invoice_open', $invoice_id->first());
+        $this->odoo->call_wf('account.invoice', 'invoice_open', $invoice_id->first());
     }
 
-
-    private function chargeCreditCard()
-    {
-
-    }
 
     private function createInvoice()
     {
@@ -211,7 +230,7 @@ class LaradooController extends Controller
             'invoiceVAT' => request('VAT'),
         ];
 
-        $token = json_decode(request('token'));
+        $token = request('token');
         $cart = json_decode(request('cartlines'));
 
         return $this->createOrder($customer, $cart, $token);

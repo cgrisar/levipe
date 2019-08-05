@@ -1,0 +1,77 @@
+fields:
+  charge_formsets:
+    type: suggest
+    mode: form
+    display: Forms
+    width: 33
+  charge_collections:
+    type: suggest
+    mode: collections
+    display: Collections
+    width: 33
+  currency:
+    type: text
+    validate: required
+    width: 33
+    default: usd
+  statuses_section:
+    type: section
+    display: Statuses
+    instructions: What would you like to call the statuses?
+  active:
+    type: text
+    default: Active
+    width: 25
+  canceling:
+    type: text
+    default: Canceling
+    width: 25
+  past_due:
+    type: text
+    default: Past Due
+    width: 25
+  canceled:
+    type: text
+    default: Canceled
+    width: 25
+  roles_section:
+    type: section
+    display: Plans & Roles
+  plans_and_roles:
+    type: grid
+    display: 'When a user subscribes to a plan, give them a role'
+    fields:
+      plan:
+        type: suggest
+        mode: charge.stripe_plans
+        display: 'Stripe Plan'
+        validate: required
+        max_items: 1
+      billing_day:
+        type: integer
+        display: Billing Day
+      prorate:
+        type: toggle
+        default: true
+      role:
+        type: user_roles
+        display: 'Role to add to user'
+        validate: required
+        max_items: 1
+    mode: table
+    add_row: Add Plan & Role
+  templates_section:
+    type: section
+    display: Email Settings
+  from_email:
+    type: text
+    width: 25
+  canceled_email_template:
+    type: template
+    width: 25
+  payment_failed_email_template:
+    type: template
+    width: 25
+  upcoming_payment_email_template:
+    type: template
+    width: 25
