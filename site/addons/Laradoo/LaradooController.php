@@ -4,6 +4,9 @@ namespace Statamic\Addons\Laradoo;
 
 use Edujugon\Laradoo\Odoo;
 use Statamic\Extend\Controller;
+use Statamic\Data\Users\User;
+use Statamic\API\User as UserAPI;
+use Statamic\API\Fieldset;
 
 class LaradooController extends Controller
 {
@@ -62,19 +65,96 @@ class LaradooController extends Controller
         return $orderLines;
     }
 
-    private function checkDeliveryAddress($odooId, $cart)
+
+    private function checkInvoiceAddress($customer, $odoo)
+    {
+        // update the contact information with the customer info
+        $test = $odoo->where('id', $customer['odooId'])
+                ->update('res.partner',
+                    [
+                        'street' => $customer['invoiceStreet'], 
+                        'zip' => $customer['invoiceZip'],
+                        'city' => $customer['invoiceCity'],
+                        'vat' => $customer['invoiceVAT'],
+                    ]);
+
+        // update the user information in Statamic
+        $user = UserAPI::getCurrent();
+        $user->data(
+                array_merge($user->data(),
+                    [
+                        'address' => $customer['invoiceStreet'],
+                        'zip' => $customer['invoiceZip'],
+                        'city' => $customer['invoiceCity'],
+                        'vat' => $customer['invoiceVAT'],
+                    ]
+                )
+            )
+            ->save();
+    }
+
+    private function checkDeliveryAddress($customer, $odooUser, $odoo)
+    {   
+        
+        // return the id if we have a match between form input and contact address
+        // we can't use array_intersect_assoc since $customer keys also contain the type of address
+        if( ($customer['deliveryStreet'] == $odooUser['street']) &&
+            ($customer['deliveryZip'] == $odooUser['zip']) &&
+            ($customer['deliveryCity'] == $odooUser['city']) )
+        {
+            return $customer['odooId'];
+        }
+
+        // we didn't match, so we're looping through the delivery addresses of odooUser to find a match
+        $addresses = $odoo->call('res.partner', 'read', 
+                            array($odooUser['child_ids']), 
+                            array('fields' => array('street', 'zip', 'city', 'type')))
+                        ->where('type', 'delivery')
+                        ->where('street', $customer['deliveryStreet'])
+                        ->where('zip', $customer['deliveryZip'])
+                        ->where('city', $customer['deliveryCity']);
+        if($addresses->isNotEmpty())
+        {
+            return $addresses->first()['id'];
+        }
+
+        // we didn't find a match in the delivery addresses, 
+        // so we create a new delivery address and attach it to odooUser
+        $deliveryId = $odoo->create('res.partner',
+                                [
+                                    'name' => $customer['deliveryStreet'],
+                                    'zip' => $customer['deliveryZip'],
+                                    'city' => $customer['deliveryCity'],
+                                    'phone' => $customer['deliveryPhone']
+                                ]
+                            );
+        $odoo->where('id', '=', $customer['odooId'])
+                ->update('res.partner',
+                        [
+                            'child_ids' => $odooUser['child_ids'][] = $deliveryId
+                        ]);
+        return $deliveryId;
+    }
+
+    private function createOrder($customer, $cart, $token)
     {
         $odoo = $this->connectToOdoo();
-        $odooUsers = $odoo->where('id', '=', $odooId)
-                            ->fields('name', 'street', 'zip', 'city', 'vat', 'type')
-                            ->get('res.partner');
+
+        $odooUser = $odoo->where('id', '=', $customer['odooId'])
+                            ->fields('name', 'street', 'zip', 'city', 'vat', 'child_ids')
+                            ->get('res.partner')
+                            ->first();
+
+        // update the customer / odoo partner data
+        $this->checkInvoiceAddress($customer, $odoo);
         
         // create order
         $values = [
             'currency_id' => 1,
             'date_order' => date("m/d/Y"),
             'payment_term' => 1,
-            'partner_id' => $odooId + 0,
+            'partner_id' => $customer['odooId'] + 0,
+            'partner_shipping_id' => $this->checkDeliveryAddress($customer, $odooUser, $odoo),
             'order_line' => $this->createOrderLines($cart)
         ];
 
@@ -104,14 +184,6 @@ class LaradooController extends Controller
     }
 
 
-    private function createOrder($odooId, $cart)
-    {
-
-        $this->checkDeliveryAddress($odooId, $cart);
-
-        return $orderLines;
-    }
-
     private function chargeCreditCard()
     {
 
@@ -125,21 +197,24 @@ class LaradooController extends Controller
     public function postOrder()
     {
         // get the request parameters
-        $odooId = request('odooId');
+        $customer = [
+            'odooId' => request('odooId'),
 
-        $delAdress = request('delAddress');
-        $delZip = request('delZip');
-        $delCity = request('delCity');
-        $delPhone = request('delPhone');
+            'deliveryStreet' => request('delAddress'),
+            'deliveryZip' => request('delZip'),
+            'deliveryCity' => request('delCity'),
+            'deliveryPhone' => request('delPhone'),
 
-        $address = request('address');
-        $zip = request('zip');
-        $city = request('city');
-        $phone = request('phone');
+            'invoiceStreet' => request('address'),
+            'invoiceZip' => request('zip'),
+            'invoiceCity' => request('city'),
+            'invoicePhone' => request('phone'),
+            'invoiceVAT' => request('VAT'),
+        ];
 
         $token = json_decode(request('token'));
-        $cart = json_decode(request('cart'));
+        $cart = json_decode(request('cartlines'));
 
-        return $this->createOrder($odooId, $cart);
+        return $this->createOrder($customer, $cart, $token);
     }
 }

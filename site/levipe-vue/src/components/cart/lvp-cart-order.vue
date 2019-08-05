@@ -14,8 +14,9 @@
     </div>
     
     <div class="block" id="deliveryBlock">
-        <input type="hidden" name="username" value="{{{ email }}">
+        <input type="hidden" name="username" value="{{ email }}">
         <input type="hidden" name="name" value="{{ name }}">
+        <input type="hidden" name="odooId" value="{{ odoo_id }}">
         
         <div class="items-center mb-6 flex flex-row">
             <div class="w-1/5">
@@ -151,7 +152,7 @@ function getValue(id){
 }
 
 export default {
-    props: ['locale', 'name', 'username', 'address', 'zip', 'city', 'phone', 'VAT', 'user'],
+    props: ['locale', 'address', 'zip', 'city', 'phone', 'VAT', 'user'],
 
     data() {
         return {
@@ -193,7 +194,6 @@ export default {
 
         submitOrder(token) {
             var orderData = new FormData();
-            orderData.set('odooId', getValue('odoo_id'));
             orderData.set('delAddress', getValue('delivery_address'));
             orderData.set('delZip', getValue('delivery_zip'));
             orderData.set('delCity', getValue('delivery_city'));
@@ -203,15 +203,8 @@ export default {
             orderData.set('city', getValue('city'));
             orderData.set('phone', getValue('vat'));
             orderData.set('cartlines', JSON.stringify(this.cart.cartLines));
-            orderData.set('token', token);
-
-            this.axios({
-                method: 'post',
-                url: '/!/Laradoo/order',
-                data: orderData,
-                config: { headers: {'Content-Type': 'multipart/form-data' }}
-                })
-                .then( (response) => console.log(response));
+            orderData.set('token', JSON.stringify(token));
+            this.$emit('submitted', orderData);
         },
 
         computed: {

@@ -14,14 +14,15 @@
     </div>
     
     {{ user }}
-        <lvp-cart   locale="{{ locale }}" 
-                    name ="{{ name }}"
-                    email = "{{ username }}"
+        <lvp-cart   locale="{{ locale }}"
+                    odoo-id="{{ odoo_id }}"
+                    name="{{ name }}"
+                    email="{{ username }}"
                     address="{{ address }}"
                     zip="{{ zip }}"
                     city="{{ city }}"
                     phone="{{ phone }}"
-                    VAT="{{ VAT }}"></lvp-cart>
+                    vat="{{ VAT }}"></lvp-cart>
     {{ /user }}
 
 </div>

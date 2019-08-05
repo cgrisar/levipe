@@ -8,14 +8,13 @@
             <div class="flex flex-col">
                 <lvp-cart-discount :locale="locale"></lvp-cart-discount>
                 <lvp-cart-order :locale="locale"
-                                :name="name"
-                                :email="username"
                                 :address="address"
                                 :zip="zip"
                                 :city="city"
                                 :phone="phone"
-                                :VAT="VAT"
-                                @chargesChanged="calcutateCharges"></lvp-cart-order>
+                                :vat="vat"
+                                @chargesChanged="calcutateCharges"
+                                @submitted="submitPayment"></lvp-cart-order>
             </div>
         </div>
     </div>
@@ -34,7 +33,7 @@ export default {
         }
     },
 
-    props: ['locale', 'name', 'email', 'address', 'zip', 'city', 'phone', 'VAT'],
+    props: ['locale', 'odooId', 'name', 'email', 'address', 'zip', 'city', 'phone', 'vat'],
     
     components: { lvpCartLines, lvpCartOrder, lvpCartDiscount},
 
@@ -42,6 +41,17 @@ export default {
         calculateCharges() {
             this.axios.get('/!/Fetch/entry/shipping/be')
                 .then(data => console.log(data))
+        },
+
+        submitPayment(orderData) {
+            orderData.set('odooId', this.odooId);
+            this.axios({
+                method: 'post',
+                url: '/!/Laradoo/order',
+                data: orderData,
+                config: { headers: {'Content-Type': 'multipart/form-data' }}
+                })
+                .then( (response) => console.log(response));
         }
     },
 
