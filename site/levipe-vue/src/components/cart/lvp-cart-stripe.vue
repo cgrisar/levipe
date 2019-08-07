@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { Card, createToken } from 'vue-stripe-elements-plus'
+import { Card, createPaymentMethod } from 'vue-stripe-elements-plus'
 
 export default {
     props: ['locale'],
@@ -44,8 +44,14 @@ export default {
         },
 
         pay() {
-            createToken().then(data => { 
-                this.$emit('submitted', data.token.id);
+            createPaymentMethod().then(result => { 
+                if(result.error){
+
+                } else {
+                    this.$emit('submitted', result.paymentMethod.id);
+                }
+            // createToken().then(data => { 
+            //     this.$emit('submitted', data.token.id);
             })
         },
     }

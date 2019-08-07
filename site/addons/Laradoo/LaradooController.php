@@ -2,8 +2,10 @@
 
 namespace Statamic\Addons\Laradoo;
 
+use Exception;
 use Stripe\Charge;
 use Stripe\Stripe;
+use Stripe\PaymentIntent;
 use Edujugon\Laradoo\Odoo;
 use Statamic\Data\Users\User;
 use Statamic\Extend\Controller;
@@ -144,20 +146,56 @@ class LaradooController extends Controller
                     );
     }
 
+    private function generatePaymentResponse($intent) {
+        # Note that if your API version is before 2019-02-11, 'requires_action'
+        # appears as 'requires_source_action'.
+        if ($intent->status == 'requires_action' &&
+            $intent->next_action->type == 'use_stripe_sdk') {
+          # Tell the client to handle the action
+          echo json_encode([
+            'requires_action' => true,
+            'payment_intent_client_secret' => $intent->client_secret
+          ]);
+        } else if ($intent->status == 'succeeded') {
+          # The payment didn’t need any additional actions and completed!
+          # Handle post-payment fulfillment
+          echo json_encode([
+            "success" => true
+          ]);
+        } else {
+          # Invalid status
+          http_response_code(500);
+          echo json_encode(['error' => 'Invalid PaymentIntent status']);
+        }
+    }
 
     private function chargeCreditCard($order, $token)
     {
-        Stripe::setApiKey('sk_test_9uSTLFoU0L0bmhDaLH2epcDR');
+        try 
+        {
+            Stripe::setApiKey('sk_test_9uSTLFoU0L0bmhDaLH2epcDR');
+            $intent = PaymentIntent::create([
+                'amount' => intval($order['amount_total'] * 100),
+                'currency' => 'eur',
+                'description' => 'Les Vins Personnalisés order ' . $order['name'],
+                'statement_descriptor' => 'le.vi.pe order ' . $order['name'],
+                'confirmation_method' => 'manual',
+                'confirm' => true,
+                'payment_method' => $token,
+            ]);
+            $this->generatePaymentResponse($intent);
+        }
 
-        $charge = Charge::create([
-            'amount' => intval($order['amount_total'] * 100),
-            'currency' => 'eur',
-            'description' => 'Les Vins Personnalisés order ' . $order['name'],
-            'statement_descriptor' => 'le.vi.pe order ' . $order['name'],
-            'source' => $token,
-        ]);
-
-        return $charge;
+        catch(\Stripe\Error\Card $e)
+        { 
+            $body = $e->getJsonBody();
+            return json_encode(['error' => $body['error']]);
+        }
+        
+        catch(\Stripe\Error\Base $e)
+        {
+            return json_encode(['error' => $e->getMessage()]);
+        }
     }
 
 
@@ -233,6 +271,7 @@ class LaradooController extends Controller
         $token = request('token');
         $cart = json_decode(request('cartlines'));
 
-        return $this->createOrder($customer, $cart, $token);
+        //return $this->createOrder($customer, $cart, $token);
+        $result = $this->chargeCreditCard(['amount_total' => '43.78', 'name' => 'SO0100'], $token);
     }
 }
