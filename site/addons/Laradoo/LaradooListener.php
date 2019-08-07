@@ -22,7 +22,7 @@ class LaradooListener extends Listener
 
         $odoo = new Odoo;
         try {
-            $odoo->connect( 'gec2', 'charles@grisarco.be', 'Ver0N!que' );
+            $odoo->connect( env('ODOO_DB'), env('ODOO_LOGIN'), env('ODOO_PASSWORD') );
         } catch(Exception $e) {
             echo 'No response';
         };
