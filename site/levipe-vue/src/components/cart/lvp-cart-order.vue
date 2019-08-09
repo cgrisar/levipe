@@ -151,6 +151,8 @@ function getValue(id){
     return document.getElementById(id).value
 }
 
+
+
 export default {
     props: ['locale', 'address', 'zip', 'city', 'phone', 'VAT', 'user'],
 
@@ -203,7 +205,11 @@ export default {
             orderData.set('city', getValue('city'));
             orderData.set('phone', getValue('vat'));
             orderData.set('cartlines', JSON.stringify(this.cart.cartLines));
-            orderData.set('token', token);
+            if('payment_method' in token) {            
+                orderData.set('payment_method', token.payment_method)
+            } else {
+                orderData.set('payment_intent', token.payment_intent)
+            };
             this.$emit('submitted', orderData);
         },
 

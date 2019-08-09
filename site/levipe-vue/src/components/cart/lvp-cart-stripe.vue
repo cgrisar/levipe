@@ -48,10 +48,9 @@ export default {
                 if(result.error){
 
                 } else {
-                    this.$emit('submitted', result.paymentMethod.id);
+                    this.$emit('submitted', {'payment_method': result.paymentMethod.id});
+                    console.log("hello from stripe");
                 }
-            // createToken().then(data => { 
-            //     this.$emit('submitted', data.token.id);
             })
         },
     }

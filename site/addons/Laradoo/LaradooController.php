@@ -146,44 +146,69 @@ class LaradooController extends Controller
                     );
     }
 
-    private function generatePaymentResponse($intent) {
-        # Note that if your API version is before 2019-02-11, 'requires_action'
-        # appears as 'requires_source_action'.
-        if ($intent->status == 'requires_action' &&
-            $intent->next_action->type == 'use_stripe_sdk') {
-          # Tell the client to handle the action
-          echo json_encode([
-            'requires_action' => true,
-            'payment_intent_client_secret' => $intent->client_secret
-          ]);
-        } else if ($intent->status == 'succeeded') {
+    private function generatePaymentResponse($intent) 
+    {
+        if ($intent->status == 'succeeded') 
+        {
           # The payment didn’t need any additional actions and completed!
           # Handle post-payment fulfillment
-          echo json_encode([
+          return response()->json([
             "success" => true
           ]);
-        } else {
-          # Invalid status
-          http_response_code(500);
-          echo json_encode(['error' => 'Invalid PaymentIntent status']);
-        }
+        };
+
+        # Note that if your API version is before 2019-02-11, 'requires_action'
+        # appears as 'requires_source_action'.
+        if ($intent->status == 'requires_source_action' && $intent->next_action->type == 'use_stripe_sdk') 
+        {
+          # Tell the client to handle the action
+          return response()->json([
+            'requires_source_action' => true,
+            'payment_intent_client_secret' => $intent->client_secret
+          ]);
+        };
+
+        # Invalid status
+        http_response_code(500);
+        echo json_encode(['error' => 'Invalid PaymentIntent status']);
     }
 
-    private function chargeCreditCard($order, $token)
+
+    /**
+     * chargeCreditCard charges the credit card in a 2-step way
+     * Function is in line with SCA and 3D Secure
+     *
+     * @param [type] $order
+     * @return void
+     */
+    private function chargeCreditCard($order)
     {
+        $payment_method = request('payment_method');
+        $payment_intent = request('payment_intent');
+        Stripe::setApiKey(env('STRIPE_SK'));
+
         try 
         {
-            Stripe::setApiKey('sk_test_9uSTLFoU0L0bmhDaLH2epcDR');
-            $intent = PaymentIntent::create([
-                'amount' => intval($order['amount_total'] * 100),
-                'currency' => 'eur',
-                'description' => 'Les Vins Personnalisés order ' . $order['name'],
-                'statement_descriptor' => 'le.vi.pe order ' . $order['name'],
-                'confirmation_method' => 'manual',
-                'confirm' => true,
-                'payment_method' => $token,
-            ]);
-            $this->generatePaymentResponse($intent);
+            if($payment_method) 
+            {
+                $intent = PaymentIntent::create([
+                    'amount' => intval($order['amount_total'] * 100),
+                    'currency' => 'eur',
+                    'description' => 'Les Vins Personnalisés order ' . $order['name'],
+                    'statement_descriptor' => 'le.vi.pe order ' . $order['name'],
+                    'confirmation_method' => 'manual',
+                    'confirm' => true,
+                    'payment_method' => $payment_method,
+                ]);
+            }
+
+            if($payment_intent)
+            {
+                $intent = PaymentIntent::retrieve($payment_intent);
+                $intent->confirm();
+            }
+
+            return $this->generatePaymentResponse($intent);
         }
 
         catch(\Stripe\Error\Card $e)
@@ -250,6 +275,17 @@ class LaradooController extends Controller
 
     }
 
+    /**
+     * Extra entry point for /!/Laradoo/chargecard
+     *
+     * @return void
+     */
+    public function postChargeCard()
+    {
+        $this->chargeCreditCard([]);
+    }
+
+
     public function postOrder()
     {
         // get the request parameters
@@ -273,5 +309,6 @@ class LaradooController extends Controller
 
         //return $this->createOrder($customer, $cart, $token);
         $result = $this->chargeCreditCard(['amount_total' => '43.78', 'name' => 'SO0100'], $token);
+        return $result;
     }
 }

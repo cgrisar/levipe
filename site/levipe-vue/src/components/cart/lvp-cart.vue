@@ -25,6 +25,36 @@ import lvpCartLines from './lvp-cart-lines.vue'
 import lvpCartOrder from './lvp-cart-order.vue'
 import lvpCartDiscount from './lvp-cart-discount'
 
+function handleServerResponse(response) {
+
+    if (response.data.requires_source_action) {
+        // Use Stripe.js to handle required card action
+        stripe.handleCardAction(response.data.payment_intent_client_secret)
+            .then(function(result) {
+                if (result.data.error) {
+                    console.log('error after payment_intent_client_secret, ', result);
+                } else {
+                    // The card action has been handled
+                    // The PaymentIntent can be confirmed again on the server
+                    this.axios({
+                        method: 'post',
+                        url: '/!/Laradoo/chargecard',
+                        config: { headers: {'Content-Type': 'multipart/form-data' }},
+                        data: JSON.stringify({ payment_intent: result.data.paymentIntent.id })
+                    }).then(confirmResult => { return confirmResult.data })
+                      .then(handleServerResponse);
+                }
+        });
+        return
+    }
+
+    if (response.error) {
+        // Show error from server on payment form
+    } else {
+        console.log('success');
+    }
+}
+
 export default {
 
     data() {
@@ -51,7 +81,9 @@ export default {
                 data: orderData,
                 config: { headers: {'Content-Type': 'multipart/form-data' }}
                 })
-                .then( (response) => console.log(response));
+                .then(result => {
+                    handleServerResponse(result)
+                });
         }
     },
 
