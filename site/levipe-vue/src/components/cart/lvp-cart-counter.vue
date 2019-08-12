@@ -1,12 +1,6 @@
 <template>
-    <span class="rounded-full bg-red-dark font-semibold text-white relative -mt-1"
-            style="padding-top:.05rem; 
-                    padding-bottom:.05rem;
-                    padding-left:0.3rem;
-                    padding-right:0.3rem;
-                    margin-left:1.1rem; 
-                    font-weight:500; 
-                    font-size:0.8rem;">
+    <span class="rounded-full bg-red-dark text-white text-xs font-semibold h-4 px-1 flex items-center justify-center absolute ml-4"
+            style="font-family:source sans pro; margin-top:-1.75rem">
         {{ bottlesInCart }}
     </span>
 </template>

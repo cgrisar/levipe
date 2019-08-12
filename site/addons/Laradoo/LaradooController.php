@@ -21,8 +21,8 @@ class LaradooController extends Controller
         $this->odoo = $this->connectToOdoo();
     }
 
-    private function connectToOdoo() {
-
+    private function connectToOdoo()
+    {
         $odoo = new Odoo;
         try {
             $odoo->connect( env('ODOO_DB'), env('ODOO_LOGIN'), env('ODOO_PASSWORD') );
@@ -181,7 +181,7 @@ class LaradooController extends Controller
      * @param [type] $order
      * @return void
      */
-    private function chargeCreditCard($order)
+    public function postChargeCreditCard()
     {
         $payment_method = request('payment_method');
         $payment_intent = request('payment_intent');
@@ -192,10 +192,10 @@ class LaradooController extends Controller
             if($payment_method) 
             {
                 $intent = PaymentIntent::create([
-                    'amount' => intval($order['amount_total'] * 100),
+                    'amount' => intval(request('amount_total') * 100),
                     'currency' => 'eur',
-                    'description' => 'Les Vins Personnalisés order ' . $order['name'],
-                    'statement_descriptor' => 'le.vi.pe order ' . $order['name'],
+                    'description' => 'Order ' . request('name'),
+                    'statement_descriptor' => 'le.vi.pe order ' . request('name'),
                     'confirmation_method' => 'manual',
                     'confirm' => true,
                     'payment_method' => $payment_method,
@@ -214,81 +214,57 @@ class LaradooController extends Controller
         catch(\Stripe\Error\Card $e)
         { 
             $body = $e->getJsonBody();
-            return json_encode(['error' => $body['error']]);
+            return response()->json(['error' => $body['error']]);
         }
         
         catch(\Stripe\Error\Base $e)
         {
-            return json_encode(['error' => $e->getMessage()]);
+            return response()->json(['error' => $e->getMessage()]);
         }
     }
 
 
-    private function createOrder($customer, $cart, $token)
-    {
-        // update the customer / odoo partner data
-        $this->updateInvoiceAddress($customer);
-        
-        // create order
-        $values = [
-            'currency_id' => 1,
-            'date_order' => date("m/d/Y"),
-            'payment_term' => 1,
-            'partner_id' => $customer['odooId'] + 0,
-            'partner_shipping_id' => $this->getDeliveryAddress($customer),
-            'order_line' => $this->createOrderLines($cart)
-        ];
-
-        $order_id = $this->odoo->create('sale.order', $values);
-        $this->odoo->call('sale.order', 'action_confirm', array($order_id));
-        $order = $this->odoo->where('id', $order_id)
-                        ->fields('name', 'amount_total')
-                        ->get('sale.order')
-                        ->first();
-
-        /*
-        * Validate the picking. Since we invoice only products that are delivered, we first have to create a transfer
-        * and then process that transfer. It is the same as clicking on "validate" on the stock picking view
-        */
-        $picking_id = $this->odoo->where('id', '=', $order_id)
-            ->fields('picking_ids')
-            ->get('sale.order')
-            ->first();
-        $immediate_picking_id=$this->odoo->create('stock.immediate.transfer', array('pick_id' => $picking_id['picking_ids'][0]));
-        $this->odoo->call('stock.immediate.transfer', 'process', array($immediate_picking_id));
-
-        // Now that we have a confirmed sale.order, we can charge stripe.
-        $this->chargeCreditCard($order, $token);
-
-        /*
-        * Stripe is charged. We can now create an invoice and acknowledge it's payment.
-        * Payment needs to be created and then added to the invoice.
-        */
-        $sale_order_to_invoice_data = array($order_id, array('context' => array('active_ids' => $order_id)));
-        $invoice_id = $this->odoo->call('sale.order', 'action_invoice_create', $sale_order_to_invoice_data);
-        $this->odoo->call_wf('account.invoice', 'invoice_open', $invoice_id->first());
-    }
-
-
-    private function createInvoice()
-    {
-
-    }
-
     /**
-     * Extra entry point for /!/Laradoo/chargecard
-     *
-     * @return void
+     * We perform all the actions after the paymet got through
+     *  - confirm the sales order
+     *  - validate the picking
+     *  - create the invoice
+     *  - reconcile the payment with the invoice
+     * 
+     * We return a "confirmed" value if all the actions were performed
      */
-    public function postChargeCard()
+    public function postConfirmOrder()
     {
-        $this->chargeCreditCard([]);
+        // $order_id = request('order_id');
+
+        // // confirm the sales order
+        // $this->odoo->call('sale.order', 'action_confirm', array($order_id));
+
+        // /**
+        // * Validate the picking. Since we invoice only products that are delivered, we first have to create a transfer
+        // * and then process that transfer. It is the same as clicking on "validate" on the stock picking view
+        // */
+        // $picking_id = $this->odoo->where('id', '=', $order_id)
+        //     ->fields('picking_ids')
+        //     ->get('sale.order')
+        //     ->first();
+        // $immediate_picking_id=$this->odoo->create('stock.immediate.transfer', array('pick_id' => $picking_id['picking_ids'][0]));
+        // $this->odoo->call('stock.immediate.transfer', 'process', array($immediate_picking_id));
+
+        // /**
+        //  * Create the invoice related to order and picking
+        //  */
+        // $sale_order_to_invoice_data = array($order_id, array('context' => array('active_ids' => $order_id)));
+        // $invoice_id = $this->odoo->call('sale.order', 'action_invoice_create', $sale_order_to_invoice_data);
+        // $this->odoo->call_wf('account.invoice', 'invoice_open', $invoice_id->first());
+
+
+        return response()->json(['confirmed' => true]);
     }
 
 
-    public function postOrder()
+    public function postCreateOrder()
     {
-        // get the request parameters
         $customer = [
             'odooId' => request('odooId') + 0,
 
@@ -304,11 +280,30 @@ class LaradooController extends Controller
             'invoiceVAT' => request('VAT'),
         ];
 
-        $token = request('token');
         $cart = json_decode(request('cartlines'));
 
-        //return $this->createOrder($customer, $cart, $token);
-        $result = $this->chargeCreditCard(['amount_total' => '43.78', 'name' => 'SO0100'], $token);
-        return $result;
+        // update the customer / odoo partner data
+        $this->updateInvoiceAddress($customer);
+        
+        // create order
+        $values = [
+            'currency_id' => 1,
+            'date_order' => date("m/d/Y"),
+            'payment_term_id' => 1,
+            'team_id' => 2,
+            'partner_id' => $customer['odooId'] + 0,
+            'partner_shipping_id' => $this->getDeliveryAddress($customer),
+            'order_line' => $this->createOrderLines($cart)
+        ];
+
+        $order_id = $this->odoo->create('sale.order', $values);
+
+        $order = $this->odoo->where('id', $order_id)
+                        ->fields('name', 'amount_total')
+                        ->get('sale.order')
+                        ->first();
+
+        return response()->json($order);
     }
+
 }

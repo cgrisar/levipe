@@ -134,8 +134,11 @@
     </div>
     
     <div class="hidden" id="orderBlock">
-        <lvp-cart-stripe :locale="locale"
-            @submitted="submitOrder"></lvp-cart-stripe>
+        <lvp-cart-stripe 
+            :locale="locale" 
+            :order="order"
+            @submitted="createOrder"
+            @paymentConfirmed="confirmOrder"></lvp-cart-stripe>
     </div>
     
 </div>
@@ -154,11 +157,12 @@ function getValue(id){
 
 
 export default {
-    props: ['locale', 'address', 'zip', 'city', 'phone', 'VAT', 'user'],
+    props: ['locale', 'odooId', 'address', 'zip', 'city', 'phone', 'vat', 'user'],
 
     data() {
         return {
-            cart: store.cart
+            cart: store.cart,
+            order: {}
         }
     },
 
@@ -190,12 +194,15 @@ export default {
             return labelMap.get(key)
         },
 
+
         shippingCost(e) {
             this.$emit('chargesChanged', e);
         },
 
-        submitOrder(token) {
+
+        createOrder() {
             var orderData = new FormData();
+            orderData.set('odooId', this.odooId);
             orderData.set('delAddress', getValue('delivery_address'));
             orderData.set('delZip', getValue('delivery_zip'));
             orderData.set('delCity', getValue('delivery_city'));
@@ -203,17 +210,25 @@ export default {
             orderData.set('address', getValue('address'));
             orderData.set('zip', getValue('zip'));
             orderData.set('city', getValue('city'));
-            orderData.set('phone', getValue('vat'));
+            orderData.set('vat', getValue('vat'));
             orderData.set('cartlines', JSON.stringify(this.cart.cartLines));
-            if('payment_method' in token) {            
-                orderData.set('payment_method', token.payment_method)
-            } else {
-                orderData.set('payment_intent', token.payment_intent)
-            };
-            this.$emit('submitted', orderData);
+
+            this.axios({
+                method: 'POST',
+                url: '/!/Laradoo/createorder',
+                data: orderData,
+                config: { headers: {"Content-Type": "multipart/form-data"}},
+            }).then(result => {
+                    this.order = result.data
+                })
         },
 
-        computed: {
+        confirmOrder() {
+            this.$emit("paymentConfirmed");
+        }
+    },
+
+    computed: {
             totalAmountCart() {
             var amount = 0;
             this.cart.forEach( element => {
@@ -221,7 +236,6 @@ export default {
             });
             return amount;
         }
-    }
     }
 }
 </script>

@@ -74,7 +74,7 @@
             return {
                 ordered: 1,
                 total_gof: 0,
-                cart: store.cart,
+                store,
                 maxquantity: (this.bo  > 0) ? this.bo * Math.floor(this.quantity / (parseInt(this.bo) + parseInt(this.gof))) : this.quantity
             }   
         },
@@ -84,7 +84,7 @@
             getVariantFromCart() 
             {
                 // if this product is in the shopping cart, then put its quantity in the quantity field
-                this.cart.cartLines.some(element => 
+                store.cart.cartLines.some(element => 
                 {
                     if (element.variantId === this.variantId) 
                     {
@@ -102,10 +102,10 @@
 
                 let found = false ;
 
-                if ( this.cart.cartLines.length ) 
+                if ( store.cart.cartLines.length ) 
                 {
                     // parse through the array and add to variantId if it is already present
-                    this.cart.cartLines.some(element => 
+                    store.cart.cartLines.some(element => 
                     {
                         if (found = (element.variantId === this.variantId)) 
                         {
@@ -119,7 +119,7 @@
                 // add an element to the array if it is not found
                 if (!found) 
                 {
-                    this.cart.cartLines.push({'wine': this.wine,
+                    store.cart.cartLines.push({'wine': this.wine,
                                                 'variantId': this.variantId,
                                                 'vintage': this.vintage, 
                                                 'volume': this.volume, 
@@ -134,7 +134,7 @@
                                             });
                  }
 
-                sessionStorage.cart = JSON.stringify(this.cart.cartLines);
+                sessionStorage.cart = JSON.stringify(store.cart.cartLines);
             },
 
             calculateTotalGof() {
@@ -145,7 +145,7 @@
                 if (this.ordered > 1) {
                     this.ordered--;
                     this.total_gof = this.calculateTotalGof();
-                    sessionStorage.cart = JSON.stringify(this.cart.cartLines);
+                    sessionStorage.cart = JSON.stringify(store.cart.cartLines);
                 }
             },
 
@@ -153,7 +153,7 @@
                 if (this.ordered < this.maxquantity) {
                     this.ordered++;
                     this.total_gof = this.calculateTotalGof();
-                    sessionStorage.cart = JSON.stringify(this.cart.cartLines);
+                    sessionStorage.cart = JSON.stringify(store.cart.cartLines);
                 }
             },
 

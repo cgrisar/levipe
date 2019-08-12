@@ -163,10 +163,13 @@
         
         document.getElementById("description-" + vintage).classList.remove('hidden');
         if (document.getElementById("vintageprices-" + vintage)) {
-            document.getElementById("vintageprices-"+vintage).classList.remove('hidden');
+            document.getElementById("vintageprices-" + vintage).classList.remove('hidden');
+            [...document.getElementById("vintageprices-"+ vintage).getElementsByTagName("input")].forEach(
+                    input => input.focus()
+                )
         };
         if (document.getElementById("scores-" + vintage)) {
-            document.getElementById("scores-"+vintage).classList.remove('hidden');
+            document.getElementById("scores-" + vintage).classList.remove('hidden');
         };
     };
 

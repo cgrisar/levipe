@@ -1,13 +1,13 @@
 <template>
     <div :id="variant.variantId" class="flex flex-row px-2 py-1 items-center">
         
-        <div class="pr-2 w-8">
+        <div class="mr-2 w-8">
             <button @click="removeVariant(variant)">
                 <i class="far fa-2x fa-times-circle" data-fa-transform="shrink-4"></i>
             </button>
         </div>
 
-        <div class="px-1 w-1/3">
+        <div class="w-2/5 sm:w-1/3">
             <div class="font-medium -mb-1 whitespace-no-wrap overflow-hidden" style="text-overflow:ellipsis; -o-text-overflow:ellipsis;">{{ variant.wine }}</div>
             <div class="text-xs italic">
                 <span class="mr-2">{{ variant.vintage }}</span>
@@ -15,7 +15,7 @@
             </div>
         </div>
         
-        <div class="font-semibold text-right px-2" style="width: 4.5rem;">{{ variant.price }} &euro;</div>
+        <div class="hidden sm:block font-semibold text-right px-2" style="width: 4.5rem;">{{ variant.price }} &euro;</div>
         
         <div class="w-1/4 justify-center px-1 flex flex-row">
             <button @click="decVariant(variant)">
@@ -27,7 +27,7 @@
             </button>
         </div>
 
-        <div class="w-1/4 flex flex-row items-center w-1/5">
+        <div class="flex flex-row flex-1 items-center">
             <div class="w-1/3 md:w-1/2 lg:w-1/2">       
                 <template v-if="variant.total_gof > 0">
                     <span class="fa-fw fa-layers fa-2x" style="margin-bottom:-.125rem;">

@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col mx-auto py-2 bg-grey-light rounded-lg">
-        <template v-if="cart.length > 0">
-            <lvp-cart-line  v-for="variant in cart" 
+        <template v-if="store.cart.cartLines.length > 0">
+            <lvp-cart-line  v-for="variant in store.cart.cartLines" 
                             v-bind:key="variant.id" 
                             v-bind:variant="variant"
                             @removed="removeCartLine($event)"
@@ -28,26 +28,26 @@ export default {
     
     data() {
         return {
-            cart: store.cart.cartLines
+            store
         }
     },
 
     methods:{
 
         calculateShippingCost() {
-            if (this.cart.delivery !== '') {
+            if (store.cart.delivery !== '') {
                 
             }
         },
         
         removeCartLine(variant) {
-            var i = this.cart.cartLines.findIndex(element => element.variantId === variant.variantId);
-            this.cart.cartLines.splice(i, 1);
+            var i = store.cart.cartLines.findIndex(element => element.variantId === variant.variantId);
+            store.cart.cartLines.splice(i, 1);
         },
 
         changeQuantity(variant) {
-            var i = this.cart.cartLines.findIndex(element => element.variantId === variant.variantId);
-            this.cart.cartLines[i] = variant;
+            var i = store.cart.cartLines.findIndex(element => element.variantId === variant.variantId);
+            store.cart.cartLines[i] = variant;
         },
 
     },
@@ -55,7 +55,7 @@ export default {
     watch: {
         cart: {
             handler: function() {
-                sessionStorage.cart = JSON.stringify(this.cart.cartLines)
+                sessionStorage.cart = JSON.stringify(store.cart.cartLines)
             },
             deep: true
         }

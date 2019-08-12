@@ -1,33 +1,30 @@
 
 <div class="flex fixed px-4 lg:px-0 justify-center min-w-full z-50 bg-white">
     <nav class="container flex py-6 z-50 h-24 text-black bg-white border-b border-solid border-grey">
-        <div class="justify-start">
+        <div class="flex justify-start items-center">
             <a href="{{ site_url }}" class="no-underline">
                 <span class="textlogo text-xl text-red-darker visible md:hidden mr-3">l . v . p</span>
                 <span class="textlogo text-2xl text-red-darker hidden md:inline mr-3">les vins personnalisés</span>
             </a>
             {{ locales }}
                 {{ if !first && locale:key != "en" }}
-                    <a href="{{ url }}" class="mt-2">
+                    <a href="{{ url }}">
                         <img src='{{ theme:images src="{ locale:key }.png" }}' width="18" class="-mb-1" />
                     </a>
                 {{ /if }}
             {{ /locales }}
         </div>
-        <div class="h-48"></div>
         
-        <div class="relative justify-end ml-auto">
+        <div class="flex flex-row justify-end ml-auto" style="margin-top:.78rem;">
             <autocomplete-search locale="{{locale}}" class="float-left"></autocomplete-search>
-            <div class="group inline">
-                <lvp-minicart locale_url="{{locale_url}}"></lvp-minicart>
-            </div>
+            <lvp-minicart locale_url="{{locale_url}}"></lvp-minicart>
             {{ user }}
                 {{ if !no_results }}
-                    <a href="{{ user:logout_url redirect={current_url} }}" class="text-black no-underline inline float-left ml-4">
+                    <a href="{{ user:logout_url redirect={current_url} }}" class="text-black no-underline ml-2 md:ml-4">
                         <i class="spk-icon-menu text-2xl"></i>
                     </a>
                 {{ else }}
-                    <a href="{{ link to='/login?redirect={ current_url }' }}" class="text-black font-regular uppercase no-underline">
+                    <a href="{{ link to='/login?redirect={ current_url }' }}" class="text-black no-underline ml-2 md:ml-4">
                         <i class="spk-icon-user-account text-2xl"></i>
                     </a>
                 {{ /if }}
