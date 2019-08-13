@@ -7,7 +7,7 @@
             </button>
         </div>
 
-        <div class="w-2/5 sm:w-1/3">
+        <div class="w-1/3 mr-2 sm:mr-0">
             <div class="font-medium -mb-1 whitespace-no-wrap overflow-hidden" style="text-overflow:ellipsis; -o-text-overflow:ellipsis;">{{ variant.wine }}</div>
             <div class="text-xs italic">
                 <span class="mr-2">{{ variant.vintage }}</span>

@@ -8,8 +8,7 @@
         </div>
         <div v-show="!confirmed" class="flex flex-col container mx-auto lg:flex-row">
             <div class="px-4 w-full mb-4 sm:px-0 lg:w-1/2 lg:pr-4 lg:border-r lg:border-red-darker">
-                <lvp-cart-lines></lvp-cart-lines>
-                {{ totalAmountCart }}
+                <lvp-cart-lines :locale="locale"></lvp-cart-lines>
             </div>
             <div class="px-4 w-full sm:px-0 lg:w-1/2 lg:pl-4">
                 <div class="flex flex-col">
@@ -21,7 +20,7 @@
                                     :city="city"
                                     :phone="phone"
                                     :vat="vat"
-                                    @chargesChanged="calcutateCharges"
+                                    @chargesChanged="calculateCharges"
                                     @paymentConfirmed="confirmPayment"></lvp-cart-order>
                 </div>
             </div>
@@ -60,8 +59,17 @@ export default {
         },
 
         calculateCharges() {
+            var shipping = 0;
             this.axios.get('/!/Fetch/entry/shipping/be')
-                .then(data => console.log(data))
+                .then(result => {
+                        result.data.data.rates.forEach(
+                            rate => { if((store.cart.totalAmount - store.cart.shipping) >= parseInt(rate.minimum_amount)) {
+                                shipping = parseInt(rate.charge)
+                                }
+                            }
+                        )
+                        store.cart.shipping = shipping;
+                    })
         },
 
         confirmPayment() {
@@ -71,15 +79,26 @@ export default {
         }
     },
 
-    computed: {
-        totalAmountCart() {
-            var amount = 0;
-            store.cart.cartLines.forEach(element => {
-                amount += element.ordered * Number(element.price.replace(',','.') )
-            });
-            store.cart.totalAmount = amount;
-            return amount
+    watch: {
+        store: {
+            handler: function() {
+                // calculate shipping costs whenever the cart changes
+                this.calculateCharges();
+
+                // calculate the total amount
+                var amount = 0;
+                store.cart.cartLines.forEach(element => {
+                    amount += element.ordered * Number(element.price.replace(',','.') )
+                });
+                store.cart.totalAmount = amount + store.cart.shipping;
+
+                // store changes into session
+                sessionStorage.cart = JSON.stringify(store.cart);
+            },
+            deep: true,
+            immediate: true
         }
+
     }
 
 }

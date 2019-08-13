@@ -1,8 +1,11 @@
 <template>
     <div>
+        <div v-show="error" class="w-full py-2 rounded-lg text-white text-center font-semibold bg-red mb-4">
+            {{ errorMessage }}
+        </div>
         <card v-show="!confirmed" class='w-full bg-white rounded-lg p-2 mb-4'
             :class='{ complete }'
-            stripe='pk_test_A2RNf0R7K3rg2fpXHiufoRIO'
+            stripe="['pk_test_A2RNf0R7K3rg2fpXHiufoRIO',  {locale: {{ locale }} }]"
             :options='stripeOptions'
             @change='complete = $event.complete'
         />
@@ -24,10 +27,13 @@ export default {
 
     data () {
         return {
-            cart: store.cart,
+            store,
+            error: false,
+            errorMessage : '',
             confirmed: false,
             complete: false,
             stripeOptions: {
+                fontSize: '14px',
                 // see https://stripe.com/docs/stripe.js#element-options for details
             }
         }
@@ -41,7 +47,7 @@ export default {
             ]);
 
             var key = this.locale + "_" + label;
-            var suffix = (label === 'pay') ? " " + this.cart.totalAmount.toFixed(2).replace('.',',') + " EUR" : "";
+            var suffix = (label === 'pay') ? " " + store.cart.totalAmount.toFixed(2).replace('.',',') + " EUR" : "";
             return labelMap.get(key) + suffix;
         },
 
@@ -52,12 +58,14 @@ export default {
 
         handleServerResponse(response) {
             if (response.error) {
-                // Show error from server on payment form
+                this.error = true;
+                this.errorMessage = "Error during payment processing!";
                 return
             }
 
             if (response.data.success) {
                 this.$emit("paymentConfirmed")
+                return
             }
 
             if (response.data.requires_source_action) {
@@ -78,6 +86,8 @@ export default {
                             }).then(result => {
                                 console.log(result);
                                 if(result.data.error) {
+                                    this.error = true;
+                                    this.errorMessage = result.data.error.message;
                                     return
                                 }
 

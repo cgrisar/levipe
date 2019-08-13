@@ -21,11 +21,13 @@
         <script>
             var store = {
                 cart: {
+                    shipping: 0,
+                    totalAmount: 0,
                     cartLines: new Array
                 }
             };
             if (sessionStorage.cart) {
-                store.cart.cartLines = JSON.parse(sessionStorage.cart)
+                store.cart = JSON.parse(sessionStorage.cart)
             }
         </script>
 

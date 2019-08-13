@@ -1,16 +1,20 @@
 <template>
 <div class="bg-grey-light rounded-lg px-4 py-4 items-center mb-4"> 
-    <h4 class="text-black mb-4">{{ localeLabel('order') }}</h4>
-    <div id="tabs" class="flex flex-row">
-        <div class="w-1/5 font-thin uppercase mb-4 pb-1 border-b border-red-darker mr-6" 
+    <h4 class="text-black -mb-1">{{ label('order') }}</h4>
+    <span class="italic block text-xs text-red mb-4">{{ label('mandatory') }}</span>
+    <div id="tabs" class="flex flex-row mb-4">
+        <div class="w-1/3 md:w-1/5 text-xs text-center text-black bg-grey-light font-semibold uppercase rounded-full mr-4 text-white bg-red-darker" 
+                style="height:1.45rem;"
                 id="delivery"
-                onclick="showTab(this)">{{ localeLabel('delivery') }}</div>
-        <div class="w-1/5 font-thin uppercase mb-4 pb-1 mr-6" 
+                onclick="showTab(this)">{{ label('delivery') }}</div>
+        <div class="w-1/3 md:w-1/5 text-xs text-center text-black bg-grey-light font-semibold uppercase rounded-full mr-4" 
+                style="height:1.45rem;"
                 id="invoice"
-                onclick="showTab(this)">{{ localeLabel('invoice') }}</div>
-        <div class="w-1/5 font-thin uppercase mb-4 pb-1" 
+                onclick="showTab(this)">{{ label('invoice') }}</div>
+        <div class="w-1/3 md:w-1/5 text-xs text-center text-black bg-grey-light font-semibold uppercase rounded-full" 
+                style="height:1.45rem;"                
                 id="order"
-                onclick="showTab(this)">{{ localeLabel('payment') }}</div>
+                onclick="showTab(this)">{{ label('payment') }}</div>
     </div>
     
     <div class="block" id="deliveryBlock">
@@ -21,7 +25,7 @@
         <div class="items-center mb-6 flex flex-row">
             <div class="w-1/5">
                 <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
-                    {{ localeLabel('address') }}
+                    {{ label('address') }}
                 </label>
             </div>
             <div class="w-4/5">
@@ -37,7 +41,7 @@
         <div class="items-center mb-6 flex flex-row">
             <div class="w-1/5">
                 <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
-                    {{ localeLabel('city') }}
+                    {{ label('city') }}
                 </label>
             </div>
             <div class="flex flex-row w-4/5">
@@ -64,7 +68,7 @@
         <div class="items-center mb-6 flex flex-row">
             <div class="w-1/5">
                 <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
-                    {{ localeLabel('phone') }}
+                    {{ label('phone') }}
                 </label>
             </div>
             <div class="w-2/5">
@@ -81,7 +85,7 @@
         <div class="items-center mb-6 flex flex-row">
             <div class="w-1/5">
                 <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
-                    {{ localeLabel('address') }}
+                    {{ label('address') }}
                 </label>
             </div>
             <div class="w-4/5">
@@ -96,7 +100,7 @@
         <div class="items-center mb-6 flex flex-row">
             <div class="w-1/5">
                 <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
-                    {{ localeLabel('city') }}
+                    {{ label('city') }}
                 </label>
             </div>
             <div class="flex flex-row w-4/5">
@@ -120,14 +124,14 @@
         <div class="items-center mb-6 flex flex-row">
             <div class="w-1/5">
                 <label class="block text-black font-semibold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
-                    {{ localeLabel('VAT') }}
+                    {{ label('VAT') }}
                 </label>
             </div>
             <div class="w-2/5">
                 <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
                         name="vat" 
-                        type="text" 
-                        :value="VAT" />
+                        type="text"
+                        :value="vat" />
             </div>
         </div>
 
@@ -161,7 +165,7 @@ export default {
 
     data() {
         return {
-            cart: store.cart,
+            store,
             order: {}
         }
     },
@@ -170,10 +174,12 @@ export default {
 
     methods: {
 
-        localeLabel(label) {
+        label(label) {
             var labelMap = new Map([
                 ['nl_order', 'Bestelling'],
                 ['fr_order', 'Commande'],
+                ['nl_mandatory', 'Alle velden (behalve BTW) zijn verplicht!'],
+                ['fr_mandatory', 'Tous les champs (sauf TVA) sont obligatoires!'],
                 ['nl_delivery', 'Levering'],
                 ['fr_delivery', 'Livraison'],
                 ['nl_invoice', 'Facturatie'],
@@ -185,9 +191,9 @@ export default {
                 ['nl_city', 'Gemeente'],
                 ['fr_city', 'Commune'],
                 ['nl_phone', 'Telefoon'],
-                ['fr_phone', 'No de Téléphone'],
-                ['nl_VAT', 'BTW-nummer'],
-                ['fr_VAT', 'No de TVA'],
+                ['fr_phone', 'Téléphone'],
+                ['nl_VAT', 'BTW'],
+                ['fr_VAT', 'No TVA'],
             ]);
 
             var key = this.locale + "_" + label;
@@ -195,8 +201,8 @@ export default {
         },
 
 
-        shippingCost(e) {
-            this.$emit('chargesChanged', e);
+        shippingCost() {
+            this.$emit('chargesChanged');
         },
 
 
@@ -231,10 +237,10 @@ export default {
     computed: {
             totalAmountCart() {
             var amount = 0;
-            this.cart.forEach( element => {
+            store.cart.cartLines.forEach( element => {
                 amount += element.ordered * Number( element.price.replace(',','.') )
             });
-            return amount;
+            return amount + store.cart.shipping;
         }
     }
 }

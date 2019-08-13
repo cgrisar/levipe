@@ -7,12 +7,17 @@
 
 <script>
     export default {
-        props: ['cartlines'],
+
+        data() {
+            return {
+                store,
+            }
+        },
 
         computed: {
             bottlesInCart() {
                 var bottles = 0;
-                this.cartlines.forEach( element => {
+                store.cart.cartLines.forEach(element => {
                     bottles += element.ordered + element.total_gof
                 });
                 return bottles;

@@ -34,15 +34,13 @@ function showTab(element) {
     
     [].forEach.call(tabs, function(div){
         if(div.id != element.id){
-            div.classList.remove('border-b');
-            div.classList.remove('border-red-darker');
+            div.classList.remove('text-white', 'bg-red-darker');
             document.getElementById(div.id+"Block").classList.remove('block');
             document.getElementById(div.id+"Block").classList.add('hidden');
         }
     });
 
-    element.classList.add('border-b');
-    element.classList.add('border-red-darker');
+    element.classList.add('text-white', 'bg-red-darker');
     document.getElementById(element.id+"Block").classList.add('block');
     document.getElementById(element.id+"Block").classList.remove('hidden');
 }

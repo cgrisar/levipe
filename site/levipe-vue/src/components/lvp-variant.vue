@@ -134,7 +134,7 @@
                                             });
                  }
 
-                sessionStorage.cart = JSON.stringify(store.cart.cartLines);
+                sessionStorage.cart = JSON.stringify(store.cart);
             },
 
             calculateTotalGof() {
@@ -145,7 +145,6 @@
                 if (this.ordered > 1) {
                     this.ordered--;
                     this.total_gof = this.calculateTotalGof();
-                    sessionStorage.cart = JSON.stringify(store.cart.cartLines);
                 }
             },
 
@@ -153,7 +152,6 @@
                 if (this.ordered < this.maxquantity) {
                     this.ordered++;
                     this.total_gof = this.calculateTotalGof();
-                    sessionStorage.cart = JSON.stringify(store.cart.cartLines);
                 }
             },
 
