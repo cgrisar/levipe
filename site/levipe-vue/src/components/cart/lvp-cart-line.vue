@@ -3,7 +3,7 @@
         
         <div class="mr-2 w-8">
             <button @click="removeVariant(variant)">
-                <i class="far fa-2x fa-times-circle" data-fa-transform="shrink-4"></i>
+                <i class="far fa-2x fa-times-circle text-red-darker" data-fa-transform="shrink-5"></i>
             </button>
         </div>
 

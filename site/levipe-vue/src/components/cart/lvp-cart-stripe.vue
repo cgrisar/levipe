@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div v-show="error" class="w-full py-2 rounded-lg text-white text-center font-semibold bg-red mb-4">
+        <div v-show="error" class="w-full py-2 rounded-lg text-white font-semibold bg-red mb-4">
             {{ errorMessage }}
         </div>
         <card v-show="!confirmed" class='w-full bg-white rounded-lg p-2 mb-4'
             :class='{ complete }'
-            stripe="['pk_test_A2RNf0R7K3rg2fpXHiufoRIO',  {locale: {{ locale }} }]"
+            stripe='pk_test_A2RNf0R7K3rg2fpXHiufoRIO'
             :options='stripeOptions'
             @change='complete = $event.complete'
         />
@@ -33,7 +33,23 @@ export default {
             confirmed: false,
             complete: false,
             stripeOptions: {
-                fontSize: '14px',
+                style: {
+                    base: {
+                        color: '#32325d',
+                        lineHeight: '24px',
+                        fontFamily: 'Roboto',
+                        fontWeight:'400',
+                        fontSmoothing: 'antialiased',
+                        fontSize: '14px',
+                        '::placeholder': {
+                        color: '#aab7c4'
+                        }
+                    },
+                    invalid: {
+                        color: '#fa755a',
+                        iconColor: '#fa755a'
+                    }
+                }
                 // see https://stripe.com/docs/stripe.js#element-options for details
             }
         }

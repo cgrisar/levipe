@@ -217,7 +217,7 @@ export default {
             orderData.set('zip', getValue('zip'));
             orderData.set('city', getValue('city'));
             orderData.set('vat', getValue('vat'));
-            orderData.set('cartlines', JSON.stringify(this.cart.cartLines));
+            orderData.set('cartlines', JSON.stringify(store.cart.cartLines));
 
             this.axios({
                 method: 'POST',
