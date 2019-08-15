@@ -17,5 +17,6 @@ return [
     'transport_message' => 'A partir de 85 EUR commandés, nous prenons la livraison en charge!',
     'assurance_header' => 'Satisfait ou Remboursé',
     'assurance_message' => 'Vous bénéficiez de 14 jours de réflexion durant lesquels nous reprenons et remboursons toute bouteille commandée non ouverte',
-
+    'email_sent' => "Vous recevrez un courriel d'initialisation de mot de passe si nous trouvons l'adresse que vous nous avez présentée!",
+    'initialiser' => 'Initialiser le mot de passe'
 ];

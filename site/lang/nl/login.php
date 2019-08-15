@@ -17,5 +17,6 @@ return [
     'transport_message' => 'Voor meer dan 85EUR besteld? De levering is gratis!',
     'assurance_header' => 'Tevreden of geld terug',
     'assurance_message' => 'Vous bénéficiez de 14 jours de réflexion durant lesquels nous reprenons et remboursons toute bouteille commandée non ouverte',
-
+    'email_sent' => 'Als wij het opgegeven adres vinden, krijgt u zo meteen een mail met de instructies om uw wachtwoord te initialiseren',
+    'initialiser' => 'Wachtwoord initialiseren'
 ];

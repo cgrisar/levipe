@@ -19,9 +19,9 @@
             <div class="flex flex-col mx-auto">
 
                 {{ user:login_form allow_request_redirect='true' }}
-                    <div class="flex items-center lg:w-4/5 lg:mx-auto">
-                        <div class="lg:w-1/2 flex flex-col mx-auto">
-                            <div class="border-red-darker lg:border-r lg:pr-6">
+                    <div class="flex items-center flex-col md:flex-row lg:w-4/5 mx-auto">
+                        <div class="flex flex-col w-full px-4 md:w-1/2 md:px-0 mx-auto md:pr-6">
+                            <div class="border-red-darker border-b pb-8 md:border-b-0 mb-8 md:mb-0 md:border-r">
 
                                 {{ if errors }} 
                                     {{ errors }}
@@ -59,10 +59,10 @@
                                 <div class="flex justify-between items-center">
                                     <span class="text-xs font-medium underline" onclick="toggleConnexions()">{{ trans:login.init_password }}</span>
                                     <button type="submit">
-                                            <span class="fa-fw fa-layers fa-2x" title="{{trans:login.login}}">
-                                                <i class="fas fa-circle text-green-darker"></i>
-                                                <i class="fas fa-sign-in-alt fa-inverse" data-fa-transform="shrink-6"></i>
-                                            </span>
+                                        <span class="fa-fw fa-layers fa-2x" title="{{trans:login.login}}">
+                                            <i class="fas fa-circle text-green-darker"></i>
+                                            <i class="fas fa-sign-in-alt fa-inverse" data-fa-transform="shrink-6"></i>
+                                        </span>
                                     </button>
                                 </div>
                             </div>
@@ -83,11 +83,11 @@
 
                         {{ if email_sent }}
                     
-                            <div id="emailSent" class="bg-green-lighter text-green-darker w-full px-4 py-2">{{ trans:login.email_sent }}</div>
+                            <div id="emailSent" class="bg-green-light rounded-lg text-green-darker w-full px-4 py-2">{{ trans:login.email_sent }}</div>
                     
                         {{ else }}
                     
-                            <div class="flex flex-1 flex-col mb-4">
+                            <div class="flex flex-1 flex-col mb-6">
                                 <input class="bg-grey-light appearance-none rounded-lg py-2 px-4 text-black focus:outline-none" 
                                         name="username"
                                         id="username" 
@@ -99,7 +99,12 @@
                                 {{ /unless }} {{ /errors }} {{ /if }}
                             </div>
                     
-                            <button>Send email</button>
+                            <button class="float-right">
+                                <span class="fa-fw fa-layers fa-2x" title="{{trans:login.initialiser}}">
+                                    <i class="fas fa-circle text-green-darker"></i>
+                                    <i class="fas fa-sign-in-alt fa-inverse" data-fa-transform="shrink-6"></i>
+                                </span>
+                            </button>
                     
                         {{ /if }}
                 
