@@ -5,7 +5,7 @@
         </div>
         <card v-show="!confirmed" class='w-full bg-white rounded-lg p-2 mb-4'
             :class='{ complete }'
-            stripe='pk_test_A2RNf0R7K3rg2fpXHiufoRIO'
+            stripe='pk_live_QW0SGmc8NFR2xRAugWQqnDyw'
             :options='stripeOptions'
             @change='complete = $event.complete'
         />
