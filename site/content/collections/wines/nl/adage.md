@@ -1,3 +1,4 @@
+description: '<p>Omgeven door pijnbomen en Garrigues, verleent het uitzonderlijk terroir op de Dentelles de Montmirail kracht en rijkdom aan <a href="/nl/grape/grenache-noir">Grenache</a>, <a href="/nl/grape/syrah">Syrah</a> en <a href="nl/grape/mourvedre">Mourvèdre</a>. Deze wijn past perfect bij alle vlezen in saus (stoofpotjes), wild en krachtige, harde kazen. Jong gedronken past deze wijn bij kruidige gerechten.</p>'
 variants:
   -
     millesime: '2015'
