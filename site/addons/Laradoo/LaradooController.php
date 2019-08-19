@@ -146,6 +146,7 @@ class LaradooController extends Controller
                     );
     }
 
+    
     private function generatePaymentResponse($intent) 
     {
         if ($intent->status == 'succeeded') 
@@ -257,6 +258,10 @@ class LaradooController extends Controller
         // $sale_order_to_invoice_data = array($order_id, array('context' => array('active_ids' => $order_id)));
         // $invoice_id = $this->odoo->call('sale.order', 'action_invoice_create', $sale_order_to_invoice_data);
         // $this->odoo->call_wf('account.invoice', 'invoice_open', $invoice_id->first());
+
+        /**
+         * Create the payment in Odoo
+         */
 
 
         return response()->json(['confirmed' => true]);

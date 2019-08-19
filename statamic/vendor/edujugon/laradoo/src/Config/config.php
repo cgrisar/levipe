@@ -6,6 +6,6 @@ return [
     //Credentials
     'host'       => 'https://gec2.odoo.com',  // should contain 'http://' or 'https://'
     'db'         => 'gec2',
-    'username'   => 'charles@grisarco.be',
+    'username'   => 'charles@levipe.be',
     'password'   => 'Ver0N!que',
 ];

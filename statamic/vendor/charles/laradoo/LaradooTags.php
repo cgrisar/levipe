@@ -15,7 +15,7 @@ class LaradooTags extends Tags
 
         $odoo = new Odoo;
         try {
-            $odoo->connect( 'gec2', 'charles@grisarco.be', 'Ver0N!que' );
+            $odoo->connect( 'gec2', 'charles@levipe.be', 'Ver0N!que' );
         } catch(Exception $e) {
             echo 'No response';
         };
