@@ -1,8 +1,8 @@
-title: 'Les Cessieux'
+title: Sainte-Epine
 cover_image:
-  - /assets/img/Wines/Cover/hsrd-cess.jpg
+  - /assets/img/Wines/Cover/hsrd-step.jpg
 label_image:
-  - /assets/img/Wines/Label/hsrd-cess.jpeg
+  - /assets/img/Wines/Label/hsrd-step.jpeg
 color: red
 culture: organic
 sparkling: false
@@ -14,7 +14,7 @@ cepages:
 appellations:
   - 455bfce1-3e57-496a-accb-6810c97e7540
   - 05852219-8b3a-4125-951e-d2d1bc604f50
-odoo: HSRD-CESS
+odoo: HSRD-STEP
 variants:
   -
     millesime: '2014'
@@ -24,9 +24,9 @@ no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
 facebook_image:
-  - /assets/img/Wines/Cover/hsrd-cess.jpg
+  - /assets/img/Wines/Cover/hsrd-step.jpg
 twitter_share_setting: inherit
-id: 918a7a67-2f88-4fa2-bc57-0a8322247462
+id: 700dc12a-331f-46e1-aea3-f625b09da456
 e:
   - domaine-romaneaux-destezet
 g:
