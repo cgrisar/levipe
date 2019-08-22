@@ -15,6 +15,9 @@ odoo: VPCO-PINO
 variants:
   -
     millesime: '2017'
+    active: false
+  -
+    millesime: '2018'
     active: true
 page_no_index: false
 no_follow_links: false

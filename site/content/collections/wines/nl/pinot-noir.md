@@ -2,6 +2,10 @@ description: '<p>Vincent Pugibet bewijst dat deze typische druif van de koele kl
 variants:
   -
     millesime: '2017'
+    active: false
+    description: 'Doorzichtig scharlakenrood, typisch voor Pinot Noir. Delicaat aroma''s van rood fruit - rode bessen en rijpe kersen. Volle rijpe kersen in de mond, ondersteund door een mooie kruidigheid. De zuurtjes brengen de nodige fraîcheur aan deze charmeur.'
+  -
+    millesime: '2018'
     active: true
     description: 'Doorzichtig scharlakenrood, typisch voor Pinot Noir. Delicaat aroma''s van rood fruit - rode bessen en rijpe kersen. Volle rijpe kersen in de mond, ondersteund door een mooie kruidigheid. De zuurtjes brengen de nodige fraîcheur aan deze charmeur.'
 id: ed42162d-e31b-4c6a-bf28-9a323f29b67a
