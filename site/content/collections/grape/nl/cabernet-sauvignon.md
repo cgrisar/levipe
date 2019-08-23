@@ -7,9 +7,5 @@ description: |
   
   Cabernet Sauvignon heeft een dikke schil wat die tegen grijsrot beschermt.&nbsp;<br></li></ul><p>De plant is gevoelig voor eutypiose, esca en echte meeldauw.&nbsp;</p><p>&nbsp;Een conservatorium met 251 klonen werd geïnstalleerd in de Médoc en de Graves. Daarvan werden 19 klonen gehomologeerd voor vermenigvuldiging.</p><p><br></p><h5>SLEUTELWOORDEN VAN DE DEGUSTATIE</h5><p>
   Donker, intens. Aroma's van rood en zwart fruit (cassis), vegetaal, tabak, hooi, leder. Tanninerijk. Groene peper en een uitdrogend bitter duiden op onrijpe druiven bij de oogst. Lange afdronk op het vegetaal karakter (menthol), wat de smaakpapillen verfrist.</p>
-page_no_index: false
-no_follow_links: false
-sitemap_priority: '0.5'
-sitemap_changefreq: daily
-twitter_share_setting: inherit
+  
 id: 089af729-d837-4619-b84d-d06ff73ab12f

@@ -1,4 +1,5 @@
 description: |
   <h5>HISTORIQUE</h5><p>
   Le Merlot fait - tout comme les Cabernets, le Petit Verdot, ... - partie de la famille des Carmenets. Nous trouvons ses origines probablement dans le Libournais ou il est sité en 1784: "Le merlau est un des meilleurs cépages de la région" écrivit un fonctionnaire local. Il est probable que ce nom fut utilisé parce que les merles s'en régalaient.&nbsp;</p><p>&nbsp;La popularité du Merlot est tardive. Il faut attendre le milieu du 19ième siècle pour le retrouver dans le Veneto sous le nom de Bordò. La Suisse suit fin 19ième siècle. Le réel essor ne suit que dans la seconde moitié du 20ième siècle, surtout en conquérant le vignoble californien. Le nom facile à prononcé associé à un vin flatteur en a fait exploser la popularité du cépage.&nbsp;&nbsp;</p><p>Avec ses 250.000 hectares, il est devenu en un temps record le deuxième cépage rouge le plus planté au monde après son frère, le cabernet-sauvignon.</p>
+  
 id: 0b20a017-0221-4608-8950-75b1226cb635
