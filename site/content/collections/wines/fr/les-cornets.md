@@ -1,0 +1,3 @@
+description: '<p>Né sur des coteaux argilo-calcaires typiques du vignoble de Pouilly-Fumé, ce Sauvignon Blanc tire sa puissance du terroir. L’expression en bouche est virile, puissante et longue. Ce vin s’adresse aux amateurs qui recherchent des vins pleins, riches et généreux.</p>'
+meta_description: 'Né sur des coteaux argilo-calcaires typiques du vignoble de Pouilly-Fumé, ce Sauvignon Blanc tire sa puissance du terroir. L’expression en bouche est virile, puissante et longue. Ce vin s’adresse aux amateurs qui recherchent des vins pleins, riches et généreux.'
+id: 6cb3c6df-ba45-4e42-a1b0-38b32f735776
