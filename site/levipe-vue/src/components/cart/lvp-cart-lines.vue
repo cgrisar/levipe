@@ -2,8 +2,8 @@
     <div class="flex flex-col mx-auto p-2 bg-grey-light rounded-lg">
         <template v-if="store.cart.cartLines.length > 0">
             <lvp-cart-line  v-for="variant in store.cart.cartLines" 
-                            v-bind:key="variant.id" 
-                            v-bind:variant="variant"
+                            :key="variant.id" 
+                            :variant="variant"
                             @removed="removeCartLine($event)"
                             @quantity="changeQuantity($event)">
             </lvp-cart-line>

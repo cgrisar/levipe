@@ -21,23 +21,27 @@
             <button @click="decVariant(variant)">
                 <i class="fas fa-2x text-red-darker fa-minus-circle fa-inverse" data-fa-transform="shrink-4"></i>
             </button>
-            <input type="number" min="1" :max="variant.quantity" class="w-8 text-right mx-1 pr-1 rounded-lg" v-model="variant.ordered" />
+            <input type="number" 
+                    min="1" 
+                    :max="variant.quantity" 
+                    class="w-8 text-right mx-1 pr-1 rounded-lg" 
+                    v-model="variant.ordered" />
             <button @click="incVariant(variant)">
                 <i class="fas fa-2x text-red-darker fa-plus-circle fa-inverse" data-fa-transform="shrink-4"></i>
             </button>
         </div>
 
         <div class="flex flex-row flex-1 items-center">
-            <div class="w-1/3 md:w-1/2 lg:w-1/2">       
+            <div class="w-1/3 md:w-1/2 lg:w-1/2 ml-1">  
                 <template v-if="variant.total_gof > 0">
-                    <span class="fa-fw fa-layers fa-2x" style="margin-bottom:-.125rem;">
+                    <span class="fa-fw fa-layers fa-2x" style="margin-bottom:-.125rem;" :key="variant.total_gof">
                         <i class="fas fa-certificate fa-stack-2x text-green-darker" data-fa-transform="shrink-8 left-6"></i>
                         <span class="fa-layers-text text-white font-semibold" data-fa-transform="shrink-8 left-2">{{ variant.total_gof }}</span>
                     </span>
                 </template>
             </div>
             <div class="w-2/3 md:w-1/2 lg:w-2/3">
-                <div class="text-right font-semibold pl-1">{{ orderedAmountVariant( variant ) }} &euro;</div>
+                <div class="text-right font-semibold pl-1">{{ orderedAmountVariant(variant) }} &euro;</div>
             </div>
         </div>
 

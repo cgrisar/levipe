@@ -2,10 +2,10 @@ active: true
 coupon: true
 last: false
 start_date: '2018-11-23'
-end_date: '2019-07-31'
+end_date: '2019-12-31'
 discount_type: bogof
 bo: '5'
-gof: '2'
+gof: '1'
 bogof_discount: '100'
 discount: '1'
 page_no_index: false
@@ -13,5 +13,5 @@ no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
 twitter_share_setting: inherit
-title: '1'
+title: LIONS
 id: 274cfba7-fab2-494f-b957-d5bdfcb5abe4

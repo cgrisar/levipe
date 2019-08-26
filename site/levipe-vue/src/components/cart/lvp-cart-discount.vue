@@ -28,7 +28,7 @@ export default {
 
     data() {
         return {
-            cart: store.cart,
+            store,
             couponCode: ''
         }
     },
@@ -59,7 +59,7 @@ export default {
                         return;
                     }
                     coupon.ratio = (parseInt(coupon.gof) * parseInt(coupon.bogof_discount)) / (100 * parseInt(coupon.bo));
-                    this.cart.forEach( (variant) => {
+                    store.cart.cartLines.forEach( (variant) => {
                         var variantRatio = 0;
                         
                         if(parseInt(variant.bo) > 0) {
