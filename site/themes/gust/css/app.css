@@ -622,9 +622,9 @@ button,
   }
 }
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   .container {
-    max-width: 760px;
+    max-width: 768px;
   }
 }
 
@@ -3470,6 +3470,10 @@ input[type=checkbox]:checked + label div {
   line-height: 1.5;
 }
 
+.leading-relaxed {
+  line-height: 1.625;
+}
+
 .leading-loose {
   line-height: 2;
 }
@@ -3512,6 +3516,14 @@ input[type=checkbox]:checked + label div {
 
 .m-12 {
   margin: 3rem;
+}
+
+.m-14 {
+  margin: 3.5rem;
+}
+
+.m-16 {
+  margin: 4rem;
 }
 
 .m-auto {
@@ -3620,6 +3632,26 @@ input[type=checkbox]:checked + label div {
 .mx-12 {
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+.my-14 {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.mx-14 {
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+}
+
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.mx-16 {
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 .my-auto {
@@ -3802,6 +3834,38 @@ input[type=checkbox]:checked + label div {
   margin-left: 3rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
+.mr-14 {
+  margin-right: 3.5rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.ml-14 {
+  margin-left: 3.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mr-16 {
+  margin-right: 4rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.ml-16 {
+  margin-left: 4rem;
+}
+
 .mt-auto {
   margin-top: auto;
 }
@@ -3930,6 +3994,18 @@ input[type=checkbox]:checked + label div {
   margin: -2rem;
 }
 
+.-m-12 {
+  margin: -3rem;
+}
+
+.-m-14 {
+  margin: -3.5rem;
+}
+
+.-m-16 {
+  margin: -4rem;
+}
+
 .-m-px {
   margin: -1px;
 }
@@ -4002,6 +4078,36 @@ input[type=checkbox]:checked + label div {
 .-mx-8 {
   margin-left: -2rem;
   margin-right: -2rem;
+}
+
+.-my-12 {
+  margin-top: -3rem;
+  margin-bottom: -3rem;
+}
+
+.-mx-12 {
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+
+.-my-14 {
+  margin-top: -3.5rem;
+  margin-bottom: -3.5rem;
+}
+
+.-mx-14 {
+  margin-left: -3.5rem;
+  margin-right: -3.5rem;
+}
+
+.-my-16 {
+  margin-top: -4rem;
+  margin-bottom: -4rem;
+}
+
+.-mx-16 {
+  margin-left: -4rem;
+  margin-right: -4rem;
 }
 
 .-my-px {
@@ -4124,6 +4230,54 @@ input[type=checkbox]:checked + label div {
 
 .-ml-8 {
   margin-left: -2rem;
+}
+
+.-mt-12 {
+  margin-top: -3rem;
+}
+
+.-mr-12 {
+  margin-right: -3rem;
+}
+
+.-mb-12 {
+  margin-bottom: -3rem;
+}
+
+.-ml-12 {
+  margin-left: -3rem;
+}
+
+.-mt-14 {
+  margin-top: -3.5rem;
+}
+
+.-mr-14 {
+  margin-right: -3.5rem;
+}
+
+.-mb-14 {
+  margin-bottom: -3.5rem;
+}
+
+.-ml-14 {
+  margin-left: -3.5rem;
+}
+
+.-mt-16 {
+  margin-top: -4rem;
+}
+
+.-mr-16 {
+  margin-right: -4rem;
+}
+
+.-mb-16 {
+  margin-bottom: -4rem;
+}
+
+.-ml-16 {
+  margin-left: -4rem;
 }
 
 .-mt-px {
@@ -8404,7 +8558,7 @@ input[type=checkbox]:checked + label div {
     height: 1.5rem;
   }
 
-  .sm\:h-7 cd.. {
+  .sm\:h-7 {
     height: 1.75rem;
   }
 
@@ -8480,6 +8634,10 @@ input[type=checkbox]:checked + label div {
     line-height: 1.5;
   }
 
+  .sm\:leading-relaxed {
+    line-height: 1.625;
+  }
+
   .sm\:leading-loose {
     line-height: 2;
   }
@@ -8522,6 +8680,14 @@ input[type=checkbox]:checked + label div {
 
   .sm\:m-12 {
     margin: 3rem;
+  }
+
+  .sm\:m-14 {
+    margin: 3.5rem;
+  }
+
+  .sm\:m-16 {
+    margin: 4rem;
   }
 
   .sm\:m-auto {
@@ -8630,6 +8796,26 @@ input[type=checkbox]:checked + label div {
   .sm\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  .sm\:my-14 {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .sm\:mx-14 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .sm\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .sm\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
 
   .sm\:my-auto {
@@ -8812,6 +8998,38 @@ input[type=checkbox]:checked + label div {
     margin-left: 3rem;
   }
 
+  .sm\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .sm\:mr-14 {
+    margin-right: 3.5rem;
+  }
+
+  .sm\:mb-14 {
+    margin-bottom: 3.5rem;
+  }
+
+  .sm\:ml-14 {
+    margin-left: 3.5rem;
+  }
+
+  .sm\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .sm\:mr-16 {
+    margin-right: 4rem;
+  }
+
+  .sm\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .sm\:ml-16 {
+    margin-left: 4rem;
+  }
+
   .sm\:mt-auto {
     margin-top: auto;
   }
@@ -8940,6 +9158,18 @@ input[type=checkbox]:checked + label div {
     margin: -2rem;
   }
 
+  .sm\:-m-12 {
+    margin: -3rem;
+  }
+
+  .sm\:-m-14 {
+    margin: -3.5rem;
+  }
+
+  .sm\:-m-16 {
+    margin: -4rem;
+  }
+
   .sm\:-m-px {
     margin: -1px;
   }
@@ -9012,6 +9242,36 @@ input[type=checkbox]:checked + label div {
   .sm\:-mx-8 {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+
+  .sm\:-my-12 {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+  }
+
+  .sm\:-mx-12 {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+
+  .sm\:-my-14 {
+    margin-top: -3.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .sm\:-mx-14 {
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
+  }
+
+  .sm\:-my-16 {
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+  }
+
+  .sm\:-mx-16 {
+    margin-left: -4rem;
+    margin-right: -4rem;
   }
 
   .sm\:-my-px {
@@ -9134,6 +9394,54 @@ input[type=checkbox]:checked + label div {
 
   .sm\:-ml-8 {
     margin-left: -2rem;
+  }
+
+  .sm\:-mt-12 {
+    margin-top: -3rem;
+  }
+
+  .sm\:-mr-12 {
+    margin-right: -3rem;
+  }
+
+  .sm\:-mb-12 {
+    margin-bottom: -3rem;
+  }
+
+  .sm\:-ml-12 {
+    margin-left: -3rem;
+  }
+
+  .sm\:-mt-14 {
+    margin-top: -3.5rem;
+  }
+
+  .sm\:-mr-14 {
+    margin-right: -3.5rem;
+  }
+
+  .sm\:-mb-14 {
+    margin-bottom: -3.5rem;
+  }
+
+  .sm\:-ml-14 {
+    margin-left: -3.5rem;
+  }
+
+  .sm\:-mt-16 {
+    margin-top: -4rem;
+  }
+
+  .sm\:-mr-16 {
+    margin-right: -4rem;
+  }
+
+  .sm\:-mb-16 {
+    margin-bottom: -4rem;
+  }
+
+  .sm\:-ml-16 {
+    margin-left: -4rem;
   }
 
   .sm\:-mt-px {
@@ -10819,7 +11127,7 @@ input[type=checkbox]:checked + label div {
   }
 }
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   .md\:list-reset {
     list-style: none;
     padding: 0;
@@ -13483,6 +13791,10 @@ input[type=checkbox]:checked + label div {
     line-height: 1.5;
   }
 
+  .md\:leading-relaxed {
+    line-height: 1.625;
+  }
+
   .md\:leading-loose {
     line-height: 2;
   }
@@ -13525,6 +13837,14 @@ input[type=checkbox]:checked + label div {
 
   .md\:m-12 {
     margin: 3rem;
+  }
+
+  .md\:m-14 {
+    margin: 3.5rem;
+  }
+
+  .md\:m-16 {
+    margin: 4rem;
   }
 
   .md\:m-auto {
@@ -13633,6 +13953,26 @@ input[type=checkbox]:checked + label div {
   .md\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  .md\:my-14 {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .md\:mx-14 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .md\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .md\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
 
   .md\:my-auto {
@@ -13815,6 +14155,38 @@ input[type=checkbox]:checked + label div {
     margin-left: 3rem;
   }
 
+  .md\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .md\:mr-14 {
+    margin-right: 3.5rem;
+  }
+
+  .md\:mb-14 {
+    margin-bottom: 3.5rem;
+  }
+
+  .md\:ml-14 {
+    margin-left: 3.5rem;
+  }
+
+  .md\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .md\:mr-16 {
+    margin-right: 4rem;
+  }
+
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .md\:ml-16 {
+    margin-left: 4rem;
+  }
+
   .md\:mt-auto {
     margin-top: auto;
   }
@@ -13943,6 +14315,18 @@ input[type=checkbox]:checked + label div {
     margin: -2rem;
   }
 
+  .md\:-m-12 {
+    margin: -3rem;
+  }
+
+  .md\:-m-14 {
+    margin: -3.5rem;
+  }
+
+  .md\:-m-16 {
+    margin: -4rem;
+  }
+
   .md\:-m-px {
     margin: -1px;
   }
@@ -14015,6 +14399,36 @@ input[type=checkbox]:checked + label div {
   .md\:-mx-8 {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+
+  .md\:-my-12 {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+  }
+
+  .md\:-mx-12 {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+
+  .md\:-my-14 {
+    margin-top: -3.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .md\:-mx-14 {
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
+  }
+
+  .md\:-my-16 {
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+  }
+
+  .md\:-mx-16 {
+    margin-left: -4rem;
+    margin-right: -4rem;
   }
 
   .md\:-my-px {
@@ -14137,6 +14551,54 @@ input[type=checkbox]:checked + label div {
 
   .md\:-ml-8 {
     margin-left: -2rem;
+  }
+
+  .md\:-mt-12 {
+    margin-top: -3rem;
+  }
+
+  .md\:-mr-12 {
+    margin-right: -3rem;
+  }
+
+  .md\:-mb-12 {
+    margin-bottom: -3rem;
+  }
+
+  .md\:-ml-12 {
+    margin-left: -3rem;
+  }
+
+  .md\:-mt-14 {
+    margin-top: -3.5rem;
+  }
+
+  .md\:-mr-14 {
+    margin-right: -3.5rem;
+  }
+
+  .md\:-mb-14 {
+    margin-bottom: -3.5rem;
+  }
+
+  .md\:-ml-14 {
+    margin-left: -3.5rem;
+  }
+
+  .md\:-mt-16 {
+    margin-top: -4rem;
+  }
+
+  .md\:-mr-16 {
+    margin-right: -4rem;
+  }
+
+  .md\:-mb-16 {
+    margin-bottom: -4rem;
+  }
+
+  .md\:-ml-16 {
+    margin-left: -4rem;
   }
 
   .md\:-mt-px {
@@ -18486,6 +18948,10 @@ input[type=checkbox]:checked + label div {
     line-height: 1.5;
   }
 
+  .lg\:leading-relaxed {
+    line-height: 1.625;
+  }
+
   .lg\:leading-loose {
     line-height: 2;
   }
@@ -18528,6 +18994,14 @@ input[type=checkbox]:checked + label div {
 
   .lg\:m-12 {
     margin: 3rem;
+  }
+
+  .lg\:m-14 {
+    margin: 3.5rem;
+  }
+
+  .lg\:m-16 {
+    margin: 4rem;
   }
 
   .lg\:m-auto {
@@ -18636,6 +19110,26 @@ input[type=checkbox]:checked + label div {
   .lg\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  .lg\:my-14 {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .lg\:mx-14 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .lg\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .lg\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
 
   .lg\:my-auto {
@@ -18818,6 +19312,38 @@ input[type=checkbox]:checked + label div {
     margin-left: 3rem;
   }
 
+  .lg\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .lg\:mr-14 {
+    margin-right: 3.5rem;
+  }
+
+  .lg\:mb-14 {
+    margin-bottom: 3.5rem;
+  }
+
+  .lg\:ml-14 {
+    margin-left: 3.5rem;
+  }
+
+  .lg\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .lg\:mr-16 {
+    margin-right: 4rem;
+  }
+
+  .lg\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .lg\:ml-16 {
+    margin-left: 4rem;
+  }
+
   .lg\:mt-auto {
     margin-top: auto;
   }
@@ -18946,6 +19472,18 @@ input[type=checkbox]:checked + label div {
     margin: -2rem;
   }
 
+  .lg\:-m-12 {
+    margin: -3rem;
+  }
+
+  .lg\:-m-14 {
+    margin: -3.5rem;
+  }
+
+  .lg\:-m-16 {
+    margin: -4rem;
+  }
+
   .lg\:-m-px {
     margin: -1px;
   }
@@ -19018,6 +19556,36 @@ input[type=checkbox]:checked + label div {
   .lg\:-mx-8 {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+
+  .lg\:-my-12 {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+  }
+
+  .lg\:-mx-12 {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+
+  .lg\:-my-14 {
+    margin-top: -3.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .lg\:-mx-14 {
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
+  }
+
+  .lg\:-my-16 {
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+  }
+
+  .lg\:-mx-16 {
+    margin-left: -4rem;
+    margin-right: -4rem;
   }
 
   .lg\:-my-px {
@@ -19140,6 +19708,54 @@ input[type=checkbox]:checked + label div {
 
   .lg\:-ml-8 {
     margin-left: -2rem;
+  }
+
+  .lg\:-mt-12 {
+    margin-top: -3rem;
+  }
+
+  .lg\:-mr-12 {
+    margin-right: -3rem;
+  }
+
+  .lg\:-mb-12 {
+    margin-bottom: -3rem;
+  }
+
+  .lg\:-ml-12 {
+    margin-left: -3rem;
+  }
+
+  .lg\:-mt-14 {
+    margin-top: -3.5rem;
+  }
+
+  .lg\:-mr-14 {
+    margin-right: -3.5rem;
+  }
+
+  .lg\:-mb-14 {
+    margin-bottom: -3.5rem;
+  }
+
+  .lg\:-ml-14 {
+    margin-left: -3.5rem;
+  }
+
+  .lg\:-mt-16 {
+    margin-top: -4rem;
+  }
+
+  .lg\:-mr-16 {
+    margin-right: -4rem;
+  }
+
+  .lg\:-mb-16 {
+    margin-bottom: -4rem;
+  }
+
+  .lg\:-ml-16 {
+    margin-left: -4rem;
   }
 
   .lg\:-mt-px {
@@ -23489,6 +24105,10 @@ input[type=checkbox]:checked + label div {
     line-height: 1.5;
   }
 
+  .xl\:leading-relaxed {
+    line-height: 1.625;
+  }
+
   .xl\:leading-loose {
     line-height: 2;
   }
@@ -23531,6 +24151,14 @@ input[type=checkbox]:checked + label div {
 
   .xl\:m-12 {
     margin: 3rem;
+  }
+
+  .xl\:m-14 {
+    margin: 3.5rem;
+  }
+
+  .xl\:m-16 {
+    margin: 4rem;
   }
 
   .xl\:m-auto {
@@ -23639,6 +24267,26 @@ input[type=checkbox]:checked + label div {
   .xl\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  .xl\:my-14 {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .xl\:mx-14 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .xl\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .xl\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
 
   .xl\:my-auto {
@@ -23821,6 +24469,38 @@ input[type=checkbox]:checked + label div {
     margin-left: 3rem;
   }
 
+  .xl\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .xl\:mr-14 {
+    margin-right: 3.5rem;
+  }
+
+  .xl\:mb-14 {
+    margin-bottom: 3.5rem;
+  }
+
+  .xl\:ml-14 {
+    margin-left: 3.5rem;
+  }
+
+  .xl\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .xl\:mr-16 {
+    margin-right: 4rem;
+  }
+
+  .xl\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .xl\:ml-16 {
+    margin-left: 4rem;
+  }
+
   .xl\:mt-auto {
     margin-top: auto;
   }
@@ -23949,6 +24629,18 @@ input[type=checkbox]:checked + label div {
     margin: -2rem;
   }
 
+  .xl\:-m-12 {
+    margin: -3rem;
+  }
+
+  .xl\:-m-14 {
+    margin: -3.5rem;
+  }
+
+  .xl\:-m-16 {
+    margin: -4rem;
+  }
+
   .xl\:-m-px {
     margin: -1px;
   }
@@ -24021,6 +24713,36 @@ input[type=checkbox]:checked + label div {
   .xl\:-mx-8 {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+
+  .xl\:-my-12 {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+  }
+
+  .xl\:-mx-12 {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+
+  .xl\:-my-14 {
+    margin-top: -3.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .xl\:-mx-14 {
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
+  }
+
+  .xl\:-my-16 {
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+  }
+
+  .xl\:-mx-16 {
+    margin-left: -4rem;
+    margin-right: -4rem;
   }
 
   .xl\:-my-px {
@@ -24143,6 +24865,54 @@ input[type=checkbox]:checked + label div {
 
   .xl\:-ml-8 {
     margin-left: -2rem;
+  }
+
+  .xl\:-mt-12 {
+    margin-top: -3rem;
+  }
+
+  .xl\:-mr-12 {
+    margin-right: -3rem;
+  }
+
+  .xl\:-mb-12 {
+    margin-bottom: -3rem;
+  }
+
+  .xl\:-ml-12 {
+    margin-left: -3rem;
+  }
+
+  .xl\:-mt-14 {
+    margin-top: -3.5rem;
+  }
+
+  .xl\:-mr-14 {
+    margin-right: -3.5rem;
+  }
+
+  .xl\:-mb-14 {
+    margin-bottom: -3.5rem;
+  }
+
+  .xl\:-ml-14 {
+    margin-left: -3.5rem;
+  }
+
+  .xl\:-mt-16 {
+    margin-top: -4rem;
+  }
+
+  .xl\:-mr-16 {
+    margin-right: -4rem;
+  }
+
+  .xl\:-mb-16 {
+    margin-bottom: -4rem;
+  }
+
+  .xl\:-ml-16 {
+    margin-left: -4rem;
   }
 
   .xl\:-mt-px {

@@ -49,7 +49,7 @@
                 {{ /if }}
 
                 {{ if e_mail }}
-                  <a href="mailto:{{ e_mail }}" class="inline-block">
+                  <a href="mailto:{{ e_mail | obfuscate_email }}" class="inline-block">
                     <span class="fa-layers fa-fw">
                         <i class="fas fa-circle text-red-darker"></i>
                         <i class="fas fa-at fa-inverse" data-fa-transform="shrink-6"></i>

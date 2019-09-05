@@ -1,0 +1,32 @@
+sections:
+  main:
+    display: Main
+    fields:
+      cover:
+        container: main
+        folder: img/Promo
+        restrict: false
+        type: assets
+        display: Cover
+      slug:
+        display: Slug
+        type: text
+      from:
+        allow_blank: false
+        allow_time: false
+        require_time: false
+        earliest_date: 'January 1, 1900'
+        type: date
+        display: From
+        default: today
+      to:
+        allow_blank: false
+        allow_time: false
+        require_time: false
+        earliest_date: 'January 1, 1900'
+        type: date
+        display: To
+        default: today
+taxonomies: false
+hide: true
+title: Promotions

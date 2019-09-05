@@ -3,7 +3,6 @@
 namespace Statamic\Addons\Laradoo;
 
 use Exception;
-use Stripe\Charge;
 use Stripe\Stripe;
 use Stripe\PaymentIntent;
 use Edujugon\Laradoo\Odoo;

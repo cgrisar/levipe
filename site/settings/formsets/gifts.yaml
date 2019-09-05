@@ -1,0 +1,15 @@
+title: gifts
+fields:
+  name:
+    display: name
+    validate: required
+  email:
+    display: email
+    validate: required
+  phone:
+    display: phone
+    validate: required
+columns:
+  - name
+  - email
+  - phone

@@ -1,0 +1,20 @@
+<div class="flex container px-4 sm:px-0 md:px-4 lg:px-0 mx-auto flex-col">
+ 
+    {{ description }}
+        
+        {{ if type == "text" || type == "bard" }}
+            {{ text }}
+        {{ /if }}
+
+        {{ if type == "image" }}
+            {{ partial:bard/image }}
+        {{ /if }}
+
+    {{ /description }}
+
+</div>
+
+
+{{ section:page_scripts }}
+
+{{ /section:page_scripts }}

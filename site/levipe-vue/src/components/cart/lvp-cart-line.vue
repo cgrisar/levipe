@@ -30,7 +30,7 @@
                 <i class="fas fa-2x text-red-darker fa-plus-circle fa-inverse" data-fa-transform="shrink-4"></i>
             </button>
         </div>
-
+    
         <div class="flex flex-row flex-1 items-center">
             <div class="w-1/3 md:w-1/2 lg:w-1/2 ml-1">  
                 <template v-if="variant.total_gof > 0">
