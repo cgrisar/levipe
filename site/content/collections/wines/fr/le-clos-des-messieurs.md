@@ -4,7 +4,7 @@ variants:
     millesime: '2014'
     active: false
   -
-    millesime: '2017'
+    millesime: '2018'
     active: true
     description: |
       La robe est cristalline, à peine teintée sur le grisé.

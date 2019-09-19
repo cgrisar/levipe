@@ -67,7 +67,7 @@ class LaradooListener extends Listener
                                                 'zip' => $user->get('zip'),
                                                 'city' => $user->get('city'),
                                                 'vat' => $user->get('vat'),
-                                                'property_account_position_id' => 1,
+                                                'property_account_position_id' => 4,
                                                 'email' => $user->get('email'),
                                                 'propery_product_pricelist' => 1,
                                                 'category_id' => array(array(6, 0, array(42))),
