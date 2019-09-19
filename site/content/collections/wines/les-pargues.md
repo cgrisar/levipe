@@ -19,6 +19,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Wines/Cover/FRSE-PARG.jpg
 twitter_share_setting: inherit
 id: 19dcd626-e99e-4a7a-9ed7-8e5324dd8631
 e:
