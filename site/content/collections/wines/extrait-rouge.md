@@ -14,6 +14,7 @@ cepages:
   - c136b12b-b234-4fd6-85b0-8478909b6ab2
 appellations:
   - 455bfce1-3e57-496a-accb-6810c97e7540
+  - 64caf4cb-d51e-448f-b6c6-a8e49561f4b4
 odoo: AFCI-EXRG
 variants:
   -
@@ -33,3 +34,4 @@ g:
   - mourvedre
 r:
   - cotes-du-rhone
+  - chateauneuf-du-pape
