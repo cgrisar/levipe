@@ -247,8 +247,8 @@ class LaradooTags extends Tags
                             array( $variant_ids ), 
                             array( 'fields' => array( 'sale_ok', 'attribute_value_ids', 'qty_available' ) ) 
                         ) ;
-
-            return $this->transform_variants_array( $products, $prices, $odoowine ) ;
+            $products_array = $this->transform_variants_array( $products, $prices, $odoowine ) ;
+            return $products_array;
         }
     }
 }
