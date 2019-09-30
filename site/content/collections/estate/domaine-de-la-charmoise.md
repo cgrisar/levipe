@@ -12,6 +12,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Estates/Covers/charmoise.jpg
 twitter_share_setting: inherit
 title: 'Domaine de la Charmoise'
 id: 287dd903-677a-49b7-ae82-b82c1c040bfa
