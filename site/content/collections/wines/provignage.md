@@ -6,6 +6,8 @@ label_image:
 color: white
 sparkling: false
 natural_wine: false
+estate:
+  - 287dd903-677a-49b7-ae82-b82c1c040bfa
 cepages:
   - 41130809-74b6-4ac8-9856-44841f6ffe99
 appellations:
@@ -23,3 +25,10 @@ facebook_image:
   - /assets/img/Wines/Cover/hmch-prov.jpg
 twitter_share_setting: inherit
 id: a12285f5-7882-4524-b10b-155615cf5720
+e:
+  - domaine-de-la-charmoise
+g:
+  - romorantin
+r:
+  - loire
+  - touraine

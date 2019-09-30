@@ -6,6 +6,8 @@ label_image:
 color: white
 sparkling: false
 natural_wine: false
+estate:
+  - 287dd903-677a-49b7-ae82-b82c1c040bfa
 cepages:
   - c0f6495a-3e99-4b34-980f-fa914df0a2ce
 appellations:
@@ -23,3 +25,10 @@ facebook_image:
   - /assets/img/Wines/Cover/hmch-vfsb.png
 twitter_share_setting: inherit
 id: 1e9498dd-a404-40a5-866c-8a4cd47046f3
+e:
+  - domaine-de-la-charmoise
+g:
+  - sauvignon-blanc
+r:
+  - loire
+  - touraine

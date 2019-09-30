@@ -7,6 +7,8 @@ color: red
 culture: classic
 sparkling: false
 natural_wine: true
+estate:
+  - 287dd903-677a-49b7-ae82-b82c1c040bfa
 cepages:
   - 1c0cef30-938c-4ad5-a25e-b18d357a6197
 appellations:
