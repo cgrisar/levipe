@@ -17,10 +17,18 @@ variants:
   -
     millesime: '2015'
     active: true
+  -
+    millesime: '2012'
+    active: false
+  -
+    millesime: '2014'
+    active: false
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Wines/Cover/BVEL-COME.jpeg
 twitter_share_setting: inherit
 id: 31315d42-4d0a-41cc-81a9-b56e0097ded2
 e:
@@ -30,3 +38,5 @@ g:
   - cabernet-sauvignon
 r:
   - bordeaux
+  - medoc
+  - saint-estephe

@@ -49,8 +49,9 @@ export default {
             if (this.couponCode == '') {
                 return
             };
-        
-            this.axios.get("/!/Fetch/entry/discounts/" + this.couponCode)
+            
+            var couponEntry = "/!/Fetch/entry/discounts/" + this.couponCode.toLowerCase();
+            this.axios.get(couponEntry)
                 .then( (response) => {
                     var coupon = response.data.data;
 

@@ -1,12 +1,8 @@
 active: true
-coupon: false
+coupon: true
 last: false
-start_date: '2019-09-26'
-end_date: '2019-09-26'
-wine:
-  - b19fbebc-fb94-4bd8-ad4a-04504a785e51
-volume: 75cl
-vintage: NV
+start_date: '2019-10-24'
+end_date: '2019-11-01'
 discount_type: bogof
 bo: '5'
 gof: '1'
@@ -17,5 +13,5 @@ no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
 twitter_share_setting: inherit
-title: Birthday
-id: 2e8a16b5-b189-44e6-a0ae-4146e301c695
+title: SINGTONIC
+id: d85c1337-7dee-409a-9bb6-45db52fa2a24
