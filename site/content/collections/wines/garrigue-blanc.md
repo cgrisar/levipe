@@ -20,6 +20,12 @@ variants:
   -
     millesime: '2018'
     active: true
+  -
+    millesime: '2015'
+    active: false
+  -
+    millesime: '2016'
+    active: false
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
