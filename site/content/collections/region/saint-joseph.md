@@ -10,6 +10,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Regions/saint-joseph.jpeg
 twitter_share_setting: inherit
 title: Saint-Joseph
 id: 05852219-8b3a-4125-951e-d2d1bc604f50
