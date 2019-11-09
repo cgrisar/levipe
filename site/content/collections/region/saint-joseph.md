@@ -2,10 +2,10 @@ level: village
 name: Saint-Joseph
 cover_image:
   - /assets/img/Regions/saint-joseph.jpeg
-area: '1082'
+area: '1231'
 estates: '160'
-production: '39000'
-yield: '36'
+production: '49781'
+yield: '40'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
