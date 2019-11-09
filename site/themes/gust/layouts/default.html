@@ -11,6 +11,12 @@
         <link rel="icon" type="image/png" sizes="16x16" href='{{ theme:images src="favicon-16x16.png" tag="true" }}'>
         <link rel="icon" type="image/png" sizes="96x96" href='{{ theme:images src="favicon-96x96.png" tag="true" }}'>
         <link defer rel="stylesheet" href='{{ theme:css src="shopkeeper.css" }}'>
+        <link rel="alternate" href="{{ path src='{slug}' absolute='true' }}" hreflang="{{ locale }}-be">
+        {{ if locale == "fr" }}
+            <link rel="alternate" href="{{ current_url replace='fr|nl' }}" hreflang="nl-be">
+        {{ else }}
+            <link rel="alternate" href="{{ current_url replace='{{locale}}|fr' }}" hreflang="fr-be">
+        {{ /if }}
 
         {{ aardvark-seo:head }}
         {{ recaptcha:head }}
