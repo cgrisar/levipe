@@ -1,4 +1,5 @@
 title: Home
+meta_title: 'les vins personnalisés'
 localized_urls:
   -
     locale: fr-fr
@@ -15,5 +16,5 @@ facebook_description: 'les vins personnalisés is specialised in importing and d
 facebook_image:
   - /assets/seo/logo_levipe-copy.png
 twitter_share_setting: inherit
-id: 903c9e30-0131-48dc-ba8a-cdefff286fd8
 fieldset: default
+id: 903c9e30-0131-48dc-ba8a-cdefff286fd8
