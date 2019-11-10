@@ -6,7 +6,7 @@ zip: '41230'
 commune: Soings-en-Sologne
 country: France
 phone: '+33 2 54 98 70 73'
-www: www.henry-marionnet.com
+www: 'http://www.henry-marionnet.com'
 e_mail: henry@henry-marionnet.com
 page_no_index: false
 no_follow_links: false

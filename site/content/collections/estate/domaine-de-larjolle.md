@@ -6,7 +6,7 @@ zip: '34480'
 commune: Pouzolles
 country: France
 phone: '+33 4 67 24 81 18'
-www: www.arjolle.com
+www: 'http://www.arjolle.com'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
