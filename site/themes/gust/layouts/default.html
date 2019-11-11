@@ -19,18 +19,6 @@
             <link rel="alternate"  hreflang="fr" href="{{ current_url replace='{{locale}}|fr' }}">
         {{ /if }}
 
-        {{ if current_uri == "/" && locale == "fr" }}
-            <title>accueil | les vins personnalisés</title>
-            <meta name="title" content="accueil | les vins personnalisés">
-            <meta name="description" content="les vins personnalisés est spécialisé dans la découverte, l'importation et la distribution de vins de propriétaires familiaux. L'achat de vin en ligne est entièrement sécurisé. Satisfait ou remboursé!">
-        {{ /if }}
-    
-        {{ if current_uri == "/" && locale == "nl" }}
-            <title>onthaal | les vins personnalisés</title>
-            <meta name="title" content="onthaal | les vins personnalisés">
-            <meta name="description" content="les vins personnalisés is de specialist van de invoer en de verdeling van wijnen van familiale domeinen. Uw wijn online kopen gebeurt in alle vertrouwen. Niet tevreden? Geld terug!">
-        {{ /if }}
-
         {{ aardvark-seo:head }}
 
         {{ recaptcha:head }}
