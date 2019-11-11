@@ -6,6 +6,10 @@ routes:
   /login: auth/login
   /forgot-password: auth/password-forgot
   /reset-password: auth/password-reset
+  /sitemap:
+    template: sitemap
+    layout: sitemap
+    content_type: xml
 collections:
   grape:
     en: '/grape/{slug}'
