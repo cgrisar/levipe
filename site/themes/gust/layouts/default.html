@@ -12,7 +12,7 @@
             <meta name="description" content="{{ meta_description }}">
         {{ /if }}
 
-        <link rel="alternate" href="{{ current_url }}" hreflang="{{ locale }}">
+        <link rel="alternate" hreflang="{{ locale }}" href="{{ current_url }}">
         {{ if locale == "fr" }}
             <link rel="alternate"  hreflang="nl" href="{{ current_url replace='fr|nl' }}">
          {{ else }}
