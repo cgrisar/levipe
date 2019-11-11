@@ -6,17 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
-        {{ if current_uri != "/" }}
-            <title>{{ title }}</title>
-            <meta name="title" content="{{ meta_title or title }}">
-            <meta name="description" content="{{ meta_description }}">
-        {{ /if }}
+        <title>{{ title }}</title>
+        <meta name="title" content="{{ meta_title or title }}">
+        <meta name="description" content="{{ meta_description }}">
 
-        <link rel="alternate" hreflang="{{ locale }}" href="{{ current_url }}">
+        <link rel="alternate" hreflang="{{ locale }}" href="{{ locale_url }}">
         {{ if locale == "fr" }}
-            <link rel="alternate"  hreflang="nl" href="{{ current_url replace='fr|nl' }}">
+            <link rel="alternate"  hreflang="nl" href="{{ locale_url replace='fr|nl' }}">
          {{ else }}
-            <link rel="alternate"  hreflang="fr" href="{{ current_url replace='{{locale}}|fr' }}">
+            <link rel="alternate"  hreflang="fr" href="{{ locale_url replace='{{locale}}|fr' }}">
         {{ /if }}
 
         {{ aardvark-seo:head }}
