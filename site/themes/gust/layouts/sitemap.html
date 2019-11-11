@@ -18,6 +18,33 @@
                     <priority>0.5</priority>
                 </url>
             {{ /collection }}
+
+            {{ collection from="grape" locale="{locale:key}" }}
+                <url>
+                    <loc>{{ permalink }}</loc>
+                    <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                </url>
+            {{ /collection }}
+
+            {{ collection from="estate" locale="{locale:key}" }}
+                <url>
+                    <loc>{{ permalink }}</loc>
+                    <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                </url>
+            {{ /collection }}
+
+            {{ collection from="wines" locale="{locale:key}" }}
+                <url>
+                    <loc>{{ permalink }}</loc>
+                    <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                </url>
+            {{ /collection }}
         {{ /if }}
     {{ /locales }}
   </urlset>
