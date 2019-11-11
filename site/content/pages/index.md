@@ -1,12 +1,6 @@
 title: Home
-meta_title: 'les vins personnalisés'
-localized_urls:
-  -
-    locale: fr-fr
-    url: levipe.be/fr
-  -
-    locale: nl-nl
-    url: levipe.be/nl
+meta_title: 'accueil | les vins personnalisés'
+meta_description: 'Meta Description'
 page_no_index: false
 no_follow_links: true
 sitemap_priority: '0.5'
