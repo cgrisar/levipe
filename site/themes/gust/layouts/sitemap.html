@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {{ locales }}
+        {{ if locale:key != "en" }}
+            {{ nav from="/" include_home="true" }}
+                <url>
+                    <loc>https://levipe.be/{{locale:key}}{{url}}</loc>
+                    <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+                    <changefreq>monthly</changefreq>
+                    <priority>{{ if url == homepage }}0.8{{ else }}0.5{{ /if }}</priority>
+                </url>
+            {{ /nav }}
+            {{ collection from="region" locale="{locale:key}" }}
+                <url>
+                    <loc>{{ permalink }}</loc>
+                    <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                </url>
+            {{ /collection }}
+        {{ /if }}
+    {{ /locales }}
+  </urlset>
