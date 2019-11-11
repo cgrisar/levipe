@@ -10,11 +10,16 @@
         <meta name="title" content="{{ meta_title or title }}">
         <meta name="description" content="{{ meta_description }}">
 
-        <link rel="alternate" hreflang="{{ locale }}" href="{{ locale_url }}">
+        <link rel="alternate" hreflang="{{ locale:key }}" href="{{ permalink }}">
+        url {{ url }}
+        permalink {{ permalink }}
+        site_url {{ site_url }}
+        locale_url {{ locale_url }}
+        slug {{ slug }}
         {{ if locale == "fr" }}
-            <link rel="alternate"  hreflang="nl" href="{{ locale_url replace='fr|nl' }}">
+            <link rel="alternate"  hreflang="nl" href="{{ permalink replace='fr|nl' }}">
          {{ else }}
-            <link rel="alternate"  hreflang="fr" href="{{ locale_url replace='{{locale}}|fr' }}">
+            <link rel="alternate"  hreflang="fr" href="{{ permalink replace='{{ locale:key }}|fr' }}">
         {{ /if }}
 
         {{ aardvark-seo:head }}
