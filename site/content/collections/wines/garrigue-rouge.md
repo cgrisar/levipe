@@ -1,6 +1,6 @@
 title: 'Garrigue (rouge)'
 cover_image:
-  - /assets/img/Wines/Cover/lasc-garr.png
+  - /assets/img/Wines/Cover/lasc-garr.jpeg
 label_image:
   - /assets/img/Wines/Label/lasc-garr-1560892977.jpg
 color: red
@@ -17,6 +17,9 @@ variants:
     active: false
   -
     millesime: '2016'
+    active: false
+  -
+    millesime: '2017'
     active: true
 page_no_index: false
 no_follow_links: false

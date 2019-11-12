@@ -19,12 +19,12 @@ assets:
     title: 'Nobles Pierres'
     alt: 'Nobles Pierres'
   img/Wines/Cover/cdmo-arab.jpg:
-    title: Arabesque
-    alt: Arabasque
+    title: "Arabasque |\_Domaine de Montvac | Vacqueyras | Rhône"
+    alt: "Arabasque |\_Domaine de Montvac | Vacqueyras | Rhône"
     focus: 23-46
   img/Wines/Cover/cdmo-adag.jpg:
-    title: Adage
-    alt: Adage
+    title: "Adage |\_Domaine de Montvac | Gigondas | Rhône"
+    alt: "Adage |\_Domaine de Montvac | Gigondas | Rhône"
   img/Wines/Label/cdmo-adag.jpeg:
     title: Adage
     alt: Adage
