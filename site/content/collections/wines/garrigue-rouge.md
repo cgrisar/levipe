@@ -13,6 +13,9 @@ cepages:
 odoo: LASC-GARR
 variants:
   -
+    millesime: '2014'
+    active: false
+  -
     millesime: '2015'
     active: false
   -

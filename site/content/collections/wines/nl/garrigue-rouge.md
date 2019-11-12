@@ -1,6 +1,9 @@
 description: '<p>De wijngaard ligt in de hart van garrigue, aan de voet van de Cévenes. Naast de typische struiken vind je er eiken en pijnbomen. Het klimaat wordt gekenmerkt door continentale invloeden. Vanaf midden-augustus geniet de wijngaard van koele nachten wat voor een explosieve aromaontwikkeling van de syrah zorgt. Sluit je ogen en het parfum van deze wijn brengt je op een wandelpad door de Garrigue. Rozemarijn, olijfbomen, lavendel, zoethout... ze zijn allemaal aanwezig in deze bijzonder verleidelijke wijn.</p>'
 variants:
   -
+    millesime: '2014'
+    active: false
+  -
     millesime: '2015'
     active: false
   -

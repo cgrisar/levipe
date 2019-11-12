@@ -1,6 +1,9 @@
 description: '<p>Les vignes dont est issu ce vin, sont plantées surun sol calcaire au cœur d’une garrigue peuplée de chênes verts et de pins d’Alep. Le climat, marqué par des influences continentales, et un micro-climat aux nuits fraîches à partir de la mi-août réussit particulièrement bien à la syrah, majoritaire dans ce vin. Fermez les yeux et laissez les parfums de ce vin vous amener sur un sentier dans la garrigue. Romarin, lavande, oliviers, réglisse... ils sont tous à l''appel dans ce vin particulièrement séducteur.</p>'
 variants:
   -
+    millesime: '2014'
+    active: false
+  -
     millesime: '2015'
     active: false
   -
