@@ -14,6 +14,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Estates/Covers/cailbourdin.jpg
 twitter_share_setting: inherit
 title: 'Domaine Cailbourdin'
 id: 40c97616-f661-4738-8f31-942d37ce092b

@@ -3,6 +3,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/gifts_nl.png
 twitter_share_setting: inherit
 template: page
 fieldset: page
