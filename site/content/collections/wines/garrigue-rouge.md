@@ -7,9 +7,13 @@ color: red
 culture: biodynamic
 sparkling: false
 natural_wine: false
+estate:
+  - f1d7d0a9-672e-4438-b8e3-37471b1d6436
 cepages:
   - 8d1d2dd3-62ec-4c10-88e9-4210c58229d7
   - c136b12b-b234-4fd6-85b0-8478909b6ab2
+appellations:
+  - 5c08cdd8-e075-47c5-822f-f764e2de5545
 odoo: LASC-GARR
 variants:
   -
