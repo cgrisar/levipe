@@ -1,0 +1,17 @@
+active: true
+coupon: true
+last: false
+start_date: '2019-11-13'
+end_date: '2020-12-31'
+discount_type: bogof
+bo: '5'
+gof: '1'
+bogof_discount: '100'
+discount: '100'
+page_no_index: false
+no_follow_links: false
+sitemap_priority: '0.5'
+sitemap_changefreq: daily
+twitter_share_setting: inherit
+title: JOERI
+id: 3d90e69d-9e05-40ca-bb0f-a6c44b8b6483

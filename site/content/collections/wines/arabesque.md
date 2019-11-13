@@ -7,6 +7,8 @@ color: red
 culture: organic
 sparkling: false
 natural_wine: false
+estate:
+  - e639b936-c0c1-4f6b-ba19-30fbf1e6ccfc
 cepages:
   - c136b12b-b234-4fd6-85b0-8478909b6ab2
   - 8d1d2dd3-62ec-4c10-88e9-4210c58229d7

@@ -11,6 +11,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Estates/Covers/arjolle.jpg
 twitter_share_setting: inherit
 title: 'Domaine de l''Arjolle'
 id: fcd535eb-7f35-4eb8-893f-dc5f27e71f65
