@@ -1,5 +1,5 @@
 title: Home
-meta_title: 'accueil | les vins personnalisés'
+meta_title: 'Home | les vins personnalisés'
 meta_description: 'Meta Description'
 page_no_index: false
 no_follow_links: true

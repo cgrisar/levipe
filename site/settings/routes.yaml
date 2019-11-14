@@ -1,6 +1,5 @@
 routes:
   /: home
-  /blog/tags: blog/taxonomies
   '/users/{username}': user/profile
   /account: user/account
   /login: auth/login
@@ -27,3 +26,4 @@ collections:
     en: '/region/{slug}'
     fr: '/region/{slug}'
     nl: '/region/{slug}'
+taxonomies: '{  }'
