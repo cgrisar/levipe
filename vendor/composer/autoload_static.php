@@ -42,11 +42,6 @@ class ComposerStaticInit88f4434b67e5a244186f5e9ed1182454
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
         ),
-        'M' => 
-        array (
-            'MatthiasMullie\\PathConverter\\' => 29,
-            'MatthiasMullie\\Minify\\' => 22,
-        ),
         'L' => 
         array (
             'Laravel\\Cashier\\' => 16,
