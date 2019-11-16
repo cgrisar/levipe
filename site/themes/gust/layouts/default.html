@@ -44,7 +44,6 @@
 
         {{ if environment == 'production' }}
             {{ theme:css src="app.min" tag="true" }}
-            {{ theme:css src="levipe.min" tag="true" }}
         {{ else }}
             {{ theme:css src="app" tag="true" }}
             {{ theme:css src="levipe" tag="true" }}
