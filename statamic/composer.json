@@ -35,8 +35,8 @@
         "nesbot/carbon": "^1.34.0",
         "statamic/stringy": "^3.1",
         "charles/laradoo": "*@dev",
-        "charles-grisar/lefipe": "*@dev",
-        "stillat/meerkat": "*@dev"
+        "stillat/meerkat": "*@dev",
+        "damcclean/minify": "*@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

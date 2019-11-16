@@ -1,6 +1,7 @@
 {
     "require": {
         "edujugon/laradoo": "^1.1",
-        "laravel/cashier": "^9.3"
+        "laravel/cashier": "^9.3",
+        "matthiasmullie/minify": "^1.3"
     }
 }

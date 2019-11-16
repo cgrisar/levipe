@@ -42,6 +42,11 @@ class ComposerStaticInit88f4434b67e5a244186f5e9ed1182454
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
         ),
+        'M' => 
+        array (
+            'MatthiasMullie\\PathConverter\\' => 29,
+            'MatthiasMullie\\Minify\\' => 22,
+        ),
         'L' => 
         array (
             'Laravel\\Cashier\\' => 16,
@@ -155,6 +160,14 @@ class ComposerStaticInit88f4434b67e5a244186f5e9ed1182454
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'MatthiasMullie\\PathConverter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/matthiasmullie/path-converter/src',
+        ),
+        'MatthiasMullie\\Minify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
         ),
         'Laravel\\Cashier\\' => 
         array (

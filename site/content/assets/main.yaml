@@ -29,4 +29,177 @@ assets:
     title: Adage
     alt: Adage
   img/Wines/Cover/EOLE-TRBL.jpeg:
+    title: "Tradition Blanc | Domaine d'Eole | Vin de Pays des Alpilles |\_Provence"
+    alt: "Tradition Blanc | Domaine d'Eole | Vin de Pays des Alpilles |\_Provence"
     focus: 50-71
+  img/Wines/Cover/BVEL-COME.jpeg:
+    title: 'Château de Côme | Saint-Estèphe | Bordeaux'
+    alt: 'Château de Côme | Saint-Estèphe | Bordeaux'
+  img/Wines/Cover/CLLA-CMES.jpg:
+    title: 'Clos des Messieurs | Domaine Lafond | Reuilly | Loire'
+    alt: 'Clos des Messieurs | Domaine Lafond | Reuilly | Loire'
+  img/Wines/Cover/DICA-RKES.jpg:
+    title: 'Riesling Grand Cru Kessler | Dirler-Cadé | Alsace Riesling | Alsace'
+    alt: 'Riesling Grand Cru Kessler | Dirler-Cadé | Alsace Riesling | Alsace'
+  img/Wines/Cover/FRSE-MASS.jpg:
+    title: 'Sélection Massale | Domaine Servin | Chablis | Bourgogne'
+    alt: 'Sélection Massale | Domaine Servin | Chablis | Bourgogne'
+  img/Wines/Cover/FRSE-PARG.jpg:
+    title: 'Les Pargues | Domaine Servin | Chablis | Bourgogne'
+    alt: 'Les Pargues | Domaine Servin | Chablis | Bourgogne'
+  img/Wines/Cover/JLAU-CDEM.jpg:
+    title: 'Clos des Demoiselles | Domaine J. Laurens | Crémant de Limoux | Languedoc'
+    alt: 'Clos des Demoiselles | Domaine J. Laurens | Crémant de Limoux | Languedoc'
+  img/Wines/Cover/LASC-NOPI.jpg:
+    title: "Les Nobles Pierres | Château de Lascaux |\_Pic Saint Loup | Languedoc"
+    alt: "Les Nobles Pierres | Château de Lascaux |\_Pic Saint Loup | Languedoc"
+  img/Wines/Cover/afci-cnpb.jpg:
+    title: 'Châteauneuf Blanc | Domaine Chante-Cigale | Châteauneuf du Pape | Rhône'
+    alt: 'Châteauneuf Blanc | Domaine Chante-Cigale | Châteauneuf du Pape | Rhône'
+  img/Wines/Cover/afci-cnpr.jpg:
+    title: 'Châteauneuf Rouge | Domaine Chante-Cigale | Châteauneuf du Pape | Rhône'
+    alt: 'Châteauneuf Rouge | Domaine Chante-Cigale | Châteauneuf du Pape | Rhône'
+  img/Wines/Cover/afci-exrg.jpeg:
+    title: 'Extrait Rouge | Domaine Chante-Cigale | Châteauneuf du Pape | Rhône'
+    alt: 'Extrait Rouge | Domaine Chante-Cigale | Châteauneuf du Pape | Rhône'
+  img/Wines/Cover/arjo-egme.jpg:
+    title: 'Echappée Gourmande Rouge | Domaine de l''Arjolle | Côtes de Thongue | Languedoc'
+    alt: 'Echappée Gourmande Rouge | Domaine de l''Arjolle | Côtes de Thongue | Languedoc'
+  img/Wines/Cover/arjo-egro.jpg:
+    title: 'Echappée Gourmande Rosé | Domaine de l''Arjolle | Côtes de Thongue | Languedoc'
+    alt: 'Echappée Gourmande Rosé | Domaine de l''Arjolle | Côtes de Thongue | Languedoc'
+  img/Wines/Cover/aurl-soln.jpg:
+    title: 'Solen | Domaine les Aurelles | Languedoc'
+    alt: 'Solen | Domaine les Aurelles | Languedoc'
+  img/Wines/Cover/cail-bofl.png:
+    title: "Cuvée de Boisfleury | Domaine Cailbourdin | Pouilly-Fumé |\_Loire"
+    alt: "Cuvée de Boisfleury | Domaine Cailbourdin | Pouilly-Fumé |\_Loire"
+  img/Wines/Cover/cail-bofl-1566644667.png:
+    title: "Cuvée de Boisfleury | Domaine Cailbourdin | Pouilly-Fumé |\_Loire"
+    alt: "Cuvée de Boisfleury | Domaine Cailbourdin | Pouilly-Fumé |\_Loire"
+  img/Wines/Cover/cail-corn.jpg:
+    title: "Les Cornets | Domaine Cailbourdin | Pouilly-Fumé |\_Loire"
+    alt: "Les Cornets | Domaine Cailbourdin | Pouilly-Fumé |\_Loire"
+  img/Wines/Cover/cail-cris.png:
+    title: "Les Cris | Domaine Cailbourdin | Pouilly-Fumé |\_Loire"
+    alt: "Les Cris | Domaine Cailbourdin | Pouilly-Fumé |\_Loire"
+  img/Wines/Cover/casp-chcl.jpg:
+    title: 'Chianti Classico | Casale dello Sparviero | Toscana | Italia'
+    alt: 'Chianti Classico | Casale dello Sparviero | Toscana | Italia'
+  img/Wines/Cover/casp-roto-2.png:
+    title: 'Rosso di Toscana | Casale dello Sparviero | Toscana | Italia'
+    alt: 'Rosso di Toscana | Casale dello Sparviero | Toscana | Italia'
+  img/Wines/Cover/clch-clrg.jpg:
+    title: 'Classique Rouge | Domaine de Châteanoy | Menetou-Salon | Loire'
+    alt: 'Classique Rouge | Domaine de Châteanoy | Menetou-Salon | Loire'
+  img/Wines/Cover/dica-belz.jpeg:
+    title: 'Belzbrunnen | Dirler-Cadé | Alsace Riesling | Alsace'
+    alt: 'Belzbrunnen | Dirler-Cadé | Alsace Riesling | Alsace'
+  img/Wines/Cover/eole-trbl.png:
+    title: 'Tradition Blanc | Domaine d''Eole | Vin de Pays des Alpilles | Provence'
+    alt: 'Tradition Blanc | Domaine d''Eole | Vin de Pays des Alpilles | Provence'
+  img/Wines/Cover/eole-trrg.jpg:
+    title: 'Tradition Rouge | Domaine d''Eole | Vin de Pays des Alpilles | Provence'
+    alt: 'Tradition Rouge | Domaine d''Eole | Vin de Pays des Alpilles | Provence'
+  img/Wines/Cover/erlg-legb.jpg:
+    title: 'Brut Réserve | Eric Legrand | Champagne'
+    alt: 'Brut Réserve | Eric Legrand | Champagne'
+  img/Wines/Cover/frri-chan.jpeg:
+    title: "Vers Chânes |\_Domaine Rijckaert | Pouilly-Fuissé | Bourgogne"
+    alt: "Vers Chânes |\_Domaine Rijckaert | Pouilly-Fuissé | Bourgogne"
+  img/Wines/Cover/frri-epin.jpeg:
+    title: 'l''Epinet | Domaine Rijckaert | Viré-Clessé | Bourgogne'
+    alt: 'l''Epinet | Domaine Rijckaert | Viré-Clessé | Bourgogne'
+  img/Wines/Cover/frri-para.jpg:
+    title: 'En Paradis | Domaine Rijckaert | Arbois | Jura'
+    alt: 'En Paradis | Domaine Rijckaert | Arbois | Jura'
+  img/Wines/Cover/hmch-prov.jpg:
+    title: 'Provignage | Domaine de la Charmoise | Touraine | Loire'
+    alt: 'Provignage | Domaine de la Charmoise | Touraine | Loire'
+  img/Wines/Cover/hmch-prve.jpeg:
+    title: 'Première Vendange | Domaine de la Charmoise | Gamay de Touraine | Loire'
+    alt: 'Première Vendange | Domaine de la Charmoise | Gamay de Touraine | Loire'
+  img/Wines/Cover/hmch-sabl.jpg:
+    title: 'Sauvignon Blanc | Domaine de la Charmoise | Sauvignon de Touraine | Loire'
+    alt: 'Sauvignon Blanc | Domaine de la Charmoise | Sauvignon de Touraine | Loire'
+  img/Wines/Cover/hmch-vfsb.png:
+    title: 'Vinifera Sauvignon | Domaine de la Charmoise | Sauvignon de Touraine | Loire'
+    alt: 'Vinifera Sauvignon | Domaine de la Charmoise | Sauvignon de Touraine | Loire'
+  img/Wines/Cover/hmcm-vfsb.jpg:
+    title: 'Vinifera Sauvignon | Domaine de la Charmoise | Sauvignon de Touraine | Loire'
+    alt: 'Vinifera Sauvignon | Domaine de la Charmoise | Sauvignon de Touraine | Loire'
+  img/Wines/Cover/hsrd-cess.jpg:
+    title: 'Les Cessieux | Romaneaux-Destezet | Saint-Joseph | Rhône'
+    alt: 'Les Cessieux | Romaneaux-Destezet | Saint-Joseph | Rhône'
+  img/Wines/Cover/hsrd-sout.jpg:
+    title: 'Souteronne | Romaneaux-Destezet | Vin de France | Rhône'
+    alt: 'Souteronne | Romaneaux-Destezet | Vin de France | Rhône'
+  img/Wines/Cover/hsrd-step.jpg:
+    title: 'Sainte-Epine | Romaneaux-Destezet | Saint-Joseph | Rhône'
+    alt: 'Sainte-Epine | Romaneaux-Destezet | Saint-Joseph | Rhône'
+  img/Wines/Cover/jlau-grai.jpg:
+    title: 'Les Graimenous | Domaine J. Laurens | Crémant de Limoux | Languedoc'
+    alt: 'Les Graimenous | Domaine J. Laurens | Crémant de Limoux | Languedoc'
+  img/Wines/Cover/jlla-rose.png:
+    title: 'La Rose N° 7 | Domaine J. Laurens | Crémant de Limoux | Languedoc'
+    alt: 'La Rose N° 7 | Domaine J. Laurens | Crémant de Limoux | Languedoc'
+  img/Wines/Cover/lasc-carr.jpg:
+    title: 'Carra | Château de Lascaux | Pic Saint Loup | Languedoc'
+    alt: 'Carra | Château de Lascaux | Pic Saint Loup | Languedoc'
+  img/Wines/Cover/lasc-casv.jpg:
+    title: 'Sauvignon - Viognier | Domaine Cavalier | Saint Guilhem le Désert | Languedoc'
+    alt: 'Sauvignon - Viognier | Domaine Cavalier | Saint Guilhem le Désert | Languedoc'
+  img/Wines/Cover/lasc-garb.jpg:
+    title: 'Garrigues Blanc | Château de Lascaux | Languedoc'
+    alt: 'Garrigues Blanc | Château de Lascaux | Languedoc'
+  img/Wines/Cover/lasc-garr.jpeg:
+    title: 'Garrigues Rouge | Château de Lascaux | Languedoc'
+    alt: 'Garrigues Rouge | Château de Lascaux | Languedoc'
+  img/Wines/Cover/lasc-piar.jpg:
+    title: 'Pierres d''Argent | Château de Lascaux | Languedoc'
+    alt: 'Pierres d''Argent | Château de Lascaux | Languedoc'
+  img/Wines/Cover/laul-bard.jpeg:
+    title: 'Les Bardots | Domaine de Laulan | Côtes de Duras | Sud-Ouest'
+    alt: 'Les Bardots | Domaine de Laulan | Côtes de Duras | Sud-Ouest'
+  img/Wines/Cover/lpep-cour.jpeg:
+    title: 'Cour Cheverny | Domaine de l''Epicourchois | Cour Cheverny | Loire'
+    alt: 'Cour Cheverny | Domaine de l''Epicourchois | Cour Cheverny | Loire'
+  img/Wines/Cover/lpep-cour-1569880409.jpeg:
+    title: 'Cour Cheverny | Domaine de l''Epicourchois | Cour Cheverny | Loire'
+    alt: 'Cour Cheverny | Domaine de l''Epicourchois | Cour Cheverny | Loire'
+  img/Wines/Cover/lpep-phyl.png:
+    title: 'Phyllade | Domaine de l''Epicourchois | Cour Cheverny | Loire'
+    alt: 'Phyllade | Domaine de l''Epicourchois | Cour Cheverny | Loire'
+  img/Wines/Cover/ltth-char.jpg:
+    title: 'La Chaume Rouge | Domaine Thomas | Sancerre | Loire'
+    alt: 'La Chaume Rouge | Domaine Thomas | Sancerre | Loire'
+  img/Wines/Cover/pcdc-cldb.jpg:
+    title: 'Classique Blanc | Domaine de Châtenoy | Menetou-Salon | Loire'
+    alt: 'Classique Blanc | Domaine de Châtenoy | Menetou-Salon | Loire'
+  img/Wines/Cover/pcdc-dcha.jpg:
+    title: 'Dame de Châtenoy | Domaine de Châtenoy | Menetou-Salon | Loire'
+    alt: 'Dame de Châtenoy | Domaine de Châtenoy | Menetou-Salon | Loire'
+  img/Wines/Cover/pigo-prro.jpg:
+    title: 'Première | Château Pigoudet | Côtes d''Aix en Provence | Provence'
+    alt: 'Première | Château Pigoudet | Côtes d''Aix en Provence | Provence'
+  img/Wines/Cover/plrl-bour.png:
+    title: 'Au Bourg | Domaine Luquet | Pouilly-Fuissé | Bourgogne'
+    alt: 'Au Bourg | Domaine Luquet | Pouilly-Fuissé | Bourgogne'
+  img/Wines/Cover/ptsa-clse.jpg:
+    title: 'Claude Seigneuret | Domaine de la Sarazinière | Mâcon-Bussières | Bourgogne'
+    alt: 'Claude Seigneuret | Domaine de la Sarazinière | Mâcon-Bussières | Bourgogne'
+  img/Wines/Cover/ptsa-mont.jpg:
+    title: 'Les Monterrains | Domaine de la Sarazinière | Mâcon-Bussières | Bourgogne'
+    alt: 'Les Monterrains | Domaine de la Sarazinière | Mâcon-Bussières | Bourgogne'
+  img/Wines/Cover/vidu-mbvv.png:
+    title: 'Château La Mothe du Barry | Bordeaux Supérieur | Bordeaux'
+    alt: 'Château La Mothe du Barry | Bordeaux Supérieur | Bordeaux'
+  img/Wines/Cover/vpco-bach.jpg:
+    title: 'Baron de Chanteclerc | Domaine La Colombette | Vin de France | Languedoc'
+    alt: 'Baron de Chanteclerc | Domaine La Colombette | Vin de France | Languedoc'
+  img/Wines/Cover/vpco-pico.jpg:
+    title: 'Pink Colomb Bay | Domaine La Colombette | Vin de France | Languedoc'
+    alt: 'Pink Colomb Bay | Domaine La Colombette | Vin de France | Languedoc'
+  img/Wines/Cover/vpco-pino.jpg:
+    title: 'Pinot Noir | Domaine La Colombette | Vin de France | Languedoc'
+    alt: 'Pinot Noir | Domaine La Colombette | Vin de France | Languedoc'
