@@ -9,7 +9,7 @@
             {{ locales }}
                 {{ if !first && locale:key != "en" }}
                     <a href="{{ url }}">
-                        <img src='{{ theme:images src="{ locale:key }.png" }}' width="18" class="-mb-1" />
+                        <img src='{{ theme:images src="{ locale:key }.png" }}' width="18" class="-mb-1" alt="{{ locale:name }}" />
                     </a>
                 {{ /if }}
             {{ /locales }}
