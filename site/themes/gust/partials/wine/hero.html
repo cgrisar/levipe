@@ -1,9 +1,10 @@
 {{ assets:cover_image }}
     <figure style="background-image:url( '{{ url }}' ); background-position: 50% 50%; padding-top: 100%" class="bg-cover sm:rounded-lg mb-8 relative shadow-md">
+        <img src="{{ url }}" class="hidden" alt="{{alt}}">
         <div class="absolute pin-t pin-l bg-black opacity-25 md:rounded-lg w-full h-full"></div>
     </figure>
 {{ /assets:cover_image }}
 
 {{ assets:label_image }}
-    <lightbox thumbnail="{{ url }}" images="" class="hidden md:block">
+    <lightbox thumbnail="{{ url }}" alt="{{assets:cover_image}}{{alt}}{{/assets:cover_image}}" images="" class="hidden md:block">
 {{ /assets:label_image }}

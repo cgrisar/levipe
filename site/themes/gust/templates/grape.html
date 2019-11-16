@@ -3,6 +3,7 @@
     <div class="flex container mx-auto flex-col">
         {{ assets:cover_image }}
             <div style="background-image:url({{ url }}); height: 600px;" class="object-fit:cover php please update:addonsw-full bg-cover mb-8 relative">
+            <img src="{{ url }}" class="hidden" alt="{{ page:title }}">
         {{ /assets:cover_image }}
                 <div class="bg-black opacity-25 absolute w-full h-full"></div>
                 <div style="padding-top:20rem;">
