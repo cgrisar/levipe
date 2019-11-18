@@ -10,5 +10,12 @@ www: 'http://www.rocdesanges.com/'
 e_mail: rocdesanges@wanadoo.fr
 acrage: '10'
 production: '30000'
+page_no_index: false
+no_follow_links: false
+sitemap_priority: '0.5'
+sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Estates/Covers/roc-des-anges-1.jpg
+twitter_share_setting: inherit
 title: 'Domaine Roc des Anges'
 id: a4363985-b8f6-4c26-a36b-e9641323eee7
