@@ -5,6 +5,10 @@ routes:
   /login: auth/login
   /forgot-password: auth/password-forgot
   /reset-password: auth/password-reset
+  /winesmap.xml:
+    template: winesmap
+    layout: winesmap
+    content_type: xml
   /sitemap:
     template: sitemap
     layout: sitemap
