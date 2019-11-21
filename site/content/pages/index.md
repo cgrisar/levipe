@@ -1,6 +1,6 @@
 title: Home
-meta_title: 'Home | les vins personnalisés'
-meta_description: 'Meta Description'
+seo_title: 'Home | les vins personnalisés'
+seo_description: 'Seo Description'
 page_no_index: false
 no_follow_links: true
 sitemap_priority: '0.5'
