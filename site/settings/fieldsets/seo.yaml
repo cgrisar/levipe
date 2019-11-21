@@ -1,0 +1,14 @@
+sections:
+  main:
+    display: Main
+    fields:
+      seo_title:
+        type: text
+        localizable: true
+        display: seo_title
+      seo_description:
+        type: text
+        localizable: true
+        display: seo_description
+taxonomies: true
+title: SEO

@@ -11,4 +11,5 @@ facebook_image:
   - /assets/seo/logo_levipe-copy.png
 twitter_share_setting: inherit
 fieldset: default
+template: auth/home
 id: 903c9e30-0131-48dc-ba8a-cdefff286fd8
