@@ -1,5 +1,7 @@
 routes:
-  /: home
+  /:
+    template: home
+    layout: default
   '/users/{username}': user/profile
   /account: user/account
   /login: auth/login
