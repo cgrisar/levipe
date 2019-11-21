@@ -2,6 +2,10 @@ description: '<p>L’équilibre de ce Vacqueyras rouge est obtenu par la complé
 variants:
   -
     millesime: '2016'
+    active: false
+    description: 'Couleur rubis profonde. Nez de fruits noirs: myrtilles, prunes bleues; épices de poivre noir. L''attaque est corsée, arômes de cerise et baies noires. Finale longue et dynamique'
+  -
+    millesime: '2017'
     active: true
     description: 'Couleur rubis profonde. Nez de fruits noirs: myrtilles, prunes bleues; épices de poivre noir. L''attaque est corsée, arômes de cerise et baies noires. Finale longue et dynamique'
 meta_description: 'Ce Vacqueyras du Domaine de Montvac est obtenu par la complémentarité des trois cépages Grenache, Syrah et Mourvèdre. A la dégustation, l''équilibre de ce vin rouge est traduit par l''élégance d’une structure fine, racée soulignant la continuité des perceptions, présence puis rondeur et persistance.'
