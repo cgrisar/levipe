@@ -161,7 +161,7 @@ text: '<div class="h-48"></div>
         {{ /form:create }}
 
       {{ /if}}
-  {{ /form:set }}
+  {{ /form:set }}<div class="h-16"></div>
   '
       
 meta_description: 'les vins personnalisés heeft als geen ander oog op de persoonlijk toets bij een relatiegeschenk. Van de keuze van de wijn, over de keuze van de verpakking tot en met de perfecte afwerking, staan wij garant voor het perfecte geschenk voor uw zakenrelatie of medewerker'

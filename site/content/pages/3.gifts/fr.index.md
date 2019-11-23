@@ -131,8 +131,8 @@ text: '<div class="h-48"></div>
       </div>
   </div>
 
-  <h2 class="text-red-darker mt-16">Plus d&#8217;informations?</h2>
-  <div class="mt-6 text-lg leading-normal">
+  <h2 class="text-red-darker mt-8">Plus d&#8217;informations?</h2>
+  <div class="mt-4 text-lg leading-normal">
     Laissez-nous vos coordonnées. Nous vous contactons dans les meilleurs délais!
   </div>
   <div class="mt-8 w-full md:w-2/5 mb-16">
@@ -155,7 +155,7 @@ text: '<div class="h-48"></div>
         {{ /form:create }}
 
       {{ /if}}
-  {{ /form:set }}
+  {{ /form:set }}<div class="h-16"></div>
 
   '
 meta_description: 'les vins personnalisés est garant de la touche personnelle du cadeau d''affaires. Du choix du vin, en passant par l''emballage jusqu''à une finition en détail, tout respire l''appréciation que vous avez pour votre client ou collaborateur.'
