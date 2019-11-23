@@ -155,7 +155,7 @@ text: '<div class="h-48"></div>
         {{ /form:create }}
 
       {{ /if}}
-  {{ /form:set }}<div class="h-16"></div>
+  {{ /form:set }}</div><div class="h-16"></div>
 
   '
 meta_description: 'les vins personnalisés est garant de la touche personnelle du cadeau d''affaires. Du choix du vin, en passant par l''emballage jusqu''à une finition en détail, tout respire l''appréciation que vous avez pour votre client ou collaborateur.'
