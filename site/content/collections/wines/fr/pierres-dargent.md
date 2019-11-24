@@ -1,4 +1,4 @@
-title: 'Pierres d''Argent'
+title: 'Pierres d&rsquo;Argent'
 description: '<p>Le vin exprime parfaitement son terroir. La composition du sol et la vinificatie en sont les garants. Le terroir composé de calcaire et de marnes est légèrenent ondulé. Le sol capte parfaitement l''eau et permet ainsi au fruit de mûrir sereinement et uniformément. La vinification est effectuée en cuves en bois, suivi d''un élevage en barrique de 9 mois.</p>'
 variants:
   -

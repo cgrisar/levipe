@@ -1,3 +1,4 @@
+title: 'Romo&rsquo;Solo'
 description: '<p>Oui, bien sûr, les fermentations avec les levures indigènes présentes sur la vendange sont garantes du reflet du terroir de leurs vins. Au cours d’un élevage long, sur lies fines de fermentation, les vins s’affinent et acquièrent leur complexité aromatique. Bien entendu! Là où le message détonne, c''est qu''il s''agit ici de quelques barriques "oubliées" pendant 7 ans. Pas d''ouillages et "le voile", "la fleur", comme à Xérès ont opéré leur magie. Ce vin est mpressionnant par son côté incisif, salin et noisettes. Ce vin a pris son temps... prenez le vôtre en le dégustant!</p>'
 variants:
   -
