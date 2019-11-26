@@ -7,6 +7,8 @@ color: white
 culture: classic
 sparkling: false
 natural_wine: false
+estate:
+  - 821b04c7-71e2-40f6-8c13-0c4f110d149a
 cepages:
   - 0964d0be-6df0-4c54-b8d7-5fe503f2da00
   - 2f77b37e-9c33-4a15-b32d-22fde2bd3964
