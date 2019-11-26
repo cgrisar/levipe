@@ -16,8 +16,11 @@ appellations:
 odoo: JLAU-CDEM
 variants:
   -
-    active: true
+    active: false
     millesime: '2016'
+  -
+    millesime: '2017'
+    active: true
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
