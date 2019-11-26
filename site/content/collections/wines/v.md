@@ -6,6 +6,8 @@ label_image:
 color: red
 sparkling: false
 natural_wine: false
+estate:
+  - e8de466a-815a-4c4e-afda-f0800900c169
 cepages:
   - e6ac9ce1-d8fe-4052-baa0-3f1fbf9b003d
 appellations:
