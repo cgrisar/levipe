@@ -41,18 +41,19 @@
 
             <div class="pr-2 sm:w-1/2 md:w-2/3 lg:w-3/4 h-8 lg:ml-6 mb-6 md:text-base md:leading-normal">
 
-              {{ description }}
-                
-                {{ if type == "text" }}
-                    {{ text }}
-                {{ /if }}
+                {{ description }}
+                    
+                    {{ if type == "text" }}
+                        {{ text }}
+                    {{ /if }}
 
-                {{ if type == "image" }}
-                    {{ partial:bard/image }}
-                {{ /if }}
+                    {{ if type == "image" }}
+                        {{ partial:bard/image }}
+                    {{ /if }}
 
-              {{ /description }}
+                {{ /description }}
 
+                <p class="h-16"></p>
             </div>
         </div>
     </div>
