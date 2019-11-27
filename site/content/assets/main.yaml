@@ -224,3 +224,6 @@ assets:
   img/Wines/Cover/pbco-v.jpeg:
     title: 'V | Pierre et Bertrand Couly | Chinon | Loire'
     alt: 'V | Pierre et Bertrand Couly | Chinon | Loire'
+  img/Wines/Cover/frch-bour.jpg:
+    title: 'Les Bournais | Domaine François Chidaine | Montlouis-sur-Loire | Loire'
+    alt: 'Les Bournais | Domaine François Chidaine | Montlouis-sur-Loire | Loire'
