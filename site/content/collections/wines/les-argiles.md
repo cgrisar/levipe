@@ -13,6 +13,7 @@ cepages:
   - 2f77b37e-9c33-4a15-b32d-22fde2bd3964
 appellations:
   - f74a2c7c-fad0-4b4c-8688-5c9d4cd3b2dd
+  - a9f35097-e8f6-4924-8987-e0ecb98c4049
 odoo: FRCH-ARGI
 variants:
   -
