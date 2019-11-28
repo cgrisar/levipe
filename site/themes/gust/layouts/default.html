@@ -7,7 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>{{ title or seo:seo_title }}</title>
-        <meta name="title" content="{{ meta_title or title or seo:seo_title }} | les vins personnalisés">
+        
+        <meta name="title" content="{{ if collection == 'wines' }}{{ relate:estate }} {{ title }} - {{ /relate:estate }}{{ /if }} {{ meta_title or title or seo:seo_title }} | les vins personnalisés">
         <meta name="description" content="{{ meta_description or seo:seo_description }}">
 
         <link rel="alternate" hreflang="{{ locale }}" href="{{ permalink }}">
