@@ -230,3 +230,78 @@ assets:
   img/Wines/Cover/frch-baud.jpg:
     title: 'Baudoin | Domaine François Chidaine | Vouvray | Loire'
     alt: 'Baudoin | Domaine François Chidaine | Vouvray | Loire'
+  img/Grapes/Covers/cabernet-franc.png:
+    title: 'Cabernet Franc'
+    alt: 'Cabernet Franc'
+  img/Grapes/Covers/cabernet-sauvignon.jpg:
+    title: Cabernet-Sauvignon
+    alt: Cabernet-Sauvignon
+  img/Grapes/Covers/cabernet-sauvignon-1539462701.jpg:
+    title: Cabernet-Sauvignon
+    alt: Cabernet-Sauvignon
+  img/Grapes/Covers/cabernetblanc.jpg:
+    title: 'Cabernet Blanc'
+    alt: 'Cabernet Blanc'
+  img/Grapes/Covers/carignan_vineyard.jpg:
+    title: Carignan
+    alt: Carignan
+  img/Grapes/Covers/chardonnay.jpg:
+    title: Chardonnay
+    alt: Chardonnay
+  img/Grapes/Covers/chenin-blanc.jpg:
+    title: 'Chenin Blanc'
+    alt: 'Chenin Blanc'
+  img/Grapes/Covers/gamay.jpg:
+    title: 'Gamay à jus blanc'
+    alt: 'Gamay à jus blanc'
+  img/Grapes/Covers/grenache.jpg:
+    title: 'Grenache Noir'
+    alt: 'Grenache Noir'
+  img/Grapes/Covers/grenache-blanc.jpg:
+    title: 'Grenache Blanc'
+    alt: 'Grenache Blanc'
+  img/Grapes/Covers/macabeu.jpg:
+    title: Macabeu
+    alt: Macabeu
+  img/Grapes/Covers/merlot.jpg:
+    title: Merlot
+    alt: Merlot
+  img/Grapes/Covers/mourvedre.jpg:
+    title: Mourvèdre
+    alt: Mourvèdre
+  img/Grapes/Covers/pinot-noir-1.jpg:
+    title: 'Pinot Noir'
+    alt: 'Pinot Noir'
+  img/Grapes/Covers/riesling.jpg:
+    title: Riesling
+    alt: Riesling
+  img/Grapes/Covers/rolle.jpeg:
+    title: Vermentino
+    alt: Vermentino
+  img/Grapes/Covers/romorantin.jpeg:
+    title: Romorantin
+    alt: Romorantin
+  img/Grapes/Covers/romorantin-1.jpeg:
+    title: Romorantin
+    alt: Romorantin
+  img/Grapes/Covers/romorantin-1539464416.jpeg:
+    title: Romorantin
+    alt: Romorantin
+  img/Grapes/Covers/roussanne.jpg:
+    title: Roussanne
+    alt: Roussanne
+  img/Grapes/Covers/sauvignon-blanc.jpeg:
+    title: 'Sauvignon Blanc'
+    alt: 'Sauvignon Blanc'
+  img/Grapes/Covers/sauvignon-blanc-1539464575.jpeg:
+    title: 'Sauvignon Blanc'
+    alt: 'Sauvignon Blanc'
+  img/Grapes/Covers/syrah-1.jpg:
+    title: Syrah
+    alt: Syrah
+  img/Grapes/Covers/viognier.jpg:
+    title: Viognier
+    alt: Viognier
+  img/Grapes/Covers/viognier-1548265740.jpg:
+    title: Viognier
+    alt: Viognier
