@@ -19,6 +19,7 @@ sections:
             options:
               BD: 'Bettane & Dessauve'
               RVF: 'Revue du Vin de France'
+              HA: 'Guide Hachette du Vin de France'
               WA: 'Wine Advocate'
             type: select
             display: Guide
