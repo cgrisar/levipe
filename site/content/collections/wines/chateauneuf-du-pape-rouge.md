@@ -20,6 +20,15 @@ variants:
   -
     millesime: '2016'
     active: true
+    scores:
+      -
+        guide: BD
+        score: '15'
+        maxscore: '20'
+      -
+        guide: WA
+        score: '91'
+        maxscore: '100'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
