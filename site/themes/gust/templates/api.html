@@ -1,0 +1,15 @@
+{{ if  type }}
+{
+  "resource_type": "{{ type | deslugify | title }}",
+
+  "entries":
+    {{ collection from="{{ type }}" as="resource" paginate="true" limit="10" }}
+      {{ resource | json }}
+    {{ /collection }}
+
+  , "meta":
+    {{ collection from="{{ type }}" as="resource" paginate="true" limit="10" }}
+      {{ paginate | json }}
+    {{ /collection }}
+}
+{{ /if }}

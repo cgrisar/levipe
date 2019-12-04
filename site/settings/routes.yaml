@@ -5,6 +5,10 @@ routes:
   /login: auth/login
   /forgot-password: auth/password-forgot
   /reset-password: auth/password-reset
+  /api/{type}:
+    layout: api
+    template: api
+    content_type: json
   /winesmap.xml:
     template: winesmap
     layout: winesmap
