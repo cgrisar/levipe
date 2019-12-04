@@ -13,6 +13,7 @@ cepages:
   - 2f77b37e-9c33-4a15-b32d-22fde2bd3964
 appellations:
   - f74a2c7c-fad0-4b4c-8688-5c9d4cd3b2dd
+  - 4ca014f3-b3d7-4c43-af06-3c50b5b3bf1e
 odoo: FRCH-CHOI
 variants:
   -
