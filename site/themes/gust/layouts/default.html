@@ -6,8 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <title>{{ title }} {{ trans:collection.{{ collection }} }}</title>
-        <meta name="title" content="{{ if collection == 'wines' }}{{ relate:estate }} {{ title }} - {{ /relate:estate }}{{ /if }} {{ meta_title or title or seo:seo_title }} | les vins personnalisés">
+        {{ if collection == 'wines' }}
+            <title>{{ relate:estate }} {{ title }} - {{ /relate:estate }} {{ title or seo:seo_title }}</title>
+            <meta name="title" content="{{ relate:estate }} {{ title }} - {{ /relate:estate }} {{ title or seo:seo_title }} | les vins personnalisés">
+        {{ else }}
+            <title>{{ title }} {{ trans:collection.{{ collection }} }}</title>
+            <meta name="title" content="{{ title or seo:seo_title }} | les vins personnalisés">
+        {{ /if }}
         <meta name="description" content="{{ meta_description or seo:seo_description }}">
         <meta name="thumbnail" content="https://levipe.be{{ assets:cover_image }}{{ url }}{{ /assets:cover_image }}"
 
