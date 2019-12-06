@@ -29,7 +29,9 @@
     
         {{ collection from="grape|region|wines|estate" limit="20" paginate="true" scope="coll" as="grwe" }}
             {{ paginate }}
-                <a href="{{ prev_page }}" class="mb-4 mx-auto"><i class="fas fa-chevron-circle-up fa-2x"></i></a>
+                {{ if prev_page }}
+                    <a href="{{ prev_page }}" class="mb-4 mx-auto"><i class="fas fa-chevron-circle-up fa-2x lg:fa-4x"></i></a>
+                {{ /if }}
             {{ /paginate }}
                 <div id="mondrian" class="flex flex-wrap">
                     {{ grwe }}
@@ -48,7 +50,9 @@
                     {{ /grwe }}
                 </div>
             {{ paginate }}
-                <a href="{{ next_page }}" class="mt-4 mx-auto"><i class="fas fa-chevron-circle-down fa-2x"></i></a>
+                {{ if next_page }}
+                    <a href="{{ next_page }}" class="mt-4 mx-auto"><i class="fas fa-chevron-circle-down fa-2x lg:fa-4x"></i></a>
+                {{ /if }}
             {{ /paginate }}
         {{ /collection }}
     </div>
