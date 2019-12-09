@@ -27,6 +27,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Wines/Cover/JLAU-CDEM.jpg
 twitter_share_setting: inherit
 id: ca00b38b-ae64-4e12-9184-8288795ae5b1
 e:
