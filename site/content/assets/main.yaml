@@ -317,3 +317,9 @@ assets:
   img/Wines/Cover/arjo-egch.jpg:
     title: "Echappée Gourmande Blanc | Domaine de l'Arjolle |\_Côtes de Thongue |\_Languedoc"
     alt: "Echappée Gourmande Blanc | Domaine de l'Arjolle |\_Côtes de Thongue |\_Languedoc"
+  img/Wines/Cover/clma-grav.jpg:
+    title: 'Gravel | Domaine Claude Maréchal | Bourgogne Pinot Noir | Bourgogne'
+    alt: 'Gravel | Domaine Claude Maréchal | Bourgogne Pinot Noir | Bourgogne'
+  img/Estates/Covers/Claude-Marechal.png:
+    title: 'Domaine Catherine & Claude Maréchal'
+    alt: 'Domaine Catherine & Claude Maréchal'
