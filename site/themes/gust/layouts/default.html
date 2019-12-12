@@ -7,10 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         {{ if collection == 'wines' }}
-            <title>{{ relate:estate }} {{ title }} - {{ /relate:estate }} {{ title or seo:seo_title }}</title>
+            <title>{{ relate:estate }} {{ title }} - {{ /relate:estate }} {{ title or seo:seo_title }} | les vins personnalisés</title>
             <meta name="title" content="{{ relate:estate }} {{ title }} - {{ /relate:estate }} {{ title or seo:seo_title }} | les vins personnalisés">
         {{ else }}
-            <title>{{ title }} {{ trans:collection.{{ collection }} }}</title>
+            <title>{{ title }} | {{ trans:collection.{{ collection }} | les vins personnalisés }}</title>
             <meta name="title" content="{{ title or seo:seo_title }} | les vins personnalisés">
         {{ /if }}
         <meta name="description" content="{{ meta_description or seo:seo_description }}">
