@@ -41,7 +41,7 @@
               <div class="fa-2x mt-4">
                 
                 {{ if phone }}
-                  <a href="tel:{{ phone }}" class="inline-block">
+                  <a href='tel:{{ phone replace=" |" }}' class="inline-block">
                     <span class="fa-layers fa-fw">
                         <i class="fas fa-circle text-red-darker"></i>
                         <i class="fas fa-phone fa-inverse" data-fa-transform="shrink-6"></i>
