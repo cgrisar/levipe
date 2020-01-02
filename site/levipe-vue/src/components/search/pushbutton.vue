@@ -1,5 +1,5 @@
 <template>
-    <div class="mr-5 md:mr-12" @click="toggle()">
+    <div class="mr-5 md:mr-12 pushbutton" @click="toggle()">
         <input type="checkbox"
             :id="collection" 
             :value="collection" 
@@ -56,4 +56,10 @@ export default {
     }
 }
 </script>
+
+<style>
+.pushbutton {
+    cursor: pointer;
+}
+</style>
 
