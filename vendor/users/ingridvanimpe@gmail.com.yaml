@@ -1,0 +1,12 @@
+name: 'Lucid Solutions EBVBA'
+newsletter: 'on'
+address: 'appelmansstraat 20'
+zip: '2018'
+city: antwerpen
+phone: '0477300458'
+vat: BE0863225071
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$xtIfDOdcnvju4l7K7464LuQdHDarSS0rWzVnT4KuUQOxM.6oRw8B6
+id: 9fd6bdff-186f-4482-abc2-6b20dd1e0b99
+odoo_id: 1391

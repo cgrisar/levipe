@@ -1,0 +1,11 @@
+name: 'Bertrand Nerincx sprl'
+address: '1, Tienne Casso'
+zip: '1300'
+city: Wavre
+phone: '+32475634787'
+vat: null
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$TxSeUNEIDgDBMYn5MieguevURh12oGF6mE/XMWWUcZwo5GuL3j1zW
+id: 253a24c7-e18b-4ed1-87e9-a8c2d84b8026
+odoo_id: 1451

@@ -1,0 +1,10 @@
+name: 'Stijn Urkens'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$8cJ1lNtdgaQBT419Flcj1OnsQ2rowpbxycNK.rLGSoq1pWR2ZMJFi
+id: 386432ee-f74b-430c-9a99-fbd8bf476fbf
+odoo_id: 1467
+address: 'Prinses Clement'
+zip: '9031'
+city: Drongen
+vat: null

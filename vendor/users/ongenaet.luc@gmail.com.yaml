@@ -1,0 +1,11 @@
+name: 'Ongenaet Luc'
+newsletter: 'on'
+address: 'Eeklostraat, 47'
+zip: '9030'
+city: Mariakerke
+phone: '0475411957'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$FGyDNq19y3GsgEK/elMgR.DET2FgVDM5xBUBifXTOK5YsWlrzvUoq
+id: 327f2acc-2bd2-47d6-a117-1051684f2e71
+odoo_id: 1458

@@ -1,0 +1,12 @@
+name: 'd''Hoop'
+newsletter: 'on'
+address: 'Groeningenlei 145'
+zip: '2550'
+city: Kontich
+phone: '+32475604621'
+vat: 'BE0871263106'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$gQYYXKavoPZIWGFrrE0VeOths36g29FWDMTKD62WYWT3.1wg0ZSWS
+id: c0b0bd8b-751c-4c0b-8375-36011ac6febc
+odoo_id: 0834

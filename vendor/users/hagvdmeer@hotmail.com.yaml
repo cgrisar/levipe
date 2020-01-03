@@ -1,0 +1,11 @@
+name: 'Harry van der Meer'
+newsletter: 'on'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$CpO/RdKl3SDD0Vuxvvy29u74WghO2pwVOXnzS7JVTC9Ezc4F8kA.i
+id: 3591247c-1505-4883-b3ce-41b2bb5a5784
+odoo_id: 1430
+address: 'Mgr van de Weteringstraat 5'
+zip: Utrecht
+city: Nederland
+vat: null

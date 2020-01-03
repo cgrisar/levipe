@@ -1,0 +1,11 @@
+name: 'Chantal Lelièvre'
+newsletter: 'on'
+address: Hoogveld
+zip: '2600'
+city: Berchem
+phone: '0479397518'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$H7Xn8Ll69YEeWA7..lc8HO1CqgB95QIkXJgB3spqGdgVE63Si/lpu
+id: a93ac108-170d-4a11-a913-22e95aa23d2d
+odoo_id: 1434

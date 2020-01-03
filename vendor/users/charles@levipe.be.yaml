@@ -1,0 +1,11 @@
+roles:
+  - d32e14fb-08c9-44c2-aaf8-21200852bafd
+address: 'Falconrui 15/002'
+name: 'Charles @ Levipe'
+id: 4a3f1cc9-07d7-49b8-b6f6-3e416683d610
+super: true
+password_hash: $2y$10$i5QE/RfmyLEAjBFkgE6VFOWFSi7HmDqe5y5EvhIwKVvhBf85256e2
+zip: '2001'
+city: Anvers
+vat: ''
+odoo_id: 3

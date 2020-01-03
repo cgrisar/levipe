@@ -1,0 +1,11 @@
+name: 'Dirk-Antoon Samyn'
+newsletter: 'on'
+address: 'Kuipersstraat 8'
+zip: '8800'
+city: Roeselare
+vat: 'BE 0427.181.664'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$PY1Iu7iFNb0TO7dIAOPjZ.FitwOXtrTMilbtL75Ny76HXKQrIaDy2
+id: d507c649-9580-425f-8a19-20fea60af4be
+odoo_id: 1383

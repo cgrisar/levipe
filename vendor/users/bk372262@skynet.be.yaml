@@ -1,0 +1,12 @@
+name: 'Les concaves SPRL'
+newsletter: 'on'
+address: 'Rue de Crombize, 44'
+zip: '7181'
+city: Feluy
+vat: '0543536035'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$Njl5h/6wLlIx7khlBkHqP.fhNXX50LYqmvY.mTHkU6F9.AT2RYcP6
+id: 4b5a0212-fce7-4c9d-997c-9c6dbc9fd0c9
+odoo_id: 
+  

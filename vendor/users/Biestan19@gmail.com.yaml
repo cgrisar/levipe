@@ -1,0 +1,11 @@
+name: 'Stan van asbroeck'
+newsletter: 'on'
+address: 'Karel selsstraat 5'
+zip: '2900'
+city: Schoten
+phone: '036452693'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$IvvXN2outQ.AbUxxIcANbOMRx/jBZG9cxMVED2FOwX7JMJaB41zOO
+id: 628356ab-b8f3-45c4-b52f-87358468a9b6
+odoo_id: 1468

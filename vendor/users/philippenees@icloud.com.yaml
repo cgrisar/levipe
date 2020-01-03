@@ -1,0 +1,11 @@
+name: 'Philippe Nees'
+newsletter: 'on'
+address: 'Planetariumlaan 207'
+zip: '2610'
+city: Wilrijk
+phone: '0032472 13 30 38'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$LR4KRGY710a9ENhPS6S1NOxb6E6jobjlMANr83CeC3GH9OniHSGEi
+id: 9c8c0542-fa2a-4226-aaa6-aeb025878a88
+odoo_id: 1456

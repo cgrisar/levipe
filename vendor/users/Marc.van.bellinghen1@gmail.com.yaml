@@ -1,0 +1,11 @@
+name: 'Marc Van Bellinghen'
+newsletter: 'on'
+address: 'Mazitsstraat, 1'
+zip: '1790'
+city: Affligem
+phone: '+32475913109'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$YRZUpRIdlhZ0qOwX5oOhFeJhnkzU2e/.X/YbG6ddNj5Oq2JdXxt1e
+id: 720410a8-110e-42b1-bffc-0ecf7538c205
+odoo_id: 1457

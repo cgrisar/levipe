@@ -1,0 +1,11 @@
+name: 'Joeri Arts'
+address: 'Ericalaan 5'
+zip: '2930'
+city: Brasschaat
+phone: '+32495035207'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$Xss5rWBJlZ5mNsvuXB6lOOCS19/dfcrFSnwy/fXyADMkgPJpVYs3.
+id: c18e2a51-0098-4af7-a5a5-7f1f210076a5
+odoo_id: 1398
+vat: null

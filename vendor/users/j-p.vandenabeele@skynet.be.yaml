@@ -1,0 +1,10 @@
+name: 'Vandenabeele Jean-Pierre'
+address: 'Elizabetlaan 158D / 03'
+zip: '8300'
+city: KNOKKE
+phone: '0496 59 19 11'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$GOo/vR0nIg.cQcMxhVcYxuw2DFl.Lo9sXfROJx9rGC6NG7LkKrgji
+id: bd6caee0-94f6-4520-ba73-1682eebe026b
+odoo_id: 1431

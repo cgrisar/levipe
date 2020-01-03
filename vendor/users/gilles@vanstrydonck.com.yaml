@@ -1,0 +1,10 @@
+name: Gilles
+address: 'Desiré Van Hoomissenstraat, 46'
+zip: '2880'
+city: Bornem
+phone: '+3232388651'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$uwP69B0liLsGiEPICXnT5ur9ecMb5yplXMTdQXvaJi36RNG6ArXkq
+id: cd1d8f76-2d6a-4b17-8787-f2c800c71a59
+odoo_id: 1384

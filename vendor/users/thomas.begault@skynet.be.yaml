@@ -1,0 +1,11 @@
+name: 'Thomas Bégault'
+newsletter: 'on'
+address: '125 Rue de Stassart'
+zip: '1050'
+city: Bruxelles
+phone: '470560298'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$LnvrxsYVNTXopSfXBZO.vO.KC5dOjs8eveDBZm2NEmvDyIXn5n0t6
+id: 9894a7b2-208e-4631-907b-705478704ab1
+odoo_id: 1390

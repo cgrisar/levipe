@@ -12,6 +12,7 @@ cepages:
   - 089af729-d837-4619-b84d-d06ff73ab12f
 appellations:
   - ff367741-f507-4f20-85f3-60defdc3d611
+  - 26a30cf6-d8b9-459f-9da5-9b1a7783bf67
 odoo: BVEL-COME
 variants:
   -

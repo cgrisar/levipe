@@ -1,0 +1,11 @@
+name: 'Lucid Solution BVBA'
+address: 'Appelmansstraat 20 bus 3'
+zip: '2018'
+city: Antwerpen
+phone: '+32479933741'
+vat: null
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$S4xN3.k/W1e9BPLGSyqnmurqWkheRGW7jeK2xTuGkiZQelVHTrVV.
+id: 1fc7ad78-4080-4873-a4d4-568ce9e06d64
+odoo_id: 1392

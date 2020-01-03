@@ -1,0 +1,11 @@
+name: Beck
+address: 'Kazerneweg 57'
+zip: '2950'
+city: Kapellen
+phone: '038877529'
+vat: 'BE0899691133'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$2vWhtjbWwveOQ.TCL/4V/OoFaqBpdd2gVM280w6Ik5UJ9gNWorBlS
+id: 0c84f4e5-1a90-4c91-aeaf-9030708934dc
+odoo_id: 1433

@@ -1,0 +1,11 @@
+name: 'Patrick Naessens'
+newsletter: 'on'
+address: 'van steenbergenlaan   16'
+zip: '2520'
+city: oelegem
+phone: '0475935428'
+roles:
+  - 7f2c29c6-1f4b-46bf-b234-8d9d8800179b
+password_hash: $2y$10$G8uJV200hIoAOXwLiE76TOeDZVwbmcmWtAfGlDedlTnoL5oeSBpBy
+id: 7275ea31-f8f8-4fe1-a7ac-fef04144cd6d
+odoo_id: 1452
