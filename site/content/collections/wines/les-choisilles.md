@@ -35,3 +35,5 @@ r:
   - loire
   - touraine
   - montlouis-sur-loire
+s:
+  - medium-white

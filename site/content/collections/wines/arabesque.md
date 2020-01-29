@@ -32,3 +32,5 @@ g:
 r:
   - cotes-du-rhone
   - vacqueyras
+s:
+  - elegant-red

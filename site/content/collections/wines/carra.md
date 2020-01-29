@@ -38,3 +38,5 @@ g:
 r:
   - languedoc
   - pic-saint-loup
+s:
+  - elegant-red

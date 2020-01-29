@@ -33,3 +33,5 @@ g:
 r:
   - loire
   - chinon
+s:
+  - light-red

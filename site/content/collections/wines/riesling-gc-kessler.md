@@ -29,3 +29,5 @@ g:
   - riesling
 r:
   - alsace
+s:
+  - rich-white

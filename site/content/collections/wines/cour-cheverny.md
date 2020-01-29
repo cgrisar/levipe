@@ -34,3 +34,5 @@ r:
   - loire
   - touraine
   - cour-cheverny
+s:
+  - medium-white

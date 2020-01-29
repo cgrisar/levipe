@@ -4,11 +4,15 @@ namespace Statamic\Addons\Fetch;
 
 use Carbon\Carbon;
 use Statamic\API\Str;
+use Statamic\API\Form;
 use Statamic\API\Page;
+use Statamic\API\User;
 use Statamic\API\Asset;
+use Statamic\API\Crypt;
 use Statamic\API\Entry;
 use Statamic\API\Search;
 use Statamic\API\Content;
+use Statamic\API\Taxonomy;
 use Statamic\API\GlobalSet;
 use Statamic\API\Collection;
 use Statamic\Extend\Extensible;
@@ -78,7 +82,7 @@ class Fetch
 
             return request()->isJson() ? response($message, 404) : $message;
         }
-
+        
         return $this->handle($collection->entries());
     }
 
@@ -210,13 +214,151 @@ class Fetch
             : Search::get($this->query);
 
         $data = $data->map(function ($item) {
-            $entry = Entry::find($item['id']);
-            $entry->set('search_score', $item['search_score']);
+            $content = Content::find($item['id']);
 
-            return $entry;
+            if (method_exists($content, 'set')) {
+                $content->set('search_score', $item['search_score']);
+            }
+
+            return $content;
         });
 
         return $this->handle($data);
+    }
+
+    /**
+     * Fetch taxonomies
+     */
+    public function taxonomies()
+    {
+        $this->deep = false;
+
+        $taxonomies = Taxonomy::all()->map(function ($taxonomy) {
+            return $taxonomy->terms()->localize($this->locale);
+        });
+
+        return $this->handle($taxonomies);
+    }
+
+    /**
+     * Fetch taxonomy
+     */
+    public function taxonomy($name = null)
+    {
+        $this->deep = false;
+
+        // Reset param due to conflicting use of "taxonomy"
+        $this->taxonomy = null;
+
+        $name = $name ?: request()->segment(4);
+
+        if (! $taxonomy = Taxonomy::whereHandle($name)) {
+            $message =  "Taxonomy [$name] not found.";
+
+            return request()->isJson() ? response($message, 404) : $message;
+        }
+
+        return $this->handle($taxonomy->terms()->localize($this->locale));
+    }
+
+    /**
+     * Fetch multiple assets
+     */
+    public function assets($assets = null, $container = null)
+    {
+        $assets = $assets ?: request('assets');
+        $container = $container ?: request('container');
+
+        if (! is_null($assets) && ! is_array($assets)) {
+            $assets = explode(',', $assets);
+        }
+
+        if ($container) {
+            $assets = Asset::whereContainer($container);
+        } elseif ($assets) {
+            $assets = collect($assets)->map(function ($path) {
+                return Asset::wherePath($path);
+            })->filter();
+        } else {
+            $assets = Asset::all();
+        }
+
+        return $this->handle($assets);
+    }
+
+    /**
+     * Fetch single asset
+     */
+    public function asset($id = null)
+    {
+        $id = $id ?: request('id');
+
+        if (! $asset = Asset::find($id)) {
+            $message = "Asset [$id] not found.";
+
+            return response($message, 404);
+        }
+
+        return $this->handle($asset);
+    }
+
+    /**
+     * Fetch single user
+     */
+    public function user($username = null)
+    {
+        $username = $username ?: request()->segment(4);
+
+        if (! $user = User::whereUsername($username)) {
+            $user = User::whereEmail($username);
+        }
+
+        if (! $user) {
+            $message = "User [$username] not found.";
+
+            return response($message, 404);
+        }
+
+        $data = collect($user->data())->except('password_hash')->toArray();
+
+        return $this->handle($data);
+    }
+
+    /**
+     * Fetch all users
+     */
+    public function users()
+    {
+        $users = User::all()->map(function ($user) {
+            return collect($user->data())->except('password_hash');
+        });
+
+        return $this->handle($users);
+    }
+
+    /**
+     * Fetch formset
+     */
+    public function formset($name = null)
+    {
+        $name = $name ?: request()->segment(4);
+
+        if (! $formset = Form::get($name)) {
+            $message =  "Formset [$name] not found.";
+
+            return request()->isJson() ? response($message, 404) : $message;
+        }
+
+        $data = $formset->formset()->data();
+        $data['params'] = Crypt::encrypt(['formset' => $name]);
+
+        $result = collect(compact('data'));
+
+        if ($this->debug) {
+            dd($result);
+        }
+
+        return $result;
     }
 
     /**
@@ -285,8 +427,12 @@ class Fetch
         }
 
         $this->data = $this->data->map(function ($item) {
-            $item->locale($this->locale);
+            if (method_exists($item, 'locale')) {
+                $item->locale($this->locale);
+            }
+
             $this->addTaxonomies($item);
+
             $data = $this->getLocalisedData($item);
 
             if ($this->isSearch) {

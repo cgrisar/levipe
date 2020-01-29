@@ -32,3 +32,5 @@ g:
   - chenin-blanc
 r:
   - loire
+s:
+  - medium-white

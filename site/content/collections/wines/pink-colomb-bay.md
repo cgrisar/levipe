@@ -26,3 +26,5 @@ g:
   - pinot-noir
 r:
   - languedoc
+s:
+  - rose

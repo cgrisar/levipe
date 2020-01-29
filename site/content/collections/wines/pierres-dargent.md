@@ -40,3 +40,5 @@ g:
   - viognier
 r:
   - languedoc
+s:
+  - rich-white

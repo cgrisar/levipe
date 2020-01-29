@@ -36,3 +36,5 @@ g:
 r:
   - loire
   - reuilly
+s:
+  - light-white

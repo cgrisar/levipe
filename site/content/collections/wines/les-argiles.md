@@ -34,3 +34,5 @@ g:
 r:
   - loire
   - vouvray
+s:
+  - medium-white

@@ -16,3 +16,5 @@ facebook_image:
   - /assets/img/Wines/Cover/casp-chcl.jpg
 twitter_share_setting: inherit
 id: 619205d7-2055-465e-9ecc-7a138cdc3e6e
+s:
+  - elegant-red

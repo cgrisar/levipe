@@ -1,0 +1,17 @@
+<div class="w-full md:w-1/2">
+    {{ collection:wines :taxonomy:s="taxonomy" limit="3" sort="random" }}
+        <div class="flex flex-row mr-2 md:mr-8 mb-4">
+            <div class="w-1/4">
+                {{ assets:label_image }}
+                    <a href="{{ site_url }}/wines/{{ slug }}">
+                        <figure class="h-12 w-12 lg:w-24 lg:h-24 bg-cover rounded-full" style="background-image: url({{url}}); background-position: 50% 0px;"></figure>
+                    </a>
+                {{ /assets:label_image }}
+            </div>
+            <div class="w-3/4">
+                <div class="mt-1 text-xs font-light text-red-darker">{{ relate:appellations sort="level:desc" limit="1" }}{{ title }}{{ /relate:appellations }} - {{ relate:estate }}{{ title }}{{ /relate:estate }} - {{ title }}</div>
+                <div class="mt-1 text-xs font-light text-black">{{ description | first:200 }}...</div>
+            </div>
+        </div>
+    {{ /collection:wines }}
+</div>

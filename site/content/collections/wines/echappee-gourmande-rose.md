@@ -29,3 +29,5 @@ e:
 g:
   - syrah
   - grenache-noir
+s:
+  - rose

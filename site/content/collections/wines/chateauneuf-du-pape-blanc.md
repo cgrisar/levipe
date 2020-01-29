@@ -38,3 +38,5 @@ g:
 r:
   - cotes-du-rhone
   - chateauneuf-du-pape
+s:
+  - rich-white

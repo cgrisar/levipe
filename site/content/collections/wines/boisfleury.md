@@ -39,3 +39,5 @@ g:
 r:
   - pouilly-fume
   - loire
+s:
+  - light-white

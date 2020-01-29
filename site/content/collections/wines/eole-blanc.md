@@ -38,3 +38,5 @@ g:
   - grenache-blanc
 r:
   - coteaux-daix-en-provence
+s:
+  - light-white

@@ -13,7 +13,7 @@
             <div class="hidden lg:block lg:w-1/4"></div>
 
             <div class="flex ml-2 lg:ml-4">
-                {{ collection:wines taxonomy:r="{{page.title | slugify }}" }}
+                {{ collection:wines taxonomy:r="{{page.title | slugify }}" sort="random" limit="6" }}
                 <div class="mr-2 md:mr-6">
                     {{ assets:label_image }}
                         <a href="{{site_url}}wines/{{ slug }}">

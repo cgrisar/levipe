@@ -31,3 +31,5 @@ e:
   - domaine-de-laulan
 g:
   - sauvignon-blanc
+s:
+  - light-white

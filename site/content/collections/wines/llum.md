@@ -32,3 +32,5 @@ g:
   - macabeu
 r:
   - vin-de-pays-catalan
+s:
+  - light-white

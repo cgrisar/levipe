@@ -29,3 +29,5 @@ g:
   - merlot
 r:
   - toscana
+s:
+  - light-red

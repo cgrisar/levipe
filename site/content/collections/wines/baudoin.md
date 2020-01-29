@@ -43,3 +43,5 @@ g:
 r:
   - loire
   - vouvray
+s:
+  - rich-white

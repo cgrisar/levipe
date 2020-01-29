@@ -32,3 +32,5 @@ g:
   - gamay-a-jus-blanc
 r:
   - cotes-du-rhone
+s:
+  - elegant-red

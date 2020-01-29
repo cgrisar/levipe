@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'estate' => ' | Wijndomein',
-    'grape' => ' | Druivensoort',
-    'region' => ' | Streek of streeknaam',
+    'estate' => ' Wijndomein',
+    'grape' => ' Druivensoort',
+    'region' => ' Streek of streeknaam',
 ];

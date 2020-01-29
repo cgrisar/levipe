@@ -47,3 +47,5 @@ g:
 r:
   - cotes-du-rhone
   - chateauneuf-du-pape
+s:
+  - bold-red

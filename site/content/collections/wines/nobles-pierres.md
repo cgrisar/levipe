@@ -37,3 +37,5 @@ g:
   - grenache-noir
 r:
   - pic-saint-loup
+s:
+  - bold-red

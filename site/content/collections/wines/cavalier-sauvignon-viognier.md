@@ -37,3 +37,5 @@ g:
   - roussanne
 r:
   - languedoc
+s:
+  - light-white

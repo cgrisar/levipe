@@ -34,3 +34,5 @@ g:
 r:
   - cotes-du-rhone
   - saint-joseph
+s:
+  - bold-red

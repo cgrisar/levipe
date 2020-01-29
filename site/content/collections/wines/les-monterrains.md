@@ -34,3 +34,5 @@ g:
 r:
   - bourgogne
   - maconnais
+s:
+  - light-red

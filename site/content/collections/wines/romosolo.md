@@ -34,3 +34,5 @@ g:
 r:
   - loire
   - cour-cheverny
+s:
+  - rich-white

@@ -38,3 +38,5 @@ g:
   - syrah
 r:
   - coteaux-daix-en-provence
+s:
+  - rose

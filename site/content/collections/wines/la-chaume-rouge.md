@@ -36,4 +36,6 @@ g:
 r:
   - sancerre
   - loire
+s:
+  - light-red
 id: f8cbf99b-6fbe-407e-aa46-1e8c2a9643f9

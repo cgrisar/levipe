@@ -34,3 +34,5 @@ g:
 r:
   - bourgogne
   - cotes-de-beaune
+s:
+  - elegant-red

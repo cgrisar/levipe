@@ -33,3 +33,5 @@ r:
   - bourgogne
   - cote-de-nuits
   - vosne-romanee
+s:
+  - bold-red

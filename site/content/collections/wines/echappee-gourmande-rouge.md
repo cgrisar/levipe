@@ -34,3 +34,5 @@ g:
   - syrah
 r:
   - languedoc
+s:
+  - elegant-red

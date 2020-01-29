@@ -37,3 +37,5 @@ g:
   - syrah
 r:
   - coteaux-daix-en-provence
+s:
+  - elegant-red

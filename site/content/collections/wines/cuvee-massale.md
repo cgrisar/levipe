@@ -28,3 +28,5 @@ g:
 r:
   - chablis
   - bourgogne
+s:
+  - medium-white

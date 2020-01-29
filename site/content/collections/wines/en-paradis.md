@@ -25,3 +25,5 @@ g:
   - chardonnay
 r:
   - arbois
+s:
+  - medium-white

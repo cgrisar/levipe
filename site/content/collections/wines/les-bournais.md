@@ -44,3 +44,5 @@ r:
   - loire
   - montlouis-sur-loire
   - touraine
+s:
+  - rich-white

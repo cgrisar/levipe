@@ -43,3 +43,5 @@ g:
   - grenache-noir
 r:
   - languedoc
+s:
+  - elegant-red

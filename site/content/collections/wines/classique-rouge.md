@@ -33,4 +33,6 @@ g:
 r:
   - loire
   - menetou-salon
+s:
+  - light-red
 id: 6666c34f-238e-4c22-82b5-3faa7c0f17df

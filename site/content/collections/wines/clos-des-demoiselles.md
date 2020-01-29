@@ -39,3 +39,5 @@ g:
   - pinot-noir
 r:
   - limoux
+s:
+  - sparkling

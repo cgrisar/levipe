@@ -41,3 +41,5 @@ r:
   - bordeaux
   - medoc
   - saint-estephe
+s:
+  - bold-red

@@ -40,3 +40,5 @@ g:
 r:
   - bourgogne
   - maconnais
+s:
+  - medium-white

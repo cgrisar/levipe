@@ -39,3 +39,5 @@ r:
   - vacqueyras
   - cotes-du-rhone
   - rhone-meridional
+s:
+  - rich-white

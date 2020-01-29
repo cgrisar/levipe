@@ -33,3 +33,5 @@ g:
 r:
   - roussillon-villages
   - roussillon
+s:
+  - elegant-red

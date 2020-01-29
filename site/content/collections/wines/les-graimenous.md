@@ -36,3 +36,5 @@ g:
 r:
   - languedoc
   - limoux
+s:
+  - sparkling

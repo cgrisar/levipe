@@ -36,3 +36,5 @@ g:
   - riesling
 r:
   - alsace
+s:
+  - medium-white

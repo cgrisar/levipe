@@ -29,3 +29,5 @@ g:
 r:
   - loire
   - touraine
+s:
+  - light-red

@@ -106,7 +106,13 @@ sections:
       e:
         type: taxonomy
         display: Estate
+        mode: tags
         taxonomy: e
+      s:
+        taxonomy: s
+        type: taxonomy
+        display: Style
+        mode: tags
 taxonomies: true
 title: Wine
 create_title: 'Create Wine'

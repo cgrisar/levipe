@@ -31,3 +31,5 @@ r:
   - bourgogne
   - maconnais
   - pouilly-fuisse
+s:
+  - medium-white

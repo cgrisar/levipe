@@ -33,3 +33,5 @@ g:
 r:
   - loire
   - pouilly-fume
+s:
+  - medium-white

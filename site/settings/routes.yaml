@@ -5,9 +5,12 @@ routes:
   /login: auth/login
   /forgot-password: auth/password-forgot
   /reset-password: auth/password-reset
-  /api/{type}:
+  /wines/style/{taxonomy}:
     layout: api
-    template: api
+    template: wines
+  /!/Fetch/collection/wines:
+    layout: api
+    template: wine/pairing_results
     content_type: json
   /winesmap.xml:
     template: winesmap

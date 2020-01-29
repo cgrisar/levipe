@@ -44,3 +44,5 @@ g:
 r:
   - pic-saint-loup
   - languedoc
+s:
+  - light-white

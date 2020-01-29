@@ -32,3 +32,5 @@ g:
 r:
   - loire
   - reuilly
+s:
+  - medium-white

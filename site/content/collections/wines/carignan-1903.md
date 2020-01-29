@@ -35,3 +35,5 @@ g:
   - carignan
 r:
   - roussillon-villages
+s:
+  - elegant-red

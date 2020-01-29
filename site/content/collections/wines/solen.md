@@ -32,3 +32,5 @@ g:
   - carignan
 r:
   - languedoc
+s:
+  - bold-red

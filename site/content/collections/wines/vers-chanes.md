@@ -35,3 +35,5 @@ r:
   - bourgogne
   - maconnais
   - pouilly-fuisse
+s:
+  - rich-white

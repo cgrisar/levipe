@@ -35,3 +35,5 @@ r:
   - bourgogne
   - maconnais
   - vire-clesse
+s:
+  - medium-white

@@ -40,3 +40,5 @@ g:
 r:
   - loire
   - menetou-salon
+s:
+  - medium-white

@@ -51,6 +51,9 @@ redactor:
 csrf_exclude:
   - '/!/Fetch/*'
   - '/!/Laradoo/*'
+  - '/nl/!/Fetch/*'
+  - '/fr/!/Fetch/*'
 yaml_parser: symfony
 send_powered_by_header: true
 ensure_unique_ids: true
+php_max_memory_limit: null

@@ -35,3 +35,5 @@ g:
   - merlot
 r:
   - bordeaux
+s:
+  - elegant-red

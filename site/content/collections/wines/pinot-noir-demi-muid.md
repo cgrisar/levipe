@@ -31,3 +31,5 @@ g:
   - pinot-noir
 r:
   - languedoc
+s:
+  - elegant-red

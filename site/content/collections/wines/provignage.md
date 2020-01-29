@@ -32,3 +32,5 @@ g:
 r:
   - loire
   - touraine
+s:
+  - rich-white

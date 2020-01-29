@@ -22,3 +22,5 @@ e:
 g:
   - pinot-noir
   - chardonnay
+s:
+  - sparkling
