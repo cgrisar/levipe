@@ -7,6 +7,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import InstantSearch from 'vue-instantsearch'
 import StarRating from 'vue-star-rating'
+import VueAnalytics from 'vue-analytics';
 
 import lvpVariant from './components/lvp-variant.vue'
 import lvpCart from './components/cart/lvp-cart.vue'
@@ -19,6 +20,7 @@ import wineandfood from './components/miscellaneous/wineandfood.vue'
 Vue.use(VModal);
 Vue.use(VueAxios, axios)
 Vue.use(InstantSearch);
+Vue.use(VueAnalytics, { id:'UA-43848540-3'});
 
 
 new Vue({

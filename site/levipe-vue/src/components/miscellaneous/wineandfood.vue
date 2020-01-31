@@ -210,6 +210,8 @@ export default {
             return
         };
 
+        this.$ga.event('ingredient', 'choose', 'Wine And Food Pairing', this.value);
+        
         this.presence = returnPresence(this.value)[0].index;
         var taxonomy = this.labels[this.presence].code;
 
