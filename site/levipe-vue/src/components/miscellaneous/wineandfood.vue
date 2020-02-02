@@ -210,8 +210,7 @@ export default {
             return
         };
 
-        console.log(this.value.stringify());
-        this.$ga.event('ingredient', 'choose', this.value.stringify());
+        this.$ga.event('ingredient', 'choose', this.value);
 
         this.presence = returnPresence(this.value)[0].index;
         var taxonomy = this.labels[this.presence].code;

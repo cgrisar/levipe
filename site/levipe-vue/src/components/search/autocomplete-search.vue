@@ -30,7 +30,7 @@
                               autofocus
                               :value="currentRefinement"
                               :placeholder="localePlaceholder()"
-                              @input="this.$ga.event('search', 'key', $event.currentTarget.value); refine($event.currentTarget.value)"
+                              @input="refine($event.currentTarget.value)"
                               class="levipe-Searchbox-input flex-1">
                             <a 
                               class="font-regular uppercase no-underline mt-3"
