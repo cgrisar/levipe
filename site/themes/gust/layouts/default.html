@@ -6,11 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+        {{ if ! segment_1 }}
+            <title>{{ trans:collection.homepage }} | les vins personnalisés</title>
+            <meta name="title" content="les vins personnalisés">
+        {{ /if }}
         {{ if collection == 'wines' }}
             <title>{{ relate:estate }} {{ title }} - {{ /relate:estate }} {{ title or seo:seo_title }} | les vins personnalisés</title>
             <meta name="title" content="{{ relate:estate }} {{ title }} - {{ /relate:estate }} {{ title or seo:seo_title }} | les vins personnalisés">
         {{ else }}
-            <title>{{ title }} | {{ trans:collection.{{ collection }} | les vins personnalisés }}</title>
+            <title>{{ title }} - {{ trans:collection.{{ collection }} }} | les vins personnalisés </title>
             <meta name="title" content="{{ title or seo:seo_title }} | les vins personnalisés">
         {{ /if }}
         <meta name="description" content="{{ meta_description or seo:seo_description }}">
@@ -73,6 +77,8 @@
                 {{ partial:navigation }}
 
                 {{ template_content }}
+
+                {{ partial:footer }}
 
         </div>
 

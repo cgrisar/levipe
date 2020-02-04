@@ -1,4 +1,8 @@
-<div class="flex container px-4 sm:px-0 md:px-4 lg:px-0 mx-auto flex-col">
+<h1 class="hidden">Accords mets vins</h1>
+
+<div class="h-36 md:h-48"></div>
+
+<div class="flex container px-4 sm:px-0 md:px-4 lg:px-0 mx-auto flex-col text-lg leading-relaxed">
  
     {{ description }}
         
@@ -7,7 +11,11 @@
         {{ /if }}
 
         {{ if type == "image" }}
-            {{ partial:bard/image }}
+            <div class="flex items-end mt-6">
+                <div class="float-left mr-6">
+                    <img class="md:max-w-sm" src="{{ image | url }}" alt="{{ caption }}" />
+                </div>
+            </div>
         {{ /if }}
 
     {{ /description }}
