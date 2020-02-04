@@ -323,3 +323,8 @@ assets:
   img/Estates/Covers/Claude-Marechal.png:
     title: 'Domaine Catherine & Claude Maréchal'
     alt: 'Domaine Catherine & Claude Maréchal'
+  img/Estates/Covers/Bhilar.jpeg:
+    alt: 'Bodegas Bhilar'
+  img/Wines/Cover/la-revilla-white.jpg:
+    title: 'Phinca La Revilla | Bodegas Bhilar | Rioja Alavesa | Rioja'
+    alt: 'Phinca La Revilla | Bodegas Bhilar | Rioja Alavesa | Rioja'
