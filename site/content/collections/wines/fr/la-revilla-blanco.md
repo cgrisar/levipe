@@ -1,4 +1,3 @@
-title: 'La Revilla (blanc)'
 description: '<p>La cuvée est composée à 100% de vignes plantées en 1925 sur cette parcelle de La Revilla d''une superficie de 68 ares. Le sol composé d''argile et de calcaire est travaillé au cheval afin de permettre une aération optimale du sol. Les raisins sont cueillis à la main, puis égrappés et foulés. La fermentation sur pellicule est effectuée par les levures indigènes. Ensuite, le vin est transféré en barrique et il y passera un élevage de 6 ans, et subira pour seule intervention un unique bâtonage.</p>'
 variants:
   -

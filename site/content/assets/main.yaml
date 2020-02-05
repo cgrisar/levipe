@@ -328,3 +328,15 @@ assets:
   img/Wines/Cover/la-revilla-white.jpg:
     title: 'Phinca La Revilla | Bodegas Bhilar | Rioja Alavesa | Rioja'
     alt: 'Phinca La Revilla | Bodegas Bhilar | Rioja Alavesa | Rioja'
+  img/Wines/Cover/bhil-phab.jpg:
+    title: 'Phinca Hapa Blanco | Bodegas Bhilar | Rioja Alavesa | Rioja'
+    alt: 'Phinca Hapa Blanco | Bodegas Bhilar | Rioja Alavesa | Rioja'
+  img/Wines/Cover/bhil-phat.png:
+    title: 'Phinca Hapa Tinto | Bodegas Bhilar | Rioja Alavesa | Rioja'
+    alt: 'Phinca Hapa Tinto | Bodegas Bhilar | Rioja Alavesa | Rioja'
+  img/Wines/Label/bhil-phat.png:
+    title: 'La Revilla Blanco | Bodegas Bhilar | Rioja Alavesa | Rioja'
+    alt: 'La Revilla Blanco | Bodegas Bhilar | Rioja Alavesa | Rioja'
+  img/Wines/Cover/bhil-bhit.jpg:
+    title: 'Bhilar Plots Tinto | Bodegas Bhilar | Rioja Alavesa | Rioja'
+    alt: 'Bhilar Plots Tinto | Bodegas Bhilar | Rioja Alavesa | Rioja'

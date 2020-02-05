@@ -32,3 +32,5 @@ g:
   - chardonnay
 r:
   - languedoc
+s:
+  - medium-white
