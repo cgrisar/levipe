@@ -12,6 +12,7 @@ estate:
 cepages:
   - c136b12b-b234-4fd6-85b0-8478909b6ab2
   - 105a9234-f0c7-43b0-8b05-27c37af074a6
+  - 16787082-85db-492e-afb6-0b2241fff03c
 odoo: BHIL-BHIT
 page_no_index: false
 no_follow_links: false

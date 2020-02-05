@@ -9,6 +9,8 @@ sparkling: false
 natural_wine: false
 estate:
   - e7b0f525-cef0-4be6-90cb-9f76b3174514
+cepages:
+  - 16787082-85db-492e-afb6-0b2241fff03c
 odoo: BHIL-PHAT
 variants:
   -
