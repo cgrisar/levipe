@@ -17,6 +17,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Wines/Cover/frri-para.jpg
 twitter_share_setting: inherit
 id: 7e734ec9-2e78-4f20-bf5e-80bcf931f6cd
 e:

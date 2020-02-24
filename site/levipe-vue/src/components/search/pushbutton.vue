@@ -1,11 +1,11 @@
 <template>
-    <div class="mr-5 md:mr-12 pushbutton" @click="toggle()">
+    <div class="mr-5 md:mr-12" @click="toggle()">
         <input type="checkbox"
             :id="collection" 
             :value="collection" 
             v-model="checked"
             class="hidden" />
-        <label>
+        <label class="cursor-pointer">
             <div v-bind:style="'background-image:url(' + file + '); background-position: 50% 0px; transform:scale(.97)'" 
                 class="w-12 h-12 md:w-24 md:h-24 bg-cover mb-2 relative rounded-full shadow-md"></div>
         </label>
@@ -56,10 +56,4 @@ export default {
     }
 }
 </script>
-
-<style>
-.pushbutton {
-    cursor: pointer;
-}
-</style>
 

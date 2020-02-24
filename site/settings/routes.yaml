@@ -5,13 +5,12 @@ routes:
   /login: auth/login
   /forgot-password: auth/password-forgot
   /reset-password: auth/password-reset
+  /entries/{collections}:
+    layout: api
+    template: home/entries
   /wines/style/{taxonomy}:
     layout: api
-    template: wines
-  /!/Fetch/collection/wines:
-    layout: api
-    template: wine/pairing_results
-    content_type: json
+    template: wineandfood/wines
   /winesmap.xml:
     template: winesmap
     layout: winesmap
