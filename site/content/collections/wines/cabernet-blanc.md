@@ -1,4 +1,6 @@
 title: 'Cabernet Blanc'
+cover_image:
+  - /assets/img/Wines/Cover/fullsizeoutput_139f.jpeg
 label_image:
   - /assets/img/Wines/Label/vpco-cabl.jpg
 color: white
