@@ -1,0 +1,7 @@
+description: '<p>Deze wijn bezingt de Renaissance. Deze periode is onlosmakelijk verbonden met Italië... en met de Touraine. De kunstzinnigheid van François I en de bouw van Chambord leidde tot de bouw van de meest prachtige kastelen van de Loire - meer bepaald in de Touraine. Jean-Sébastien Marionnet heeft in navolging van zijn vader Henry besloten om terug te gaan naar de wijnen van de renaissance: oorspronkelijke druiven in "franc de pied" (geen geënte stokken). De vinificatie gebeurt volledig zonder toevoeging van sulfieten. De moderne technieken laten Jean-Sebastien toe om wijnen te maken die rechtlijnig en foutloos zijn. Wat geeft het resultaat? De wijn wint duidelijk aan materie ten opzichte van de geënte broertjes! Deze wijn, en al de andere cuvées in franc de pied van het domein geven de kans om de typiciteit van een druif te herkennen... in een stijl die je in de klassieke wijnbouw niet meer terugvindt. Een must voor elke liefhebber!</p>'
+variants:
+  -
+    millesime: '2018'
+    active: true
+    description: 'Schitterende scharlaken kleur. Parfum van rijp rood fruit waar de aardbei domineert. Volle, frisse en levendige aanzet. De wijn toont een mooie, elegante densiteit en de aroma''s volgen het palet van dat we in de neus gewaar werden. Zijdezachte tannine. Een perfecte plezierwijn die een lange indruk laat... en meteen uitnodigt om de volgende slok te drinken.'
+id: ae0d796f-9bfc-4966-9db1-0c3065349f95

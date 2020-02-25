@@ -1,4 +1,4 @@
-title: 'Châteauneuf du Pape Rouge'
+title: 'Châteauneuf-du-Pape Rouge'
 cover_image:
   - /assets/img/Wines/Cover/afci-cnpr.jpg
 label_image:
@@ -19,7 +19,7 @@ odoo: AFCI-CNPR
 variants:
   -
     millesime: '2016'
-    active: true
+    active: false
     scores:
       -
         guide: BD
@@ -29,6 +29,9 @@ variants:
         guide: WA
         score: '91'
         maxscore: '100'
+  -
+    millesime: '2017'
+    active: true
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

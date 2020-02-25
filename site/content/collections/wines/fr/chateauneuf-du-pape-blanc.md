@@ -2,6 +2,10 @@ description: '<p>Réussir une Châteauneuf-du-Pape blanc n''est pas à la porté
 variants:
   -
     millesime: '2016'
+    active: false
+    description: 'Couleur or pailles pour ce Châteauneuf floral, fruité et légèrement toasté au nez. La bouche est aimable, ronde, chaleureuse et suave ; impressions renforcées par des nuances miellées, de fines notes d''agrumes et de menthol apportant une merveilleuse fraîcheur.'
+  -
+    millesime: '2018'
     active: true
     description: 'Couleur or pailles pour ce Châteauneuf floral, fruité et légèrement toasté au nez. La bouche est aimable, ronde, chaleureuse et suave ; impressions renforcées par des nuances miellées, de fines notes d''agrumes et de menthol apportant une merveilleuse fraîcheur.'
 meta_description: 'Ce Châteauneuf-du-Pape unique, assemblé à parts égales de Grenache, Rousanne, Bourboulenc, Clairette et Picpoul, allie richesse et fraîcheur, soulignant la compréhension fondamentale du climat et du terroir par ce vigneron extrêmement talentueux.'

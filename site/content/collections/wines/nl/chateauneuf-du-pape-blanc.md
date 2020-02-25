@@ -2,6 +2,10 @@ description: '<p>Een witte Châteauneuf-du-Pape maken ligt niet voor de hand. Al
 variants:
   -
     millesime: '2016'
+    active: false
+    description: 'Goud-strokleurige kleur voor deze châteauneuf met een bloemig parfum, dat plaats laat voor de steenvruchten en een licht toast. De wijn proeft vriendelijk, warm en sappig. Deze indrukken worden versterkt door smaken van honing. Fijne citrusvruchten en een lichte mentholtoetsen brengen een welgekomen fraîcheur aan deze fantastische wijn.'
+  -
+    millesime: '2018'
     active: true
     description: 'Goud-strokleurige kleur voor deze châteauneuf met een bloemig parfum, dat plaats laat voor de steenvruchten en een licht toast. De wijn proeft vriendelijk, warm en sappig. Deze indrukken worden versterkt door smaken van honing. Fijne citrusvruchten en een lichte mentholtoetsen brengen een welgekomen fraîcheur aan deze fantastische wijn.'
 meta_description: 'Deze unieke Châteauneuf-du-Pape, bestaande uit gelijke delen van Grenache, Rousanne, Bourboulenc, Clairette et Picpoul, verenigt weelde en fraîcheur. Hiermee onderstreept deze bijzonder talentvolle wijnmaker hoe goed hij het klimaat en de terroir begrijpt.'

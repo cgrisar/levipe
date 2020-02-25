@@ -18,6 +18,9 @@ odoo: AFCI-CNPB
 variants:
   -
     millesime: '2016'
+    active: false
+  -
+    millesime: '2018'
     active: true
 page_no_index: false
 no_follow_links: false

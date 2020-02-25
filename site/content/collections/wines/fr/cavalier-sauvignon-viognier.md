@@ -5,6 +5,10 @@ variants:
     active: false
   -
     millesime: '2018'
+    active: false
+    description: 'Belle robe brillante aux reflets dorés. Le nez est très aromatique sur les agrumes, le pamplemousse. En bouche, le vin offre une belle sensation de vivacité et de fraîcheur et un rappel marqué sur des notes fleuries plutôt riches. Le vin est tendu, l’aromatique est persistante.'
+  -
+    millesime: '2019'
     active: true
     description: 'Belle robe brillante aux reflets dorés. Le nez est très aromatique sur les agrumes, le pamplemousse. En bouche, le vin offre une belle sensation de vivacité et de fraîcheur et un rappel marqué sur des notes fleuries plutôt riches. Le vin est tendu, l’aromatique est persistante.'
 meta_description: 'Le Domaine Cavalier se situe au sein des vignobles du Château de Lascaux, près du Pic-Saint-Loup. L’assemblage de Sauvignon blanc, de viognier, de Roussanne et de Marsanne, permet d’obtenir une identité singulière pour ce vin languedocien au pied des Cévennes.'
