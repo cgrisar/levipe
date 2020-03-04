@@ -24,6 +24,7 @@ class Attributes {
         '47' => 2017,
         '48' => 2007,
         '49' => 2018,
+        '50' => 2019
     ];
 
     public static function all() 
