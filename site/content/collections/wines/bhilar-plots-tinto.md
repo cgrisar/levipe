@@ -14,6 +14,10 @@ cepages:
   - 105a9234-f0c7-43b0-8b05-27c37af074a6
   - 16787082-85db-492e-afb6-0b2241fff03c
 odoo: BHIL-BHIT
+variants:
+  -
+    millesime: '2018'
+    active: true
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
