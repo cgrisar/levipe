@@ -43,10 +43,12 @@
                         this.prevPage = (response.data.search('prevPage') > 0);
                         this.nextPage = (response.data.search('nextPage') > 0);
                         if (response.data.search('figure') < 0) this.page = 1;
-                        
+
                         var entries = document.getElementById('entries');
                         entries.innerHTML = "";
-                        entries.insertAdjacentHTML('beforeend', response.data)
+                        entries.insertAdjacentHTML('beforeend', response.data);
+
+                        this.$ga.event('page', 'select', JSON.stringify(this.page));
                     });
             },
 
