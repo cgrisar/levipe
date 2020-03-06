@@ -2,6 +2,10 @@ description: '<p>Deze wijn bewijst dat er een enorm verschil is tussen geënte w
 variants:
   -
     millesime: '2016'
+    active: false
+    description: 'Frisse, intens florale neus (egelantier, acacia). Kristallijnen aanzet, heel fijn en toch mooi vol. Aroma''s van perzik, peer, pompelmoes en citroen. De wijn is rijk, complex en bijzonder elegant.'
+  -
+    millesime: '2017'
     active: true
     description: 'Frisse, intens florale neus (egelantier, acacia). Kristallijnen aanzet, heel fijn en toch mooi vol. Aroma''s van perzik, peer, pompelmoes en citroen. De wijn is rijk, complex en bijzonder elegant.'
 meta_description: 'Deze wijn bewijst dat er een enorm verschil is tussen geënte wijnstokken en wijnstokken in "franc de pied". "Franc de pied" doelt op wijnstokken in 1 geheel. Jaar in jaar uit is deze Sauvignon Blanc ruimer, nauwkeuriger, eleganter en merkelijk minder vegetaal dan de geënte variant.'

@@ -16,6 +16,9 @@ odoo: HMCH-VFSB
 variants:
   -
     millesime: '2016'
+    active: false
+  -
+    millesime: '2017'
     active: true
 page_no_index: false
 no_follow_links: false
