@@ -7,4 +7,8 @@ variants:
   -
     millesime: '2017'
     active: false
+  -
+    millesime: '2019'
+    active: true
+    description: 'Goudkleurig en een parfum van exotisch fruit, grassen (tabak) en kruiden (eucalyptus, witte peper). De frisse aanzet verraadt een mooie aciditeit. De materie ruim aanwezig om de zuren te compenseren en de wijn is hierdoor mooi evenwichtig. De middellange afdronk wordt ondersteund door aroma''s van citrusvruchten.'
 id: 55c4fb49-36dd-4924-a575-75ed0d3b1fe2
