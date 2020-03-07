@@ -4,4 +4,5 @@ variants:
     millesime: '2018'
     active: true
     description: 'Schitterende scharlaken kleur. Parfum van rijp rood fruit waar de aardbei domineert. Volle, frisse en levendige aanzet. De wijn toont een mooie, elegante densiteit en de aroma''s volgen het palet van dat we in de neus gewaar werden. Zijdezachte tannine. Een perfecte plezierwijn die een lange indruk laat... en meteen uitnodigt om de volgende slok te drinken.'
+meta_description: 'Deze gamay "franc de pied" (niet-geënte stokken) zonder toegevoegde sulfieten is een ode aan de Renaissance. In de schaduw van de kastelen van de Loire, vangt u met deze smakelijke, sappige rode wijn een glimp op van wat ze in die tijd voor lekkers aan tafel serveerden.'
 id: ae0d796f-9bfc-4966-9db1-0c3065349f95

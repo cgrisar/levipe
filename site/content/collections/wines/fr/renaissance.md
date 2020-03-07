@@ -4,4 +4,5 @@ variants:
     millesime: '2018'
     active: true
     description: 'Rouge écarlate éclatant. Parfum de fruits rouges bien mûrs à la dominante fraise. Attaque dense, fraîche et vive. Les arômes suivent les parfums. Structure soyeuse et douce. Ce vin de plaisir parfait laisse une impression longue en finale et invite à prendre la prochaine gorgée.'
+meta_description: 'Ce gamay "franc de pied" (vigne non greffée) sans sulfites ajoutés loue la Renaissance. A l''ombre des châteaux de la Loire, vous découvrirez avec ce vin rouge fruité, juteux et élégant ce qu''on servait de mieux à table il y a 500 ans.'
 id: ae0d796f-9bfc-4966-9db1-0c3065349f95
