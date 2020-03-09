@@ -16,6 +16,11 @@ variants:
   -
     millesime: '2016'
     active: true
+    scores:
+      -
+        guide: WA
+        score: '93'
+        maxscore: '100'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
