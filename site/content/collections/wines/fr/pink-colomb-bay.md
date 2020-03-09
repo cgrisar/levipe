@@ -1,3 +1,4 @@
+description: '<p>Vincent Pugibet au Domaine La Colombette imagine le rosé clair du Languedoc à base de pinot noir. Emballage chic pour un vin qui ne créera pas de choc: aérien, doux et rafraîchissant à la fois, à 11% d''alcool, on ne risque pas de se prendre la tête! Le must de l''été!</p>'
 variants:
   -
     millesime: '2018'
