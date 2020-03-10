@@ -312,8 +312,8 @@ assets:
     title: 'Cuvée Nathalie | Domaine Claude Lafond | Reuilly | Loire'
     alt: 'Cuvée Nathalie | Domaine Claude Lafond | Reuilly | Loire'
   img/Wines/Cover/fullsizeoutput_1136.jpeg:
-    title: 'Vosse Romanée | Domaine des Perdrix | Vosne-Romanée | Bourgogne'
-    alt: 'Vosse Romanée | Domaine des Perdrix | Vosne-Romanée | Bourgogne'
+    title: 'Vosne Romanée | Domaine des Perdrix | Vosne-Romanée | Bourgogne'
+    alt: 'Vosne Romanée | Domaine des Perdrix | Vosne-Romanée | Bourgogne'
   img/Wines/Cover/arjo-egch.jpg:
     title: "Echappée Gourmande Blanc | Domaine de l'Arjolle |\_Côtes de Thongue |\_Languedoc"
     alt: "Echappée Gourmande Blanc | Domaine de l'Arjolle |\_Côtes de Thongue |\_Languedoc"
@@ -346,3 +346,6 @@ assets:
   img/Wines/Cover/fullsizeoutput_139f.jpeg:
     title: 'Cabernet Blanc | Domaine La Colombette | Pays d''Oc | Languedoc'
     alt: 'Cabernet Blanc | Domaine La Colombette | Pays d''Oc | Languedoc'
+  img/Wines/Cover/LASC-CAVR.jpeg:
+    title: 'Cabernet - Syrah | Château de Lascaux | Pays d''Oc | Languedoc'
+    alt: 'Cabernet - Syrah | Château de Lascaux | Pays d''Oc | Languedoc'
