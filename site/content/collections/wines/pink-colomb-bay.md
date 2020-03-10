@@ -12,6 +12,10 @@ estate:
 cepages:
   - 17e91089-b78c-4649-9cfe-3ddc4efa4983
 odoo: VPCO-PICO
+variants:
+  -
+    millesime: '2019'
+    active: true
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
