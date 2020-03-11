@@ -5,6 +5,10 @@ variants:
     active: false
   -
     millesime: '2017'
+    active: false
+    description: 'Zeer lichte kleuren met groene tinten. De neus is mineraal en bloemig met toetsen van limoen, munt en heemst. De minerale aanzet stimuleert de smaakpapillen en haar friste helpt de aroma''s: violet, pronkerwt, zeste van geconfijte citroen, mirabellen. De nobele bitters ondersteunen een lange frisse afdronk met toetsen van zoethout en peper.'
+  -
+    millesime: '2018'
     active: true
     description: 'Zeer lichte kleuren met groene tinten. De neus is mineraal en bloemig met toetsen van limoen, munt en heemst. De minerale aanzet stimuleert de smaakpapillen en haar friste helpt de aroma''s: violet, pronkerwt, zeste van geconfijte citroen, mirabellen. De nobele bitters ondersteunen een lange frisse afdronk met toetsen van zoethout en peper.'
 meta_description: 'Deze Arbois is één van de domeinen waarmee het domein haar intrede deed in de Jura. "En Paradis" is een chardonnay die op Bourgondische wijze werd gerijpt in oudere vaten: de prioriteit wordt gegeven aan de uitdrukking van de aroma''s van de wijn.'
