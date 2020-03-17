@@ -10,6 +10,7 @@ import StarRating from 'vue-star-rating'
 import VueAnalytics from 'vue-analytics';
 
 import lvpVariant from './components/lvp-variant.vue'
+import lvpNoVariant from './components/lvp-novariant.vue'
 import lvpCart from './components/cart/lvp-cart.vue'
 import lvpMinicart from './components/cart/lvp-minicart.vue'
 import autocompleteSearch from './components/search/autocomplete-search.vue'
@@ -34,7 +35,8 @@ new Vue({
     },
     
     components: {   swal, 
-                    lvpVariant, 
+                    lvpVariant,
+                    lvpNoVariant, 
                     lvpCart, 
                     lvpMinicart, 
                     StarRating, 

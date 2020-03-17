@@ -1,0 +1,17 @@
+active: true
+coupon: false
+last: true
+start_date: '2020-03-16'
+end_date: '2020-04-03'
+discount_type: bogof
+bo: '5'
+gof: '1'
+bogof_discount: '100'
+discount: '100'
+page_no_index: false
+no_follow_links: false
+sitemap_priority: '0.5'
+sitemap_changefreq: daily
+twitter_share_setting: inherit
+title: CORONA
+id: 5f15a56f-d43e-4838-8e80-9d5881ed1a69

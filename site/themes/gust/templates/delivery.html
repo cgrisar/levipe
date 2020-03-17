@@ -1,0 +1,121 @@
+
+
+<div class="flex container mx-auto flex-col">
+  {{ assets:hero }}
+    <div style="background-image:url({{ url }}); height: 600px; background-position: 50% 0px;" class="bg-cover relative mb-8">
+    <img src="{{ url }}" class="hidden" alt="{{ page:title }}">
+  {{ /assets:hero }}
+        <div class="bg-black opacity-25 absolute w-full h-full"></div>
+        <div style="padding-top:20rem;">
+            <h1 class="text-3xl lg:text-5xl font-bold text-white relative text-center">{{ title }}</h1>
+            <h2 class="text-2xl lg:text-3xl font-medium text-white relative text-center mt-6 md:mt-8">{{ restaurant }}</h2>
+        </div>
+    </div>
+
+    <div class="flex mb-8">
+        <div class="hidden md:block md:w-1/3 lg:w-1/4"></div>
+
+        <div class="flex ml-2 lg:ml-6">
+            {{ relate:wines sort="random" limit="6" }}
+            <div class="mr-2 md:mr-6">
+                {{ assets:label_image }}
+                    <a href="{{site_url}}wines/{{ slug }}">
+                      <figure class="h-12 w-12 lg:w-24 lg:h-24 bg-cover rounded-full" style="background-image: url({{url}}); background-position: 50% 0px;"></figure>
+                    </a>
+                {{ /assets:label_image }}
+            </div>
+            {{ /relate:wines }}
+        </div>
+    </div>
+
+
+  <div class="flex container mx-2 lg:mx-auto flex-col md:flex-row mb-8">
+
+      <div class="pl-2 mb-8 sm:w-1/2 md:w-1/3 lg:w-1/4 lg:pl-0">
+          <div class="md:text-right md:border-r md:border-red-darker md:pr-6">
+              <div class="hidden md:flex md:flex-col">
+                  <div>
+
+                    {{ assets:chef }}
+                      <img src="{{ url }}" alt="{{ alt }}" class="object-cover shadow-md h-26 w-26 rounded-full" />
+                    {{ /assets:chef }}
+
+                  </div>
+
+                  <div class="mt-4">
+                    {{ address }}<br />
+                    {{ zip }} {{ commune }}<br />
+                  </div>
+  
+                  <div class="fa-2x mt-4">
+                    
+                    {{ if phone }}
+                      <a href='tel:{{ phone replace=" |" }}' class="inline-block">
+                        <span class="fa-layers fa-fw">
+                            <i class="fas fa-circle text-red-darker"></i>
+                            <i class="fas fa-phone fa-inverse" data-fa-transform="shrink-6"></i>
+                        </span> 
+                      </a>
+                    {{ /if }}
+
+                    {{ if e_mail }}
+                      <a href="mailto:{{ e_mail | obfuscate_email }}" class="inline-block">
+                        <span class="fa-layers fa-fw">
+                            <i class="fas fa-circle text-red-darker"></i>
+                            <i class="fas fa-at fa-inverse" data-fa-transform="shrink-6"></i>
+                        </span> 
+                      </a>
+                    {{ /if }}
+                    
+                    {{ if www }}
+                      <a href="{{ www }}" class="inline-block">
+                        <span class="fa-layers fa-fw">
+                            <i class="fas fa-circle text-red-darker"></i>
+                            <i class="fas fa-globe fa-inverse" data-fa-transform="shrink-6"></i>
+                        </span>
+                      </a>
+                    {{ /if }}
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <hr class="border-b border-red-darker md:hidden">
+
+      <div class="flex pr-2 sm:w-1/2 md:w-2/3 md:pl-6 lg:w-3/4 mb-6 md:text-base md:leading-normal">
+        <div class="md:w-2/3">
+          {{ description }}
+        </div>
+        <div class="flex-1">
+          {{ user }}
+
+          {{ unless no_results }}
+
+              {{ laradoo:no_variant_product_price odooproduct="{ odoo }" customer="{ email }" as="price" }}
+                  {{ vintages }}
+                              <lvp-variant wine='{{ title }}'
+                                          variant-id="{{ variantId }}" 
+                                          vintage="{{ millesime }}" 
+                                          volume="{{ volume }}" 
+                                          price="{{ price }}" 
+                                          quantity="{{ quantity }}" 
+                                          bo="{{ bo }}" 
+                                          gof="{{ gof }}" 
+                                          bogof_discount="{{ bogof_discount }}"
+                                          bogof_title="{{ trans:cart.bogof bo='{ bo }' gof='{ gof }' bogof_discount='{ bogof_discount }' }}">
+                              </lvp-variant>
+                  {{ /vintages}}
+              {{ /laradoo:variants_of_a_wine }}
+
+              <!-- only logged in users can comment on a wine -->
+              {{ partial:comments/meerkat_form }}
+          
+          {{ /unless }}
+
+      {{ /user }}
+        </div>
+      </div>
+
+  </div>
+</div>

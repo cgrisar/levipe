@@ -53,10 +53,10 @@
 <div class="font-light">
     {{ relate:appellations sort="level" }}
         {{ unless no_results }}
-        <a href="{{ url }}" class="text-red-darker no-underline hover:underline"> {{ title }}</a>
-        {{ unless last }}
-            &nbsp;-&nbsp;
-        {{ /unless }}
+            <a href="{{ url }}" class="text-red-darker no-underline hover:underline"> {{ title }}</a>
+                {{ unless last }}
+                    &nbsp;-&nbsp;
+                {{ /unless }}
         {{ /unless }}
     {{ /relate:appellations }}
 </div>

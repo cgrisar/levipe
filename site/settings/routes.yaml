@@ -5,10 +5,10 @@ routes:
   /login: auth/login
   /forgot-password: auth/password-forgot
   /reset-password: auth/password-reset
-  /entries/{collections}:
+  '/entries/{collections}':
     layout: api
     template: home/entries
-  /wines/style/{taxonomy}:
+  '/wines/style/{taxonomy}':
     layout: api
     template: wineandfood/wines
   /winesmap.xml:
@@ -36,4 +36,8 @@ collections:
     en: '/region/{slug}'
     fr: '/region/{slug}'
     nl: '/region/{slug}'
+  delivery:
+    en: '/delivery/{slug}'
+    fr: '/delivery/{slug}'
+    nl: '/delivery/{slug}'
 taxonomies: '{  }'

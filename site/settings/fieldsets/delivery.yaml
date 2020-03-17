@@ -1,0 +1,81 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        type: text
+        localizable: true
+        display: Title
+      restaurant:
+        type: text
+        display: Restaurant
+      hero:
+        container: main
+        folder: img/Takeaway/Recipe
+        restrict: true
+        type: assets
+        display: Hero
+      chef:
+        container: main
+        folder: img/Takeaway/Chef
+        restrict: true
+        type: assets
+        display: Chef
+      description:
+        buttons:
+          - h2
+          - h3
+          - h4
+          - bold
+          - italic
+          - unorderedlist
+          - orderedlist
+          - removeformat
+          - quote
+          - anchor
+        style: sans
+        spellcheck: true
+        allow_source: true
+        allow_internal_links: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: false
+        semantic_elements: false
+        restrict_assets: false
+        type: bard
+        localizable: true
+        display: Description
+      wines:
+        collection:
+          - wines
+        type: collection
+        display: Wines
+      owner:
+        type: text
+        display: owner
+      address:
+        type: text
+        display: address
+      zip:
+        type: text
+        display: zip
+      commune:
+        type: text
+        display: commune
+      phone:
+        type: text
+        display: phone
+      www:
+        type: text
+        display: www
+      e-mail:
+        type: text
+        display: e-mail
+      facebook:
+        type: text
+        display: facebook
+      odoo:
+        type: text
+        display: ODOO
+taxonomies: true
+title: Takeaway
