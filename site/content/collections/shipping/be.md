@@ -2,7 +2,7 @@ vat: '21'
 rates:
   -
     minimum_amount: '0'
-    charge: '7'
+    charge: '0'
   -
     minimum_amount: '75'
     charge: '0'
