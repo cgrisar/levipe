@@ -210,14 +210,15 @@ class LaradooTags extends Tags
 
     }
 
-    private function getNoVariantProductPrice($odoo, $odoowine)
+    private function getNoVariantProductPrice($odoo, $product)
     {
 
-        return $odoo->where( 'default_code', 'like', $odoowine ) 
+        $list_price =  $odoo->where( 'default_code', 'like', $product ) 
                     ->where( 'sale_ok', '=', true )
                     ->fields( 'list_price' )
-                    ->get( 'product.template' );
-
+                    ->get( 'product.template' )
+                    ->toArray()[0];
+        return $list_price;
     }
 
     private function getProductPrices($odoo, $pricelist, $template)

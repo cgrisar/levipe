@@ -19,13 +19,34 @@
 
         data() {
             return {
-                checked: true
+                checked: true,
+                pbs: []
             }
         },
+
         methods: {
             toggle() {
+                
+                let allChecked = true;
+                this.pbs.forEach(function(pb) { allChecked = allChecked && pb.checked });
+
+                // if all are checked, we're going to uncheck all the pushbuttons and
+                // check only the one that is being pressed upon
+                if (allChecked) {
+                    this.pbs.forEach( function(pb) {
+                        pb.checked = false
+                    });
+                    this.checked = true;
+                    return false;
+                };
+
                 this.checked = !this.checked;
             }
         },
+
+        mounted() {
+            this.pbs = this.$parent.$children;
+        }
+
     }
 </script>

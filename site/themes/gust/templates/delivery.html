@@ -84,37 +84,30 @@
       <hr class="border-b border-red-darker md:hidden">
 
       <div class="flex pr-2 sm:w-1/2 md:w-2/3 md:pl-6 lg:w-3/4 mb-6 md:text-base md:leading-normal">
+
         <div class="md:w-2/3">
           {{ description }}
         </div>
-        <div class="flex-1">
+
+        <div class="pl-0 xl:w-1/2 xl:pl-6"  style="min-width:45%">
           {{ user }}
 
-          {{ unless no_results }}
+            {{ unless no_results }}
 
-              {{ laradoo:no_variant_product_price odooproduct="{ odoo }" customer="{ email }" as="price" }}
-                  {{ vintages }}
-                              <lvp-variant wine='{{ title }}'
-                                          variant-id="{{ variantId }}" 
-                                          vintage="{{ millesime }}" 
-                                          volume="{{ volume }}" 
-                                          price="{{ price }}" 
-                                          quantity="{{ quantity }}" 
-                                          bo="{{ bo }}" 
-                                          gof="{{ gof }}" 
-                                          bogof_discount="{{ bogof_discount }}"
-                                          bogof_title="{{ trans:cart.bogof bo='{ bo }' gof='{ gof }' bogof_discount='{ bogof_discount }' }}">
-                              </lvp-variant>
-                  {{ /vintages}}
-              {{ /laradoo:variants_of_a_wine }}
+                {{ laradoo:no_variant_product_price productcode="{ odoo }" customer="{ email }" }}
+                    <div class="px-1 py-2 lg:p-2 rounded-lg bg-grey-light">
+                        <lvp-no-variant product="{{ restaurant }} - {{ title }}"
+                                        id="{{ id }}" 
+                                        price="{{ list_price }}">
+                        </lvp-no-variant>
+                    </div>
+                {{ /laradoo:no_variant_product_price }}
+            
+            {{ /unless }}
 
-              <!-- only logged in users can comment on a wine -->
-              {{ partial:comments/meerkat_form }}
-          
-          {{ /unless }}
-
-      {{ /user }}
+          {{ /user }}
         </div>
+
       </div>
 
   </div>
