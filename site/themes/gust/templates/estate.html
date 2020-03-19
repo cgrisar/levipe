@@ -1,82 +1,82 @@
 
 
 <div class="flex container mx-auto flex-col">
-  {{ assets:cover_image }}
-    <div style="background-image:url({{ url }}); height: 600px; background-position: 50% 0px;" class="bg-cover relative mb-8">
-    <img src="{{ url }}" class="hidden" alt="{{ page:title }}">
-  {{ /assets:cover_image }}
-        <div class="bg-black opacity-25 absolute w-full h-full"></div>
-        <div style="padding-top:20rem;">
-            <h1 class="text-3xl lg:text-5xl font-bold text-white relative text-center">{{ title }} <span class="hidden">{{ trans:collection.estate}}</span></h1>
-        </div>
-    </div>
-
-    <div class="flex mb-8">
-        <div class="hidden md:block md:w-1/3 lg:w-1/4"></div>
-
-        <div class="flex ml-2 lg:ml-6">
-            {{ collection:wines taxonomy:e="{{page.title | slugify }}" sort="random" limit="6" }}
-            <div class="mr-2 md:mr-6">
-                {{ assets:label_image }}
-                    <a href="{{site_url}}wines/{{ slug }}">
-                      <figure class="h-12 w-12 lg:w-24 lg:h-24 bg-cover rounded-full" style="background-image: url({{url}}); background-position: 50% 0px;"></figure>
-                    </a>
-                {{ /assets:label_image }}
-            </div>
-            {{ /collection:wines }}
-        </div>
-    </div>
-
-
-  <div class="flex container mx-2 lg:mx-auto flex-col md:flex-row mb-8">
-
-      <div class="pl-2 mb-8 sm:w-1/2 md:w-1/3 lg:w-1/4 lg:pl-0">
-          <div class="md:text-right md:border-r md:border-red-darker md:pr-6">
-
-              {{ owner }}<br />
-              {{ address }}<br />
-              {{ zip }} {{ commune }}<br />
-              {{ country }}<br />
-  
-              <div class="fa-2x mt-4">
-                
-                {{ if phone }}
-                  <a href='tel:{{ phone replace=" |" }}' class="inline-block">
-                    <span class="fa-layers fa-fw">
-                        <i class="fas fa-circle text-red-darker"></i>
-                        <i class="fas fa-phone fa-inverse" data-fa-transform="shrink-6"></i>
-                    </span> 
-                  </a>
-                {{ /if }}
-
-                {{ if e_mail }}
-                  <a href="mailto:{{ e_mail | obfuscate_email }}" class="inline-block">
-                    <span class="fa-layers fa-fw">
-                        <i class="fas fa-circle text-red-darker"></i>
-                        <i class="fas fa-at fa-inverse" data-fa-transform="shrink-6"></i>
-                    </span> 
-                  </a>
-                {{ /if }}
-                
-                {{ if www }}
-                  <a href="{{ www }}" class="inline-block">
-                    <span class="fa-layers fa-fw">
-                        <i class="fas fa-circle text-red-darker"></i>
-                        <i class="fas fa-globe fa-inverse" data-fa-transform="shrink-6"></i>
-                    </span>
-                  </a>
-                {{ /if }}
-
-              </div>
-
+    {{ assets:cover_image }}
+      <div style="background-image:url({{ url }}); height: 600px; background-position: 50% 0px;" class="bg-cover relative mb-8">
+      <img src="{{ url }}" class="hidden" alt="{{ page:title }}">
+    {{ /assets:cover_image }}
+          <div class="bg-black opacity-25 absolute w-full h-full"></div>
+          <div style="padding-top:20rem;">
+              <h1 class="text-3xl lg:text-5xl font-bold text-white relative text-center">{{ title }} <span class="hidden">{{ trans:collection.estate}}</span></h1>
           </div>
       </div>
 
-      <hr class="border-b border-red-darker md:hidden">
+      <div class="flex mb-8">
+          <div class="hidden md:block md:w-1/3 lg:w-1/4"></div>
 
-      <div class="pr-2 sm:w-1/2 md:w-2/3 md:pl-6 lg:w-3/4 mb-6 md:text-base md:leading-normal">
-          {{ description }}
+          <div class="flex ml-2 lg:ml-6">
+              {{ collection:wines taxonomy:e="{{page.title | slugify }}" sort="random" limit="6" }}
+              <div class="mr-2 md:mr-6">
+                  {{ assets:label_image }}
+                      <a href="{{site_url}}wines/{{ slug }}">
+                        <figure class="h-12 w-12 lg:w-24 lg:h-24 bg-cover rounded-full" style="background-image: url({{url}}); background-position: 50% 0px;"></figure>
+                      </a>
+                  {{ /assets:label_image }}
+              </div>
+              {{ /collection:wines }}
+          </div>
       </div>
 
-  </div>
+
+    <div class="flex container mx-2 lg:mx-auto flex-col md:flex-row mb-8">
+
+        <div class="pl-2 mb-8 sm:w-1/2 md:w-1/3 lg:w-1/4 lg:pl-0">
+            <div class="md:text-right md:border-r md:border-red-darker md:pr-6">
+
+                {{ owner }}<br />
+                {{ address }}<br />
+                {{ zip }} {{ commune }}<br />
+                {{ country }}<br />
+    
+                <div class="fa-2x mt-4">
+                  
+                  {{ if phone }}
+                    <a href='tel:{{ phone replace=" |" }}' class="inline-block">
+                      <span class="fa-layers fa-fw">
+                          <i class="fas fa-circle text-red-darker"></i>
+                          <i class="fas fa-phone fa-inverse" data-fa-transform="shrink-6"></i>
+                      </span> 
+                    </a>
+                  {{ /if }}
+
+                  {{ if e_mail }}
+                    <a href="mailto:{{ e_mail | obfuscate_email }}" class="inline-block">
+                      <span class="fa-layers fa-fw">
+                          <i class="fas fa-circle text-red-darker"></i>
+                          <i class="fas fa-at fa-inverse" data-fa-transform="shrink-6"></i>
+                      </span> 
+                    </a>
+                  {{ /if }}
+                  
+                  {{ if www }}
+                    <a href="{{ www }}" class="inline-block">
+                      <span class="fa-layers fa-fw">
+                          <i class="fas fa-circle text-red-darker"></i>
+                          <i class="fas fa-globe fa-inverse" data-fa-transform="shrink-6"></i>
+                      </span>
+                    </a>
+                  {{ /if }}
+
+                </div>
+
+            </div>
+        </div>
+
+        <hr class="border-b border-red-darker md:hidden">
+
+        <div class="pr-2 sm:w-1/2 md:w-2/3 md:pl-6 lg:w-3/4 mb-6 md:text-base md:leading-normal">
+            {{ description }}
+        </div>
+
+    </div>
 </div>
