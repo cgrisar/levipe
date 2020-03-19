@@ -1,8 +1,56 @@
-<div class="flex min-w-full bg-white">
-    <div class="flex container my-4 text-red-darker px-4 lg:px-0 justify-start z-50 mx-auto">
-        {{ trans:footer.whoarewe }}</br class="mb-0 lg:mb-2">
-        {{ trans:footer.cgv }}</br class="mb-0 lg:mb-2">
-        {{ trans:footer.privacy }}
+<div class="flex min-w-full mt-16">
+    <div class="flex container my-4 bg-red-darker text-white px-4 py-2 rounded-lg lg:px-0 justify-start z-50 mx-auto">
+        <div class="w-1/2 lg:w-1/3 px-4">
+            <div class="text-xs">{{ trans:footer.whoarewe }}</div>
+        </div>
+        <div class="hidden lg:block lg:w-1/2 lg:mx-auto">
+            <div class="flex flex-row">
+                <div class="w-1/2 pr-2">
+                    <h6 class="text-xs font-semibold text-white uppercase mb-1">{{ trans:footer.region }}</h6>
+                    <div class="flex flex-row">
+                        <div class="w-1/2 pr-2">
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/region/bordeaux">{{ trans:footer.region1 }}</a>
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/region/loire">{{ trans:footer.region2 }}</a>
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/region/bourgogne">{{ trans:footer.region3 }}</a>
+                            <!--
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/region/rioja">{{ trans:footer.region4 }}</a>
+                            -->
+                        </div>
+                        <div class="w-1/2 pl-2">
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/region/limoux">{{ trans:footer.region5 }}</a>
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/region/languedoc">{{ trans:footer.region6 }}</a>
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/region/cotes-du-rhone">{{ trans:footer.region7 }}</a>
+                            <!--
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/region/champagne">{{ trans:footer.region8 }}</a>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/2 pl-2">
+                    <h6 class="text-xs font-semibold text-white uppercase mb-1">{{ trans:footer.cepage }}</h6>
+                    <div class="flex flex-row">
+                        <div class="w-1/2 pr-2">
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/grape/pinot-noir">{{ trans:footer.cepage1 }}</a>
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/grape/chardonnay">{{ trans:footer.cepage2 }}</a>
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/grape/sauvignon-blanc">{{ trans:footer.cepage3 }}</a>
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/grape/cabernet-sauvignon">{{ trans:footer.cepage4 }}</a>
+                        </div>
+                        <div class="w-1/2 pl-2">
+                            <a class="text-xs block text-white no-underline" href="/{{ locale }}/grape/tempranillo">{{ trans:footer.cepage5 }}</a>
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/grape/chardonnay">{{ trans:footer.cepage6 }}</a>
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/grape/sauvignon-blanc">{{ trans:footer.cepage7 }}</a>
+                            <a class="text-xs block leading-tight text-white no-underline" href="/{{ locale }}/grape/cabernet-sauvignon">{{ trans:footer.cepage8 }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right w-1/2 lg:w-1/4 px-4">
+            <a href="/{{ locale }}/conditions" class="text-xs block font-semibold text-white uppercase font-semibold no-underline">{{ trans:footer.cgv }}</a>
+            <a href="/{{ locale }}/privacy" class="text-xs block font-semibold text-white uppercase font-semibold no-underline">{{ trans:footer.privacy }}</a>
+            E: admin (at) levipe.be<br>
+            T: +32 473 98 05 96
+        </div>
     </div>
 </div>
 <div class="h-16"></div>

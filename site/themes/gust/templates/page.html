@@ -1,0 +1,24 @@
+<div class="h-48 md:h-60"></div>
+
+<div class="flex flex-col container px-4 sm:px-0 md:px-4 lg:px-0 mx-auto text-lg leading-relaxed">
+ 
+    {{ description }}
+        
+        {{ if type == "text" || type == "bard" }}
+            {{ text }}
+        {{ /if }}
+
+        {{ if type == "image" }}
+            <div class="relative inline float-left mr-6">
+                <img class="md:max-w-sm" src="{{ image | url }}" alt="{{ caption }}" />
+            </div>
+        {{ /if }}
+
+    {{ /description }}
+
+</div>
+
+
+{{ section:page_scripts }}
+
+{{ /section:page_scripts }}

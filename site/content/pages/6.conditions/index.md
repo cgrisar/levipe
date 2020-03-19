@@ -1,0 +1,10 @@
+title: Conditions
+page_no_index: false
+no_follow_links: false
+sitemap_priority: '0.5'
+sitemap_changefreq: daily
+twitter_share_setting: inherit
+fieldset: page
+layout: default
+template: page
+id: 15094572-743c-4438-ad1e-5fc0c49c2a78
