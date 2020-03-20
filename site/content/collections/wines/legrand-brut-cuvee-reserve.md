@@ -10,6 +10,8 @@ natural_wine: false
 cepages:
   - 17e91089-b78c-4649-9cfe-3ddc4efa4983
   - 0964d0be-6df0-4c54-b8d7-5fe503f2da00
+appellations:
+  - edd0e022-2d9a-4bb9-b48f-60f80b541d6c
 odoo: ERLG-LEGB
 page_no_index: false
 no_follow_links: false
@@ -22,5 +24,7 @@ e:
 g:
   - pinot-noir
   - chardonnay
+r:
+  - champagne
 s:
   - sparkling

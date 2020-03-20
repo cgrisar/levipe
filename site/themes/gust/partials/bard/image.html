@@ -1,11 +1,15 @@
-{{ if float == "left" }}
-    <div class="relative inline float-left mr-6">
-        <img class="md:max-w-sm" src="{{ image | url }}" alt="{{ caption }}" />
-        <p class="absolute bg-red-darker text-white font-semibold p-2" style="bottom:2rem; width:10rem; left:-1rem;">{{ caption }}</p>
-    </div>
-{{ else }}
-    <div class="relative inline float-right ml-6">
-        <img class="md:max-w-sm" src="{{ image | url }}" alt="{{ caption }}" />
-        <p class="absolute -mr-4 bg-red-darker text-white font-semibold p-2 text-right" style="bottom:2rem; width:10rem;right:-1rem">{{ caption }}</p>
-    </div>
-{{ /if }}
+    {{ if float == "left" }}
+        <div class="relative inline float-left mr-6">
+            <img class="md:max-w-sm" src="{{ image | url }}" alt="{{ caption }}" />
+            {{ if caption }}
+                <p class="absolute bg-red-darker text-white font-semibold p-2" style="bottom:2rem; width:10rem; left:-1rem;">{{ caption }}</p>
+            {{ /if }}
+        </div>
+    {{ else }}
+        <div class="relative inline float-right ml-6">
+            <img class="md:max-w-sm" src="{{ image | url }}" alt="{{ caption }}" />
+            {{ if caption }}
+                <p class="absolute -mr-4 bg-red-darker text-white font-semibold p-2 text-right" style="bottom:2rem; width:10rem;right:-1rem">{{ caption }}</p>
+            {{ /if }}
+        </div>
+    {{ /if }}
