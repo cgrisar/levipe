@@ -3,7 +3,8 @@ path: assets
 url: /assets
 assets:
   img/Regions/chablis.jpg:
-    title: Chablis
+    title: 'Les chaufferettes à Chablis'
+    alt: 'Les chaufferettes à Chablis'
   img/Wines/Cover/chateau-de-come.jpeg:
     title: 'Château de Côme'
     alt: 'Château de Côme'
@@ -349,3 +350,105 @@ assets:
   img/Wines/Cover/LASC-CAVR.jpeg:
     title: 'Cabernet - Syrah | Château de Lascaux | Pays d''Oc | Languedoc'
     alt: 'Cabernet - Syrah | Château de Lascaux | Pays d''Oc | Languedoc'
+  img/Regions/champagne.jpg:
+    title: 'Vignoble de Champagne'
+    alt: 'Vignoble de Champagne'
+  img/Regions/abbaye_hautvillers.jpg:
+    title: 'l''Abbaye de Hautvillers'
+    alt: 'l''Abbaye de Hautvillers'
+  img/Regions/arbois.jpg:
+    title: 'l''Arbois'
+    alt: 'l''Arbois'
+  img/Regions/bordelais-1.jpg:
+    title: 'le vignoble bordelais'
+    alt: 'le vignoble bordelais'
+  img/Regions/carte-champagne.png:
+    title: 'carte de Champagne'
+    alt: 'carte de Champagne'
+  img/Regions/etiquette-champagne.jpg:
+    title: 'Etiquette de Champagne'
+    alt: 'Etiquette de Champagne'
+  img/Regions/nicole-clicquot.jpg:
+    title: 'Nicole-Barbe Clicquot Ponsardin'
+    alt: 'Nicole-Barbe Clicquot Ponsardin'
+  img/Regions/hospices.jpeg:
+    title: 'Hospices de Beaune'
+    alt: 'Hospices de Beaune'
+  img/Regions/gigondas.jpeg:
+    title: 'Les Dentelles de Montmirail'
+    alt: 'Les Dentelles de Montmirail'
+  img/Regions/limoux.jpg:
+    title: 'Le vignoble de Limoux'
+    alt: 'Le vignoble de Limoux'
+  img/Regions/maconnais.jpg:
+    title: 'La roche de Solutré en Mâconnais'
+    alt: 'La roche de Solutré en Mâconnais'
+  img/Regions/eleonore.jpg:
+    title: 'Eléonore d''Aquitaine'
+    alt: 'Eléonore d''Aquitaine'
+  img/Regions/coteaux-daix-en-provence.jpg:
+    title: 'Les Alpilles en Coteaux d''Aix en Provence'
+    alt: 'Les Alpilles en Coteaux d''Aix en Provence'
+  img/Regions/medoc.jpg:
+    title: 'Léoville las Cases en Médoc'
+    alt: 'Léoville las Cases en Médoc'
+  img/Regions/menetou.jpg:
+    title: Menetou-Salon
+    alt: Menetou-Salon
+  img/Regions/carteloire.jpg:
+    title: 'Carte du vignoble de Loire'
+    alt: 'Carte du vignoble de Loire'
+  img/Regions/dentelles-montmirail.jpg:
+    title: 'Vignoble de Vacqueyras'
+    alt: 'Vignoble de Vacqueyras'
+  img/Regions/chateau-palmer-768x576.jpg:
+    title: 'Château Palmer'
+    alt: 'Château Palmer'
+  img/Regions/chateauneuf-du-pape.jpg:
+    title: 'Les galets roulés de Châteauneuf-du-Pape'
+    alt: 'Les galets roulés de Châteauneuf-du-Pape'
+  img/Regions/chinon.jpeg:
+    title: Chinon
+    alt: Chinon
+  img/Regions/saint-estephe.jpg:
+    title: Saint-Estèphe
+    alt: Saint-Estèphe
+  img/Regions/vouvray.jpeg:
+    title: Vouvray
+    alt: Vouvray
+  img/Regions/vir-c3-a9-cless-c3-a9.jpg:
+    title: Viré-Clessé
+    alt: Viré-Clessé
+  img/Regions/montlouis.jpg:
+    title: Montlouis-sur-Loire
+    alt: Montlouis-sur-Loire
+  img/Regions/pouilly-1566658642.jpg:
+    title: 'La Loire à Pouilly'
+    alt: 'La Loire à Pouilly'
+  img/Regions/quincy.jpg:
+    title: 'Vignoble de Quincy'
+    alt: 'Vignoble de Quincy'
+  img/Regions/picsaintloup.jpg:
+    title: 'Le Pic Saint-Loup'
+    alt: 'Le Pic Saint-Loup'
+  img/Regions/pouilly.jpg:
+    title: 'Vignoble de Pouilly-Fumé'
+    alt: 'Vignoble de Pouilly-Fumé'
+  img/Regions/pouilly-fuisse.jpg:
+    title: 'Le village de Fuissé en Mâconnais'
+    alt: 'Le village de Fuissé en Mâconnais'
+  img/Regions/languedoc.jpg:
+    title: 'Vignoble du Languedoc'
+    alt: 'Vignoble du Languedoc'
+  img/Regions/saint-joseph.jpeg:
+    title: 'Vignoble en terrasse de Saint-Joseph'
+    alt: 'Vignoble en terrasse de Saint-Joseph'
+  img/Regions/sancerre.jpg:
+    title: 'Le mont de Sancerre'
+    alt: 'Le mont de Sancerre'
+  img/Regions/cotesdurhone.jpg:
+    title: 'Les Côtes du Rhône'
+    alt: 'Les Côtes du Rhône'
+  img/Regions/muscadet-sevre-et-maine.jpg:
+    title: Muscadet
+    alt: Muscadet
