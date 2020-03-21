@@ -40,12 +40,12 @@ description:
       Nous ne poursuivons aucun autre but que ceux présentés ci-dessus. En particulier, nous ne vendons pas à tiers les informations que vous nous avez confié.
       Nous demanderons votre autorisation préalable au cas où nous voyons un but qui n'est pas décrit dans cette politique de confidentialité.
       <br><br>
-      <h4>Tiers</h4>
+      </p><h4>Tiers</h4><p>
       Les informations que vous nous avez confié peuvent être partagées avec des tiers dans des cas très spécifiques. Ainsi, il est possible que nous partageons ces informations avec un prestataire, par exemple dans le cadre d'une livraison d'une commande que vous passé à travers ce site.
       
       Nous faisons tout pour conformer les prestataires à notre politique de confidentialité, sans pouvoir le garantir.
       
-      </p><p><br></p><h5>Modifications</h5><p>
+      </p><p><br></p><p><br></p><h5>Modifications</h5><p>
       Cette politique de confidentialité est basée sur l'utilisation du site. Certaines modifications au site pourraient entrainer une modification à cette politique.
       
       </p><p><br></p><h5>Modifier / Désabonner de la newsletter</h5><p>
@@ -61,4 +61,5 @@ description:
       http://www.privacycommission.be
       </p>
       
+meta_description: 'Informations concernant notre politique de confidentialité. Votre vie privée nous est chère.'
 id: b2edd2b2-a2d3-4ef1-89e0-66b017ffb32e

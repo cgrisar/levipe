@@ -452,3 +452,9 @@ assets:
   img/Regions/muscadet-sevre-et-maine.jpg:
     title: Muscadet
     alt: Muscadet
+  img/Wines/Cover/hmcm-sarg.jpg:
+    title: 'Gamay de Touraine | Domaine de la Charmoise | Touraine | Loire'
+    alt: 'Gamay de Touraine | Domaine de la Charmoise | Touraine | Loire'
+  img/Wines/Cover/hmcm-sarg.jpeg:
+    title: 'Gamay de Touraine | Domaine de la Charmoise | Touraine | Loire'
+    alt: 'Gamay de Touraine | Domaine de la Charmoise | Touraine | Loire'
