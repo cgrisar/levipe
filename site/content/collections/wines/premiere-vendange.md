@@ -14,6 +14,10 @@ cepages:
 appellations:
   - f74a2c7c-fad0-4b4c-8688-5c9d4cd3b2dd
 odoo: HMCM-PRVE
+variants:
+  -
+    millesime: '2018'
+    active: true
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
