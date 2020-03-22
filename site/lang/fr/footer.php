@@ -3,7 +3,7 @@
 return [
     'whoarewe' => '"les vins personnalisés" est le spécialiste de l&apos;importation et de la distribution de vins de domaines familiaux. Les vins des amoureux de cépages et de terroir, vous les trouvez ici, aux meilleures conditions.',
     'cgv' => 'Conditions générales',
-    'privacy' => 'Privacy',
+    'privacy' => 'Confidentialité',
     'region' => 'Régions Vedette',
     'region1' => 'Bordeaux',
     'region2' => 'Loire',
