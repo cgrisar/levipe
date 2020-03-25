@@ -9,12 +9,12 @@ sections:
       restaurant:
         type: text
         display: Restaurant
-      hero:
+      cover_image:
         container: main
         folder: img/Takeaway/Recipe
         restrict: true
         type: assets
-        display: Hero
+        display: cover
       chef:
         container: main
         folder: img/Takeaway/Chef
@@ -45,6 +45,25 @@ sections:
         type: bard
         localizable: true
         display: Description
+        sets:
+          image:
+            display: Image
+            fields:
+              image:
+                container: main
+                folder: img/Regions
+                restrict: false
+                type: assets
+                display: image
+              caption:
+                type: text
+                display: caption
+              float:
+                options:
+                  left: left
+                  right: right
+                type: select
+                display: float
       wines:
         collection:
           - wines
@@ -68,7 +87,7 @@ sections:
       www:
         type: text
         display: www
-      e-mail:
+      e_mail:
         type: text
         display: e-mail
       facebook:
@@ -77,5 +96,9 @@ sections:
       odoo:
         type: text
         display: ODOO
+      region:
+        type: text
+        localizable: true
+        display: region
 taxonomies: true
 title: Takeaway
