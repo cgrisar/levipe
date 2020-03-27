@@ -458,3 +458,15 @@ assets:
   img/Wines/Cover/hmcm-sarg.jpeg:
     title: 'Gamay de Touraine | Domaine de la Charmoise | Touraine | Loire'
     alt: 'Gamay de Touraine | Domaine de la Charmoise | Touraine | Loire'
+  img/Regions/takeaway.png:
+    title: 'Afhaalmenu | De Compagnie | Brasschaat | Antwerpen'
+    alt: 'Afhaalmenu | De Compagnie | Brasschaat | Antwerpen'
+  img/Takeaway/Recipe/compagnie.jpg:
+    title: 'Brasserie De Compagnie | Brasschaat | Antwerpen'
+    alt: 'Brasserie De Compagnie | Brasschaat | Antwerpen'
+  img/Takeaway/Recipe/atelier-maple-2.jpg:
+    title: 'Atelier Maple | Boekenbergpark | Antwerpen'
+    alt: 'Atelier Maple | Boekenbergpark | Antwerpen'
+  img/Takeaway/Chef/tim-lynn.jpg:
+    title: 'Timothy & Lynn'
+    alt: 'Timothy & Lynn'
