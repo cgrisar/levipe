@@ -10,6 +10,9 @@ use Statamic\Data\Users\User;
 use Statamic\Extend\Controller;
 use Statamic\API\User as UserAPI;
 use Illuminate\Support\Collection;
+use Illuminate\Http\Request;
+
+use Statamic\Addons\Helpers\Attributes;
 
 class LaradooController extends Controller
 {
@@ -171,6 +174,24 @@ class LaradooController extends Controller
         # Invalid status
         http_response_code(500);
         echo json_encode(['error' => 'Invalid PaymentIntent status']);
+    }
+
+    public function getWineVariants(Request $request) 
+    {
+        $odoowine = $request->query()["params"]["productID"];
+
+        $variant_ids = $this->odoo->where( 'default_code', 'like', $odoowine ) 
+                    ->where( 'sale_ok', '=', true )
+                    ->fields( 'product_variant_ids' )
+                    ->limit( 1 )
+                    ->get( 'product.template' )[0]["product_variant_ids"];
+
+        $products = $this->odoo->call('product.product', 'read', 
+                    array( $variant_ids ), 
+                    array( 'fields' => array( 'sale_ok', 'attribute_value_ids', 'qty_available' ) ) 
+        );
+
+        return $odoowine;
     }
 
 

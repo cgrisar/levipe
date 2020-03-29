@@ -17,6 +17,8 @@ page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Wines/Cover/erlg-legb.jpg
 twitter_share_setting: inherit
 id: b19fbebc-fb94-4bd8-ad4a-04504a785e51
 e:
