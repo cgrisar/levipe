@@ -476,3 +476,24 @@ assets:
   img/Wines/Cover/thui-thui.jpg:
     title: 'Château Thuillac | Côtes de Bourg | Bordeaux'
     alt: 'Château Thuillac | Côtes de Bourg | Bordeaux'
+  img/Takeaway/Recipe/pazzo.jpg:
+    title: 'Restaurant Pazzo | Eilandje | Antwerpen'
+    alt: 'Restaurant Pazzo | Eilandje | Antwerpen'
+  img/Takeaway/Chef/ingrid-neven.jpg:
+    title: 'Ingrid Neven | Restaurant Pazzo'
+    alt: 'Ingrid Neven | Restaurant Pazzo'
+  img/Takeaway/Recipe/de-notenkraker-openhaard-min.jpg:
+    title: 'De Notenkraker | Berchem | Antwerpen'
+    alt: 'De Notenkraker | Berchem | Antwerpen'
+  img/Takeaway/Recipe/racinepakt_terras.jpg:
+    title: 'Racine Pakt | Groen Kwartier | Antwerpen'
+    alt: 'Racine Pakt | Groen Kwartier | Antwerpen'
+  img/Takeaway/Recipe/volauvent.png:
+    title: 'Butcher''s Son | Oud Berchem | Antwerpen'
+    alt: 'Butcher''s Son | Oud Berchem | Antwerpen'
+  img/Takeaway/Recipe/wilford-t.jpg:
+    title: 'Wilford-T | Temse | Oost-Vlaanderen'
+    alt: 'Wilford-T | Temse | Oost-Vlaanderen'
+  img/Takeaway/Recipe/22.jpg:
+    title: 'Great Traiteur | Bruxelles | Brabant'
+    alt: 'Great Traiteur | Bruxelles | Brabant'

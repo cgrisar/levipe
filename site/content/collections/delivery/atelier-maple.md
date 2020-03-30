@@ -1,4 +1,4 @@
-title: 'Carte Blanche'
+title: 'Maple @ home'
 restaurant: 'Atelier Maple'
 cover_image:
   - /assets/img/Takeaway/Recipe/atelier-maple-2.jpg
@@ -6,8 +6,9 @@ chef:
   - /assets/img/Takeaway/Chef/tim-lynn.jpg
 description:
   -
-    type: text
-    text: '<p>Geïnspireerd door de verse producten van de markt, maakt Timothy Barren Thynes elke dag opnieuw een heerlijke dagschotel klaar.</p>'
+    type: image
+    image:
+      - /assets/img/Regions/maple-menu.jpg
 address: 'Karel de Preterlei 210'
 zip: '2140'
 commune: Antwerpen

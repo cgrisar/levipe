@@ -1,0 +1,55 @@
+title: Package
+sections:
+  main:
+    display: Main
+    fields:
+      cover_image:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: cover_image
+      description:
+        buttons:
+          - h2
+          - h3
+          - h5
+          - h6
+          - bold
+          - italic
+          - unorderedlist
+          - orderedlist
+          - removeformat
+          - quote
+          - anchor
+          - assets
+        style: sans
+        spellcheck: true
+        allow_source: true
+        allow_internal_links: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: false
+        semantic_elements: false
+        restrict_assets: false
+        type: bard
+        localizable: true
+        display: description
+      price:
+        type: text
+        display: price
+      products:
+        mode: table
+        fields:
+          laradoo:
+            type: laradoo
+            display: laradoo
+          variantid:
+            type: integer
+            display: variantID
+          quantity:
+            type: integer
+            display: quantity
+        type: grid
+        display: Products
+taxonomies: true
