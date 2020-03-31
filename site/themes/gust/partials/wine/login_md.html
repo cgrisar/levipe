@@ -42,7 +42,7 @@
                                             <input  class="h-8 w-full rounded-lg bg-grey-light appearance-none py-2 px-3 text-black focus:outline-none" 
                                                     name="username" 
                                                     type="email" 
-                                                    placeholder="Adresse e-mail"
+                                                    placeholder="{{ trans:login.email }}"
                                                     onkeydown="hideUsernameError()">
                                             {{ if errors }} {{ errors }} {{ if value ~ '/username field field/' }}
                                                 <span id="md_usernameError" class="text-red-dark text-xs mt-1 pl-2">{{trans:login.username_required}}</span>
@@ -53,7 +53,7 @@
                                             <input  class="h-8 w-full rounded-lg bg-grey-light appearance-none py-2 px-3 text-black focus:outline-none" 
                                                     name="password" 
                                                     type="password" 
-                                                    placeholder="Mot de passe"
+                                                    placeholder="{{ trans:login.password }}"
                                                     onkeydown="hidePasswordError()">
                                             {{ if errors }} {{ errors }} {{ if value ~ '/password/' }}
                                                 <span id="md_passwordError" class="text-red-dark text-xs mt-1 pl-2">{{trans:login.password_required}}</span>
