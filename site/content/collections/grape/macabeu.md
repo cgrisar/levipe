@@ -1,6 +1,10 @@
 name: Macabeu
 cover_image:
   - /assets/img/Grapes/Covers/macabeu.jpg
+leave_image:
+  - /assets/img/Grapes/Leaves/macabeu_b-feuille_.jpg
+grape_image:
+  - /assets/img/Grapes/Grapes/datphoto1_47e38573d4554_.jpg
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
