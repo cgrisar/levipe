@@ -15,6 +15,7 @@ description:
       
       De Graves is de belangrijkste productieregio. De clairet - een donker roze wijn - is de stijl van wijn die het meeste wordt geproduceerd. Later verbasteren de Engelsen het woord clairet in claret, al bedoelen zij daar rode wijn mee.&nbsp;</p><p>&nbsp;Aan de handel tussen Bordeaux en Engeland wordt abrupt een halt toegeroepen wanneer de Honderjarige Oorlog begint in 1337. Frankrijk lijft Aquitanië in en de handel wordt hervat via Schotland, Frankrijks nieuwe bondgenoot.
       </p><p><br></p><h5>EEN NIEUWE STREEK EN EEN KLASSEMENT</h5>
+      
   -
     type: image
     image:
@@ -29,6 +30,7 @@ description:
       Bordeaux heeft verschillende gelaten. Je vindt er de linkeroever: Médoc en Graves, de rechteroever met Libournais en de Côtes, de Entre-deux-Mers en de Bordeaux (supérieur) tussen de Dordogne en de Garonne.
       Deze 3 grote regio's behelzen samen 67 appellatifs met een heel kenmerkend terroir. De blauwe druiven zijn dominant (80% van de productie in Bordeaux), waarvan <a href="/nl/grape/merlot">Merlot</a> het leeuwendeel voor zijn rekening neemt, gevolgd door <a href="/nl/grape/cabernet-sauvignon">Cabernet-Sauvignon</a>. De meeste witte wijnen vind je in de Graves en de Entre-deux-Mers. <a href="/nl/grape/sauvignon-blanc">Sauvignon Blanc</a> en Semillon zijn de slokkoppen.
       </p><p><br></p><h5>EEN ONGEËVENAARDE ROEM</h5>
+      
   -
     type: image
     image:
@@ -41,9 +43,6 @@ description:
       <p>De roem van Bordeaux wordt begin 18de eeuw gevestigd. Mijnheer de Pontac past als eerste technieken toe die de kwaliteit van de wijnen merkelijk ging verbeteren. "sulfitage", "soutirage" en "ouillage" waren toen al de moderne methodes om betere wijn langer te bewaren. Deze technieken worden nog steeds toegepast. Mijnheer de Pontac, eigenaar van &nbsp;Château de Pontac (het latere Château de Pez) en Château Haut-Brion is ook de eerste persoon die de wijn verkoopt onder de naam van het kasteel in zijn eigen wijnbar in Londen, de Pontack's Head.&nbsp;</p><p>Heel snel wordt de reputatie van de wijnen gevestigd en kan Mijnheer de Pontac een hogere prijs vragen voor zijn cuvées. Dit is het startschot voor een race naar steeds betere kwaliteit!
       
       Met de roem komt ook het geld en buitenlandse handelaars. Zij komen uit Engeland, Ierland, Schotland en Rusland. Het geld wordt vaak in Châteaux geïnvesteerd die nog steeds de namen van hun oprichters dragen: Brown, Palmer, Kirwan, Prieuré-Lichine, …&nbsp;</p><p>&nbsp;Nu is Bordeaux het derde departement in Frankrijk naar geproduceerde hoeveelheid. Het is wel het eerste departement wat betreft de productie van AOC wijnen.</p>
-page_no_index: false
-no_follow_links: false
-sitemap_priority: '0.5'
-sitemap_changefreq: daily
-twitter_share_setting: inherit
+      
+meta_description: 'Door de eeuwen heen heeft de wijngaard van Bordeaux zijn reputatie kunnen bestendigen. Minder bekend is dat deze regio waar merlot, cabernet en sauvignon blanc domineren ook een verrassende diversiteit aan smaken en stijlen in rode en witte wijnen biedt.'
 id: ff367741-f507-4f20-85f3-60defdc3d611

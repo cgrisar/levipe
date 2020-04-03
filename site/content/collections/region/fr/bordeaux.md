@@ -1,7 +1,7 @@
 description:
   -
     type: text
-    text: '<p>Bordeaux n’est pas le plus ancien vignoble de France, mais il est certainement le plus réputé. Ces débuts datent probablement du début du troisième siècle. On lit le romain Ausone, habitant du Saint-Emilion actuel, le chanter dans ses poèmes. Les bordelais estimaient que les vins du narbonnais et d’Italie étaient trop chers et plantent leurs propres vignes.</p><p>Nous retrouvons probablement les premières vignes juste au Sud de Burdigala. Elles formeront les prémisses des Graves. Ensuite, un vignoble se crée autour de Saint-Emilion. La vigne plantée est probablement le Bicurta. Nous n’en retrouvons plus de traces.<br></p><p><br></p><h5>LA BRITISH CONNECTION</h5>'
+    text: '<p>Bordeaux n’est pas le plus ancien vignoble de France, mais il est certainement le plus réputé. Ces origines datent probablement du début du troisième siècle. On lit le romain Ausone, habitant du Saint-Emilion actuel, le chanter dans ses poèmes. Les bordelais estimaient que les vins du narbonnais et d’Italie étaient trop chers et plantent leurs propres vignes.</p><p>Nous retrouvons probablement les premières vignes juste au Sud de Burdigala. Elles formeront les prémisses des Graves. Ensuite, un vignoble se crée autour de Saint-Emilion. La vigne plantée est probablement le Bicurta. Nous n’en retrouvons plus de traces.<br></p><p><br></p><h5>LA BRITISH CONNECTION</h5>'
   -
     type: image
     image:
@@ -29,9 +29,5 @@ description:
   -
     type: text
     text: '<p>Bordeaux, c’est aussi sa renommée. Elle a commencé au début du 18ième siècle quand on Monsieur Pontac a travaillé à augmenter sensiblement la qualité de ses vins. Sulfitage, soutirage, ouillages étaient utilisés. Ce sont des gestes que tous les producteurs pratiquent de nos jours. Monsieur de Pontac était propriétaire du Château de Pontac (qui deviendra plus tard Château de Pez) et de Château Haut-Brion. Il était le premier à vendre ces vins sous leurs noms dans son bar à vin à Londres, le Pontack’s Head. Très vite la réputation de ces vins s’est installé et Pontac arrivait à demander un prix plus élevé pour ses cuvées. C’est le début de la course à la qualité !</p><p>Avec la renommée de la région venait aussi l’argent et les hommes d’affaires, surtout d’Angleterre, d’Irlande, d’Ecosse et de Russie. L’argent était investi en Châteaux et bon nombre portent le nom de ces marchands-propriétaires : Brown, Palmer, Kirwan, Prieuré-Lichine, … reflettent sont les signes figés dans la pierre de cette époque de négoce.<br></p><p>Aujourd’hui, le bordelais est le troisième département viticole de France après l’Herault et l’Aude. En revanche, c’est la première région pour les vins d’appellation controlée.<br></p>'
-page_no_index: false
-no_follow_links: false
-sitemap_priority: '0.5'
-sitemap_changefreq: daily
-twitter_share_setting: inherit
+meta_description: 'Bordeaux est certainement une des régions viticoles les plus réputées au monde. A travers les siècles, Bordeaux a pu installer sa notoriété et celle de ses grosses pointures. Mais cette région où dominent merlot, cabernet et sauvignon blanc, présente aussi une surprenante variété dans ses vins.'
 id: ff367741-f507-4f20-85f3-60defdc3d611
