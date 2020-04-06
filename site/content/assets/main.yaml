@@ -512,3 +512,6 @@ assets:
   img/Grapes/Leaves/macabeu_b-feuille_.jpg:
     title: 'Feuille de Macabeu'
     alt: 'Feuille de Macabeu'
+  img/Article/asperge.jpg:
+    title: Asperges
+    alt: Asperges

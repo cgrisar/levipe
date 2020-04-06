@@ -8,7 +8,7 @@ sections:
         display: Name
       cover_image:
         container: main
-        folder: img/Regions
+        folder: img/Article
         restrict: false
         type: assets
         display: 'Cover Image'
