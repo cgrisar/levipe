@@ -1,5 +1,5 @@
 <template slot-scope="{pb}">
-    <div class="mr-5 md:mr-12" @click="toggle()">
+    <div class="mr-4 md:mr-12" @click="toggle()">
         <input type="checkbox"
             :id="collection" 
             :value="collection" 
