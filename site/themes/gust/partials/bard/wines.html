@@ -1,0 +1,23 @@
+<div class="bg-grey-light rounded-lg my-8 p-2 lg:p-4">
+    {{ if wines_caption }}
+        <h5 class="uppercase mt-2 mb-4">{{ wines_caption }}</h5>
+    {{ /if }}
+
+    <div class="flex">
+        {{ relate:wines }}
+            <div class="mr-2 md:mr-6">
+                {{ assets:label_image }}
+                    <a href="{{site_url}}wines/{{ slug }}">
+                        <figure class="h-12 w-12 lg:w-24 lg:h-24 bg-cover rounded-full" style="background-image: url({{url}}); background-position: 50% 0px;"></figure>
+                    </a>
+                {{ /assets:label_image }}
+            </div>
+        {{ /relate:wines }}
+    </div>
+
+    {{ if wines_text }}
+        <div class="mt-2 md:mt-4">
+            {{ wines_text }}
+        </div>
+    {{ /if }}
+</div>

@@ -1,0 +1,111 @@
+title: Article
+sections:
+  main:
+    display: Main
+    fields:
+      name:
+        type: text
+        display: Name
+      cover_image:
+        container: main
+        folder: img/Regions
+        restrict: false
+        type: assets
+        display: 'Cover Image'
+      description:
+        buttons:
+          - h2
+          - h3
+          - h5
+          - h6
+          - bold
+          - italic
+          - unorderedlist
+          - orderedlist
+          - removeformat
+          - quote
+          - anchor
+        style: sans
+        spellcheck: true
+        allow_source: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: false
+        semantic_elements: false
+        restrict_assets: true
+        type: bard
+        display: Description
+        sets:
+          image:
+            display: Image
+            fields:
+              image:
+                container: main
+                folder: img/Regions
+                restrict: false
+                type: assets
+                display: image
+              caption:
+                type: text
+                display: caption
+              float:
+                options:
+                  left: left
+                  right: right
+                type: select
+                display: float
+          wines:
+            display: wines
+            fields:
+              wines_caption:
+                type: text
+                display: 'Wines Caption'
+              wines_text:
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                style: sans
+                spellcheck: true
+                allow_source: true
+                allow_internal_links: true
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                semantic_elements: false
+                restrict_assets: false
+                type: bard
+                display: 'Wines Text'
+        localizable: true
+        allow_internal_links: true
+      estate:
+        collection:
+          - estate
+        type: collection
+        display: Estate
+        mode: tags
+      cepages:
+        collection:
+          - grape
+        type: collection
+        display: Cépages
+        mode: tags
+        localizable: true
+      appellations:
+        collection:
+          - region
+        type: collection
+        display: appellations
+        mode: tags
+      wines:
+        collection:
+          - wines
+        type: collection
+        display: wines
+taxonomies: true

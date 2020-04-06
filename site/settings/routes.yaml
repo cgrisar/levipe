@@ -40,4 +40,8 @@ collections:
     en: '/delivery/{slug}'
     fr: '/delivery/{slug}'
     nl: '/delivery/{slug}'
+  article:
+    en: '/article/{slug}'
+    fr: '/article/{slug}'
+    nl: '/article/{slug}'
 taxonomies: '{  }'
