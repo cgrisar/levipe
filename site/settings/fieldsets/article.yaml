@@ -12,6 +12,10 @@ sections:
         restrict: false
         type: assets
         display: 'Cover Image'
+      video:
+        type: video
+        localizable: true
+        display: video
       description:
         buttons:
           - h2
