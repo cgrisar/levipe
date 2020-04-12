@@ -29,6 +29,7 @@ sections:
           - removeformat
           - quote
           - anchor
+          - code
         style: sans
         spellcheck: true
         allow_source: true
