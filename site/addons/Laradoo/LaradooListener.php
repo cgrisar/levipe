@@ -3,9 +3,11 @@
 namespace Statamic\Addons\Laradoo;
 
 use Edujugon\Laradoo\Odoo;
+use Illuminate\Http\Response;
 use Statamic\Data\Users\User;
 use Statamic\Extend\Listener;
 use Statamic\Events\Data\UserSaved;
+use SoapClient;
 
 class LaradooListener extends Listener
 {
@@ -15,7 +17,7 @@ class LaradooListener extends Listener
      * @var array
      */
     public $events = [
-        'user.registered' => 'createUserInOdoo'
+        'user.registered' => 'createUserInOdoo',
     ];
 
     private function connectToOdoo() {
@@ -31,7 +33,6 @@ class LaradooListener extends Listener
 
     }
 
-
     public function createUserInOdoo(User $user)
     {
         $odoo = $this->connectToOdoo();
@@ -40,11 +41,12 @@ class LaradooListener extends Listener
                     ->where('name', '=', $user->get('name'))
                     ->search('res.partner');
         
+        /**
+        * if the registering user exists in Odoo, we'll import its data into Statamic.
+        * We know there is one or more if count($ids) > 0
+        */
         if(count($ids))
         {
-            /**
-             * if the registering user exists in Odoo, we'll import its data into Statamic
-             */
             $odooUser = $odoo->where('id', '=', $ids->first())
                             ->limit(1)
                             ->fields('street', 'zip', 'city', 'vat', 'lang', 'category_id')
@@ -61,20 +63,23 @@ class LaradooListener extends Listener
             return;
         }
 
-        $user->set('odoo_id', $odoo->create('res.partner', [  
-                                                'name' => $user->get('name'),
-                                                'street' => $user->get('address'),
-                                                'zip' => $user->get('zip'),
-                                                'city' => $user->get('city'),
-                                                'vat' => $user->get('vat'),
-                                                'property_account_position_id' => 4,
-                                                'email' => $user->get('email'),
-                                                'propery_product_pricelist' => 1,
-                                                'category_id' => array(array(6, 0, array(42))),
-                                                'lang' => app()->getLocale() . '_' . strtoupper(app()->getLocale())
-                                                ] 
-                                            )
+        $odooId = $odoo->create('res.partner', [  
+                            'name' => $user->get('name'),
+                            'street' => $user->get('address'),
+                            'zip' => $user->get('zip'),
+                            'city' => $user->get('city'),
+                            'vat' => '',
+                            'property_account_position_id' => 4,
+                            'email' => $user->get('email'),
+                            'propery_product_pricelist' => 1,
+                            'category_id' => array(array(6, 0, array(42))),
+                            'lang' => app()->getLocale() . '_' . strtoupper(app()->getLocale())
+                            ] 
                     );
-        $user->save();
+
+        if (is_numeric($odooId)) {
+            $user->set('odoo_id', $odooId);
+            $user->save();
+        };
     }
 }

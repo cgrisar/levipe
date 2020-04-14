@@ -129,9 +129,12 @@
             </div>
             <div class="w-2/5">
                 <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
-                        name="vat" 
+                        name="vat"
+                        id="vat"
                         type="text"
-                        :value="vat" />
+                        placeholder="BE0123456789"
+                        v-model="vatNumber"
+                        @blur="checkVAT" />
             </div>
         </div>
 
@@ -166,7 +169,9 @@ export default {
     data() {
         return {
             store,
-            order: {}
+            order: {},
+            vatOK: true,
+            vatNumber: this.vat
         }
     },
 
@@ -205,6 +210,27 @@ export default {
             this.$emit('chargesChanged');
         },
 
+        checkVAT() {
+
+            if (this.vatNumber.length == 0) {
+                return;
+            }
+            
+            var regex = /[.,\s]/g;
+            this.vatNumber = this.vatNumber.replace(regex,'');
+
+            var orderData = new FormData();
+            orderData.set('vat', this.vatNumber);
+
+            this.axios({
+                method: 'POST',
+                url: '/!/Laradoo/checkVIES',
+                data: orderData,
+                config: { headers: {"Content-Type": "multipart/form-data"}},
+            }).then(result => 
+                    this.vatNumber = result.data ? this.vatNumber : ''
+            );
+        },
 
         createOrder() {
             var orderData = new FormData();

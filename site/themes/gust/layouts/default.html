@@ -10,6 +10,7 @@
             <title>{{ trans:collection.homepage }} | les vins personnalisés</title>
             <meta name="title" content="les vins personnalisés">
         {{ /if }}
+
         {{ if collection == 'wines' }}
             <title>{{ relate:estate }} {{ title }} - {{ /relate:estate }} {{ title or seo:seo_title }} | les vins personnalisés</title>
             <meta name="title" content="{{ relate:estate }} {{ title }} - {{ /relate:estate }} {{ title or seo:seo_title }} | les vins personnalisés">
@@ -17,14 +18,18 @@
             <title>{{ title }} - {{ trans:collection.{{ collection }} }} | les vins personnalisés </title>
             <meta name="title" content="{{ title or seo:seo_title }} | les vins personnalisés">
         {{ /if }}
+        
+        <!-- description and thumbnail, gets loaded by Google -->
         <meta name="description" content="{{ meta_description or seo:seo_description }}">
-        <meta name="thumbnail" content="https://levipe.be{{ assets:cover_image }}{{ url }}{{ /assets:cover_image }}"
+        <meta name="thumbnail" content="https://levipe.be{{ assets:cover_image }}{{ url }}{{ /assets:cover_image }}">   
 
+        <!-- language -->
+        <link rel="alternate" hreflang="x-default" href="https://www.levipe.be{{ url | substr:3 }}">
         <link rel="alternate" hreflang="{{ locale }}" href="{{ permalink }}">
         {{ if locale == "fr" }}
             <link rel="alternate"  hreflang="nl" href="{{ permalink replace='fr|nl' }}">
          {{ else }}
-            <link rel="alternate"  hreflang="fr" href="{{ permalink replace='{{ locale:key }}|fr' }}">
+            <link rel="alternate"  hreflang="fr" href="{{ permalink replace='{{ locale }}|fr' }}">
         {{ /if }}
 
         {{ aardvark-seo:head }}

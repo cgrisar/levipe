@@ -518,3 +518,9 @@ assets:
   img/Wines/Cover/antan.jpg:
     title: 'Degré d''Antan | Domaine La Colombette | Languedoc'
     alt: 'Degré d''Antan | Domaine La Colombette | Languedoc'
+  img/Grapes/Covers/lledoner_pelut.jpg:
+    title: 'Lledoner Pelut'
+    alt: 'Lledoner Pelut'
+  img/Grapes/Covers/tempranillo.jpg:
+    title: Tempranillo
+    alt: Tempranillo

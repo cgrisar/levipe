@@ -28,9 +28,12 @@ class LaradooController extends Controller
     private function connectToOdoo()
     {
         $odoo = new Odoo;
-        try {
+        try 
+        {
             $odoo->connect( env('ODOO_DB'), env('ODOO_LOGIN'), env('ODOO_PASSWORD') );
-        } catch(Exception $e) {
+        } 
+        catch(Exception $e) 
+        {
             echo 'No response';
         };
 
@@ -38,21 +41,41 @@ class LaradooController extends Controller
 
     }
 
+    /**
+     * The function returns TRUE or FALSE depending on VAT being or not in the European database
+     *
+     * @return boolean
+     */
+    public function postcheckVIES()
+    {
+        $vat = request('vat');
+
+        try 
+        {
+            $client = new \SoapClient('http://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl');
+            $returnVat = $client->checkVat(array('countryCode' => substr($vat,0, 2), 'vatNumber' => substr($vat, 2)));
+            return $returnVat->valid;
+        }
+        catch(Exception $e)
+        {
+            return false;
+        }
+    }
+
+    /*
+    * The cart array needs to be transformed into another array
+    * A valid order line needs
+    * - productid
+    * - name
+    * - product unit of measure
+    * - quantity
+    * - price_unit
+    *
+    * The order line is then transformed to a (0,0, orderline) and added to an array
+    * This techniques allows to create an order with just 1 call to ODOO.
+    */
     private function createOrderLines($cartLines)
     {
-        /*
-        * The cart array needs to be transformed into another array
-        * A valid order line needs
-        * - productid
-        * - name
-        * - product unit of measure
-        * - quantity
-        * - price_unit
-        *
-        * The order line is then transformed to a (0,0, orderline) and added to an array
-        * This techniques allows to create an order with just 1 call to ODOO.
-        */
-
         $orderLines = [];
         
         foreach($cartLines as $cartLine) {
@@ -61,7 +84,7 @@ class LaradooController extends Controller
             $orderLine['product_id'] = $cartLine->variantId + 0;
             $orderLine['name'] = $cartLine->wine . ' ' . $cartLine->vintage . ' ' . $cartLine->volume;
             $orderLine['product_uom_qty'] = $cartLine->ordered;
-            $orderLine['price_unit'] = str_replace(',', '.', $cartLine->price) + 0;
+            $orderLine['price_unit'] = str_replace(',', '.', $cartLine->price) + 0;@
             $orderLines[] = array(0, 0, $orderLine);
 
             // any free articles?
@@ -79,15 +102,15 @@ class LaradooController extends Controller
     private function updateInvoiceAddress($customer)
     {
 
-        // update the contact information with the customer info
+        // update the contact information with the new customer info
         $this->odoo->where('id', $customer['odooId'])
                 ->update('res.partner',
                     [
                         'street' => $customer['invoiceStreet'], 
                         'zip' => $customer['invoiceZip'],
                         'city' => $customer['invoiceCity'],
-                        'vat' => $customer['invoiceVAT'],
-                    ]);
+                        'vat' => trimVAT($customer['invoiceVAT']),
+                    ]);            
 
         // update the user information in Statamic
         $user = UserAPI::getCurrent();

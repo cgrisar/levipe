@@ -15,6 +15,10 @@ appellations:
   - 881ccb8f-1c4f-4893-9b95-1776f3141bfc
   - 052e4118-f910-4b93-ba7a-15299e7dc6d4
 odoo: PLRL-BOUR
+variants:
+  -
+    millesime: '2017'
+    active: true
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
