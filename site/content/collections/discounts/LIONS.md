@@ -2,7 +2,7 @@ active: true
 coupon: true
 last: false
 start_date: '2018-11-23'
-end_date: '2019-12-31'
+end_date: '2020-12-31'
 discount_type: bogof
 bo: '5'
 gof: '1'
