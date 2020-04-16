@@ -54,11 +54,11 @@ class LaradooController extends Controller
         {
             $client = new \SoapClient('http://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl');
             $returnVat = $client->checkVat(array('countryCode' => substr($vat,0, 2), 'vatNumber' => substr($vat, 2)));
-            return response()->json(['vatValid' => $returnVat->valid]);
+            return $returnVat->valid;
         }
         catch(Exception $e)
         {
-            return response()->json(['vatValid' => false]);
+            return false;
         }
     }
 
