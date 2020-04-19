@@ -129,11 +129,13 @@
             </div>
             <div class="w-2/5">
                 <input class="bg-white appearance-none w-full rounded-lg py-2 px-4 text-black" 
+                        :class="{'bg-red-lighter text-red-darker': vatNOK}"
                         name="vat"
                         id="vat"
                         type="text"
                         placeholder="BE0123456789"
                         v-model="vatNumber"
+                        @focus= "vatNOK = false;"
                         @blur="checkVAT" />
             </div>
         </div>
@@ -170,7 +172,7 @@ export default {
         return {
             store,
             order: {},
-            vatOK: true,
+            vatNOK: false,
             vatNumber: this.vat
         }
     },
@@ -227,9 +229,7 @@ export default {
                 url: '/!/Laradoo/checkVIES',
                 data: orderData,
                 config: { headers: {"Content-Type": "multipart/form-data"}},
-            }).then(result => 
-                    this.vatNumber = result.data ? this.vatNumber : ''
-            );
+            }).then(result => this.vatNOK = !result.data.vatValid);
         },
 
         createOrder() {
