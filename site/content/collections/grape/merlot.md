@@ -5,7 +5,7 @@ leave_image:
   - /assets/img/Grapes/Leaves/merlot_leaf.JPG
 grape_image:
   - /assets/img/Grapes/Grapes/merlot_n-grappe_.jpg
-description: '<h5><br></h5>'
+description: '<h2 class="text-base md:text-lg"><br></h2>'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
