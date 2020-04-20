@@ -524,3 +524,15 @@ assets:
   img/Grapes/Covers/tempranillo.jpg:
     title: Tempranillo
     alt: Tempranillo
+  img/Article/edith-piaf.jpeg:
+    title: 'Edith Piaf'
+    alt: 'Edith Piaf'
+  img/Regions/edith-piaf-et-yves-montand.jpg:
+    title: 'Edith Piaf et Yves Montand'
+    alt: 'Edith Piaf et Yves Montand'
+  img/Regions/cerdan-piaf.jpg:
+    title: 'Marcel Cerdan et Edith Piaf'
+    alt: 'Marcel Cerdan et Edith Piaf'
+  img/Regions/jean-cocteau-et-edith-piaf.jpg:
+    title: 'Jean Cocteau et Edith Piaf'
+    alt: 'Jean Cocteau et Edith Piaf'
