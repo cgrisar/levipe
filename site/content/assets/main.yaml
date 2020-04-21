@@ -536,3 +536,6 @@ assets:
   img/Regions/jean-cocteau-et-edith-piaf.jpg:
     title: 'Jean Cocteau et Edith Piaf'
     alt: 'Jean Cocteau et Edith Piaf'
+  img/Wines/Cover/vermentitude.png:
+    title: 'Vementitude | Domaine d''Eole | Vin de Pays des Alpilles | Provence'
+    alt: 'Vementitude | Domaine d''Eole | Vin de Pays des Alpilles | Provence'
