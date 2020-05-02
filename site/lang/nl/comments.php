@@ -4,5 +4,6 @@ return [
     'mycomment' => 'Mijn Ervaring',
     'comment' => 'Ervaring',
     'comments' => 'Ervaringen',
-    'submit' => 'Delen'
+    'submit' => 'Delen',
+    'article' => 'Nieuws'
 ];

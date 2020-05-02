@@ -4,5 +4,6 @@ return [
     'mycomment' => 'Mon commentaire',
     'comment' => 'Commentaire',
     'comments' => 'Commentaires',
-    'submit' => 'Partager'
+    'submit' => 'Partager',
+    'article' => 'Nouvelles'
 ];

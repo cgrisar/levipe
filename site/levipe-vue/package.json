@@ -16,7 +16,8 @@
     "vue": "^2.5.11",
     "vue-analytics": "^5.22.1",
     "vue-multiselect": "^2.1.6",
-    "vue-star-rating": "^1.6.1"
+    "vue-star-rating": "^1.6.1",
+    "vueperslides": "^2.8.3"
   },
   "browserslist": [
     "> 1%",
@@ -34,7 +35,7 @@
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
     "laravel-mix": "^4.0.15",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.14.0",
     "resolve-url-loader": "2.3.1",
     "sass-loader": "^6.0.6",
     "sweetalert": "^2.1.2",

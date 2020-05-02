@@ -113,4 +113,26 @@ sections:
           - wines
         type: collection
         display: wines
+  taxonomies:
+    display: Taxonomies
+    fields:
+      g:
+        taxonomy: g
+        mode: tags
+        type: taxonomy
+        display: grapes
+      r:
+        taxonomy: r
+        mode: tags
+        type: taxonomy
+        display: Regions
+      e:
+        taxonomy: e
+        type: taxonomy
+        display: Estates
+      w:
+        taxonomy: w
+        mode: tags
+        type: taxonomy
+        display: Wines
 taxonomies: true

@@ -100,7 +100,6 @@ export default {
                                 config: { headers: {'Content-Type': 'multipart/form-data' }},
                                 data: { payment_intent: result.paymentIntent.id }
                             }).then(result => {
-                                console.log(result);
                                 if(result.data.error) {
                                     this.error = true;
                                     this.errorMessage = result.data.error.message;

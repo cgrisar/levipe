@@ -7,7 +7,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import InstantSearch from 'vue-instantsearch'
 import StarRating from 'vue-star-rating'
-import VueAnalytics from 'vue-analytics';
+import VueAnalytics from 'vue-analytics'
 
 import lvpVariant from './components/lvp-variant.vue'
 import lvpNoVariant from './components/lvp-novariant.vue'
@@ -18,6 +18,7 @@ import pb from './components/miscellaneous/pb.vue'
 import pbs from './components/miscellaneous/pbs.vue'
 import lightbox from './components/miscellaneous/lightbox.vue'
 import wineandfood from './components/miscellaneous/wineandfood.vue'
+import carousel from './components/miscellaneous/carousel.vue'
 
 Vue.use(VModal);
 Vue.use(VueAxios, axios)
@@ -39,7 +40,8 @@ new Vue({
                     lvpNoVariant, 
                     lvpCart, 
                     lvpMinicart, 
-                    StarRating, 
+                    StarRating,
+                    carousel,
                     autocompleteSearch,
                     lightbox,
                     wineandfood,
