@@ -3,7 +3,7 @@
         <transition-group name='fade' tag='div' class="relative object-fit:cover w-full bg-cover">
             <div v-for="i in [currentIndex]" :key='i'>
                 <a :href="slides[slideIndex].url">
-                    <img  :src="slides[slideIndex].cover_image[0]" class="md:rounded-lg w-full h-36 md:h-48" />
+                    <img  :src="slides[slideIndex].cover_image[0].replace('/nl/', '/').replace('/fr/', '/')" class="md:rounded-lg w-full h-36 md:h-48" />
                     <div class="rounded-lg absolute pin-t w-full h-48" style="background:rgba(0, 0, 0, .25)">
                         <h6 class="text-sm md:text-sm opacity-100 font-bold text-white text-center absolute pin-b pb-2 pl-4">{{ slides[slideIndex].title }}</h6>
                     </div>
