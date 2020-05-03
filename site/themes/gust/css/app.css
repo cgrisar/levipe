@@ -2142,6 +2142,10 @@ input[type=checkbox]:checked + label div {
   height: 4rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-24 {
   height: 6rem;
 }
@@ -2168,6 +2172,14 @@ input[type=checkbox]:checked + label div {
 
 .h-64 {
   height: 16rem;
+}
+
+.h-120 {
+  height: 30rem;
+}
+
+.h-144 {
+  height: 36rem;
 }
 
 .h-auto {
@@ -5418,6 +5430,10 @@ input[type=checkbox]:checked + label div {
     height: 4rem;
   }
 
+  .sm\:h-20 {
+    height: 5rem;
+  }
+
   .sm\:h-24 {
     height: 6rem;
   }
@@ -5444,6 +5460,14 @@ input[type=checkbox]:checked + label div {
 
   .sm\:h-64 {
     height: 16rem;
+  }
+
+  .sm\:h-120 {
+    height: 30rem;
+  }
+
+  .sm\:h-144 {
+    height: 36rem;
   }
 
   .sm\:h-auto {
@@ -8687,6 +8711,10 @@ input[type=checkbox]:checked + label div {
     height: 4rem;
   }
 
+  .md\:h-20 {
+    height: 5rem;
+  }
+
   .md\:h-24 {
     height: 6rem;
   }
@@ -8713,6 +8741,14 @@ input[type=checkbox]:checked + label div {
 
   .md\:h-64 {
     height: 16rem;
+  }
+
+  .md\:h-120 {
+    height: 30rem;
+  }
+
+  .md\:h-144 {
+    height: 36rem;
   }
 
   .md\:h-auto {
@@ -11956,6 +11992,10 @@ input[type=checkbox]:checked + label div {
     height: 4rem;
   }
 
+  .lg\:h-20 {
+    height: 5rem;
+  }
+
   .lg\:h-24 {
     height: 6rem;
   }
@@ -11982,6 +12022,14 @@ input[type=checkbox]:checked + label div {
 
   .lg\:h-64 {
     height: 16rem;
+  }
+
+  .lg\:h-120 {
+    height: 30rem;
+  }
+
+  .lg\:h-144 {
+    height: 36rem;
   }
 
   .lg\:h-auto {
@@ -15225,6 +15273,10 @@ input[type=checkbox]:checked + label div {
     height: 4rem;
   }
 
+  .xl\:h-20 {
+    height: 5rem;
+  }
+
   .xl\:h-24 {
     height: 6rem;
   }
@@ -15251,6 +15303,14 @@ input[type=checkbox]:checked + label div {
 
   .xl\:h-64 {
     height: 16rem;
+  }
+
+  .xl\:h-120 {
+    height: 30rem;
+  }
+
+  .xl\:h-144 {
+    height: 36rem;
   }
 
   .xl\:h-auto {

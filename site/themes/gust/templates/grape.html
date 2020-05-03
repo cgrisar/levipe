@@ -1,13 +1,12 @@
 <section>
 
     <div class="flex container mx-auto flex-col">
-        {{ assets:cover_image }}
-            <div style="background-image:url({{ url }}); height: 600px;" class="object-fit:cover w-full bg-cover mb-8 relative">
-            <img src="{{ url }}" class="hidden" alt="{{ page:title }}">
-        {{ /assets:cover_image }}
-                <div class="bg-black opacity-25 absolute w-full h-full"></div>
-                <div style="padding-top:20rem;">
-                    <h1 class="text-3xl lg:text-5xl font-bold text-white relative text-center">{{ name }} <span class="hidden">{{ trans:collection.grape}}</span></h1>
+            <div class="mb-8 relative h-48 md:h-120 lg:h-144">
+                {{ assets:cover_image }}
+                    <img src="{{ url }}" class="h-full w-full" style="object-fit:cover" alt="{{ page:title }}">
+                {{ /assets:cover_image }}
+                <div class="absolute pin-t w-full h-full" style="background-color:rgba(0,0,0,.25)">
+                    <h1 class="text-3xl lg:text-5xl font-bold text-white relative text-center" style="top:45%">{{ name }} <span class="hidden">{{ trans:collection.grape}}</span></h1>
                 </div>
             </div>
 
