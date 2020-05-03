@@ -3,7 +3,7 @@
         <h5 v-if="title" class="text-right uppercase mb-4">{{ title }}</h5>
         <div>
             <transition-group name="fade" tag="div" class="static md:relative">
-                <div v-for="i in [currentIndex]" :key="i" class="relative h-36 md:h-48">
+                <div v-for="i in [currentIndex]" :key="i" class="absolute w-full h-36 md:h-48">
                     <a :href="slides[slideIndex].url">
                         <img  :src="slides[slideIndex].cover_image[0].replace('/nl/', '/').replace('/fr/', '/')" class="md:rounded-lg w-full h-full"  style="object-fit:cover" />
                         <div class="md:rounded-lg absolute pin-t w-full h-full" style="background:rgba(0, 0, 0, .25)">
@@ -71,7 +71,6 @@
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.9s ease;
-  position: absolute;
   width:100%;
   opacity: 1;
 }
