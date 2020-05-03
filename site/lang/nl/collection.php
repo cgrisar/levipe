@@ -6,6 +6,7 @@ return [
     'grape' => ' Druivensoort',
     'region' => ' Streek of streeknaam',
     'article' => ' Informatie',
+    'wines' => ' Wijnen',
     'delivery' => ' T & D',
     'estate_pb' => 'Domein',
     'wines_pb' => 'Wijnen',

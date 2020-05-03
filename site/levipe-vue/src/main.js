@@ -19,6 +19,7 @@ import pbs from './components/miscellaneous/pbs.vue'
 import lightbox from './components/miscellaneous/lightbox.vue'
 import wineandfood from './components/miscellaneous/wineandfood.vue'
 import carousel from './components/miscellaneous/carousel.vue'
+import smalltabs from './components/miscellaneous/smalltabs.vue'
 
 Vue.use(VModal);
 Vue.use(VueAxios, axios)
@@ -42,6 +43,7 @@ new Vue({
                     lvpMinicart, 
                     StarRating,
                     carousel,
+                    smalltabs,
                     autocompleteSearch,
                     lightbox,
                     wineandfood,

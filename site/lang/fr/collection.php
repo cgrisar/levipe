@@ -5,6 +5,7 @@ return [
     'estate' => ' Domaine viticole',
     'grape' => ' Cépage',
     'region' => ' Région',
+    'wines' => ' Vins',
     'article' => ' Information',
     'delivery' => ' T & D',
     'estate_pb' => 'Domaine',

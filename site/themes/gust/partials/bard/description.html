@@ -1,0 +1,15 @@
+{{ description }}
+                    
+    {{ if type == "text" }}
+        {{ text }}
+    {{ /if }}
+
+    {{ if type == "image" }}
+        {{ partial:bard/image }}
+    {{ /if }}
+
+    {{ if type == "wines" }}
+        {{ partial:bard/wines }}
+    {{ /if }}
+    
+{{ /description }}

@@ -1,27 +1,30 @@
 <template>
-    <div class="relative h-36 md:h-48">
-        <transition-group name='fade' tag='div' class="relative object-fit:cover w-full bg-cover">
-            <div v-for="i in [currentIndex]" :key='i'>
-                <a :href="slides[slideIndex].url">
-                    <img  :src="slides[slideIndex].cover_image[0].replace('/nl/', '/').replace('/fr/', '/')" class="md:rounded-lg w-full h-36 md:h-48" />
-                    <div class="rounded-lg absolute pin-t w-full h-48" style="background:rgba(0, 0, 0, .25)">
-                        <h6 class="text-sm md:text-sm opacity-100 font-bold text-white text-center absolute pin-b pb-2 pl-4">{{ slides[slideIndex].title }}</h6>
-                    </div>
-                </a>
-            </div>
-        </transition-group>
-        <button @click="prev">
-            <i class="fas fa-2x fa-chevron-circle-left text-white opacity-75 hover:opacity-100 absolute pin-l ml-3" style="top: 45%;" data-fa-transform="shrink-5"></i>
-        </button>
-        <button @click="next">
-            <i class="fas fa-2x fa-chevron-circle-right text-white opacity-75 hover:opacity-100 absolute pin-r mr-3" style="top: 45%;" data-fa-transform="shrink-5"></i>
-        </button>
+    <div v-if="this.slides.length > 0">
+        <h5 v-if="title" class="text-right uppercase mb-4">{{ title }}</h5>
+        <div>
+            <transition-group name="fade" tag="div" class="static md:relative">
+                <div v-for="i in [currentIndex]" :key="i" class="relative h-36 md:h-48">
+                    <a :href="slides[slideIndex].url">
+                        <img  :src="slides[slideIndex].cover_image[0].replace('/nl/', '/').replace('/fr/', '/')" class="md:rounded-lg w-full h-full"  style="object-fit:cover" />
+                        <div class="md:rounded-lg absolute pin-t w-full h-full" style="background:rgba(0, 0, 0, .25)">
+                            <h6 class="text-sm md:text-sm opacity-100 font-bold text-white text-center absolute pin-b pb-2 pl-4">{{ slides[slideIndex].title }}</h6>
+                        </div>
+                    </a>
+                    <button @click="prev">
+                        <i class="fas fa-2x fa-chevron-circle-left text-white opacity-75 hover:opacity-100 absolute pin-l ml-3" style="top: 45%;" data-fa-transform="shrink-5"></i>
+                    </button>
+                    <button @click="next">
+                        <i class="fas fa-2x fa-chevron-circle-right text-white opacity-75 hover:opacity-100 absolute pin-r mr-3" style="top: 45%;" data-fa-transform="shrink-5"></i>
+                    </button>
+                </div>
+            </transition-group>
+        </div>
     </div>
 </template>
 
 <script>
     export default {
-        props:[ 'collection', 'taxonomy', 'language' ],
+        props:[ 'collection', 'taxonomy', 'language', 'title' ],
 
         data() {
             return {
@@ -34,8 +37,10 @@
         mounted() {
             let url = '/!/Fetch/collection/' + this.collection + '?taxonomy=' + this.taxonomy + '&locale=' + this.language;
             this.axios.get(url)
-                .then(response => { this.slides = response.data.data });
-            this.startSlide();
+                .then(response => { 
+                        this.slides = response.data.data 
+                        if(this.slides.length >0) this.startSlide()
+                });
         },
     
         methods: {
@@ -65,13 +70,15 @@
 <style>
 .fade-enter-active,
 .fade-leave-active {
-  transition: 0.9s ease;
+  transition: all 0.9s ease;
   position: absolute;
+  width:100%;
   opacity: 1;
 }
 .fade-enter,
 .fade-leave-to {
   visibility: hidden;
+  width:100%;
   opacity: 0;
 }
 

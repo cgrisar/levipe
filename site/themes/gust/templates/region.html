@@ -28,29 +28,13 @@
 
                 </div>
 
-                {{ collection:article taxonomy:a="{{page.title | slugify}}" }}
-                <div>
-                    {{ title }}
-                </div>
-                {{ /collection:article }}
-
             </div>
 
             <hr class="border-b border-red-darker md:hidden">
 
             <div class="px-2 sm:w-1/2 md:w-2/3 lg:w-3/4 lg:ml-6 mb-6 md:text-base md:leading-normal">
 
-                {{ description }}
-                    
-                    {{ if type == "text" }}
-                        {{ text }}
-                    {{ /if }}
-
-                    {{ if type == "image" }}
-                        {{ partial:bard/image }}
-                    {{ /if }}
-
-                {{ /description }}
+                {{ partial:bard/description }}
 
             </div>
         </div>
