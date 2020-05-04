@@ -6,10 +6,19 @@
             {{ /if }}
         </div>
     {{ else }}
-        <div class="relative inline float-right ml-6">
-            <img class="md:max-w-sm" src="{{ image | url }}" alt="{{ caption }}" />
-            {{ if caption }}
-                <p class="absolute -mr-4 bg-red-darker text-white font-semibold p-2 text-right" style="bottom:2rem; width:10rem;right:-1rem">{{ caption }}</p>
-            {{ /if }}
-        </div>
+        {{ if float == "right" }}
+            <div class="relative inline float-right ml-6">
+                <img class="md:max-w-sm" src="{{ image | url }}" alt="{{ caption }}" />
+                {{ if caption }}
+                    <p class="absolute -mr-4 bg-red-darker text-white font-semibold p-2 text-right" style="bottom:2rem; width:10rem;right:-1rem">{{ caption }}</p>
+                {{ /if }}
+            </div>
+        {{ else }}
+            <div class="relative inline float-right mx-auto">
+                <img src="{{ image | url }}" alt="{{ caption }}" />
+                {{ if caption }}
+                    <p class="absolute -mr-4 bg-red-darker text-white font-semibold p-2 text-right" style="bottom:2rem; width:10rem;right:-1rem">{{ caption }}</p>
+                {{ /if }}
+            </div>
+        {{ /if }}
     {{ /if }}

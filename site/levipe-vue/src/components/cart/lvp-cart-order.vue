@@ -3,15 +3,15 @@
     <h4 class="text-black -mb-1">{{ label('order') }}</h4>
     <span class="italic block text-xs text-red mb-4">{{ label('mandatory') }}</span>
     <div id="tabs" class="flex flex-row mb-4">
-        <div class="w-1/3 md:w-1/5 text-xs text-center text-black bg-grey-light font-semibold uppercase rounded-full mr-4 text-white bg-red-darker" 
+        <div class="cursor-pointer w-1/3 md:w-1/5 text-xs text-center text-black bg-grey-light font-semibold uppercase rounded-full mr-4 text-white bg-red-darker" 
                 style="height:1.45rem;"
                 id="delivery"
                 onclick="showTab(this)">{{ label('delivery') }}</div>
-        <div class="w-1/3 md:w-1/5 text-xs text-center text-black bg-grey-light font-semibold uppercase rounded-full mr-4" 
+        <div class="cursor-pointer w-1/3 md:w-1/5 text-xs text-center text-black bg-grey-light font-semibold uppercase rounded-full mr-4" 
                 style="height:1.45rem;"
                 id="invoice"
                 onclick="showTab(this)">{{ label('invoice') }}</div>
-        <div class="w-1/3 md:w-1/5 text-xs text-center text-black bg-grey-light font-semibold uppercase rounded-full" 
+        <div class="cursor-pointer w-1/3 md:w-1/5 text-xs text-center text-black bg-grey-light font-semibold uppercase rounded-full" 
                 style="height:1.45rem;"                
                 id="order"
                 onclick="showTab(this)">{{ label('payment') }}</div>

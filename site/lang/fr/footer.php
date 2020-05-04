@@ -5,6 +5,8 @@ return [
     'cgv' => 'Conditions générales',
     'privacy' => 'Confidentialité',
     'region' => 'Régions Vedette',
+    'buywine' => 'Acheter du vin',
+    'buywineslugify' => 'acheter-du-vin',
     'region1' => 'Bordeaux',
     'region2' => 'Loire',
     'region3' => 'Bourgogne',

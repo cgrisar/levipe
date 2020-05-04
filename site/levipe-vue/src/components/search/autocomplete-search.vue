@@ -1,6 +1,6 @@
 <template>
 <div class="mr-2 md:mr-4">
-    <a class="text-black no-underline"
+    <a class="cursor-pointer text-black no-underline"
         @click="$modal.show('search-modal')"
     >
         <i class="spk-icon-search text-2xl"></i>

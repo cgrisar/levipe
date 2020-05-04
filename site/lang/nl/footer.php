@@ -5,6 +5,8 @@ return [
     'cgv' => 'Algemene voorwaarden',
     'privacy' => 'Privacy',
     'region' => 'Uitgelichte Streken',
+    'buywine' => 'Wijn kopen',
+    'buywineslugify' => 'wijn-kopen',
     'region1' => 'Bordeaux',
     'region2' => 'Loire',
     'region3' => 'Bourgogne',
