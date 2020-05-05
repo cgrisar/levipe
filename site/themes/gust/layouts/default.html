@@ -29,13 +29,14 @@
         <meta name="thumbnail" content="https://levipe.be{{ assets:cover_image }}{{ url }}{{ /assets:cover_image }}">   
 
         <!-- language -->
-        <link rel="alternate" hreflang="x-default" href="https://www.levipe.be{{ url | substr:3 }}">
-        <link rel="alternate" hreflang="{{ locale }}" href="{{ permalink }}">
         {{ if locale == "fr" }}
+            <link rel="alternate" hreflang="x-default" href="{{ permalink replace='/fr/|/' }}">
             <link rel="alternate"  hreflang="nl" href="{{ permalink replace='fr|nl' }}">
          {{ else }}
+            <link rel="alternate" hreflang="x-default" href="{{ permalink replace='/nl/|/' }}">
             <link rel="alternate"  hreflang="fr" href="{{ permalink replace='{{ locale }}|fr' }}">
         {{ /if }}
+        <link rel="alternate" hreflang="{{ locale }}" href="{{ permalink }}">
 
         {{ aardvark-seo:head }}
 
