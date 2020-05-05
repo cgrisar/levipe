@@ -1,3 +1,4 @@
+title: 'Qui sommes nous ?'
 description:
   -
     type: text

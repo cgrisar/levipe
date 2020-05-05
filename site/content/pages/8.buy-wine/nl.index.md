@@ -1,7 +1,7 @@
 description:
   -
     type: text
-    text: '<h1 class="text-center">Wijn online kopen bij les vins personnalisés</h1><p><br><br></p><p>Wijn kopen op Internet aan de beste prijs kwaliteit verhouding is kinderspel geworden dankzij deze website. De eenvoud in gebruik vloeit uit de talloze opmerkingen die we van jullie krijgen. Ze helpen ons helpen echt om deze website continu te verbeteren.</p><p>De gebruikservaring staat centraal in het ontwerp van deze website. Graag helpen wij u hierbij met 2 bijzonder performante werkmiddelen: onze zoekmachine is het neusje van de zalm en dankzij onze matchmaker tussen spijs en drank zal u steeds een gepaste wijn vinden om uw heerlijke gerechten te vergezellen.</p><p><br></p><h2>Hoe zoekt u een wijn op ?</h2><p>Rechtsboven de werkbalk op elke pagina vindt u een vergrootglas.</p>'
+    text: '<h1>Wijn online kopen bij les vins personnalisés</h1><p><br><br></p><p>Wijn kopen op Internet aan de beste prijs kwaliteit verhouding is kinderspel geworden dankzij deze website. De eenvoud in gebruik vloeit uit de talloze opmerkingen die we van jullie krijgen. Ze helpen ons helpen echt om deze website continu te verbeteren.</p><p>De gebruikservaring staat centraal in het ontwerp van deze website. Graag helpen wij u hierbij met 2 bijzonder performante werkmiddelen: onze zoekmachine is het neusje van de zalm en dankzij onze matchmaker tussen spijs en drank zal u steeds een gepaste wijn vinden om uw heerlijke gerechten te vergezellen.</p><p><br></p><h2>Hoe zoekt u een wijn op ?</h2><p>Rechtsboven de werkbalk op elke pagina vindt u een vergrootglas.</p>'
   -
     type: image
     image: /assets/img/werkbalk.png
@@ -37,6 +37,7 @@ description:
   -
     type: text
     text: '<p><br></p><p>De inhoud van de winkelkar kan u hier nog aanpassen: u kan het aantal flessen vermeerderen, verminderen of een wijn verwijderen.</p><p>Geniet u van een kortingscode, dan kan u die hier ook inruilen.</p><p>Uiteraard hebben we ook uw adresgegevens nodig om de levering uit te voeren. Als laatste vult u uw kredietkaartgegevens in. Wij werken met stripe om de betalingen af te ronden. Zij ontwikkelen fantastische technologie om de betalingsprocessen maximaal te vereenvoudigen en in orde te zijn met PSD2. </p><p><br></p><h2>We zijn in orde met PSD2</h2><p>PSD2 bundelt de laatste Europese directieven rond de beveiligingen van elektronische betalingen. De betalingen volgen we het Strong Customer Authentication (SCA) schema. Dit schema is het meest sterke schema dat momenteel bestaat. Hierdoor kan u uw betalingen in alle veiligheid uitvoeren.</p><p><br></p><h2>Een wijn bevalt u niet ?</h2><p>Dan stuurt u binnen de 14 dagen na aankoop een mail naar admin@levipe.be. Wij nemen de ongeopende flessen terug. U kan kiezen tussen een terugbetaling van de wijn of een alternatief uit de winkel.</p>'
-meta_description: 'Of het gaat om rode wijn, om witte wijn, om rosé wijn of om mousserende wijn, wijn kopen op Internet aan de beste prijs kwaliteit verhouding is kinderspel geworden dankzij deze website.'
+meta_title: 'Online wine kopen'
+meta_description: 'Of het gaat om rode wijn, om witte wijn, om rosé wijn of om mousserende wijn, online wijn kopen op Internet aan de beste prijs kwaliteit verhouding is kinderspel geworden dankzij deze website.'
 id: 52300435-815a-4d0d-ac64-0542d148d9cb
 slug: wijn-kopen

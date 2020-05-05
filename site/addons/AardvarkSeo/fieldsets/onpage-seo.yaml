@@ -5,6 +5,7 @@ fields:
     instructions: Edit the meta data for this specific page.
   meta_title:
     type: aardvark_seo.valid_meta_title
+    localizable: true
   meta_description:
     type: aardvark_seo.valid_meta_description
     localizable: true

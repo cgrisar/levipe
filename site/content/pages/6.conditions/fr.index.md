@@ -1,25 +1,26 @@
+title: 'Conditions générales'
 description:
   -
     type: text
     text: |
-      <h2>Conditions Générales de l'utilisation du site</h2><p><br>
+      <h2>Conditions générales de l'utilisation du site</h2><p><br>
       Le présent document a pour objet de définir les modalités et conditions dans lesquelles d’une part, Grisar &amp; Co, Falconrui 15 à 2000 Antwerpen , ci-après dénommé l’EDITEUR, met à la disposition de ses utilisateurs le site, et les services disponibles sur le site et d’autre part, la manière par laquelle l’utilisateur accède au site et utilise ses services.
       
       Le simple accès au site de l’EDITEUR à l’adresse URL "levipe.be" ou "www.levipe.be" - ainsi que les pages sous-jacentes de ces url -, ci-après dénommé le SITE, implique l’acceptation de l’ensemble des conditions décrites ci-après par l'UTILISATEUR. Toute connexion au SITE est subordonnée au respect des présentes conditions.
       
-      </p><h2 class="text-base md:text-lg">Propriété intellectuelle</h2><p>
+      </p><h2>Propriété intellectuelle</h2><p>
       
       La structure générale du site levipe.be , ainsi que les textes, graphiques, images, sons et vidéos la composant, sont la propriété de l’EDITEUR ou de ses partenaires. Toute représentation et/ou reproduction et/ou exploitation partielle ou totale des contenus et services proposés par le SITE, par quelque procédé que ce soit, sans l'autorisation préalable et par écrit de l’EDITEUR et/ou de ses partenaires est strictement interdite et serait susceptible de constituer une contrefaçon au sens du Code de la propriété intellectuelle.
       
       Les marques "levipe.be", "les vins personnalisés" sont des marques déposées par l'EDITEUR. Toute représentation et/ou reproduction et/ou exploitation partielle ou totale de ces marques, de quelque nature que ce soit, est totalement prohibée.
       
-      </p><h2 class="text-base md:text-lg">Liens hypertextes</h2><p>
+      </p><h2>Liens hypertextes</h2><p>
       
       Le SITE peut contenir des liens hypertextes vers d’autres sites présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le SITE.
       
       Il est possible de créer un lien vers la page de présentation de ce site sans autorisation expresse de l’EDITEUR. Aucune autorisation ou demande d’information préalable ne peut être exigée par l’EDITEUR à l’égard d’un site qui souhaite établir un lien vers le site de l’EDITEUR. Il convient toutefois d’afficher ce site dans une nouvelle fenêtre du navigateur. Cependant, l’EDITEUR se réserve le droit de demander la suppression d’un lien qu’il estime non conforme à l’objet du SITE.
       
-      </p><h2 class="text-base md:text-lg">Responsabilité de l’EDITEUR</h2><p>
+      </p><h2>Responsabilité de l’EDITEUR</h2><p>
       
       Les informations et/ou documents figurant sur ce SITE et/ou accessibles par ce SITE proviennent de sources considérées comme étant fiables.
       
@@ -35,7 +36,7 @@ description:
       
       L’EDITEUR ne pourra en aucun cas être tenu responsable de tout dommage de quelque nature qu’il soit résultant de l’interprétation ou de l’utilisation des informations et/ou documents disponibles sur ce site.
       
-      </p><h2 class="text-base md:text-lg">Accès au SITE</h2><p>
+      </p><h2>Accès au SITE</h2><p>
       
       l’EDITEUR s’efforce de permettre l’accès au SITE 24 heures sur 24, 7 jours sur 7, sauf en cas de force majeure ou d’un événement hors du contrôle de l’EDITEUR, et sous réserve des éventuelles pannes et interventions de maintenance nécessaires au bon fonctionnement du SITE et des services.
       
@@ -45,7 +46,7 @@ description:
       
       Par ailleurs, l’EDITEUR peut être amené à interrompre le SITE ou une partie des services, à tout moment sans préavis, le tout sans droit à indemnités. l'UTILISATEUR reconnaît et accepte que l’EDITEUR ne soit pas responsable des interruptions, et des conséquences qui peuvent en découler pour l’utilisateur ou tout tiers.
       
-      </p><h2 class="text-base md:text-lg">Règles d'usage d'Internet</h2><p>
+      </p><h2>Règles d'usage d'Internet</h2><p>
       
       l'UTILISATEUR déclare accepter les caractéristiques et les limites d’Internet, et notamment reconnaît que :
       
@@ -59,11 +60,11 @@ description:
       
       l'UTILISATEUR reconnaît que l’EDITEUR ne dispose d’aucun moyen de contrôle sur le contenu des services accessibles sur Internet.
       
-      </p><h2 class="text-base md:text-lg">Modification des conditions d’utilisation</h2><p>
+      </p><h2>Modification des conditions d’utilisation</h2><p>
       
       L’EDITEUR se réserve la possibilité de modifier, à tout moment et sans préavis, les présentes conditions d’utilisation afin de les adapter aux évolutions du SITE et/ou de son exploitation.
       
-      </p><h2 class="text-base md:text-lg">Droit applicable</h2><p>
+      </p><h2>Droit applicable</h2><p>
       
       Tant le présent site que les modalités et conditions de son utilisation sont régis par le droit belge, quel que soit le lieu d’utilisation. En cas de contestation éventuelle, et après l’échec de toute tentative de recherche d’une solution amiable, les tribunaux belges seront seuls compétents pour connaître de ce litige.
       
