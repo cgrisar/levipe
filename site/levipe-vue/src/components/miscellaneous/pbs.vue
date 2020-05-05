@@ -67,7 +67,7 @@
 
                 this.pbs.forEach( function(pb) { if (pb.checked) collectionArray.push(pb.collection) } );
                 if (collectionArray.length == 0) {
-                    collectionArray = ['wines', 'grape', 'estate', 'region'];
+                    collectionArray = ['wines', 'grape', 'estate', 'region', 'article'];
                     this.pbs.forEach( function(pb) { pb.checked = true });
                 };
 
