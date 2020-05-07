@@ -5,7 +5,9 @@ namespace Statamic\Addons\Odoo;
 use Edujugon\Laradoo\Odoo;
 
 
-class Laradoo {
+class Laradoo 
+{
+
     public $odoo;
 
     public function __construct()
@@ -16,9 +18,14 @@ class Laradoo {
     protected function connectToOdoo()
     {
         $odoo = new Odoo;
-        try {
+        try 
+        {
             $odoo->connect( env('ODOO_DB'), env('ODOO_LOGIN'), env('ODOO_PASSWORD') );
-        } catch(Exception $e) {
+        } 
+
+        catch(Exception $e) 
+        
+        {
             echo 'No response';
         };
 

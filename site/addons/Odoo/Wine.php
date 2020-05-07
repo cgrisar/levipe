@@ -5,12 +5,15 @@ namespace Statamic\Addons\Odoo;
 use Statamic\Addons\Odoo\Laradoo;
 use Statamic\Addons\Helpers\Attributes;
 
-class Wine extends Laradoo {
+class Wine extends Laradoo 
+{
     public $odoocode = '';
     public $name = '';
     public $variants = array();
+    public $vintage = '';
 
-    public function __construct ( $odoocode ) {
+    public function __construct ( $odoocode ) 
+    {
         parent::__construct();
         $this->odoocode = $odoocode;
     }
@@ -41,4 +44,10 @@ class Wine extends Laradoo {
             $this->variants[] = $product;
         };
     }
+
+    public function getPriceOfAVintage()
+    {
+        
+    }
+
 }

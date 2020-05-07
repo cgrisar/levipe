@@ -273,4 +273,8 @@ class LaradooTags extends Tags
         return $this->getNoVariantProductPrice($odoo, $odooproduct);
     }
 
+    public function productPrice($millesime)
+    {
+        return;
+    }
 }

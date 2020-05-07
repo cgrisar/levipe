@@ -1,6 +1,6 @@
 title: Vermentitude
 cover_image:
-  - /assets/img/Wines/Cover/vermentitude.png
+  - /assets/img/Wines/Cover/eole-verm.png
 label_image:
   - /assets/img/Wines/Label/eole-verm.png
 color: white
@@ -23,7 +23,7 @@ no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
 facebook_image:
-  - /assets/img/Wines/Cover/vermentitude.png
+  - /assets/img/Wines/Cover/eole-verm.png
 twitter_share_setting: inherit
 id: 6a354e08-fdd8-4ed6-8d52-e6705ef2f7bf
 e:
