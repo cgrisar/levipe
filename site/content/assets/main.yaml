@@ -548,3 +548,9 @@ assets:
   img/Wines/Cover/bhil-phla.jpg:
     title: 'Phincalali | Bodegas Bhilar | Rioja Alavesa | La Rioja'
     alt: 'Phincalali | Bodegas Bhilar | Rioja Alavesa | La Rioja'
+  img/Wines/Cover/bhil-thmi.jpg:
+    title: 'Phincas Thousand Mils | Bodegas Bhilar | Rioja Alavesa | La Rioja'
+    alt: 'Phincas Thousand Mils | Bodegas Bhilar | Rioja Alavesa | La Rioja'
+  img/Grapes/Covers/gruner-veltliner.jpg:
+    title: 'Grüner Veltliner'
+    alt: 'Grüner Veltliner'

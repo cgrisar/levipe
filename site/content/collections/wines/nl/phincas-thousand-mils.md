@@ -1,0 +1,8 @@
+description: '<p>Aan de bron van deze wijn vind je de beste witte druiven van het domein die volgens de regels van de biodynamische wijnbouw worden behandeld. De oogst verloopt volgens de regels van de kunst. Nadien worden de druiven ontsteeld en met de voeten gekneusd. Het sap wordt in houten vaten opgevangen waar het aldaar fermenteert op schil. Dit contact met de schil geeft een lichte, bijzonder verfijnde en nobele tannine aan de wijn waardoor het delicaat karakter van de wijn extra in de verf wordt gezet. Een rijping gedurende 3 jaar zonder bescherming tegen de lucht accentueert een oxidatieve toets die aan de betere sherrys doet denken. Deze wijn combineert perfect met oesters, nobel pluimvee en zelfs delicaat rood vlees zoals, bijvoorbeeld, filet pur.</p>'
+variants:
+  -
+    millesime: '2016'
+    active: true
+    description: 'De wijn is rijk, goudkleurig. De neus is intens en deelt met ons het parfum van nootjes, appelen en verse champignons. Wat verder vinden we ook een hint van munt. De aanzet is vrij en vrank. We zijn onder de indruk van het bijzonder mineraal karakter van de wijn waarbij de iode overheerst. De fijne en delicate tannine volgt uit de vinificatie op schil en draagt bij tot de complexiteit van de wijn. We vragen naar meer wanneer de bijzonder lange, fijne en verfrissende afdronk onze zintuigen loslaat'
+meta_description: 'Aan de bron van deze wijn vind je de beste witte druiven van het domein. De druiven worden ontsteeld en met de voeten gekneusd. Het sap wordt in houten vaten opgevangen waar het aldaar fermenteert op schil. Dit contact met de schil geeft een lichte, bijzonder verfijnde en nobele tannine aan de wijn.'
+id: ea7ff429-8765-4864-99a8-0e27b95f7ee0
