@@ -17,7 +17,7 @@
 
                     <div id="wines">
                         <div class="flex">
-                            {{ collection:wines taxonomy:g="{{page.title | slugify }}" sort="random" limit="5" }}
+                            {{ collection:wines taxonomy:g="{page.title|slugify}" sort="random" limit="5" }}
                             <div class="mr-2 md:mr-6">
                                 {{ assets:label_image }}
                                     <a href="{{site_url}}wines/{{ slug }}">
@@ -71,3 +71,5 @@
     </div>
 
 </section>
+
+{{ partial:ldjson/grapecarousel }}
