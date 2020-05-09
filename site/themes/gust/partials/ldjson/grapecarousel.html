@@ -1,0 +1,19 @@
+<script type="application/ld+json">
+{{noparse}}
+{
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[ {{ /noparse }}
+    {{ collection:wines taxonomy:g="{page.title|slugify}" sort="random" scope="wine" }}
+        {{ noparse }}
+      {
+        "@type":"ListItem",
+        "position":{{ /noparse }}{{ count }}{{ noparse }},
+        "url":"{{ /noparse }}{{ wine:permalink }}{{ noparse }}"
+      }{{ /noparse}}{{ if !last }}{{ noparse }},{{ /noparse }}{{ /if }}
+    {{ /collection:wines }}
+    {{ noparse }}
+    ]
+  }
+{{ /noparse }}
+</script>
