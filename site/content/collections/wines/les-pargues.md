@@ -15,6 +15,11 @@ appellations:
   - f7d9550a-e0e3-4904-b0d9-31de824f82f2
   - fc0cfb2f-55db-4f43-89a9-d6c537412fc0
 odoo: FRSE-PARG
+variants:
+  -
+    millesime: '2017'
+    active: true
+    price: '15.95'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

@@ -15,6 +15,17 @@ appellations:
   - fc0cfb2f-55db-4f43-89a9-d6c537412fc0
   - f7d9550a-e0e3-4904-b0d9-31de824f82f2
 odoo: FRSE-MASS
+variants:
+  -
+    millesime: '2015'
+    active: false
+  -
+    millesime: '2017'
+    active: true
+    price: '19.20'
+  -
+    millesime: '2008'
+    active: false
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

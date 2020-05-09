@@ -16,6 +16,11 @@ cepages:
 appellations:
   - cb952961-7ea8-42fc-a16f-87380159c7ae
 odoo: CDMO-ADAG
+variants:
+  -
+    millesime: '2015'
+    active: true
+    price: '18.50'
 localized_urls:
   -
     locale: fr-fr
@@ -30,20 +35,6 @@ sitemap_changefreq: weekly
 facebook_image:
   - /assets/img/Wines/Cover/cdmo-adag.jpg
 twitter_share_setting: inherit
-schema_objects: |
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Wine",
-    "name": "Adage",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.2",
-      "bestRating": "5",
-      "ratingCount": "20"
-    }
-  }
-  </script>
 id: b7b746af-4b99-4115-ba58-4c2c89b57cfb
 e:
   - domaine-de-montvac

@@ -16,6 +16,7 @@ variants:
   -
     millesime: '2019'
     active: true
+    price: '29.99'
   -
     millesime: '2018'
     active: false

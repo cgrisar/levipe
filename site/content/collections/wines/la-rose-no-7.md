@@ -16,6 +16,11 @@ cepages:
 appellations:
   - 454ab9ad-acb0-4979-8acc-234517832d5c
 odoo: JLAU-ROSE
+variants:
+  -
+    millesime: NV
+    active: true
+    price: '12.95'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

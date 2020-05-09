@@ -16,7 +16,12 @@ odoo: HMCH-SABL
 variants:
   -
     millesime: '2017'
+    active: false
+    price: '11.30'
+  -
+    millesime: '2018'
     active: true
+    price: '11.30' 
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

@@ -8,6 +8,10 @@ sections:
       active:
         type: toggle
         display: Active
+      price:
+        type: text
+        display: Price
+        localizable: true
       description:
         type: textarea
         localizable: true

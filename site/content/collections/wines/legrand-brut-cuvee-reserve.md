@@ -13,6 +13,11 @@ cepages:
 appellations:
   - edd0e022-2d9a-4bb9-b48f-60f80b541d6c
 odoo: ERLG-LEGB
+variants:
+  -
+    millesime: NV
+    active: true
+    price: '22.49'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

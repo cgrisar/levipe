@@ -18,6 +18,7 @@ variants:
   -
     millesime: '2018'
     active: false
+    price: '8.75'
   -
     millesime: '2017'
     active: false

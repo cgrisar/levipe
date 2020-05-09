@@ -22,6 +22,7 @@ variants:
   -
     millesime: '2018'
     active: true
+    price: '13.50'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

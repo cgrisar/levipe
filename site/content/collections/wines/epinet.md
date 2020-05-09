@@ -18,7 +18,11 @@ odoo: FRRI-EPIN
 variants:
   -
     millesime: '2017'
+    active: false
+  -
+    millesime: '2018'
     active: true
+    price: '17.75'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

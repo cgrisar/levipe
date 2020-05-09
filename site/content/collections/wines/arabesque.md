@@ -17,6 +17,11 @@ appellations:
   - 455bfce1-3e57-496a-accb-6810c97e7540
   - 0efec7ad-16a6-4937-ac2d-94f2a001fedd
 odoo: CDMO-ARAB
+variants:
+  -
+    millesime: '2017'
+    active: true
+    price: '14.95'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

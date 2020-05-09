@@ -22,6 +22,7 @@ variants:
   -
     millesime: '2019'
     active: true
+    price: '7.99'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

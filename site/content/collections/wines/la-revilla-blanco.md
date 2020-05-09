@@ -16,6 +16,7 @@ variants:
   -
     millesime: '2013'
     active: true
+    price: '76.00'
     scores:
       -
         guide: WA

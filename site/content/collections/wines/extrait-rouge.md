@@ -20,6 +20,7 @@ variants:
   -
     millesime: '2015'
     active: true
+    price: '116.97'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

@@ -13,6 +13,17 @@ cepages:
 appellations:
   - dc80e2a5-c7bb-404e-8c3a-9cd4a0a39185
 odoo: FRRI-PARA
+variants:
+  -
+    millesime: '2016'
+    active: false
+  -
+    millesime: '2017'
+    active: false
+  -
+    millesime: '2018'
+    active: true
+    price: '18.50'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

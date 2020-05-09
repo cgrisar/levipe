@@ -19,6 +19,7 @@ variants:
   -
     millesime: '2018'
     active: true
+    price: '28.30'
     scores:
       -
         guide: RVF

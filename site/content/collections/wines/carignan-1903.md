@@ -16,6 +16,7 @@ variants:
   -
     millesime: '2011'
     active: true
+    price: '31.20'
     scores:
       -
         guide: HA

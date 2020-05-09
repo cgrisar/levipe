@@ -20,6 +20,7 @@ variants:
   -
     millesime: '2013'
     active: true
+    price: '19.50'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

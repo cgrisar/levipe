@@ -20,6 +20,7 @@ variants:
   -
     millesime: '2016'
     active: false
+    price: '30.99'
     scores:
       -
         guide: BD

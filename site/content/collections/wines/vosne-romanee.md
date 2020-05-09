@@ -17,6 +17,7 @@ variants:
   -
     millesime: '2008'
     active: true
+    price: '58.00'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

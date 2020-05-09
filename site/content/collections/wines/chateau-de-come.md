@@ -18,6 +18,7 @@ variants:
   -
     millesime: '2015'
     active: true
+    price: '27.30'
   -
     millesime: '2012'
     active: false

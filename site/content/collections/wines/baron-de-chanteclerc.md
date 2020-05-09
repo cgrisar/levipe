@@ -15,6 +15,7 @@ variants:
   -
     millesime: NV
     active: true
+    price: '7.65'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

@@ -18,7 +18,7 @@ variants:
   -
     millesime: '2017'
     active: true
-    description: 'Robe jaune pâle, reflets gris, profond. On découvre au nez des arômes de fleurs blanches: aubépine et fleur d''acacia, suivis de nuances rappelant le bourgeon de cassis et la pêche blanche. En bouche, magnifique harmonie de gras et d''acidité sur des notes citronnées et de coing. On finit sur des notes minérales de pierres à fusil. Belle tension maintenue de l''attaque à la finale.'
+    price: '17.40'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
