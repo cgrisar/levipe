@@ -2,10 +2,13 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    main: './src/main.js',
+    region: './src/regionmain.js'
+  },
   output: {
     path: path.resolve('../themes/gust/js'),
-    filename: 'mainvue.js'
+    filename: '[name].js'
   },
   module: {
     rules: [

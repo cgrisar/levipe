@@ -1,4 +1,6 @@
-Vue.config.devtools=true
+Vue.config.devtools=false
+Vue.config.debug=false
+Vue.config.silent=true
 
 import Vue from 'vue'
 import swal from 'sweetalert'
