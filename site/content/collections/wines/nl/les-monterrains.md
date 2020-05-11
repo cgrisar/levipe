@@ -4,4 +4,5 @@ variants:
     millesime: '2017'
     active: true
     description: 'Robijnrode, kristallen kleur. Aroma''s van klein rood fruit en een uitgesproken kers. Hinten van peper en boschampignons. Smaken van rood fruit, heerlijk krokant, bijzonder verfrissend. Rijke, zijdezachte tanine. Geconcentreerd en zonnig!'
+meta_description: 'Gelukkig heeft Philippe Trébignaud zijn oude gamays niet gerooid. Telkens we zo''n fles ontkurken is het feest! Deze rode wijn uit de mâconnais is elegant, speels en verdomd verleidelijk. Je kan hem jong drink of een paar jaren veilig bewaren.'
 id: a8a0c2da-78b7-478e-8863-a59f2bc781af

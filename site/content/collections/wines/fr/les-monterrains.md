@@ -4,4 +4,5 @@ variants:
     millesime: '2017'
     active: true
     description: 'Couleur rouge rubis crystalline. Au nez des fruits rouges frais, cerise prononcée, nuances de poivre et de champignons des bois. Saveurs de fruits rouges croquants, très rafraîchissantes. Tanin riche, doux et soyeux, malgré la concentration du vin. Le soleil est dans le verre!'
+meta_description: 'Philippe Trébignaud était bien inspiré en gardant ses pieds de vigne de gamay de plus de 70 ans. Quelle fête! Quel régal! Ce vin rouge du mâconnais est éclatant, élégant et séduisant. Le vin est à boire jeune tout comme il est de bonne garde.'
 id: a8a0c2da-78b7-478e-8863-a59f2bc781af

@@ -1,3 +1,4 @@
+title: 'Cavalier ''Cabernet - Syrah'''
 description: '<p>Le Domaine Cavalier se situe au sein des vignobles du Château de Lascaux, près du Pic-Saint-Loup. Regroupées autour d’un mas Cévenol sur des terres en altitude, les parcelles de vignes s’étendent sur 20 ha. L’assemblage de Cabernet-Sauvignon et de Syrah permet d’obtenir une identité singulière tout en laissant s’exprimer le terroir plus frais des parcelles sises au pied des Cévennes.</p>'
 variants:
   -
