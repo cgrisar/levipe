@@ -574,3 +574,9 @@ assets:
   support/reviews/ha/ha.jpg:
     title: 'Guide Hachette des Vins'
     alt: 'Guide Hachette des Vins'
+  img/Regions/clos.jpg:
+    title: Chambertin
+    alt: Chambertin
+  img/Regions/carte_bourgogne.png:
+    title: 'Vignoble de Bourgogne'
+    alt: 'Vignoble de Bourgogne'
