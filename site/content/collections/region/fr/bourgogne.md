@@ -23,9 +23,4 @@ description:
 climate: 'sémi-continental et méridional'
 terroir: 'argiles et calcaires'
 meta_description: 'Découvrez l''histoire du vignoble de Bourgogne. Apprenez tout sur le système d''appellations. Retrouvez ses cépages-rois pinot noir et chardonnay. Ensuite, si vous le souhaitez, n''hésitez pas à achter un vin en ligne en toute sécurité. Satisfait ou remboursé.'
-page_no_index: false
-no_follow_links: false
-sitemap_priority: '0.5'
-sitemap_changefreq: daily
-twitter_share_setting: inherit
 id: f7d9550a-e0e3-4904-b0d9-31de824f82f2
