@@ -556,3 +556,21 @@ assets:
     alt: 'Grüner Veltliner'
   img/Regions/carte-de-saint-joseph.png:
     title: 'Les 26 communes de Saint-Joseph'
+  support/reviews/bd/bd.jpg:
+    title: 'Bettane et Dessauve'
+    alt: 'Bettane et Dessauve'
+  support/reviews/rvf/rvf.jpg:
+    title: 'la revue du vin de france'
+    alt: 'la revue du vin de france'
+  support/reviews/wa/wa.jpg:
+    title: 'wine advocate'
+    alt: 'wine advocate'
+  support/reviews/lvp/lvp.png:
+    title: 'les vins personnalisés'
+    alt: 'les vins personnalisés'
+  img/Promo/wine-and-food.jpg:
+    title: 'Wine and Food'
+    alt: 'Wine and Food'
+  support/reviews/ha/ha.jpg:
+    title: 'Guide Hachette des Vins'
+    alt: 'Guide Hachette des Vins'
