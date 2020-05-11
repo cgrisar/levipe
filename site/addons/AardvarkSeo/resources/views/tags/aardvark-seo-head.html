@@ -37,35 +37,35 @@
 <meta property="og:locale" content="{{ locale }}">
 <meta property="og:url" content="{{ canonical_url or permalink }}">
 {{ if calculated_facebook_image }}
-{{ asset:calculated_facebook_image }}
-<meta property="og:image" content="https://levipe.be{{ url }}">
-<meta property="og:image:width" content="{{ width }}">
-<meta property="og:image:height" content="{{ height }}">
-<meta property="og:image:alt" content="{{ alt }}">
-{{ /asset:calculated_facebook_image }}
+    {{ asset:calculated_facebook_image }}
+        <meta property="og:image" content="https://www.levipe.be{{ url }}">
+        <meta property="og:image:width" content="{{ width }}">
+        <meta property="og:image:height" content="{{ height }}">
+        <meta property="og:image:alt" content="{{ alt }}">
+    {{ /asset:calculated_facebook_image }}
 {{ else }}
-<meta property="og:image" content="https://levipe.be/site/themes/gust/images/logo_levipe.png">
+    <meta property="og:image" content="https://www.levipe.be/site/themes/gust/images/logo_levipe.png">
 {{ /if }}
 
 <meta name="twitter:card" content="{{ calculated_twitter_card_type }}">
 {{ if twitter_username }}
-<meta name="twitter:site" content="{{ twitter_username ensure_left='@' }}">
-<meta name="twitter:creator" content="{{ twitter_username ensure_left='@' }}">
+    <meta name="twitter:site" content="{{ twitter_username ensure_left='@' }}">
+    <meta name="twitter:creator" content="{{ twitter_username ensure_left='@' }}">
 {{ /if }}
 {{# -- We don't need to explicitly define data if inheriting from the Facebook setting as Twitter will inherit from og tags -- #}}
 {{ if twitter_share_setting === 'custom' }}
   {{# Twitter card tags #}}
   {{ if twitter_title }}
-  <meta name="twitter:title" content="{{ twitter_title }}">
+      <meta name="twitter:title" content="{{ twitter_title }}">
   {{ /if }}
   {{ if twitter_description }}
-  <meta name="twitter:description" content="{{ twitter_description }}">
+      <meta name="twitter:description" content="{{ twitter_description }}">
   {{ /if }}
   {{ if calculated_twitter_card_type === 'summary_large_image' }}
   {{ asset:calculated_twitter_large_image }}
-  <meta name="twitter:image" content="{{ permalink }}">
+      <meta name="twitter:image" content="{{ permalink }}">
   {{ if alt }}
-    <meta name="twitter:image:alt" content="{{ alt }}">
+      <meta name="twitter:image:alt" content="{{ alt }}">
   {{ /if }}
   {{ /asset:calculated_twitter_large_image }}
   {{ elseif calculated_twitter_summary_image }}

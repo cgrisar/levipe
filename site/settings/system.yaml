@@ -54,6 +54,6 @@ csrf_exclude:
   - '/nl/!/Fetch/*'
   - '/fr/!/Fetch/*'
 yaml_parser: symfony
-send_powered_by_header: true
+send_powered_by_header: false
 ensure_unique_ids: true
 php_max_memory_limit: null

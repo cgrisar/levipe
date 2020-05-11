@@ -1,4 +1,4 @@
 fields:
   asset_container:
-    default: /img
+    default: /seo
     type: asset_container
