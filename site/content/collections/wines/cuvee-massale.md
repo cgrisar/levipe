@@ -21,11 +21,15 @@ variants:
     active: false
   -
     millesime: '2017'
-    active: true
+    active: false
     price: '19.20'
   -
     millesime: '2008'
     active: false
+  -
+    millesime: '2018'
+    active: true
+    price: '19.20'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

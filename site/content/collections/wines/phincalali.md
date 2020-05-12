@@ -18,6 +18,11 @@ variants:
     millesime: '2016'
     active: true
     price: '52.50'
+    scores:
+      -
+        guide: TA
+        score: '95'
+        maxscore: '100'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

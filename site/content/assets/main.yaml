@@ -586,3 +586,12 @@ assets:
   img/Wines/Cover/FRSE-MONT.jpeg:
     title: 'Montée de Tonnerre | Domaine Servin | Chablis Premier Cru | Bourgogne'
     alt: 'Montée de Tonnerre | Domaine Servin | Chablis Premier Cru | Bourgogne'
+  img/Wines/Cover/FRSE-PREU.png:
+    title: 'Les Preuses | Domaine Servin | Chablis Grand Cru | Bourgogne'
+    alt: 'Les Preuses | Domaine Servin | Chablis Grand Cru | Bourgogne'
+  support/reviews/vi/vi.jpg:
+    title: 'Vinous by Antonio Galloni'
+    alt: 'Vinous by Antonio Galloni'
+  support/reviews/ta/ta.jpg:
+    title: 'Tim Atkin MW'
+    alt: 'Tim Atkin MW'

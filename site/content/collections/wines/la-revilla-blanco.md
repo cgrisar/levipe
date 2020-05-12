@@ -22,6 +22,10 @@ variants:
         guide: WA
         score: '95'
         maxscore: '100'
+      -
+        guide: TA
+        score: '96'
+        maxscore: '100'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

@@ -18,8 +18,21 @@ odoo: FRSE-PARG
 variants:
   -
     millesime: '2017'
+    active: false
+    price: '15.95'
+  -
+    millesime: '2018'
     active: true
     price: '15.95'
+    scores:
+      -
+        guide: TA
+        score: '90'
+        maxscore: '100'
+      -
+        guide: VI
+        score: '90'
+        maxscore: '100'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

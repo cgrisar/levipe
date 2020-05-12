@@ -25,6 +25,8 @@ sections:
               RVF: 'Revue du Vin de France'
               HA: 'Guide Hachette du Vin de France'
               WA: 'Wine Advocate'
+              VI: 'Vinous by Antonio Galloni'
+              TA: 'Tim Atkin'
             type: select
             display: Guide
           score:

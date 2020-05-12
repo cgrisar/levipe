@@ -2,6 +2,13 @@ description: '<p>L''équilibre parfait entre fraîcheur et vivacité, concentre 
 variants:
   -
     millesime: '2017'
+    active: false
+    description: |
+      La robe est jaune pâle avec des reflets or blanc. Le nez est très fin et élégant avec des notes florales et d’agrumes.
+       L’attaque en bouche est fraiche. Les agrumes sont bien présents avec une finale minérale donnant à ce vin une jolie tension.
+      
+  -
+    millesime: '2018'
     active: true
     description: |
       La robe est jaune pâle avec des reflets or blanc. Le nez est très fin et élégant avec des notes florales et d’agrumes.
