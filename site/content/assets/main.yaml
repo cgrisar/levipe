@@ -580,3 +580,9 @@ assets:
   img/Regions/carte_bourgogne.png:
     title: 'Vignoble de Bourgogne'
     alt: 'Vignoble de Bourgogne'
+  img/Wines/Label/FRSE-MONT.jpeg:
+    title: 'Montée de Tonnerre | Domaine Servin | Chablis Premier Cru | Bourgogne'
+    alt: 'Montée de Tonnerre | Domaine Servin | Chablis Premier Cru | Bourgogne'
+  img/Wines/Cover/FRSE-MONT.jpeg:
+    title: 'Montée de Tonnerre | Domaine Servin | Chablis Premier Cru | Bourgogne'
+    alt: 'Montée de Tonnerre | Domaine Servin | Chablis Premier Cru | Bourgogne'
