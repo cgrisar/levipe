@@ -22,6 +22,14 @@ variants:
     millesime: '2017'
     active: true
     price: '14.95'
+    scores:
+      -
+        guide: VI
+        score: '90'
+        maxscore: '100'
+  -
+    millesime: '2016'
+    active: false
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

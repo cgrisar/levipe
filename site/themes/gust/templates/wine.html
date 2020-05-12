@@ -145,6 +145,7 @@
                 document.getElementById("vintageprices-"+li.id).classList.add('hidden');
             };
             if(document.getElementById("scores-"+li.id)){
+                document.getElementById("scores-"+li.id).classList.remove('flex');
                 document.getElementById("scores-"+li.id).classList.add('hidden');
             };
         });
@@ -162,6 +163,7 @@
         };
         if (document.getElementById("scores-" + vintage)) {
             document.getElementById("scores-" + vintage).classList.remove('hidden');
+            document.getElementById("scores-" + vintage).classList.add('flex');
         };
     };
 

@@ -14,10 +14,24 @@ variants:
   -
     millesime: '2008'
     active: true
+    scores:
+      -
+        guide: BD
+        score: '17'
+        maxscore: '20'
+      -
+        guide: RVF
+        score: '17.5'
+        maxscore: '20'
   -
     millesime: '2014'
     active: true
     price: '32.15'
+    scores:
+      -
+        guide: RVF
+        score: '15.5'
+        maxscore: '20'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
