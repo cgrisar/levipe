@@ -91,12 +91,10 @@
 <script type="application/ld+json" id="schema">
   {
     "@context": "http://schema.org",
-    "@type": "{{ if company_or_person === 'company' }}Organization{{ else }}Person{{ /if }}",
-    "url": "{{ site_url }}",
-    "name": "{{ if company_or_person === 'company' }}{{ company_name}}{{ else }}{{ your_name }}{{ /if }}",
-    {{ if company_or_person === 'company' && company_logo != '' }}
-    "logo": "{{ asset:company_logo }}{{ permalink }}{{ /asset:company_logo}}",
-    {{ /if }}
+    "@type": "Organization",
+    "url": "https://www.levipe.be",
+    "name": "les vins personnalisés",
+    "logo": "https://www.levipe.be/assets/seo/favicon.png",
     "sameAs": [
       {{ social_links }}"{{ url}}"{{ if !last }},
       {{ /if }}{{ /social_links }}
