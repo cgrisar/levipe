@@ -9,6 +9,8 @@ sparkling: false
 natural_wine: false
 estate:
   - 9389718a-b4ab-405b-9e2f-d9402d5a493c
+cepages:
+  - df2bb712-b75c-4548-a1a4-54e5d724c9bf
 odoo: DICA-RKES
 variants:
   -
