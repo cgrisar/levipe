@@ -18,6 +18,11 @@ variants:
     millesime: '2014'
     active: true
     price: '18.50'
+    scores:
+      -
+        guide: RVF
+        score: '16'
+        maxscore: '20'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

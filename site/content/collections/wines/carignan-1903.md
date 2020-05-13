@@ -22,6 +22,14 @@ variants:
         guide: HA
         score: '3'
         maxscore: '3'
+      -
+        guide: RVF
+        score: '16.5'
+        maxscore: '20'
+      -
+        guide: BD
+        score: '16'
+        maxscore: '20'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

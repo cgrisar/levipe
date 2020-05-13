@@ -595,3 +595,6 @@ assets:
   support/reviews/ta/ta.jpg:
     title: 'Tim Atkin MW'
     alt: 'Tim Atkin MW'
+  img/Wines/Cover/vpco-char.jpg:
+    title: "Chardonnay | Domaine La Colombette |\_Pays d'Oc | Languedoc"
+    alt: "Chardonnay | Domaine La Colombette |\_Pays d'Oc | Languedoc"
