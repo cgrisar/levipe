@@ -6,11 +6,11 @@ variants:
     scores:
       -
         guide: BD
-        score: '16,5'
+        score: '16.5'
         maxscore: '20'
       -
         guide: RVF
-        score: '17,5'
+        score: '17.5'
         maxscore: '20'
     description: 'De kleur van deze droge en fruitige witte wijn is zuiver en schitterend. In de neus en in de mond een elegant boeket citrusvruchten en witte bloesems. De smaken vinden hun evenwicht tussen aromatische complexiteit en fraicheur. Dat evenwicht zet zich door in een ellenlange afdronk. Pure klasse!'
 meta_description: 'Les Bournais is een oud nieuw perceel dat de Loire overziet en bestaat uit een klei-kalkbodem. François Chidaine was overtuigd van het potentieel om grote, rijke, kruidige, droge witte wijnen te maken wanneer hij hier zijn eerste wijnstokken plantte in 1999.'

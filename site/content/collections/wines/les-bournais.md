@@ -23,11 +23,11 @@ variants:
     scores:
       -
         guide: BD
-        score: '16,5'
+        score: '16.5'
         maxscore: '20'
       -
         guide: RVF
-        score: '17,5'
+        score: '17.5'
         maxscore: '20'
 page_no_index: false
 no_follow_links: false
