@@ -25,7 +25,7 @@
         {{ /if }}
         
         <!-- description and thumbnail, gets loaded by Google -->
-        <meta name="description" content="{{ meta_description or seo:seo_description }}">
+        <meta name="description" content="{{ meta_description sanitize="true" }}">
         <meta name="thumbnail" content="https://levipe.be{{ assets:cover_image }}{{ url }}{{ /assets:cover_image }}">   
 
         <!-- language -->

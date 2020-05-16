@@ -4,5 +4,5 @@ variants:
     millesime: NV
     active: true
     description: 'Ce crémant de Limoux se caractérise par une robe d’un beau rose saumon aux reflets vifs. Son nez exprime des fraise des bois parsemés de notes d’agrumes et de brioche. Une bouche tout en finesse, ronde et parfaitement équilibrée. Belle vivacité et structure. Groseilles et citron confit pour les arômes en bouche. La finale est longue et aérienne.'
-meta_description: 'La Rose No 7, un crémant de Limoux rosé assemblé de Chardonnay, Chenin Blanc et de Pinot Noir, imaginé par un champenois au domaine J. Laurens'
+meta_description: 'Dans la tradition des Blanquettes de Limoux, bien fraîches, La Rose No 7 est un crémant de Limoux rosé assemblé de chardonnay, chenin blanc et de pinot noir, imaginé par un champenois au domaine J. Laurens'
 id: f4b5d5a1-8b65-482f-aa05-f0243e2fdda6

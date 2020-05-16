@@ -32,7 +32,7 @@
 {{# Facebook OG tags #}}
 <meta property="og:site_name" content="{{ site_name }}">
 <meta property="og:title" content="{{ facebook_title or meta_title or title }}">
-<meta property="og:description" content="{{ facebook_description or meta_description }}">
+<meta property="og:description" content="{{ meta_description sanitize="true" }}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="{{ locale }}">
 <meta property="og:url" content="{{ canonical_url or permalink }}">

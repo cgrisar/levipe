@@ -1,6 +1,6 @@
 title: Chardonnay
 cover_image:
-  - /assets/img/Wines/Cover/vpco-char.jpg
+  - /assets/img/Wines/Cover/vpco-char-1589666036.jpg
 label_image:
   - /assets/img/Wines/Label/vpco-char.png
 color: white
@@ -23,7 +23,7 @@ no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
 facebook_image:
-  - /assets/img/Wines/Cover/vpco-char.jpg
+  - /assets/img/Wines/Cover/vpco-char-1589666036.jpg
 twitter_share_setting: inherit
 id: 74884aa9-03f3-46f6-b950-09b0b9881d1c
 e:
