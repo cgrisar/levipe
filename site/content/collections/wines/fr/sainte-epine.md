@@ -6,5 +6,6 @@ variants:
     description: |
       Couleur intense, soutenue. Une explosion d’épices au nez, où aussi sont présents des notes d’orange, d’anis et de violettes.
       Une bouche à base minérale et d’épices de cuisson rencontre les cerises rouges et une grande dose de poivre noir. L'acidité donne beaucoup de portance au vin et conduit à une longue finale minérale et poivrée.
+      
 meta_description: 'Souvent confronté aux jugements normatifs et arbitraires des dégustateurs des commissions d’agréments et bien que situé sur l’un des coteaux mythiques de l’appellation Saint Joseph, Hervé Souhaut ne demande pas l’agrément pour ce syrah qui défie les standards oenologiques classiques.'
 id: 700dc12a-331f-46e1-aea3-f625b09da456
