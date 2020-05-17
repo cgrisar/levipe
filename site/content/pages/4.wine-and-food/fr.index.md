@@ -13,4 +13,3 @@ description:
 meta_title: 'Accords mets - vins'
 meta_description: 'Apprenez la théorie des combinaisons des goûts du vin et des aliments et évitez les combinaison contre-nature. L''outil que nous mettons à votre disposition vous permet de trouver l''accord met vin judicieux.'
 id: 084cb952-35f7-4640-8418-c46d52e87115
-slug: accords-mets-vins

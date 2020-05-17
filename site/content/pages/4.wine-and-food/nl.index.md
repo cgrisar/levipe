@@ -13,4 +13,3 @@ description:
 meta_title: 'Wijn en spijs'
 meta_description: 'Leer alles over de theorie om smaken van wijn en spijs te combineren en om onnatuurlijke combinaties te vermijden. Het instrument dat wij bijvoegen helpt u om die fouten te vermijden en om wijnen te ontdekken.'
 id: 084cb952-35f7-4640-8418-c46d52e87115
-slug: wijn-en-spijs
