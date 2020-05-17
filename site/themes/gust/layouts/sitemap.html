@@ -6,7 +6,7 @@
                 <url>
                     <loc>{{ permalink }}</loc>
                     <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
-                    <changefreq>monthly</changefreq>
+                    <changefreq>daily</changefreq>
                     <priority>{{ if url == homepage }}0.8{{ else }}0.5{{ /if }}</priority>
                 </url>
             {{ /nav }}
@@ -38,6 +38,15 @@
             {{ /collection }}
 
             {{ collection from="wines" locale="{locale:key}" }}
+                <url>
+                    <loc>{{ permalink }}</loc>
+                    <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                </url>
+            {{ /collection }}
+
+            {{ collection from="article" locale="{locale:key}" }}
                 <url>
                     <loc>{{ permalink }}</loc>
                     <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
