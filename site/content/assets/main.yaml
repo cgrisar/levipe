@@ -603,3 +603,6 @@ assets:
     alt: 'Chardonnay | Domaine La Colombette | Pays d''Oc | Languedoc'
   img/Regions/leccia.jpg:
     title: 'Alcoholpercentage op etiket wijnfles'
+  img/Wines/Cover/ptsa-bruy.jpg:
+    title: 'Clos des Bruyères | Domaine de la Sarazinière | Mâcon-Bussières | Bourgogne'
+    alt: 'Clos des Bruyères | Domaine de la Sarazinière | Mâcon-Bussières | Bourgogne'
