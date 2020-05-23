@@ -609,3 +609,7 @@ assets:
   img/Grapes/Covers/gewurztraminer.jpg:
     title: Gewürztraminer
     alt: Gewürztraminer
+  img/Wines/Cover/clma-savi.jpeg:
+    title: "Savigny-lès-Beaune VV | Domaine Claude Maréchal | Côte de Beaune |\_Bourgogne"
+    alt: "Savigny-lès-Beaune VV | Domaine Claude Maréchal | Côte de Beaune |\_Bourgogne"
+    focus: 62-82
