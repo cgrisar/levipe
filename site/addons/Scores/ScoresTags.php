@@ -80,7 +80,7 @@ class ScoresTags extends Tags
         foreach( $scores as $score )
         {
             $total_score += $score['maxscore'] == '100' ? $score['score'] : 0 ;
-            $total_score += $score['maxscore'] == '20' ? $score['score'] * 2.5 : 0;
+            $total_score += $score['maxscore'] == '20' ? $score['score'] * 2.5 + 50 : 0;
             $total_score += $score['maxscore'] == '3' ? $this->starsToScore(3) : 0;
         }
 
