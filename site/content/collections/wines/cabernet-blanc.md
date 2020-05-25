@@ -18,13 +18,13 @@ variants:
   -
     millesime: '2018'
     active: false
-    price: '8.75'
   -
     millesime: '2017'
     active: false
   -
     millesime: '2019'
     active: true
+    price: '8.75'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
