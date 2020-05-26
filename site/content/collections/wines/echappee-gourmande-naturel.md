@@ -1,4 +1,6 @@
 title: 'Echappée Gourmande - Naturel'
+cover_image:
+  - /assets/img/Wines/Cover/ARJO-EGNA.jpg
 label_image:
   - /assets/img/Wines/Label/arjo-egna.jpg
 color: red
@@ -16,10 +18,13 @@ variants:
   -
     millesime: '2019'
     active: true
+    price: '9.15'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'
 sitemap_changefreq: daily
+facebook_image:
+  - /assets/img/Wines/Cover/ARJO-EGNA.jpg
 twitter_share_setting: inherit
 id: 822cd326-068e-40fa-a6d2-a049a61ea442
 e:

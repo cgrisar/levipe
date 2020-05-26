@@ -4,4 +4,5 @@ variants:
     millesime: NV
     active: true
     description: 'Licht roze zalmkleur. De wijn heeft fijne bellen en een romige mousse. Het parfum van aangenaam rood fruit wordt gedomineerd door de aardbei. Frisse en fruitige aanzet. Pas nadien worden we gewaar dat de wijn wat zoet is, perfect in evenwicht gehouden door de zuren. Bij het aperitief laat de dorstlessende afdronk ons hunkeren naar het tweede glas.'
+meta_description: 'Om een kwaliteitswijn aan 0% te maken, steunt het Domaine la Colombette op 3 peilers: de Grenache, koningsdruif op het domein, de techniek waarin hij meester is geworden om alcohol aan de wijn te onttrekken en de bewaring van deze wijn.'
 id: 232543e5-a407-4225-ad68-0248d0315d73

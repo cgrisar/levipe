@@ -11,4 +11,5 @@ variants:
     millesime: '2019'
     active: true
     description: 'Robe dorée et parfum de fruits exotiques, de notes herbacées (tabac) et d''épices (eucalyptus, poivre blanc). L''attaque en fraîcheur trahit une belle acidité. La matière compense parfaitement l''acidité proposant ainsi un bel équilibre. Finale moyennement longue soutenue par des arômes d''agrumes'
+meta_description: 'La création au Domaine la Colombette de cépages résistants aux maladies trouve ses premiers résultats dans cette cuvée de Cabernet Blanc. Ce vin particulièrement séduisant apporte parfums, arômes et fraîcheur et convient parfaitement aux plats équilibrés tels poissons, pâtes, quiches et risottos.'
 id: 55c4fb49-36dd-4924-a575-75ed0d3b1fe2

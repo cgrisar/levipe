@@ -11,4 +11,5 @@ variants:
     millesime: '2019'
     active: true
     description: 'Goudkleurig en een parfum van exotisch fruit, grassen (tabak) en kruiden (eucalyptus, witte peper). De frisse aanzet verraadt een mooie aciditeit. De materie ruim aanwezig om de zuren te compenseren en de wijn is hierdoor mooi evenwichtig. De middellange afdronk wordt ondersteund door aroma''s van citrusvruchten.'
+meta_description: 'Het project op het Domaine la Colombette om druivensoorten te creëren die resistent zijn aan ziektes vindt zijn eerste resultaten in deze prachtige Cabernet Blanc. De wijn is strakker dan weelderig en brengt uw vissen, pastaschotels, quiches of risotto''s in een goed daglicht.'
 id: 55c4fb49-36dd-4924-a575-75ed0d3b1fe2
