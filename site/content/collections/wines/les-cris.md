@@ -19,6 +19,11 @@ variants:
     millesime: '2018'
     active: true
     price: '17.99'
+    scores:
+      -
+        guide: DEC
+        score: '87'
+        maxscore: '100'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

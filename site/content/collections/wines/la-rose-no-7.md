@@ -21,6 +21,15 @@ variants:
     millesime: NV
     active: true
     price: '12.95'
+    scores:
+      -
+        guide: RVF
+        score: '14.5'
+        maxscore: '20'
+      -
+        guide: DEC
+        score: '87'
+        maxscore: '100'
 page_no_index: false
 no_follow_links: false
 sitemap_priority: '0.5'

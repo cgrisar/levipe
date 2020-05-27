@@ -19,11 +19,11 @@
                         <div class="flex">
                             {{ collection:wines taxonomy:g="{page.title|slugify}" sort="random" limit="5" }}
                             <div class="mr-2 md:mr-6">
-                                {{ assets:label_image }}
-                                    <a href="{{site_url}}wines/{{ slug }}">
+                                <a href="{{ url }}">
+                                    {{ assets:label_image }}
                                         <figure class="h-12 w-12 lg:w-24 lg:h-24 bg-cover rounded-full" style="background-image: url({{url}}); background-position: 50% 0px;"></figure>
-                                    </a>
-                                {{ /assets:label_image }}
+                                    {{ /assets:label_image }}
+                                </a>
                             </div>
                             {{ /collection:wines }}
                         </div>

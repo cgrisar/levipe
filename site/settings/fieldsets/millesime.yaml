@@ -27,6 +27,9 @@ sections:
               WA: 'Wine Advocate'
               VI: 'Vinous by Antonio Galloni'
               TA: 'Tim Atkin'
+              DEC: Decanter
+              WE: 'Wine Enthousiast'
+              GM: 'Gault & Millau'
             type: select
             display: Guide
           score:
