@@ -6,7 +6,7 @@
   "dependencies": {
     "algoliasearch": "^3.32.1",
     "flickity": "^2.1.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "modal": "^1.2.0",
     "vue-autosuggest": "^1.8.3",
     "vue-axios": "^2.1.4",
